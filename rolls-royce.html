@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolls-Royce Motor Cars — Inspiring Greatness</title>
+  <meta name="description" content="The home of the world's pinnacle super-luxury automobiles. Discover Phantom, Ghost, Cullinan, Spectre and Black Badge.">
+  <meta property="og:title" content="Rolls-Royce Motor Cars — Inspiring Greatness">
+  <meta property="og:type" content="website">
+
+  <!-- Cormorant (elegant serif headlines) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — Rolls-Royce Design Tokens
+    ============================================================ */
+    :root {
+      /* Colours */
+      --rr-black:      #0A0A0A;
+      --rr-deep:       #111111;
+      --rr-charcoal:   #1C1C1C;
+      --rr-dark:       #252525;
+      --rr-mid:        #3A3A3A;
+      --rr-silver:     #8C8C8C;
+      --rr-light:      #C8C8C8;
+      --rr-white:      #F5F4F2;   /* warm off-white */
+      --rr-pure:       #FFFFFF;
+      --rr-gold:       #9E7D5C;   /* muted Rolls champagne gold */
+      --rr-champagne:  #C4A882;   /* lighter champagne */
+      --rr-gold-lt:    #D4B896;   /* highlight */
+
+      /* Type */
+      --font-serif:  'Cormorant', 'Times New Roman', Georgia, serif;
+      --font-sans:   'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      /* Spacing */
+      --nav-h:       72px;
+      --margin:      clamp(1.5rem, 4vw, 5rem);
+
+      /* Easing */
+      --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+      --t-slow:      0.9s var(--ease-luxury);
+      --t-mid:       0.55s var(--ease);
+      --t-fast:      0.3s  var(--ease);
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      font-size: clamp(13px, 0.95vw, 15px);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--rr-light);
+      background: var(--rr-black);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a  { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img, video { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+    ::selection { background: var(--rr-gold); color: var(--rr-black); }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+    /* Image / Video placeholder */
+    .rr-ph {
+      width: 100%; height: 100%;
+      background: var(--rr-charcoal);
+      display: flex; align-items: flex-end; justify-content: center;
+      padding-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .rr-ph::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2526 40%, #1c1b1b 100%);
+    }
+    .rr-ph-label {
+      position: relative;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.15);
+      text-align: center;
+    }
+    .rr-ph-light {
+      background: #e8e5e0;
+    }
+    .rr-ph-light::before { background: linear-gradient(135deg, #e0ddd8 0%, #d4d0ca 100%); }
+    .rr-ph-light .rr-ph-label { color: rgba(0,0,0,0.18); }
+
+    /* Gold divider */
+    .rr-rule {
+      display: block;
+      width: 40px; height: 1px;
+      background: var(--rr-gold);
+      margin: 0 auto 1.5rem;
+    }
+    .rr-rule-left { margin: 0 0 1.5rem; }
+
+    /* ============================================================
+       NAV OVERLAY (full-screen menu backdrop)
+    ============================================================ */
+    #nav-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 800;
+      opacity: 0; pointer-events: none;
+      transition: opacity var(--t-mid);
+    }
+    #nav-overlay.open { opacity: 1; pointer-events: all; }
+
+    /* ============================================================
+       FULLSCREEN MENU (left off-canvas)
+    ============================================================ */
+    #fs-menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: min(480px, 100vw);
+      height: 100vh;
+      background: var(--rr-deep);
+      z-index: 900;
+      display: flex; flex-direction: column;
+      padding: var(--nav-h) 3rem 3rem;
+      transform: translateX(-100%);
+      transition: transform 0.8s var(--ease-luxury);
+      overflow-y: auto;
+      border-right: 1px solid rgba(255,255,255,0.05);
+    }
+    #fs-menu.open { transform: translateX(0); }
+
+    .fs-menu-close {
+      position: absolute; top: 1.8rem; left: 3rem;
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rr-silver);
+      transition: color var(--t-fast);
+    }
+    .fs-menu-close:hover { color: var(--rr-white); }
+    .fs-menu-close-icon {
+      display: flex; flex-direction: column; gap: 6px;
+      width: 20px;
+    }
+    .fs-menu-close-icon span {
+      display: block; height: 1px; background: currentColor;
+      transition: transform var(--t-fast);
+    }
+    .fs-menu-close-icon span:first-child  { transform: translateY(3.5px) rotate(45deg); }
+    .fs-menu-close-icon span:last-child   { transform: translateY(-3.5px) rotate(-45deg); }
+
+    .fs-menu-nav {
+      margin-top: 2.5rem;
+      flex: 1;
+    }
+    .fs-menu-section { margin-bottom: 2.5rem; }
+    .fs-menu-section-label {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .fs-menu-link {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 300;
+      line-height: 1.3;
+      color: var(--rr-white);
+      padding: 0.35rem 0;
+      transition: color var(--t-fast), padding-left var(--t-fast);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .fs-menu-link:hover { color: var(--rr-champagne); padding-left: 0.5rem; }
+    .fs-menu-link:last-child { border-bottom: none; }
+
+    .fs-menu-sub-link {
+      display: block;
+      font-size: 12px; font-weight: 300;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--rr-silver);
+      padding: 0.5rem 0;
+      transition: color var(--t-fast);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .fs-menu-sub-link:hover { color: var(--rr-champagne); }
+
+    .fs-menu-footer {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .fs-menu-cta {
+      display: inline-block;
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--rr-champagne);
+      padding: 0.7rem 1.5rem;
+      border: 1px solid var(--rr-gold);
+      transition: background var(--t-fast), color var(--t-fast);
+    }
+    .fs-menu-cta:hover { background: var(--rr-gold); color: var(--rr-black); }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    #site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 700;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 var(--margin);
+      transition: background var(--t-mid), border-color var(--t-mid);
+    }
+    #site-header.scrolled {
+      background: rgba(10,10,10,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Left: hamburger */
+    .hdr-left {
+      display: flex; align-items: center; gap: 2rem;
+    }
+    .hdr-burger {
+      display: flex; flex-direction: column; gap: 5px;
+      width: 24px; cursor: pointer;
+      transition: opacity var(--t-fast);
+    }
+    .hdr-burger:hover { opacity: 0.6; }
+    .hdr-burger span {
+      display: block; height: 1px; background: var(--rr-white);
+      transition: width var(--t-fast);
+    }
+    .hdr-burger span:nth-child(2) { width: 65%; }
+    .hdr-burger:hover span:nth-child(2) { width: 100%; }
+
+    .hdr-nav-desktop {
+      display: flex; align-items: center; gap: 2rem;
+    }
+    .hdr-nav-link {
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rr-silver);
+      transition: color var(--t-fast);
+      position: relative;
+    }
+    .hdr-nav-link::after {
+      content: '';
+      position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1px; background: var(--rr-gold);
+      transform: scaleX(0);
+      transition: transform var(--t-fast);
+    }
+    .hdr-nav-link:hover { color: var(--rr-white); }
+    .hdr-nav-link:hover::after { transform: scaleX(1); }
+
+    /* Center: Logo */
+    .hdr-logo {
+      display: flex; justify-content: center; align-items: center;
+      text-decoration: none;
+    }
+    .hdr-logo-inner {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+    }
+    /* Double-R Spirit of Ecstasy SVG mark */
+    .hdr-rr-badge {
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hdr-wordmark {
+      font-family: var(--font-sans);
+      font-size: 8.5px; font-weight: 400;
+      letter-spacing: 0.38em; text-transform: uppercase;
+      color: var(--rr-silver);
+      white-space: nowrap;
+    }
+
+    /* Right: CTAs */
+    .hdr-right {
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 2rem;
+    }
+    .hdr-cta-link {
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rr-silver);
+      transition: color var(--t-fast);
+    }
+    .hdr-cta-link:hover { color: var(--rr-white); }
+    .hdr-cta-btn {
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rr-champagne);
+      padding: 0.55rem 1.2rem;
+      border: 1px solid rgba(196,168,130,0.5);
+      transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+    }
+    .hdr-cta-btn:hover {
+      background: var(--rr-gold);
+      color: var(--rr-black);
+      border-color: var(--rr-gold);
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      width: 100%; height: 100vh; min-height: 600px;
+      overflow: hidden;
+      background: var(--rr-black);
+    }
+
+    /* Video/image fill */
+    .hero-media {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+    }
+    /* Gradient overlay — bottom fade for legibility */
+    .hero-veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1)  0%,
+        rgba(0,0,0,0.05) 40%,
+        rgba(0,0,0,0.55) 80%,
+        rgba(0,0,0,0.85) 100%
+      );
+      z-index: 1;
+    }
+
+    /* Hero text block */
+    .hero-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      padding: 0 var(--margin) clamp(3rem, 6vh, 5rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+    .hero-eyebrow {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--rr-champagne);
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.8s ease 0.8s, transform 0.8s var(--ease) 0.8s;
+    }
+    .hero-eyebrow.in { opacity: 1; transform: none; }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 5vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--rr-white);
+      letter-spacing: 0.01em;
+      opacity: 0;
+      transform: translateY(1.5rem);
+      transition: opacity 1s ease 1s, transform 1s var(--ease-luxury) 1s;
+    }
+    .hero-title.in { opacity: 1; transform: none; }
+
+    .hero-right {
+      display: flex; flex-direction: column;
+      align-items: flex-start; gap: 1.2rem;
+      padding-bottom: 0.4rem;
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.9s ease 1.3s, transform 0.9s var(--ease) 1.3s;
+    }
+    .hero-right.in { opacity: 1; transform: none; }
+
+    .hero-desc {
+      font-size: clamp(13px, 1vw, 15px);
+      font-weight: 300;
+      color: var(--rr-silver);
+      max-width: 36ch;
+      line-height: 1.7;
+    }
+    .hero-cta-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+
+    /* CTA buttons */
+    .btn-rr {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 10.5px; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      transition: var(--t-mid);
+      white-space: nowrap;
+    }
+    .btn-rr-primary {
+      background: var(--rr-gold);
+      color: var(--rr-black);
+    }
+    .btn-rr-primary:hover { background: var(--rr-champagne); }
+    .btn-rr-ghost {
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--rr-white);
+    }
+    .btn-rr-ghost:hover {
+      border-color: var(--rr-champagne);
+      color: var(--rr-champagne);
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem; left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      opacity: 0;
+      transition: opacity 1s ease 1.8s;
+    }
+    .hero-scroll.in { opacity: 1; }
+    .hero-scroll-label {
+      font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      writing-mode: vertical-rl;
+    }
+    .hero-scroll-line {
+      width: 1px; height: 50px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+      animation: heroScroll 2s ease-in-out infinite;
+    }
+    @keyframes heroScroll {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+      50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      51%  { transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ============================================================
+       SECTION COMMONS
+    ============================================================ */
+    .section-head {
+      text-align: center;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .section-eyebrow {
+      display: block;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 4vw, 56px);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--rr-white);
+      letter-spacing: 0.02em;
+    }
+    .section-title-dark { color: var(--rr-black); }
+    .section-sub {
+      margin-top: 1rem;
+      font-size: clamp(13px, 1vw, 15px);
+      font-weight: 300;
+      color: var(--rr-silver);
+      max-width: 55ch;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* ============================================================
+       MODELS SECTION
+    ============================================================ */
+    .sec-models {
+      background: var(--rr-black);
+      padding: clamp(5rem, 10vw, 9rem) var(--margin);
+    }
+
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+    }
+
+    .model-card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      display: block;
+      color: var(--rr-white);
+    }
+
+    .model-card-media {
+      position: absolute; inset: 0;
+      transition: transform 1.2s var(--ease-luxury);
+    }
+    .model-card:hover .model-card-media { transform: scale(1.04); }
+
+    .model-card-veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.25) 50%,
+        transparent 100%
+      );
+      z-index: 1;
+      transition: background var(--t-mid);
+    }
+    .model-card:hover .model-card-veil {
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.3) 50%,
+        transparent 100%
+      );
+    }
+
+    .model-card-body {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      padding: 2rem 1.8rem;
+    }
+    .model-card-tag {
+      font-size: 9px; font-weight: 400;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .model-card-name {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 2.5vw, 34px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--rr-white);
+      margin-bottom: 0.9rem;
+    }
+    .model-card-cta {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      transition: color var(--t-fast);
+      opacity: 0;
+      transform: translateY(0.5rem);
+      transition: opacity var(--t-mid), transform var(--t-mid), color var(--t-fast);
+    }
+    .model-card:hover .model-card-cta {
+      opacity: 1; transform: none; color: var(--rr-champagne);
+    }
+    .model-card-arrow {
+      display: inline-block;
+      width: 2rem; height: 1px;
+      background: currentColor;
+      position: relative;
+    }
+    .model-card-arrow::after {
+      content: '';
+      position: absolute; right: 0; top: -3px;
+      width: 5px; height: 5px;
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    /* Featured card (spans 2 cols) */
+    .model-card-featured {
+      grid-column: span 2;
+      aspect-ratio: 2/1;
+    }
+    .model-card-featured .model-card-name {
+      font-size: clamp(30px, 3.5vw, 50px);
+    }
+
+    /* ============================================================
+       BLACK BADGE STRIP
+    ============================================================ */
+    .sec-black-badge {
+      background: var(--rr-deep);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 60vh;
+    }
+    .bb-media { position: relative; min-height: 420px; overflow: hidden; }
+    .bb-content {
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: clamp(3rem, 6vw, 6rem) clamp(2.5rem, 5vw, 6rem);
+      background: var(--rr-deep);
+    }
+    .bb-eyebrow {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 1.5rem;
+    }
+    .bb-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 3.5vw, 52px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--rr-white);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+    .bb-desc {
+      font-size: clamp(13px, 1vw, 15px);
+      font-weight: 300; line-height: 1.75;
+      color: var(--rr-silver);
+      max-width: 45ch;
+      margin-bottom: 2.5rem;
+    }
+    .bb-rule { width: 40px; height: 1px; background: var(--rr-gold); margin-bottom: 2rem; }
+
+    /* ============================================================
+       BESPOKE SECTION
+    ============================================================ */
+    .sec-bespoke {
+      position: relative;
+      height: 90vh; min-height: 500px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .bespoke-media { position: absolute; inset: 0; }
+    .bespoke-veil {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+    .bespoke-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: 0 var(--margin);
+      max-width: 800px;
+    }
+    .bespoke-eyebrow {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .bespoke-title {
+      font-family: var(--font-serif);
+      font-size: clamp(38px, 5.5vw, 80px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--rr-white);
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .bespoke-sub {
+      font-size: clamp(13px, 1vw, 16px);
+      font-weight: 300; line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      max-width: 48ch; margin: 0 auto 2.5rem;
+    }
+
+    /* ============================================================
+       INSPIRING GREATNESS EDITORIAL
+    ============================================================ */
+    .sec-editorial {
+      background: var(--rr-deep);
+      padding: clamp(5rem, 10vw, 9rem) var(--margin);
+    }
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      margin-top: 4rem;
+    }
+    .editorial-feature {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      display: block;
+      color: var(--rr-white);
+    }
+    .editorial-feature-media {
+      position: absolute; inset: 0;
+      transition: transform 1.2s var(--ease-luxury);
+    }
+    .editorial-feature:hover .editorial-feature-media { transform: scale(1.03); }
+    .editorial-veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%);
+      z-index: 1;
+    }
+    .editorial-body {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 2; padding: 2.5rem;
+    }
+    .editorial-category {
+      font-size: 9.5px; font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 0.7rem; display: block;
+    }
+    .editorial-title {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.2vw, 30px);
+      font-weight: 300; line-height: 1.2;
+      color: var(--rr-white);
+    }
+    .editorial-read {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 1rem;
+      transition: color var(--t-fast);
+    }
+    .editorial-feature:hover .editorial-read { color: var(--rr-champagne); }
+
+    /* ============================================================
+       STORIES / NEWS GRID
+    ============================================================ */
+    .sec-stories {
+      background: var(--rr-black);
+      padding: clamp(5rem, 10vw, 9rem) var(--margin);
+    }
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .story-card {
+      display: flex; flex-direction: column;
+      color: var(--rr-white);
+    }
+    .story-card-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .story-card-img-inner {
+      width: 100%; height: 100%;
+      transition: transform 1s var(--ease-luxury);
+    }
+    .story-card:hover .story-card-img-inner { transform: scale(1.04); }
+    .story-category {
+      font-size: 9.5px; font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 0.6rem; display: block;
+    }
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: clamp(18px, 1.6vw, 22px);
+      font-weight: 300; line-height: 1.25;
+      color: var(--rr-white);
+      margin-bottom: 0.8rem;
+    }
+    .story-excerpt {
+      font-size: clamp(12px, 0.88vw, 13px);
+      font-weight: 300; line-height: 1.7;
+      color: var(--rr-silver);
+      flex: 1;
+    }
+    .story-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-top: 1.2rem;
+      transition: gap var(--t-fast), color var(--t-fast);
+    }
+    .story-link:hover { gap: 0.9rem; color: var(--rr-champagne); }
+    .story-arrow { font-size: 14px; line-height: 1; }
+
+    /* ============================================================
+       COMMISSION CTA STRIP
+    ============================================================ */
+    .sec-commission {
+      background: var(--rr-charcoal);
+      padding: clamp(5rem, 10vw, 8rem) var(--margin);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .commission-left {}
+    .commission-eyebrow {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 1.5rem; display: block;
+    }
+    .commission-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4vw, 56px);
+      font-weight: 300; line-height: 1.1;
+      color: var(--rr-white);
+    }
+    .commission-right {
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .commission-desc {
+      font-size: clamp(13px, 1vw, 15px);
+      font-weight: 300; line-height: 1.75;
+      color: var(--rr-silver);
+      max-width: 45ch;
+    }
+    .commission-btns { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .site-footer {
+      background: var(--rr-deep);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Footer top: logo + newsletter */
+    .footer-top {
+      padding: clamp(4rem, 8vw, 6rem) var(--margin) clamp(3rem, 5vw, 4rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-logo {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 0.8rem;
+    }
+    .footer-logo-badge { width: 44px; height: 44px; }
+    .footer-logo-name {
+      font-family: var(--font-sans);
+      font-size: 9px; font-weight: 400;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--rr-silver);
+    }
+    .footer-logo-tagline {
+      font-family: var(--font-serif);
+      font-size: clamp(14px, 1.2vw, 17px);
+      font-weight: 300;
+      color: var(--rr-light);
+      font-style: italic;
+    }
+    .footer-newsletter {}
+    .footer-nl-label {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--rr-gold);
+      margin-bottom: 0.7rem; display: block;
+    }
+    .footer-nl-title {
+      font-family: var(--font-serif);
+      font-size: clamp(18px, 1.8vw, 24px);
+      font-weight: 300; line-height: 1.3;
+      color: var(--rr-white);
+      margin-bottom: 1.5rem;
+    }
+    .footer-nl-form {
+      display: flex; gap: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      max-width: 420px;
+    }
+    .footer-nl-input {
+      flex: 1;
+      background: none; border: none; outline: none;
+      font: inherit; font-weight: 300;
+      font-size: clamp(13px, 0.95vw, 15px);
+      color: var(--rr-white);
+      padding: 0.7rem 0;
+    }
+    .footer-nl-input::placeholder { color: rgba(255,255,255,0.25); }
+    .footer-nl-btn {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--rr-champagne);
+      padding: 0.7rem 0 0.7rem 1rem;
+      transition: color var(--t-fast);
+      white-space: nowrap;
+    }
+    .footer-nl-btn:hover { color: var(--rr-white); }
+
+    /* Footer nav */
+    .footer-nav {
+      padding: clamp(3rem, 6vw, 4.5rem) var(--margin);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-nav-col {}
+    .footer-nav-heading {
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--rr-champagne);
+      margin-bottom: 1.3rem; display: block;
+    }
+    .footer-nav-link {
+      display: block;
+      font-size: clamp(11px, 0.85vw, 13px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      padding: 0.3rem 0;
+      transition: color var(--t-fast);
+    }
+    .footer-nav-link:hover { color: var(--rr-white); }
+
+    /* Footer bottom */
+    .footer-bottom {
+      padding: 1.8rem var(--margin);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-legal {
+      display: flex; align-items: center; gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-legal-link {
+      font-size: 11px; font-weight: 300;
+      color: rgba(255,255,255,0.28);
+      transition: color var(--t-fast);
+    }
+    .footer-legal-link:hover { color: var(--rr-silver); }
+    .footer-copy {
+      font-size: 11px; font-weight: 300;
+      color: rgba(255,255,255,0.22);
+    }
+    .footer-social {
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .footer-social-link {
+      font-size: 10.5px; font-weight: 300;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      transition: color var(--t-fast);
+    }
+    .footer-social-link:hover { color: var(--rr-champagne); }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .rev {
+      opacity: 0; transform: translateY(2rem);
+      transition: opacity 0.9s var(--ease-luxury), transform 0.9s var(--ease-luxury);
+    }
+    .rev.in { opacity: 1; transform: none; }
+    .rev-d1 { transition-delay: 0.12s; }
+    .rev-d2 { transition-delay: 0.24s; }
+    .rev-d3 { transition-delay: 0.36s; }
+    .rev-fade { transform: none; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1100px) {
+      .models-grid { grid-template-columns: 1fr 1fr; }
+      .model-card-featured { grid-column: span 2; aspect-ratio: 16/9; }
+      .footer-nav { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .sec-black-badge { grid-template-columns: 1fr; }
+      .editorial-grid { grid-template-columns: 1fr; }
+      .sec-commission { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .stories-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 60px; }
+      .hdr-nav-desktop { display: none; }
+      .hdr-cta-btn { display: none; }
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .models-grid { grid-template-columns: 1fr; }
+      .model-card-featured { grid-column: span 1; aspect-ratio: 4/3; }
+      .footer-nav { grid-template-columns: 1fr 1fr; }
+      .stories-grid { grid-template-columns: 1fr; }
+      .hero-scroll { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      :root { --margin: 1.2rem; }
+      .footer-nav { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ============================================================
+       SPIRIT OF ECSTASY — SVG mark (inline)
+    ============================================================ */
+    .soe-svg { fill: none; }
+    .soe-rr  { fill: var(--rr-silver); }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV OVERLAY ───────────────────────────────────────── -->
+  <div id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ── FULLSCREEN MENU ──────────────────────────────────── -->
+  <nav id="fs-menu" aria-label="Site navigation" aria-hidden="true">
+    <button class="fs-menu-close" id="menu-close" aria-label="Close menu">
+      <span class="fs-menu-close-icon" aria-hidden="true">
+        <span></span><span></span>
+      </span>
+      Close
+    </button>
+
+    <div class="fs-menu-nav">
+
+      <div class="fs-menu-section">
+        <span class="fs-menu-section-label">Models</span>
+        <!-- MODEL LINKS PLACEHOLDER — add/remove as needed -->
+        <a href="#" class="fs-menu-link">Phantom</a>
+        <a href="#" class="fs-menu-link">Phantom Extended</a>
+        <a href="#" class="fs-menu-link">Ghost</a>
+        <a href="#" class="fs-menu-link">Cullinan</a>
+        <a href="#" class="fs-menu-link">Spectre</a>
+        <a href="#" class="fs-menu-link">Black Badge</a>
+        <a href="#" class="fs-menu-link">Droptail</a>
+      </div>
+
+      <div class="fs-menu-section">
+        <span class="fs-menu-section-label">Discover</span>
+        <a href="#" class="fs-menu-sub-link">Bespoke</a>
+        <a href="#" class="fs-menu-sub-link">Inspiring Greatness</a>
+        <a href="#" class="fs-menu-sub-link">Ownership</a>
+        <a href="#" class="fs-menu-sub-link">Financial Services</a>
+        <a href="#" class="fs-menu-sub-link">Provenance</a>
+        <a href="#" class="fs-menu-sub-link">Boutique</a>
+      </div>
+
+    </div>
+
+    <div class="fs-menu-footer">
+      <a href="#" class="fs-menu-cta">Find a Dealer</a>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ────────────────────────────────────────────── -->
+  <header id="site-header" role="banner">
+
+    <!-- Left: hamburger + desktop nav -->
+    <div class="hdr-left">
+      <button class="hdr-burger" id="menu-open" aria-label="Open navigation" aria-expanded="false" aria-controls="fs-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="hdr-nav-desktop" aria-label="Primary">
+        <a href="#" class="hdr-nav-link">Models</a>
+        <a href="#" class="hdr-nav-link">Bespoke</a>
+        <a href="#" class="hdr-nav-link">Inspiring Greatness</a>
+        <a href="#" class="hdr-nav-link">Ownership</a>
+      </nav>
+    </div>
+
+    <!-- Center: Logo (centered via grid) -->
+    <a href="#" class="hdr-logo" aria-label="Rolls-Royce Motor Cars — Home">
+      <div class="hdr-logo-inner">
+        <!--
+          ROLLS-ROYCE DOUBLE-R BADGE PLACEHOLDER
+          Replace the SVG below with the official Spirit of Ecstasy / RR badge SVG.
+        -->
+        <div class="hdr-rr-badge" aria-hidden="true">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" width="38" height="38">
+            <circle cx="19" cy="19" r="17" stroke="rgba(255,255,255,0.18)" stroke-width="0.8"/>
+            <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
+              font-family="'Cormorant', serif" font-size="14" font-weight="400"
+              fill="rgba(255,255,255,0.65)" letter-spacing="1">RR</text>
+          </svg>
+        </div>
+        <span class="hdr-wordmark">Rolls‑Royce Motor Cars</span>
+      </div>
+    </a>
+
+    <!-- Right: Utility links -->
+    <div class="hdr-right">
+      <a href="#" class="hdr-cta-link">My Rolls‑Royce</a>
+      <a href="#" class="hdr-cta-btn">Find a Dealer</a>
+    </div>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Hero">
+
+    <!-- HERO MEDIA PLACEHOLDER — Replace with <video> or <img> -->
+    <div class="hero-media" aria-hidden="true">
+      <div class="rr-ph" style="background:linear-gradient(135deg,#0d0d0d 0%,#1e1a16 50%,#0a0a0a 100%);">
+        <span class="rr-ph-label">Hero Video / Image — Replace with full-screen campaign asset</span>
+      </div>
+    </div>
+
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div>
+        <p class="hero-eyebrow" id="hero-eyebrow">
+          <!-- EYEBROW PLACEHOLDER -->
+          The Pinnacle of Luxury
+        </p>
+        <h1 class="hero-title" id="hero-title">
+          <!--
+            HERO HEADLINE PLACEHOLDER
+            Replace with campaign headline copy.
+          -->
+          Inspiring<br>Greatness
+        </h1>
+      </div>
+      <div class="hero-right" id="hero-right">
+        <p class="hero-desc">
+          <!-- HERO DESCRIPTION PLACEHOLDER -->
+          A confluence of exceptional and extraordinary narratives, as revealed by Rolls‑Royce.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#" class="btn-rr btn-rr-primary">
+            <!-- CTA PLACEHOLDER -->Explore Models
+          </a>
+          <a href="#" class="btn-rr btn-rr-ghost">
+            <!-- CTA PLACEHOLDER -->Discover Bespoke
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="hero-scroll" id="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-label">Scroll</span>
+      <span class="hero-scroll-line"></span>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MODELS
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="sec-models" aria-labelledby="models-heading">
+
+    <div class="section-head rev">
+      <span class="section-eyebrow">The Collection</span>
+      <span class="rr-rule"></span>
+      <h2 class="section-title" id="models-heading">
+        <!--
+          MODELS SECTION TITLE PLACEHOLDER
+        -->
+        Choose Your Rolls&#8209;Royce
+      </h2>
+    </div>
+
+    <div class="models-grid">
+
+      <!-- ── PHANTOM (featured) ── -->
+      <a href="#" class="model-card model-card-featured rev" aria-label="Discover Phantom">
+        <div class="model-card-media">
+          <!--
+            PHANTOM IMAGE PLACEHOLDER
+            Replace with: <img src="phantom.jpg" alt="Rolls-Royce Phantom" loading="lazy">
+          -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#0e0c0b 0%,#231f1a 60%,#100e0d 100%);">
+            <span class="rr-ph-label">Phantom — Campaign Image Placeholder</span>
+          </div>
+        </div>
+        <div class="model-card-veil" aria-hidden="true"></div>
+        <div class="model-card-body">
+          <span class="model-card-tag">Pinnacle</span>
+          <h3 class="model-card-name">
+            <!-- MODEL NAME PLACEHOLDER -->Phantom
+          </h3>
+          <span class="model-card-cta">
+            Discover <span class="model-card-arrow" aria-hidden="true"></span>
+          </span>
+        </div>
+      </a>
+
+      <!-- ── GHOST ── -->
+      <a href="#" class="model-card rev rev-d1" aria-label="Discover Ghost">
+        <div class="model-card-media">
+          <!-- GHOST IMAGE PLACEHOLDER -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#131213 0%,#201d20 60%,#0f0e10 100%);">
+            <span class="rr-ph-label">Ghost — Image Placeholder</span>
+          </div>
+        </div>
+        <div class="model-card-veil" aria-hidden="true"></div>
+        <div class="model-card-body">
+          <span class="model-card-tag">Saloon</span>
+          <h3 class="model-card-name">Ghost</h3>
+          <span class="model-card-cta">Discover <span class="model-card-arrow" aria-hidden="true"></span></span>
+        </div>
+      </a>
+
+      <!-- ── CULLINAN ── -->
+      <a href="#" class="model-card rev rev-d1" aria-label="Discover Cullinan">
+        <div class="model-card-media">
+          <!-- CULLINAN IMAGE PLACEHOLDER -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#0d1010 0%,#181e1e 60%,#0b0e0e 100%);">
+            <span class="rr-ph-label">Cullinan — Image Placeholder</span>
+          </div>
+        </div>
+        <div class="model-card-veil" aria-hidden="true"></div>
+        <div class="model-card-body">
+          <span class="model-card-tag">SUV</span>
+          <h3 class="model-card-name">Cullinan</h3>
+          <span class="model-card-cta">Discover <span class="model-card-arrow" aria-hidden="true"></span></span>
+        </div>
+      </a>
+
+      <!-- ── SPECTRE ── -->
+      <a href="#" class="model-card rev rev-d2" aria-label="Discover Spectre">
+        <div class="model-card-media">
+          <!-- SPECTRE IMAGE PLACEHOLDER -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#0d0d0f 0%,#1a1a22 60%,#0a0a10 100%);">
+            <span class="rr-ph-label">Spectre — Image Placeholder</span>
+          </div>
+        </div>
+        <div class="model-card-veil" aria-hidden="true"></div>
+        <div class="model-card-body">
+          <span class="model-card-tag">Electric Coupé</span>
+          <h3 class="model-card-name">Spectre</h3>
+          <span class="model-card-cta">Discover <span class="model-card-arrow" aria-hidden="true"></span></span>
+        </div>
+      </a>
+
+      <!-- ── DROPTAIL ── -->
+      <a href="#" class="model-card rev rev-d2" aria-label="Discover Droptail">
+        <div class="model-card-media">
+          <!-- DROPTAIL IMAGE PLACEHOLDER -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#100e08 0%,#201c10 60%,#0e0c06 100%);">
+            <span class="rr-ph-label">Droptail — Image Placeholder</span>
+          </div>
+        </div>
+        <div class="model-card-veil" aria-hidden="true"></div>
+        <div class="model-card-body">
+          <span class="model-card-tag">Coachbuild</span>
+          <h3 class="model-card-name">Droptail</h3>
+          <span class="model-card-cta">Discover <span class="model-card-arrow" aria-hidden="true"></span></span>
+        </div>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BLACK BADGE STRIP
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="sec-black-badge" aria-labelledby="bb-heading">
+
+    <div class="bb-media" aria-hidden="true">
+      <!--
+        BLACK BADGE IMAGE PLACEHOLDER
+        Replace with: <img src="black-badge.jpg" alt="Black Badge" loading="lazy">
+      -->
+      <div class="rr-ph" style="background:#050505; height:100%;">
+        <span class="rr-ph-label">Black Badge — Full Bleed Image Placeholder</span>
+      </div>
+    </div>
+
+    <div class="bb-content">
+      <span class="bb-eyebrow rev">Black Badge</span>
+      <div class="bb-rule rev rev-d1"></div>
+      <h2 class="bb-title rev rev-d1" id="bb-heading">
+        <!--
+          BLACK BADGE TITLE PLACEHOLDER
+        -->
+        The Alter Ego of<br>Rolls&#8209;Royce
+      </h2>
+      <p class="bb-desc rev rev-d2">
+        <!--
+          BLACK BADGE DESCRIPTION PLACEHOLDER
+        -->
+        Black Badge is the dark side of Rolls&#8209;Royce — a collection of motor cars designed
+        for those who defy convention and demand a motor car that reflects their uncompromising
+        individuality.
+      </p>
+      <div class="rev rev-d3">
+        <a href="#" class="btn-rr btn-rr-ghost">Explore Black Badge</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BESPOKE
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="sec-bespoke" aria-labelledby="bespoke-heading">
+
+    <!-- BESPOKE BG IMAGE PLACEHOLDER -->
+    <div class="bespoke-media" aria-hidden="true">
+      <div class="rr-ph" style="background:linear-gradient(135deg,#100e09 0%,#2a2218 50%,#0a0907 100%);">
+        <span class="rr-ph-label">Bespoke — Full-Screen Background Image Placeholder</span>
+      </div>
+    </div>
+    <div class="bespoke-veil" aria-hidden="true"></div>
+
+    <div class="bespoke-content">
+      <span class="bespoke-eyebrow rev">Rolls&#8209;Royce Bespoke</span>
+      <h2 class="bespoke-title rev rev-d1" id="bespoke-heading">
+        <!--
+          BESPOKE TITLE PLACEHOLDER
+        -->
+        A Rolls&#8209;Royce<br>Wholly Unique to You
+      </h2>
+      <p class="bespoke-sub rev rev-d2">
+        <!--
+          BESPOKE SUB PLACEHOLDER
+        -->
+        Choose from exclusive Bespoke collections, or collaborate with our master craftspeople
+        and designers to create a Rolls&#8209;Royce as individual as you are.
+      </p>
+      <div class="rev rev-d3">
+        <a href="#" class="btn-rr btn-rr-primary">Discover Bespoke</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       INSPIRING GREATNESS EDITORIAL
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="sec-editorial" aria-labelledby="editorial-heading">
+
+    <div class="section-head rev">
+      <span class="section-eyebrow">Inspiring Greatness</span>
+      <span class="rr-rule"></span>
+      <h2 class="section-title" id="editorial-heading">
+        <!-- EDITORIAL TITLE PLACEHOLDER -->
+        Stories of the Extraordinary
+      </h2>
+      <p class="section-sub">
+        <!-- EDITORIAL SUB PLACEHOLDER -->
+        A window into the worlds of those who defy the ordinary — people on
+        unrelenting quests for greatness.
+      </p>
+    </div>
+
+    <div class="editorial-grid">
+
+      <!-- STORY 1 -->
+      <a href="#" class="editorial-feature rev" aria-label="Read: Design Integrity">
+        <div class="editorial-feature-media">
+          <!-- EDITORIAL IMAGE 1 PLACEHOLDER -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#0f0d0b 0%,#2a2318 100%);">
+            <span class="rr-ph-label">Editorial Image 1 — Placeholder</span>
+          </div>
+        </div>
+        <div class="editorial-veil" aria-hidden="true"></div>
+        <div class="editorial-body">
+          <span class="editorial-category"><!-- CATEGORY PLACEHOLDER -->Design</span>
+          <h3 class="editorial-title">
+            <!--
+              EDITORIAL TITLE 1 PLACEHOLDER
+            -->
+            Three Inspiring Firsts — 3D Ink Layering,<br>Marquetry &amp; Gold Leafing
+          </h3>
+          <span class="editorial-read">
+            Read More
+            <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- STORY 2 -->
+      <a href="#" class="editorial-feature rev rev-d1" aria-label="Read: Heritage Restoration">
+        <div class="editorial-feature-media">
+          <!-- EDITORIAL IMAGE 2 PLACEHOLDER -->
+          <div class="rr-ph" style="background:linear-gradient(160deg,#0d0c10 0%,#1e1c28 100%);">
+            <span class="rr-ph-label">Editorial Image 2 — Placeholder</span>
+          </div>
+        </div>
+        <div class="editorial-veil" aria-hidden="true"></div>
+        <div class="editorial-body">
+          <span class="editorial-category">Heritage</span>
+          <h3 class="editorial-title">
+            <!--
+              EDITORIAL TITLE 2 PLACEHOLDER
+            -->
+            Twenty Years On — The First Phantom VII<br>Returns to Goodwood
+          </h3>
+          <span class="editorial-read">
+            Read More
+            <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       LATEST STORIES
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="sec-stories" aria-labelledby="stories-heading">
+
+    <div class="section-head rev">
+      <span class="section-eyebrow">Latest</span>
+      <span class="rr-rule"></span>
+      <h2 class="section-title" id="stories-heading">
+        <!-- STORIES HEADING PLACEHOLDER -->
+        From the House of Rolls&#8209;Royce
+      </h2>
+    </div>
+
+    <div class="stories-grid">
+
+      <!-- STORY CARD 1 -->
+      <article class="story-card rev">
+        <div class="story-card-img">
+          <div class="story-card-img-inner">
+            <!-- STORY IMAGE PLACEHOLDER -->
+            <div class="rr-ph" style="background:linear-gradient(135deg,#111 0%,#1e1a14 100%);">
+              <span class="rr-ph-label">Story 1 Image — Placeholder</span>
+            </div>
+          </div>
+        </div>
+        <span class="story-category"><!-- CATEGORY PLACEHOLDER -->Bespoke</span>
+        <h3 class="story-title">
+          <!-- STORY TITLE PLACEHOLDER -->
+          A Year of Marvels and Masterpieces: Bespoke Highlights
+        </h3>
+        <p class="story-excerpt">
+          <!-- STORY EXCERPT PLACEHOLDER -->
+          In 2025, the Rolls&#8209;Royce Bespoke Collective of designers, engineers and
+          craftspeople brought to life some of the most creative and ambitious examples of
+          artistry ever seen.
+        </p>
+        <a href="#" class="story-link">
+          Read More <span class="story-arrow" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <!-- STORY CARD 2 -->
+      <article class="story-card rev rev-d1">
+        <div class="story-card-img">
+          <div class="story-card-img-inner">
+            <!-- STORY IMAGE PLACEHOLDER -->
+            <div class="rr-ph" style="background:linear-gradient(135deg,#0e0e12 0%,#1a1a24 100%);">
+              <span class="rr-ph-label">Story 2 Image — Placeholder</span>
+            </div>
+          </div>
+        </div>
+        <span class="story-category">Spectre</span>
+        <h3 class="story-title">
+          <!-- STORY TITLE PLACEHOLDER -->
+          Spectre: The First Fully Electric Rolls&#8209;Royce
+        </h3>
+        <p class="story-excerpt">
+          <!-- STORY EXCERPT PLACEHOLDER -->
+          More than a century of luxury craftsmanship meets the electrified future.
+          Spectre represents a bold new chapter in the history of the marque.
+        </p>
+        <a href="#" class="story-link">
+          Read More <span class="story-arrow" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <!-- STORY CARD 3 -->
+      <article class="story-card rev rev-d2">
+        <div class="story-card-img">
+          <div class="story-card-img-inner">
+            <!-- STORY IMAGE PLACEHOLDER -->
+            <div class="rr-ph" style="background:linear-gradient(135deg,#100d09 0%,#20180f 100%);">
+              <span class="rr-ph-label">Story 3 Image — Placeholder</span>
+            </div>
+          </div>
+        </div>
+        <span class="story-category"><!-- CATEGORY PLACEHOLDER -->Provenance</span>
+        <h3 class="story-title">
+          <!-- STORY TITLE PLACEHOLDER -->
+          Provenance: The Art of Acquiring a Pre-Owned Rolls&#8209;Royce
+        </h3>
+        <p class="story-excerpt">
+          <!-- STORY EXCERPT PLACEHOLDER -->
+          Every pre-owned Rolls&#8209;Royce carries a story. Our certified Provenance programme
+          ensures each motor car meets the most exacting standards before it finds a new custodian.
+        </p>
+        <a href="#" class="story-link">
+          Read More <span class="story-arrow" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <!--
+        ADD MORE STORY CARDS HERE
+        Copy a <article class="story-card"> block above.
+      -->
+
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BEGIN YOUR COMMISSION
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="sec-commission" aria-labelledby="commission-heading">
+
+    <div class="commission-left">
+      <span class="commission-eyebrow rev">Begin Your Commission</span>
+      <h2 class="commission-title rev rev-d1" id="commission-heading">
+        <!--
+          COMMISSION TITLE PLACEHOLDER
+        -->
+        Configure Your<br>Rolls&#8209;Royce
+      </h2>
+    </div>
+
+    <div class="commission-right">
+      <p class="commission-desc rev">
+        <!--
+          COMMISSION DESCRIPTION PLACEHOLDER
+        -->
+        Working with our Bespoke team and master craftspeople, every detail of your
+        Rolls&#8209;Royce can be tailored precisely to your vision — from the exterior
+        finish to the Gallery and beyond.
+      </p>
+      <div class="commission-btns rev rev-d1">
+        <a href="#" class="btn-rr btn-rr-primary">Configure Now</a>
+        <a href="#" class="btn-rr btn-rr-ghost">Request a Consultation</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+
+    <!-- Top: logo + newsletter -->
+    <div class="footer-top">
+
+      <div class="footer-logo">
+        <!--
+          FOOTER LOGO PLACEHOLDER
+          Replace SVG below with official RR badge.
+        -->
+        <svg class="footer-logo-badge" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="20" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+          <text x="50%" y="57%" dominant-baseline="middle" text-anchor="middle"
+            font-family="'Cormorant', serif" font-size="16" font-weight="300"
+            fill="rgba(255,255,255,0.5)" letter-spacing="1.5">RR</text>
+        </svg>
+        <span class="footer-logo-name">Rolls-Royce Motor Cars</span>
+        <span class="footer-logo-tagline">Inspiring Greatness</span>
+      </div>
+
+      <div class="footer-newsletter">
+        <span class="footer-nl-label">Subscribe</span>
+        <p class="footer-nl-title">
+          <!-- NEWSLETTER TITLE PLACEHOLDER -->
+          Stay connected with<br>the world of Rolls&#8209;Royce
+        </p>
+        <form class="footer-nl-form" onsubmit="submitNL(event)" aria-label="Newsletter sign-up">
+          <input
+            type="email"
+            class="footer-nl-input"
+            name="email"
+            placeholder="Your email address"
+            aria-label="Email address"
+            required
+          >
+          <button type="submit" class="footer-nl-btn">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Nav columns -->
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Models</span>
+        <!-- NAV LINKS PLACEHOLDER — update hrefs when pages exist -->
+        <a href="#" class="footer-nav-link">Phantom</a>
+        <a href="#" class="footer-nav-link">Phantom Extended</a>
+        <a href="#" class="footer-nav-link">Ghost</a>
+        <a href="#" class="footer-nav-link">Cullinan</a>
+        <a href="#" class="footer-nav-link">Spectre</a>
+        <a href="#" class="footer-nav-link">Droptail</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Black Badge</span>
+        <a href="#" class="footer-nav-link">Black Badge Ghost</a>
+        <a href="#" class="footer-nav-link">Black Badge Cullinan</a>
+        <a href="#" class="footer-nav-link">Black Badge Spectre</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Bespoke</span>
+        <a href="#" class="footer-nav-link">Discover Bespoke</a>
+        <a href="#" class="footer-nav-link">Collections</a>
+        <a href="#" class="footer-nav-link">Inspiration</a>
+        <a href="#" class="footer-nav-link">Configure</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Discover</span>
+        <a href="#" class="footer-nav-link">Inspiring Greatness</a>
+        <a href="#" class="footer-nav-link">Ownership</a>
+        <a href="#" class="footer-nav-link">Financial Services</a>
+        <a href="#" class="footer-nav-link">Provenance</a>
+        <a href="#" class="footer-nav-link">Boutique</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Company</span>
+        <a href="#" class="footer-nav-link">About Rolls&#8209;Royce</a>
+        <a href="#" class="footer-nav-link">Press</a>
+        <a href="#" class="footer-nav-link">Careers</a>
+        <a href="#" class="footer-nav-link">Find a Dealer</a>
+        <a href="#" class="footer-nav-link">Contact Us</a>
+      </div>
+
+    </nav>
+
+    <!-- Bottom: legal + social -->
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <span class="footer-copy">
+          <!-- COPYRIGHT PLACEHOLDER -->
+          &copy; Rolls-Royce Motor Cars Limited 2025
+        </span>
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Cookie Policy</a>
+        <a href="#" class="footer-legal-link">Legal Notice</a>
+        <a href="#" class="footer-legal-link">Accessibility</a>
+        <a href="#" class="footer-legal-link">Modern Slavery</a>
+      </div>
+
+      <div class="footer-social">
+        <!-- SOCIAL LINKS PLACEHOLDER -->
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">Facebook</a>
+        <a href="#" class="footer-social-link">YouTube</a>
+        <a href="#" class="footer-social-link">LinkedIn</a>
+        <a href="#" class="footer-social-link">WeChat</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════════════════ -->
+  <script>
+    'use strict';
+
+    /* ── MENU ────────────────────────────────────────────────── */
+    const navOverlay = document.getElementById('nav-overlay');
+    const fsMenu     = document.getElementById('fs-menu');
+    const menuOpen   = document.getElementById('menu-open');
+    const menuClose  = document.getElementById('menu-close');
+
+    function openMenu () {
+      navOverlay.classList.add('open');
+      fsMenu.classList.add('open');
+      fsMenu.setAttribute('aria-hidden', 'false');
+      menuOpen.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu () {
+      navOverlay.classList.remove('open');
+      fsMenu.classList.remove('open');
+      fsMenu.setAttribute('aria-hidden', 'true');
+      menuOpen.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    menuOpen.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    navOverlay.addEventListener('click', closeMenu);
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    /* ── HERO ANIMATIONS ─────────────────────────────────────── */
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('hero-eyebrow').classList.add('in');
+        document.getElementById('hero-title').classList.add('in');
+        document.getElementById('hero-right').classList.add('in');
+        document.getElementById('hero-scroll').classList.add('in');
+      }, 400);
+    });
+
+    /* ── HEADER SCROLL STATE ─────────────────────────────────── */
+    const siteHeader = document.getElementById('site-header');
+    let   rafPending = false;
+
+    window.addEventListener('scroll', () => {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(() => {
+        siteHeader.classList.toggle('scrolled', window.scrollY > 60);
+        rafPending = false;
+      });
+    }, { passive: true });
+
+    /* ── SCROLL REVEAL ───────────────────────────────────────── */
+    const revIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.rev').forEach(el => revIO.observe(el));
+
+    /* ── NEWSLETTER ──────────────────────────────────────────── */
+    function submitNL (e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      if (btn) btn.textContent = 'Thank you';
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
