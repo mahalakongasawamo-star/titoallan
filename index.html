@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telha Clarke — Melbourne based Architecture &amp; Interior Design studio</title>
+  <meta name="description" content="Melbourne based Architecture &amp; Interior Design studio, designing various project typologies across Australia and Internationally.">
+  <meta property="og:title" content="Telha Clarke — Architecture &amp; Interior Design">
+  <meta property="og:description" content="Melbourne based Architecture &amp; Interior Design studio.">
+  <meta property="og:type" content="website">
+
+  <!-- DM Sans — closest free substitute to Europa-Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --black:   #000000;
+      --white:   #ffffff;
+      --mist:    #CACFCB;   /* sage-grey accent */
+      --font:    'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      --margin:        1.6rem;
+      --header-h:      3.8rem;
+      --ease-out:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-in-out:   cubic-bezier(0.76, 0, 0.24, 1);
+      --t-base:        0.65s var(--ease-out);
+      --t-fast:        0.3s  var(--ease-out);
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      font-size: clamp(14px, 1.05vw, 17px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--black);
+      background: var(--black);
+      overflow-x: hidden;
+    }
+    a  { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+    address { font-style: normal; }
+
+    /* ============================================================
+       PAGE FRAMES (thin black border strips)
+    ============================================================ */
+    .frame {
+      position: fixed;
+      background: var(--black);
+      z-index: 600;
+      pointer-events: none;
+      top: 0;
+      height: 100vh;
+      width: var(--margin);
+    }
+    .frame-l { left: 0; }
+    .frame-r { right: 0; }
+
+    /* ============================================================
+       LOADER
+    ============================================================ */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: var(--black);
+      z-index: 9999;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--margin);
+      transition: opacity 0.9s var(--ease-in-out), transform 0.9s var(--ease-in-out);
+    }
+    #loader.done {
+      opacity: 0;
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+    .loader-row {
+      display: flex;
+      gap: 0.4em;
+      color: var(--white);
+      font-size: clamp(13px, 1vw, 16px);
+      letter-spacing: 0.02em;
+    }
+    #loader-num { color: var(--mist); }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    #site-header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      padding: 0 var(--margin) 0.55rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto auto auto;
+      align-items: end;
+      gap: 0 1rem;
+      z-index: 500;
+      color: var(--black);
+      transition: background var(--t-fast), backdrop-filter var(--t-fast), color var(--t-fast);
+    }
+    #site-header.scrolled {
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(10px);
+    }
+    #site-header.on-dark { color: var(--white); }
+    #site-header.on-dark.scrolled { color: var(--black); }
+
+    /* Logo */
+    .hdr-logo {
+      display: flex;
+      align-items: center;
+      width: 150px;
+      flex-shrink: 0;
+    }
+    .hdr-logo svg { width: 100%; height: auto; fill: currentColor; }
+
+    /* Desktop nav */
+    .hdr-nav {
+      display: flex;
+      align-items: flex-end;
+      gap: 0;
+      padding-left: 1.5rem;
+    }
+    .hdr-nav-link {
+      font-size: inherit;
+      transition: opacity var(--t-fast);
+      white-space: nowrap;
+    }
+    .hdr-nav-link::after { content: ','; margin-right: 0.3em; }
+    .hdr-nav-link:last-child::after { content: ''; margin-right: 0; }
+    .hdr-nav-link:hover { opacity: 0.35; }
+
+    /* Time */
+    .hdr-time {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.1em;
+      font-size: clamp(11px, 0.82vw, 13px);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      opacity: 0.7;
+    }
+
+    /* Location */
+    .hdr-loc {
+      font-size: clamp(11px, 0.82vw, 13px);
+      opacity: 0.55;
+      white-space: nowrap;
+    }
+
+    /* Contact */
+    .hdr-contact {
+      font-size: inherit;
+      transition: opacity var(--t-fast);
+      white-space: nowrap;
+    }
+    .hdr-contact:hover { opacity: 0.35; }
+
+    /* Mobile menu toggle (hidden on desktop) */
+    .hdr-toggle {
+      display: none;
+      overflow: hidden;
+      height: 1.2em;
+      align-items: center;
+      font-size: inherit;
+    }
+
+    /* ============================================================
+       FULLSCREEN MENU
+    ============================================================ */
+    #menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--t-base);
+    }
+    #menu-overlay.open { opacity: 1; pointer-events: all; }
+
+    #fullscreen-menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
+      background: var(--black);
+      z-index: 800;
+      display: flex;
+      flex-direction: column;
+      padding: var(--margin);
+      transform: translateY(-100%);
+      transition: transform 0.75s var(--ease-in-out);
+    }
+    #fullscreen-menu.open { transform: translateY(0); }
+
+    .menu-close {
+      align-self: flex-end;
+      color: var(--white);
+      font-size: inherit;
+      transition: opacity var(--t-fast);
+      margin-bottom: 1.5rem;
+    }
+    .menu-close:hover { opacity: 0.4; }
+
+    .menu-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: auto;
+    }
+    .menu-nav-link {
+      color: var(--white);
+      font-size: clamp(40px, 9vw, 80px);
+      font-weight: 400;
+      line-height: 1;
+      overflow: hidden;
+      transition: opacity var(--t-fast);
+    }
+    .menu-nav-link:hover { opacity: 0.35; }
+
+    .menu-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .menu-social a {
+      color: var(--mist);
+      font-size: clamp(12px, 0.9vw, 14px);
+      transition: opacity var(--t-fast);
+    }
+    .menu-social a:hover { opacity: 0.5; }
+
+    /* ============================================================
+       MAIN (white background for content below hero)
+    ============================================================ */
+    #main { background: var(--white); position: relative; }
+
+    /* ============================================================
+       COVER / HERO
+    ============================================================ */
+    .cover {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 560px;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    /* Parallax image layer */
+    .cover-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 115%;
+      top: -7.5%;
+      will-change: transform;
+    }
+    /* Placeholder */
+    .img-ph {
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, #141414 0%, #2a2a2a 55%, #181818 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 1.5rem;
+    }
+    .img-ph-label {
+      color: rgba(255,255,255,0.12);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .img-ph-light { background: #DDDDD8; }
+    .img-ph-light .img-ph-label { color: rgba(0,0,0,0.2); }
+    .img-ph-mid { background: #1c1c1c; }
+
+    /* Dark overlay */
+    .cover-veil {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.22);
+      z-index: 1;
+    }
+
+    /* Scroll indicator */
+    .cover-scroll {
+      position: absolute;
+      bottom: var(--margin);
+      left: var(--margin);
+      z-index: 2;
+      color: var(--white);
+      font-size: clamp(12px, 0.85vw, 14px);
+      display: flex;
+      align-items: center;
+      gap: 0.15em;
+      opacity: 0;
+      transform: translateY(0.8rem);
+      transition: opacity 0.9s ease 1.4s, transform 0.9s var(--ease-out) 1.4s;
+    }
+    .cover-scroll.in { opacity: 1; transform: translateY(0); }
+    .cover-scroll-br { opacity: 0.4; }
+    .scroll-line {
+      display: block;
+      width: 1px;
+      height: 44px;
+      background: rgba(255,255,255,0.45);
+      margin-left: 0.7rem;
+      transform-origin: top;
+      animation: scrollPulse 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      49%  { transform: scaleY(1); transform-origin: top; }
+      50%  { transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* Hero headline */
+    .cover-headline {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      z-index: 2;
+      padding: 0 var(--margin) var(--margin);
+      color: var(--white);
+      font-size: clamp(26px, 3.8vw, 58px);
+      font-weight: 400;
+      line-height: 1.06;
+      text-align: right;
+    }
+    .cover-headline-inner {
+      display: block;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 1s ease 0.9s, transform 1s var(--ease-out) 0.9s;
+    }
+    .cover-headline-inner.in { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       STUDIO SECTION  (01)
+    ============================================================ */
+    .sec-studio {
+      background: var(--white);
+      padding: 8rem var(--margin) 7rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem 5rem;
+      align-items: start;
+    }
+
+    .sec-label {
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+      font-size: clamp(10px, 0.78vw, 12px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--mist);
+      margin-bottom: 2.2rem;
+    }
+    .sec-label-num { color: var(--black); }
+
+    .studio-acknowledgment {
+      font-size: clamp(12px, 0.84vw, 14px);
+      line-height: 1.65;
+      color: rgba(0,0,0,0.48);
+      max-width: 44ch;
+      margin-bottom: 3rem;
+    }
+
+    .studio-tagline {
+      font-size: clamp(24px, 2.8vw, 44px);
+      font-weight: 400;
+      line-height: 1.12;
+      max-width: 18ch;
+    }
+
+    .studio-r { padding-top: 2rem; }
+
+    .studio-img-wrap {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .studio-desc-lbl {
+      font-size: clamp(14px, 1vw, 16px);
+      font-style: italic;
+      color: rgba(0,0,0,0.5);
+      margin-bottom: 1rem;
+    }
+
+    .studio-desc {
+      font-size: clamp(13px, 0.96vw, 15px);
+      line-height: 1.65;
+      color: rgba(0,0,0,0.62);
+      max-width: 55ch;
+    }
+
+    /* ============================================================
+       WORKS SECTION  (02)
+    ============================================================ */
+    .sec-works {
+      background: var(--white);
+      padding: 2rem 0 10rem;
+      overflow: hidden;
+    }
+
+    .works-hdr {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 var(--margin);
+      margin-bottom: 4rem;
+    }
+    .works-hdr-l {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5rem;
+    }
+    .works-num { font-size: clamp(10px, 0.78vw, 12px); color: var(--mist); text-transform: uppercase; }
+    .works-h2  { font-size: clamp(28px, 3.8vw, 60px); font-weight: 400; line-height: 1; }
+    .works-yr  { font-size: clamp(11px, 0.84vw, 13px); color: var(--mist); }
+
+    .works-list { display: flex; flex-direction: column; gap: 5rem; }
+
+    .work-item {
+      display: block;
+      width: 100%;
+      color: var(--black);
+      cursor: pointer;
+    }
+    .work-item-title-row {
+      display: flex;
+      align-items: center;
+      font-size: clamp(34px, 5.2vw, 84px);
+      font-weight: 400;
+      line-height: 1;
+      padding: 0 var(--margin);
+    }
+    .work-bracket-l { flex: 1; text-align: right;  opacity: 0.28; }
+    .work-bracket-r { flex: 1; text-align: left;   opacity: 0.28; }
+    .work-name      { flex: 3; text-align: center; }
+
+    .work-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      margin-top: -0.8rem;
+    }
+    .work-img .img-ph {
+      transition: transform 0.85s var(--ease-out);
+      transform: scale(1.04);
+    }
+    .work-item:hover .work-img .img-ph { transform: scale(1); }
+
+    .work-meta {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem var(--margin);
+      font-size: clamp(11px, 0.84vw, 13px);
+      color: var(--mist);
+    }
+
+    /* ============================================================
+       VISION SECTION
+    ============================================================ */
+    .sec-vision {
+      background: var(--black);
+      color: var(--white);
+      position: relative;
+    }
+
+    /* Tall scroll-space that drives the sticky panel */
+    .vision-track { position: relative; }
+    .vision-spacer { height: 320vh; }
+
+    .vision-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      align-items: center;
+      gap: 3rem;
+      padding: 0 var(--margin);
+    }
+
+    /* Left: text */
+    .vision-lbl {
+      display: flex;
+      align-items: baseline;
+      gap: 1.2rem;
+      font-size: clamp(10px, 0.78vw, 12px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--mist);
+      margin-bottom: 3rem;
+    }
+    .vision-lbl-num { opacity: 0.38; }
+
+    .vision-titles { margin-bottom: 3rem; }
+    .vision-title-item {
+      display: block;
+      font-size: clamp(38px, 5vw, 76px);
+      font-weight: 400;
+      line-height: 1.06;
+      opacity: 0.28;
+      transition: opacity 0.5s ease;
+      will-change: opacity;
+    }
+    .vision-title-item.active { opacity: 1; }
+
+    .vision-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: clamp(11px, 0.84vw, 13px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.55);
+      transition: color var(--t-fast);
+    }
+    .vision-cta:hover { color: var(--white); }
+    .vision-arrow {
+      display: inline-block;
+      width: 2.5rem;
+      height: 1px;
+      background: currentColor;
+      position: relative;
+    }
+    .vision-arrow::after {
+      content: '';
+      position: absolute;
+      right: 0; top: -4px;
+      width: 7px; height: 7px;
+      border-top:   1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    /* Right: image */
+    .vision-img-col {
+      height: 70vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .vision-img-col .img-ph {
+      height: 130%;
+      top: 0;
+      position: absolute;
+      left: 0; right: 0;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--white);
+      padding: 6rem var(--margin) 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* CTA row */
+    .footer-cta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 4rem;
+      margin-bottom: 5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .footer-cta-ttl {
+      font-size: clamp(26px, 3.6vw, 56px);
+      font-weight: 400;
+      line-height: 1.1;
+      max-width: 14ch;
+    }
+    .footer-cta-btn {
+      display: inline-block;
+      font-size: clamp(11px, 0.84vw, 13px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.8rem 1.6rem;
+      border: 1px solid var(--black);
+      color: var(--black);
+      white-space: nowrap;
+      transition: background var(--t-fast), color var(--t-fast);
+    }
+    .footer-cta-btn:hover { background: var(--black); color: var(--white); }
+
+    /* Newsletter */
+    .footer-nl { margin-bottom: 5rem; }
+    .footer-nl-lbl {
+      font-size: clamp(11px, 0.84vw, 13px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(0,0,0,0.45);
+      margin-bottom: 0.9rem;
+    }
+    .footer-nl-form {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 0.5rem;
+      max-width: 380px;
+    }
+    .footer-nl-input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      font: inherit;
+      font-size: clamp(14px, 1vw, 16px);
+      color: var(--black);
+      padding: 0.2rem 0;
+    }
+    .footer-nl-input::placeholder { color: rgba(0,0,0,0.28); }
+    .footer-nl-btn {
+      font-size: clamp(10px, 0.78vw, 12px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(0,0,0,0.45);
+      transition: color var(--t-fast);
+    }
+    .footer-nl-btn:hover { color: var(--black); }
+
+    /* Main footer grid */
+    .footer-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    .footer-nav-col { display: flex; flex-direction: column; gap: 0.55rem; }
+    .footer-nav-link {
+      font-size: clamp(13px, 0.96vw, 15px);
+      transition: opacity var(--t-fast);
+    }
+    .footer-nav-link:hover { opacity: 0.35; }
+
+    .footer-addr { line-height: 1.7; }
+    .footer-addr-line { font-size: clamp(12px, 0.84vw, 14px); color: rgba(0,0,0,0.55); }
+
+    .footer-contacts { display: flex; flex-direction: column; gap: 0.9rem; }
+    .footer-contact-row { display: flex; gap: 1rem; align-items: flex-start; }
+    .footer-c-lbl {
+      font-size: clamp(10px, 0.72vw, 11px);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--mist);
+      min-width: 1.2rem;
+      padding-top: 0.1em;
+    }
+    .footer-c-val { font-size: clamp(12px, 0.84vw, 14px); color: rgba(0,0,0,0.55); }
+    .footer-c-val a:hover { text-decoration: underline; }
+
+    .footer-social { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 1.5rem; }
+    .footer-social a {
+      font-size: clamp(12px, 0.84vw, 14px);
+      color: rgba(0,0,0,0.55);
+      transition: opacity var(--t-fast);
+    }
+    .footer-social a:hover { opacity: 0.4; }
+
+    /* Bottom bar */
+    .footer-btm {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    .footer-btm-l { display: flex; flex-direction: column; gap: 0.3rem; }
+    .footer-btm-copy {
+      font-size: clamp(10px, 0.78vw, 12px);
+      color: rgba(0,0,0,0.38);
+    }
+    .footer-btm-links { display: flex; gap: 1.5rem; margin-top: 0.35rem; }
+    .footer-btm-link {
+      font-size: clamp(10px, 0.78vw, 12px);
+      color: rgba(0,0,0,0.38);
+      transition: color var(--t-fast);
+    }
+    .footer-btm-link:hover { color: var(--black); }
+    .footer-back-top {
+      font-size: clamp(10px, 0.78vw, 12px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(0,0,0,0.38);
+      transition: color var(--t-fast);
+    }
+    .footer-back-top:hover { color: var(--black); }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .rev {
+      opacity: 0;
+      transform: translateY(1.8rem);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .rev.in { opacity: 1; transform: none; }
+    .rev-d1 { transition-delay: 0.1s; }
+    .rev-d2 { transition-delay: 0.2s; }
+    .rev-d3 { transition-delay: 0.3s; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .sec-studio { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .vision-sticky { grid-template-columns: 1fr; }
+      .vision-img-col { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --margin: 1.2rem; --header-h: 3.2rem; }
+      .hdr-nav, .hdr-time, .hdr-loc, .hdr-contact { display: none; }
+      .hdr-toggle { display: flex; }
+      #site-header { grid-template-columns: 1fr auto; }
+      .cover-headline { font-size: clamp(22px, 6.5vw, 38px); text-align: left; }
+      .works-h2 { font-size: clamp(22px, 6vw, 40px); }
+      .work-item-title-row { font-size: clamp(26px, 8vw, 52px); }
+      .footer-cta { flex-direction: column; align-items: flex-start; gap: 2rem; }
+      .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+      .vision-title-item { font-size: clamp(32px, 9vw, 56px); }
+    }
+
+    @media (max-width: 480px) {
+      .studio-tagline { font-size: clamp(20px, 6.5vw, 30px); }
+      .work-item-title-row { font-size: clamp(22px, 9vw, 40px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── LOADER ─────────────────────────────────────────────── -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-row">
+      <span>Loading</span>
+      <span id="loader-num">0</span>
+      <span>%</span>
+    </div>
+  </div>
+
+  <!-- ── PAGE FRAMES ────────────────────────────────────────── -->
+  <div class="frame frame-l" aria-hidden="true"></div>
+  <div class="frame frame-r" aria-hidden="true"></div>
+
+  <!-- ── MENU OVERLAY ──────────────────────────────────────── -->
+  <div id="menu-overlay" aria-hidden="true"></div>
+
+  <!-- ── FULLSCREEN NAV ────────────────────────────────────── -->
+  <nav id="fullscreen-menu" aria-label="Full screen navigation" aria-hidden="true">
+    <button class="menu-close" id="menu-close" aria-label="Close navigation">Close</button>
+    <ul class="menu-nav">
+      <li><a href="#" class="menu-nav-link">Home</a></li>
+      <li><a href="#" class="menu-nav-link">Work</a></li>
+      <li><a href="#" class="menu-nav-link">Process</a></li>
+      <li><a href="#" class="menu-nav-link">Studio</a></li>
+      <li><a href="#" class="menu-nav-link">Contact</a></li>
+    </ul>
+    <div class="menu-social">
+      <a href="#">Instagram,</a>
+      <a href="#">Linkedin</a>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header id="site-header" role="banner">
+
+    <!-- Logo -->
+    <a href="#" class="hdr-logo" aria-label="Telha Clarke — Home">
+      <!--
+        LOGO PLACEHOLDER
+        Replace the SVG below with the actual Telha Clarke wordmark SVG.
+        The logo renders in currentColor so it adapts to light/dark contexts.
+      -->
+      <svg viewBox="0 0 180 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text
+          x="0" y="18"
+          font-family="'DM Sans', 'Helvetica Neue', sans-serif"
+          font-size="13"
+          font-weight="400"
+          fill="currentColor"
+          letter-spacing="1.5"
+        >TELHA CLARKE</text>
+      </svg>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="hdr-nav" aria-label="Primary">
+      <a href="#" class="hdr-nav-link">Work</a>
+      <a href="#" class="hdr-nav-link">Process</a>
+      <a href="#" class="hdr-nav-link">Studio</a>
+    </nav>
+
+    <!-- Live Melbourne time -->
+    <div class="hdr-time" aria-label="Current Melbourne time">
+      <span id="t-h">--</span><span>:</span><span id="t-m">--</span>
+      <span style="margin-left:0.2em" id="t-ap">pm</span>
+    </div>
+
+    <!-- Location -->
+    <span class="hdr-loc">South Yarra, AUS</span>
+
+    <!-- Contact (desktop) -->
+    <a href="#" class="hdr-contact">Contact</a>
+
+    <!-- Mobile toggle -->
+    <button class="hdr-toggle" id="menu-open" aria-label="Open navigation" aria-expanded="false" aria-controls="fullscreen-menu">
+      Menu
+    </button>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN
+  ══════════════════════════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- ── HERO / COVER ──────────────────────────────────────── -->
+    <section class="cover" aria-label="Hero">
+
+      <!-- Parallax image layer -->
+      <div class="cover-img" id="cover-parallax">
+        <!--
+          HERO IMAGE PLACEHOLDER
+          Replace the div below with: <img src="your-hero.jpg" alt="…" loading="eager">
+        -->
+        <div class="img-ph" aria-hidden="true">
+          <span class="img-ph-label">Hero Image — Replace with project photography</span>
+        </div>
+      </div>
+
+      <div class="cover-veil" aria-hidden="true"></div>
+
+      <!-- Scroll indicator -->
+      <div class="cover-scroll" id="cover-scroll" aria-hidden="true">
+        <span class="cover-scroll-br">[</span>
+        <span>&nbsp;Scroll</span>
+        <span>&nbsp;down&nbsp;</span>
+        <span class="cover-scroll-br">]</span>
+        <span class="scroll-line"></span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="cover-headline">
+        <span class="cover-headline-inner" id="cover-headline">
+          Driven by History, Centered on Context,<br>Embracing Culture
+        </span>
+      </h1>
+
+    </section>
+
+    <!-- ── STUDIO  (01) ─────────────────────────────────────── -->
+    <section class="sec-studio" aria-labelledby="studio-h2">
+
+      <!-- Left column -->
+      <div class="studio-l">
+        <div class="sec-label">
+          <span class="sec-label-num">01</span>
+          <span>Studio</span>
+        </div>
+
+        <p class="studio-acknowledgment rev">
+          We connect, create and work on the lands of Aboriginal and Torres
+          Strait Islander peoples throughout Australia. We acknowledge First
+          Nations' ancient histories, cultures, and ongoing connections to
+          Country, and we pay our respect to Elders past and present.
+        </p>
+
+        <h2 class="studio-tagline rev rev-d1" id="studio-h2">
+          <!--
+            TAGLINE PLACEHOLDER
+            Replace text below with final studio description copy.
+          -->
+          Telha Clarke is a Melbourne based Architecture &amp; Interior Design
+          studio, designing various project typologies across Australia and
+          Internationally.
+        </h2>
+      </div>
+
+      <!-- Right column -->
+      <div class="studio-r">
+        <!--
+          STUDIO IMAGE PLACEHOLDER
+          Replace the div below with: <img src="studio.jpg" alt="Telha Clarke studio" loading="lazy">
+        -->
+        <div class="studio-img-wrap rev">
+          <div class="img-ph img-ph-light" aria-hidden="true">
+            <span class="img-ph-label">Studio Image — Replace with studio photography</span>
+          </div>
+        </div>
+
+        <p class="studio-desc-lbl rev rev-d1">Architecture &amp; Interior Design</p>
+        <p class="studio-desc rev rev-d2">
+          <!--
+            DESCRIPTION PLACEHOLDER
+            Replace text below with final description copy.
+          -->
+          With experience covering a range of typologies; from single &amp;
+          multi-residential, seniors living, student accommodation, social
+          housing, hotels, hospitality and workplace. We believe human touch
+          must drive creativity.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── SELECTED WORKS  (02) ─────────────────────────────── -->
+    <section class="sec-works" aria-labelledby="works-h2">
+
+      <div class="works-hdr rev">
+        <div class="works-hdr-l">
+          <span class="works-num">02</span>
+          <h2 class="works-h2" id="works-h2">Selected Works</h2>
+        </div>
+        <span class="works-yr">17 – 25'</span>
+      </div>
+
+      <ul class="works-list">
+
+        <!-- ── WORK 1 ── -->
+        <li>
+          <a href="#" class="work-item rev" aria-label="View Loller project — Multi-residential 2025">
+            <div class="work-item-title-row">
+              <span class="work-bracket-l" aria-hidden="true">[</span>
+              <h3 class="work-name">
+                <!-- PROJECT TITLE PLACEHOLDER — replace with actual project name -->
+                Loller
+              </h3>
+              <span class="work-bracket-r" aria-hidden="true">]</span>
+            </div>
+            <div class="work-img" aria-hidden="true">
+              <!--
+                WORK IMAGE PLACEHOLDER
+                Replace with: <img src="loller.jpg" alt="Loller project" loading="lazy">
+              -->
+              <div class="img-ph img-ph-mid">
+                <span class="img-ph-label">Loller — Project Image Placeholder</span>
+              </div>
+            </div>
+            <div class="work-meta">
+              <span><!-- CATEGORY PLACEHOLDER -->Multi-residential</span>
+              <span><!-- YEAR PLACEHOLDER -->2025</span>
+            </div>
+          </a>
+        </li>
+
+        <!-- ── WORK 2 ── -->
+        <li>
+          <a href="#" class="work-item rev rev-d1" aria-label="View Penthouse Vivace project — Residential 2025">
+            <div class="work-item-title-row">
+              <span class="work-bracket-l" aria-hidden="true">[</span>
+              <h3 class="work-name">
+                <!-- PROJECT TITLE PLACEHOLDER -->
+                Penthouse Vivace
+              </h3>
+              <span class="work-bracket-r" aria-hidden="true">]</span>
+            </div>
+            <div class="work-img" aria-hidden="true">
+              <!--
+                WORK IMAGE PLACEHOLDER
+                Replace with: <img src="penthouse-vivace.jpg" alt="Penthouse Vivace" loading="lazy">
+              -->
+              <div class="img-ph" style="background:#212121;">
+                <span class="img-ph-label">Penthouse Vivace — Project Image Placeholder</span>
+              </div>
+            </div>
+            <div class="work-meta">
+              <span><!-- CATEGORY PLACEHOLDER -->Residential</span>
+              <span><!-- YEAR PLACEHOLDER -->2025</span>
+            </div>
+          </a>
+        </li>
+
+        <!-- ── WORK 3 ── -->
+        <li>
+          <a href="#" class="work-item rev rev-d2" aria-label="View Southbank Tower project — Multi-residential 2019">
+            <div class="work-item-title-row">
+              <span class="work-bracket-l" aria-hidden="true">[</span>
+              <h3 class="work-name">
+                <!-- PROJECT TITLE PLACEHOLDER -->
+                Southbank Tower
+              </h3>
+              <span class="work-bracket-r" aria-hidden="true">]</span>
+            </div>
+            <div class="work-img" aria-hidden="true">
+              <!--
+                WORK IMAGE PLACEHOLDER
+                Replace with: <img src="southbank-tower.jpg" alt="Southbank Tower" loading="lazy">
+              -->
+              <div class="img-ph" style="background:#181818;">
+                <span class="img-ph-label">Southbank Tower — Project Image Placeholder</span>
+              </div>
+            </div>
+            <div class="work-meta">
+              <span><!-- CATEGORY PLACEHOLDER -->Multi-residential</span>
+              <span><!-- YEAR PLACEHOLDER -->2019</span>
+            </div>
+          </a>
+        </li>
+
+        <!--
+          ADD MORE WORKS HERE
+          Copy and paste a <li>…</li> block above for each additional project.
+        -->
+
+      </ul>
+    </section>
+
+    <!-- ── VISION ───────────────────────────────────────────── -->
+    <section class="sec-vision" aria-labelledby="vision-h2">
+      <div class="vision-track">
+        <div class="vision-spacer" id="vision-spacer">
+
+          <div class="vision-sticky" id="vision-sticky">
+
+            <!-- Left: text pillar -->
+            <div class="vision-l">
+              <div class="vision-lbl">
+                <span>Vision</span>
+                <span class="vision-lbl-num">0303</span>
+              </div>
+
+              <div class="vision-titles">
+                <!--
+                  VISION TITLES PLACEHOLDER
+                  Replace with final vision/values copy.
+                -->
+                <span class="vision-title-item active" data-idx="0" id="vision-h2">Design integrity</span>
+                <span class="vision-title-item"         data-idx="1">Innovation</span>
+                <span class="vision-title-item"         data-idx="2">Enhanced living</span>
+              </div>
+
+              <a href="#" class="vision-cta">
+                <span><!-- CTA PLACEHOLDER -->Discover</span>
+                <span class="vision-arrow" aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <!-- Right: image -->
+            <div class="vision-img-col" aria-hidden="true">
+              <!--
+                VISION IMAGE PLACEHOLDER
+                Replace with: <img src="vision.jpg" alt="Vision" loading="lazy">
+              -->
+              <div class="img-ph" id="vision-img" style="background:#0f0f0f;">
+                <span class="img-ph-label">Vision Image — Replace with project photography</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+
+    <!-- CTA -->
+    <div class="footer-cta rev">
+      <h2 class="footer-cta-ttl">
+        <!-- CTA TITLE PLACEHOLDER -->
+        Talk to us about your project
+      </h2>
+      <a href="#" class="footer-cta-btn">Contact us</a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-nl rev rev-d1">
+      <p class="footer-nl-lbl" id="nl-label">Subscribe to our newsletter</p>
+      <form class="footer-nl-form" aria-labelledby="nl-label" onsubmit="submitNL(event)">
+        <input
+          type="email"
+          class="footer-nl-input"
+          name="email"
+          placeholder="Your email address"
+          aria-label="Email address"
+          required
+        >
+        <button type="submit" class="footer-nl-btn">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Main grid -->
+    <div class="footer-main rev rev-d2">
+
+      <!-- Nav -->
+      <nav class="footer-nav-col" aria-label="Footer">
+        <a href="#" class="footer-nav-link">Home</a>
+        <a href="#" class="footer-nav-link">Work</a>
+        <a href="#" class="footer-nav-link">Studio</a>
+        <a href="#" class="footer-nav-link">Process</a>
+        <a href="#" class="footer-nav-link">Contact</a>
+      </nav>
+
+      <!-- Address -->
+      <address class="footer-addr">
+        <!--
+          ADDRESS PLACEHOLDER
+          Replace with final address details.
+        -->
+        <div class="footer-contact-row">
+          <span class="footer-c-lbl">N</span>
+          <div>
+            <div class="footer-addr-line">59 Garden Street</div>
+            <div class="footer-addr-line">South Yarra</div>
+            <div class="footer-addr-line">Victoria, Australia 3141</div>
+          </div>
+        </div>
+      </address>
+
+      <!-- Contacts + Social -->
+      <div>
+        <div class="footer-contacts">
+          <div class="footer-contact-row">
+            <span class="footer-c-lbl">P</span>
+            <span class="footer-c-val">
+              <!-- PHONE PLACEHOLDER -->
+              <a href="tel:+61386725999">+61 3 8672 5999</a>
+            </span>
+          </div>
+          <div class="footer-contact-row">
+            <span class="footer-c-lbl">C</span>
+            <span class="footer-c-val">
+              <!-- EMAIL PLACEHOLDER -->
+              <a href="mailto:contact@telhaclarke.com.au">contact@telhaclarke.com.au</a>
+            </span>
+          </div>
+        </div>
+        <div class="footer-social">
+          <!-- SOCIAL LINKS PLACEHOLDER -->
+          <a href="#">Instagram,</a>
+          <a href="#">Linkedin</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-btm">
+      <div class="footer-btm-l">
+        <span class="footer-btm-copy">S &nbsp; All rights reserved</span>
+        <span class="footer-btm-copy">© Telha Clarke 2025</span>
+        <div class="footer-btm-links">
+          <a href="#" class="footer-btm-link">Privacy policy</a>
+          <a href="#" class="footer-btm-link">Terms of services</a>
+          <span class="footer-btm-copy">Website by TM &amp; GL</span>
+        </div>
+      </div>
+      <button
+        class="footer-back-top"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Back to top"
+      >Back to top ↑</button>
+    </div>
+
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════════════════ -->
+  <script>
+    'use strict';
+
+    /* ── LOADER ──────────────────────────────────────────────── */
+    (function () {
+      const loaderEl  = document.getElementById('loader');
+      const numEl     = document.getElementById('loader-num');
+      let   progress  = 0;
+      document.body.style.overflow = 'hidden';
+
+      const tick = setInterval(() => {
+        progress += Math.floor(Math.random() * 9) + 3;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(tick);
+          numEl.textContent = '100';
+          setTimeout(() => {
+            loaderEl.classList.add('done');
+            document.body.style.overflow = '';
+            bootAnimations();
+          }, 350);
+        }
+        numEl.textContent = progress;
+      }, 55);
+    })();
+
+    /* ── BOOT ANIMATIONS (after loader hides) ────────────────── */
+    function bootAnimations () {
+      // Hero elements
+      setTimeout(() => {
+        document.getElementById('cover-scroll').classList.add('in');
+        document.getElementById('cover-headline').classList.add('in');
+      }, 200);
+
+      // Scroll reveal
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+      }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.rev').forEach(el => io.observe(el));
+    }
+
+    /* ── LIVE MELBOURNE TIME ─────────────────────────────────── */
+    function refreshTime () {
+      const fmt = new Intl.DateTimeFormat('en-AU', {
+        timeZone: 'Australia/Melbourne',
+        hour: '2-digit', minute: '2-digit', hour12: true
+      });
+      const parts = fmt.formatToParts(new Date());
+      const get   = t => parts.find(p => p.type === t)?.value ?? '--';
+      document.getElementById('t-h').textContent  = get('hour');
+      document.getElementById('t-m').textContent  = get('minute');
+      document.getElementById('t-ap').textContent = get('dayPeriod').toLowerCase();
+    }
+    refreshTime();
+    setInterval(refreshTime, 30_000);
+
+    /* ── MENU TOGGLE ─────────────────────────────────────────── */
+    const overlay  = document.getElementById('menu-overlay');
+    const fsMenu   = document.getElementById('fullscreen-menu');
+    const btnOpen  = document.getElementById('menu-open');
+    const btnClose = document.getElementById('menu-close');
+
+    function openMenu () {
+      overlay.classList.add('open');
+      fsMenu.classList.add('open');
+      fsMenu.setAttribute('aria-hidden', 'false');
+      btnOpen.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu () {
+      overlay.classList.remove('open');
+      fsMenu.classList.remove('open');
+      fsMenu.setAttribute('aria-hidden', 'true');
+      btnOpen.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    btnOpen.addEventListener('click', openMenu);
+    btnClose.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    /* ── SCROLL HANDLER ──────────────────────────────────────── */
+    let   rafPending = false;
+    const hdr        = document.getElementById('site-header');
+    const coverPx    = document.getElementById('cover-parallax');
+    const visionSp   = document.getElementById('vision-spacer');
+    const visionImg  = document.getElementById('vision-img');
+    const vTitles    = document.querySelectorAll('.vision-title-item');
+
+    window.addEventListener('scroll', () => {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(() => {
+        const sy = window.scrollY;
+        const vh = window.innerHeight;
+
+        /* Header scroll state */
+        hdr.classList.toggle('scrolled', sy > 50);
+
+        /* Hero parallax */
+        if (sy < vh) {
+          coverPx.style.transform = `translateY(${sy * 0.28}px)`;
+        }
+
+        /* Vision scroll */
+        if (visionSp) {
+          const rect  = visionSp.getBoundingClientRect();
+          const top   = sy + rect.top;
+          const range = visionSp.offsetHeight - vh;
+          if (sy >= top && sy <= top + range) {
+            const pct   = (sy - top) / range;          // 0 → 1
+            const panel = Math.min(Math.floor(pct * 3), 2);
+
+            vTitles.forEach((t, i) => t.classList.toggle('active', i === panel));
+
+            /* Subtle image parallax */
+            if (visionImg) {
+              visionImg.style.transform = `translateY(${-pct * 50}px)`;
+            }
+          }
+        }
+
+        rafPending = false;
+      });
+    }, { passive: true });
+
+    /* ── NEWSLETTER ──────────────────────────────────────────── */
+    function submitNL (e) {
+      e.preventDefault();
+      const lbl = document.getElementById('nl-label');
+      lbl.textContent = 'Thanks for joining!';
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
