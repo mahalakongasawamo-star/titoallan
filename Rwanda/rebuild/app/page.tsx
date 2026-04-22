@@ -1,33 +1,82 @@
-const seedProjects = [
-  { name: "Tennessee Performing Arts Center", location: "Nashville, United States", slug: "tennessee-performing-arts-center" },
-  { name: "NOT A HOTEL Setouchi", location: "Sagishima, Japan", slug: "not-a-hotel-setouchi" },
-  { name: "Gastronomy Open Ecosystem", location: "San Sebastian, Spain", slug: "gastronomy-open-ecosystem" },
-  { name: "East Side Coastal Resiliency", location: "New York, United States", slug: "east-side-coastal-resiliency" },
-  { name: "The Plus", location: "Magnor, Norway", slug: "the-plus" },
-];
+import projectsData from "./projects.json";
+
+type Project = {
+  num: number;
+  name: string;
+  location: string;
+  slug: string;
+  photoFile: string | null;
+  monoFile: string | null;
+  photoUrl: string | null;
+  monoUrl: string | null;
+  photoOnDisk: boolean;
+  monoOnDisk: boolean;
+};
+
+const projects = projectsData as Project[];
+
+// SVG 0 from capture/rendered-page.html — pixelated block-style BIG wordmark.
+// Used at two sizes/colors: large white inside the intro loader, small black
+// as the persistent top-left wordmark. fill="currentColor" lets parent control.
+function BigLogo({ className, label = "BIG" }: { className?: string; label?: string }) {
+  return (
+    <svg viewBox="0 0 475 216" role="img" aria-label={label} className={className}>
+      <path fill="currentColor" d="M43 87V130V174H0V0H130V87H87V43H43V87Z" />
+      <path fill="currentColor" d="M0 216V173H43H130H173V216H0Z" />
+      <path fill="currentColor" d="M173 86V174H130V129H42V86H86H130H173Z" />
+      <path fill="currentColor" d="M216 216V0H259V216H216Z" />
+      <path fill="currentColor" d="M345 43H302V0H475V43H345Z" />
+      <path fill="currentColor" d="M475 216H302V42H345V173H432V129H389V86H475V216Z" />
+    </svg>
+  );
+}
+
+function HamburgerIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 12" role="img" aria-label="Open menu" className={className}>
+      <rect x="0" y="1" width="24" height="2" fill="currentColor" />
+      <rect x="0" y="5" width="24" height="2" fill="currentColor" />
+      <rect x="0" y="9" width="24" height="2" fill="currentColor" />
+    </svg>
+  );
+}
+
+function SearchIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 20 20" role="img" aria-label="Search" className={className} fill="none">
+      <circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="13.5" y1="13.5" x2="18" y2="18" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function photoSrc(p: Project): string | null {
+  if (p.photoOnDisk && p.photoFile) return `/assets/${p.photoFile}`;
+  return p.photoUrl; // remote fallback from media.big.dk
+}
+
+function monoSrc(p: Project): string | null {
+  if (p.monoOnDisk && p.monoFile) return `/assets/${p.monoFile}`;
+  return p.monoUrl;
+}
 
 export default function Page() {
   return (
     <>
-      {/* §3.1 — Full-screen intro loader (static black overlay; slide anim lands in Phase 4) */}
+      {/* §3.1 — Full-screen intro loader (static black overlay). Animation lands in Phase 4. */}
       <div className="intro-loader pointer-events-none fixed inset-0 z-50 bg-black flex items-center justify-center">
-        <span
-          className="intro-logo text-white inline-flex items-center justify-center w-[80px] h-[40px] text-xl"
-          data-placeholder="large BIG pixel SVG"
-        >
-          BIG
-        </span>
+        <BigLogo className="intro-logo text-white block w-[80px] h-auto" />
       </div>
 
       {/* §3.2 — Fixed top bar: hamburger + BIG wordmark + filter tabs + search + stage toggle */}
       <div className="top-bar fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-[30px] pt-[24px]">
-        <button className="hamburger relative z-50 w-[24px] h-[24px] inline-flex items-center justify-center" aria-label="Open menu">
-          <span data-placeholder="hamburger icon">≡</span>
+        <button className="hamburger relative z-50 inline-flex items-center justify-center text-black" aria-label="Open menu">
+          <HamburgerIcon className="w-[24px] h-[12px]" />
         </button>
 
         {/* §3.1 / §3.2 — persistent BIG wordmark anchored at (30, 20) */}
-        <a className="logo fixed top-[20px] left-[30px] w-[42px] h-[19px] inline-flex items-center text-black z-50" href="/">
-          <span className="text-[14px] leading-none" data-placeholder="BIG wordmark SVG">BIG</span>
+        <a className="logo fixed top-[20px] left-[30px] inline-flex items-center text-black z-50" href="/">
+          <BigLogo className="block w-[42px] h-[19px]" />
         </a>
 
         <label className="filter-menu group flex items-center gap-[48px] text-[14px] uppercase">
@@ -39,8 +88,8 @@ export default function Page() {
         </label>
 
         <div className="top-bar-right flex items-center gap-[12px] text-[14px] uppercase">
-          <button className="search w-[20px] h-[20px] inline-flex items-center justify-center" aria-label="search">
-            <span data-placeholder="search icon">⌕</span>
+          <button className="search inline-flex items-center justify-center text-black" aria-label="search">
+            <SearchIcon className="w-[18px] h-[18px]" />
           </button>
           <button className="stage-toggle">COMPLETED</button>
         </div>
@@ -62,27 +111,53 @@ export default function Page() {
         </ul>
       </nav>
 
-      {/* §3.4 — Project list (seed: first 5 rows from copy.md). Top-padded so top bar doesn't overlap the first row. */}
+      {/* §3.4 — Project list (all 129 rows from copy.md § Project list) */}
       <div className="projects-container overflow-x-hidden pt-[80px]">
         <div className="project-list flex flex-col">
-          {seedProjects.map((p) => (
-            <a key={p.slug} className="project-row grid grid-cols-[1fr_2fr] items-start gap-[30px] py-[30px] px-[30px] border-t border-gray-200" href={`/projects/${p.slug}`}>
-              <div className="project-label flex items-start gap-[16px]">
-                <img className="w-[25px] h-[25px] bg-black" alt="" data-placeholder="monogram SVG 52x52" />
-                <div>
-                  <h3 className="text-[18px] leading-[20px]">{p.name}</h3>
-                  <p className="text-[12px] text-[#797979] uppercase tracking-[0.3px] mt-[4px]">{p.location}</p>
+          {projects.map((p) => {
+            const photo = photoSrc(p);
+            const mono = monoSrc(p);
+            return (
+              <a
+                key={`${p.num}-${p.slug}`}
+                className="project-row grid grid-cols-[1fr_2fr] items-start gap-[30px] py-[30px] px-[30px] border-t border-gray-200"
+                href={`/projects/${p.slug}`}
+              >
+                <div className="project-label flex items-start gap-[16px]">
+                  {mono ? (
+                    <img
+                      className="w-[25px] h-[25px] object-cover bg-black shrink-0"
+                      src={mono}
+                      alt={`${p.name} monogram`}
+                    />
+                  ) : (
+                    <span className="w-[25px] h-[25px] bg-black shrink-0 block" data-todo="monogram asset needed" />
+                  )}
+                  <div className="min-w-0">
+                    <h3 className="text-[18px] leading-[20px]">{p.name}</h3>
+                    <p className="text-[12px] text-[#797979] uppercase tracking-[0.3px] mt-[4px]">{p.location}</p>
+                  </div>
                 </div>
-              </div>
-              <figure className="m-0 aspect-[16/9] overflow-hidden bg-gray-200">
-                <img className="w-full h-full object-cover" alt="" data-placeholder="project photo 800w" />
-              </figure>
-            </a>
-          ))}
+                <figure className="m-0 aspect-[16/9] overflow-hidden bg-gray-200">
+                  {photo ? (
+                    <img
+                      className="w-full h-full object-cover"
+                      src={photo}
+                      alt={`${p.name} photograph`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    /* TODO: photo asset needed for this row */
+                    <span />
+                  )}
+                </figure>
+              </a>
+            );
+          })}
         </div>
       </div>
 
-      {/* §3.5 — Footer */}
+      {/* §3.5 — Footer (copy.md § Footer verbatim) */}
       <footer id="footer" className="bg-white py-[64px] px-[30px] text-[14px]">
         <div className="footer-grid grid grid-cols-[1fr_1fr_1fr_1fr] gap-x-[30px]">
           <section>
