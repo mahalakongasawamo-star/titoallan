@@ -19,6 +19,9 @@ out/
 .claude/launch.json
 .claude/worktrees/
 
+# Project migrated to its own repo (aurum-spa-aesthetics)
+kimbrandesign/
+
 # OS files
 .DS_Store
 Thumbs.db
