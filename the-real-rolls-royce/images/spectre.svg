@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#080c18"/>
+      <stop offset="50%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#0a1020"/>
+    </linearGradient>
+    <radialGradient id="elecGlow" cx="0.5" cy="0.55" r="0.4">
+      <stop offset="0%" stop-color="#00498F" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00498F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floorGrad" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#0a1025" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect width="960" height="540" fill="url(#elecGlow)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="350" width="960" height="190" fill="url(#floorGrad)"/>
+
+  <!-- Spectre - Sleek electric coupe, side profile -->
+  <g transform="translate(480, 290)" opacity="0.9">
+    <!-- Body - lower, wider, more aggressive coupe -->
+    <path d="M-260,25 L-240,-15 L-200,-42 L-130,-55 L-40,-58 L80,-56 L180,-42 L240,-15 L260,25 L260,42 L-260,42 Z"
+          fill="#0c1225" stroke="#152040" stroke-width="0.8"/>
+    <!-- Fastback roofline - sleek coupe -->
+    <path d="M-110,-55 C-70,-92 -10,-102 50,-100 C120,-90 180,-55 220,-20"
+          fill="none" stroke="#00498F" stroke-width="0.8" opacity="0.4"/>
+    <!-- Electric blue accent line along body -->
+    <path d="M-250,-5 C-100,-8 100,-8 250,-5"
+          fill="none" stroke="#00498F" stroke-width="1" opacity="0.3"/>
+    <!-- Charging port hint -->
+    <rect x="-160" y="-15" width="12" height="6" rx="2" fill="#00498F" opacity="0.2"/>
+    <!-- Grille (closed - electric) -->
+    <rect x="-250" y="-22" width="28" height="48" rx="4" fill="#0a0f1a" stroke="#C4A44D" stroke-width="0.6" opacity="0.25"/>
+    <!-- LED headlight strip -->
+    <rect x="-225" y="-12" width="35" height="3" rx="1.5" fill="#00498F" opacity="0.3"/>
+    <!-- LED tail light strip -->
+    <rect x="230" y="-8" width="25" height="3" rx="1.5" fill="#8B0000" opacity="0.25"/>
+    <!-- Wheels - larger, aero design -->
+    <circle cx="-170" cy="42" r="30" fill="#080808" stroke="#152040" stroke-width="1.5"/>
+    <circle cx="-170" cy="42" r="20" fill="none" stroke="#00498F" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="170" cy="42" r="30" fill="#080808" stroke="#152040" stroke-width="1.5"/>
+    <circle cx="170" cy="42" r="20" fill="none" stroke="#00498F" stroke-width="0.5" opacity="0.2"/>
+    <!-- Spirit of Ecstasy -->
+    <line x1="-240" y1="-42" x2="-240" y2="-52" stroke="#C4A44D" stroke-width="0.7" opacity="0.35"/>
+    <path d="M-243,-52 L-240,-59 L-237,-52" fill="#C4A44D" opacity="0.2"/>
+    <!-- Electric glow under car -->
+    <ellipse cx="0" cy="55" rx="200" ry="8" fill="#00498F" opacity="0.06"/>
+  </g>
+
+  <!-- Electric particles -->
+  <circle cx="300" cy="280" r="1.5" fill="#00498F" opacity="0.2"/>
+  <circle cx="650" cy="260" r="1" fill="#00498F" opacity="0.15"/>
+  <circle cx="150" cy="310" r="0.8" fill="#00498F" opacity="0.12"/>
+  <circle cx="800" cy="300" r="1.2" fill="#00498F" opacity="0.18"/>
+
+  <text x="480" y="490" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="10" letter-spacing="6" fill="#00498F" opacity="0.3">SPECTRE</text>
+</svg>

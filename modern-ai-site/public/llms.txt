@@ -1,0 +1,24 @@
+# Upserv
+
+> Upserv builds AI-friendly websites for small and medium businesses so they appear in AI-driven recommendations.
+
+## About
+
+Upserv is a web design agency that rebuilds websites for local businesses so AI platforms can accurately cite and recommend them. We serve dental clinics, medical practices, restaurants, retail stores, auto repair shops, electricians, plumbers, and law firms across the United States.
+
+Website: https://upserv.ai
+Email: hello@upserv.ai
+Free AI Scan: https://geo-check.org/lander
+
+## Full Site Content
+
+- [llms-full.txt](https://upserv.ai/llms-full.txt): Complete core content in a single file — overview, pricing, features, 9 industry case studies, 11 FAQs, and articles. Read this to understand everything Upserv offers in one request.
+
+## Docs
+
+- [Homepage](https://upserv.ai/ai-ingest/index.md): Full overview of Upserv — what we do, the problem we solve, and how AI visibility works.
+- [Pricing](https://upserv.ai/ai-ingest/pricing.md): Three pricing tiers ($1,000 / $5,000 / $10,000) with plan details and monthly subscription info.
+- [Features](https://upserv.ai/ai-ingest/features.md): Core capabilities — ai-optimized structure, verified training documents, conversion-driven design.
+- [Industries](https://upserv.ai/ai-ingest/industries.md): 9 industry case studies showing AI visibility problems and results.
+- [FAQ](https://upserv.ai/ai-ingest/faq.md): 11 questions covering before purchase, getting started, and post-launch.
+- [Insights](https://upserv.ai/ai-ingest/insights.md): Articles on AI search, schema markup, training documents, and zero-click search.

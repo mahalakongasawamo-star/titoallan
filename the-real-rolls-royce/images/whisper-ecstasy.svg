@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 854" width="640" height="854">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#00205B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.35">
+      <stop offset="0%" stop-color="#C4A44D" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#C4A44D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="854" fill="url(#bg)"/>
+  <rect width="640" height="854" fill="url(#glow)"/>
+
+  <!-- Spirit of Ecstasy - Large centered iconic figure -->
+  <g transform="translate(320, 360)" opacity="0.75">
+    <!-- Base/pedestal -->
+    <rect x="-20" y="80" width="40" height="12" rx="3" fill="#0c1018" stroke="#C4A44D" stroke-width="0.6" opacity="0.25"/>
+    <rect x="-30" y="92" width="60" height="8" rx="2" fill="#0c1018" stroke="#C4A44D" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Figure - stylized Spirit of Ecstasy -->
+    <!-- Body/torso leaning forward -->
+    <path d="M0,80 C-5,40 -8,10 -3,-40"
+          fill="none" stroke="#C4A44D" stroke-width="1.5" opacity="0.35"/>
+    <!-- Head -->
+    <circle cx="-2" cy="-50" r="8" fill="none" stroke="#C4A44D" stroke-width="1" opacity="0.3"/>
+    <!-- Forward-reaching arms/wings -->
+    <path d="M-3,-30 C-25,-50 -50,-65 -80,-70"
+          fill="none" stroke="#C4A44D" stroke-width="1" opacity="0.25"/>
+    <path d="M-3,-30 C10,-45 25,-55 45,-58"
+          fill="none" stroke="#C4A44D" stroke-width="0.8" opacity="0.2"/>
+    <!-- Flowing robes/wings behind -->
+    <path d="M-5,20 C-30,-5 -60,-25 -100,-30 C-80,-15 -50,10 -30,30"
+          fill="none" stroke="#C4A44D" stroke-width="0.8" opacity="0.18"/>
+    <path d="M-5,20 C-25,0 -45,-15 -75,-20 C-55,-5 -35,15 -20,35"
+          fill="none" stroke="#C4A44D" stroke-width="0.6" opacity="0.12"/>
+    <!-- Flowing fabric/wind -->
+    <path d="M0,50 C-20,30 -45,15 -70,10"
+          fill="none" stroke="#C4A44D" stroke-width="0.5" opacity="0.1"/>
+
+    <!-- Pedestal glow -->
+    <ellipse cx="0" cy="105" rx="50" ry="8" fill="#C4A44D" opacity="0.03"/>
+  </g>
+
+  <!-- Heritage decorative elements -->
+  <g transform="translate(320, 160)" opacity="0.1">
+    <!-- Decorative line top -->
+    <line x1="-80" y1="0" x2="80" y2="0" stroke="#C4A44D" stroke-width="0.5"/>
+    <circle cx="-80" cy="0" r="2" fill="#C4A44D" opacity="0.5"/>
+    <circle cx="80" cy="0" r="2" fill="#C4A44D" opacity="0.5"/>
+    <circle cx="0" cy="0" r="3" fill="#C4A44D" opacity="0.3"/>
+  </g>
+
+  <!-- RR monogram hint -->
+  <g transform="translate(320, 650)" opacity="0.08">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#C4A44D" stroke-width="0.8"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="18" font-weight="200" letter-spacing="4" fill="#C4A44D">RR</text>
+  </g>
+
+  <text x="320" y="780" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="9" letter-spacing="5" fill="#C4A44D" opacity="0.2">SPIRIT OF ECSTASY</text>
+</svg>

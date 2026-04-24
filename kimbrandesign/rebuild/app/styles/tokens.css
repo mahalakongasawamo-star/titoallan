@@ -1,0 +1,116 @@
+/* Design tokens — SITE_SPEC.md § 2.
+ * Font file → family mappings are taken from the captured <style> block in
+ * `css styles.txt` (authoritative), not from § 6's heuristic "Used In"
+ * column — § 6 had several rows wrong. Paths go up 3 levels from this file
+ * (rebuild/app/styles/ → rebuild/ → kimbrandesign/ → assets/). */
+
+/* ——— DM Sans (primary, weights 200/300/400/700, normal + italic) ——— */
+/* The two woff2 files are variable faces covering all four weights each. */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/765d66fbb0991791.woff2") format("woff2"),
+       url("../../../assets/4302a682c7d921a0.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/765d66fbb0991791.woff2") format("woff2"),
+       url("../../../assets/9491cd90228f492f.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/765d66fbb0991791.woff2") format("woff2"),
+       url("../../../assets/7895ba5fd3a797de.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/765d66fbb0991791.woff2") format("woff2"),
+       url("../../../assets/dcb2480e1f266b67.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/03b7cbddac9c3eb0.woff2") format("woff2"),
+       url("../../../assets/c991514f71c69373.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/03b7cbddac9c3eb0.woff2") format("woff2"),
+       url("../../../assets/cb668991ce8e6cd9.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/03b7cbddac9c3eb0.woff2") format("woff2"),
+       url("../../../assets/d0eaef4eda47b84b.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../assets/03b7cbddac9c3eb0.woff2") format("woff2"),
+       url("../../../assets/062a3d73a3722636.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ——— Testimonia (display/script — used for about H2, services H3) ——— */
+@font-face {
+  font-family: "Testimonia";
+  src: url("../../../assets/ea89008166ecaf2a.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ——— Marcellus (serif — usage uncertain, likely testimonies) ——— */
+@font-face {
+  font-family: "Marcellus";
+  src: url("../../../assets/cd0acf0893b7ce08.woff2") format("woff2"),
+       url("../../../assets/31be9ddde920ac08.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors (§ 2) */
+  --color-bg-page:       #FFFFFF;
+  --color-fg-default:    #0F0F0F;
+  --color-fg-on-dark:    #FFFFFF;
+  --color-accent-yellow: #FFF14E; /* confirmed via capture/runtime-data.json .service bg rgb(255,241,78) */
+  --color-club-dark:     #0F0F0F; /* confirmed via capture/runtime-data.json #club bg rgb(15,15,15) */
+
+  /* Global backdrop (§ 2 --background token). Path from rebuild/app/styles/
+     up 3 levels to kimbrandesign/assets/. */
+  --background:          url("../../../assets/Background.BtFVN-l5.jpg");
+
+  /* Fonts */
+  --font-primary:   "DM Sans", Arial, sans-serif;
+  --font-secondary: "Testimonia", Arial, sans-serif;
+  --font-tertiary:  "Marcellus", Arial, serif;
+
+  /* Source-declared runtime helpers (static analysis, § 2) —
+     declared here so per-element `style="--fit:cover"` etc. from Phase 3+
+     can rely on them. */
+  --fit: cover;
+  --pos: center;
+  --progress: 0;
+}

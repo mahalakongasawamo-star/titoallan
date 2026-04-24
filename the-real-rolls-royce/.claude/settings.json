@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"c:/Users/Apat-Dapat/OneDrive/Desktop/KrissAI/claude sample1/the-real-rolls-royce/\"*.png \"c:/Users/Apat-Dapat/OneDrive/Desktop/KrissAI/claude sample1/the-real-rolls-royce/\"*.jpg)",
+      "Bash(awk '{print $NF}')",
+      "Bash(ls \"c:/Users/Apat-Dapat/OneDrive/Desktop/KrissAI/claude sample1/the-real-rolls-royce/images/\"*.png)",
+      "Bash(awk -F/ '{print $NF}')",
+      "Bash(npx -y serve -l 3000 .)"
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient-4);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        opacity: .5;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .35px;
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-5);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="71.29" cy="75.02" fx="71.29" fy="75.02" r="41.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".26" stop-color="#fff"/>
+      <stop offset=".75" stop-color="#f5f5f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="75.31" cy="74.23" fx="75.31" fy="74.23" r="15.46" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-3" cx="75.3" cy="75.32" fx="75.3" fy="75.32" r="34.05" gradientTransform="translate(0 -17.46) scale(1 1.23)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".63" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f5f5f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="73.88" cy="75.32" fx="73.88" fy="75.32" r="44.84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".65" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f5f5f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-5" cx="73.88" cy="75.32" fx="73.88" fy="75.32" r="37.18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".51" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f5f5f5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="background">
+    <rect width="150" height="150"/>
+  </g>
+  <g id="ICON">
+    <g id="Layer_5" data-name="Layer 5" class="cls-4">
+      <polygon class="cls-3" points="82.02 85.64 81.94 111.96 68.77 122.21 68.79 88.52 40.41 110.86 40.46 94.06 63.22 76.35 37.43 63.7 43.18 51.96 68.98 64.62 69.04 37.9 81.99 27.83 81.92 61.82 105.16 43.74 105.13 60.14 87.62 73.76 101.38 80.51 96.05 92.51 82.02 85.64"/>
+      <rect class="cls-7" x="67.98" y="53.64" width="14.67" height="41.19"/>
+    </g>
+    <g id="Layer_10" data-name="Layer 10">
+      <rect class="cls-2" x="67.92" y="27.74" width="14.77" height="95.16"/>
+    </g>
+    <g id="Layer_11" data-name="Layer 11">
+      <polygon class="cls-1" points="115.81 53.24 106.77 41.56 82.69 60.19 82.69 27.74 67.92 27.74 67.92 71.61 31.96 99.43 40.99 111.11 67.92 90.28 67.92 122.9 82.69 122.9 82.69 78.86 115.81 53.24"/>
+    </g>
+    <g id="Layer_12" data-name="Layer 12">
+      <polygon class="cls-5" points="115.81 53.24 106.77 41.56 82.69 60.19 82.69 27.74 67.92 27.74 67.92 63.06 39.08 48.84 32.54 62.08 61.67 76.45 31.96 99.43 40.99 111.11 67.92 90.28 67.92 122.9 82.69 122.9 82.69 86.81 102.08 96.38 108.61 83.14 89.4 73.66 115.81 53.24"/>
+    </g>
+    <g id="Layer_13" data-name="Layer 13">
+      <line class="cls-6" x1="67.98" y1="28.73" x2="67.98" y2="122.84"/>
+      <line class="cls-6" x1="82.69" y1="28.58" x2="82.69" y2="122.7"/>
+      <line class="cls-6" x1="82.69" y1="78.86" x2="114.42" y2="54.31"/>
+      <line class="cls-6" x1="82.69" y1="60.19" x2="106.77" y2="41.56"/>
+      <line class="cls-6" x1="67.92" y1="71.61" x2="31.96" y2="99.43"/>
+      <line class="cls-6" x1="67.92" y1="90.28" x2="42.45" y2="109.98"/>
+      <line class="cls-6" x1="67.98" y1="62.93" x2="41.45" y2="50.06"/>
+      <line class="cls-6" x1="61.62" y1="76.48" x2="34.28" y2="62.93"/>
+      <line class="cls-6" x1="89.62" y1="73.55" x2="108.94" y2="83.34"/>
+      <line class="cls-6" x1="82.64" y1="86.75" x2="101.96" y2="96.54"/>
+    </g>
+  </g>
+</svg>

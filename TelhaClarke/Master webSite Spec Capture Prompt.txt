@@ -1,0 +1,407 @@
+# Site Spec Capture Prompt — for Claude Code
+
+Paste the prompt below into Claude Code inside the repo where you want the spec generated. Before pasting, make sure:
+- The target URL is accessible from your machine
+- The site's pre-downloaded HTML/CSS files are saved somewhere in the repo (you'll point Claude Code at them in the prompt)
+- Node.js is installed (Playwright will be installed by Claude Code if missing)
+
+---
+
+```
+You are a senior front-end reverse-engineering specialist. Your job is to produce a complete, rebuild-ready specification of a reference website by combining static source analysis with runtime behavior capture via Playwright. The output is a set of files in this repo that another Claude Code session (or a human developer) can use to rebuild the site faithfully.
+
+## Context (carry forward)
+- This spec is NOT code. It is a written breakdown a developer or Claude Code will execute against.
+- The consumer of this spec is Claude Code running in this repo. Format everything so Claude Code can parse and act on it.
+- Animations must be captured at runtime, not guessed from source. Source inference is a fallback only.
+- The reference site may or may not be AEO-optimized. Do NOT add AEO recommendations — only passively capture what's there.
+
+## Inputs you will receive
+- TARGET_URL: the live reference site
+- LOCAL_SOURCE_PATH: a path in this repo containing pre-downloaded HTML/CSS files from the target
+
+Ask the user for both values before starting if they are not provided. Do not proceed without them.
+
+## Hard rules
+- MUST run Playwright for runtime capture. Source-only inference is only permitted as an explicit fallback when Playwright fails.
+- MUST stop and report if the site blocks Playwright (Cloudflare, bot protection, 403s, infinite challenge loops). Do NOT try stealth plugins. Hand control back to the user with a clear next-step message.
+- MUST detect framework-obscured sites (Webflow, Framer, Wix, Squarespace) by sniffing for `data-wf-*`, `data-framer-*`, `wix-*`, `sqs-*` attributes in the rendered DOM. If detected, skip source inference entirely and rely on Playwright runtime capture only. Note the framework in the spec.
+- MUST produce a partial spec if capture is incomplete. Prepend an `INCOMPLETE` header to `SITE_SPEC.md` and add a `## Gaps` section listing exactly what's missing and how to recover it.
+- MUST download all referenced assets (images, fonts, videos) to a local `assets/` folder.
+- MUST extract verbatim copy into a separate `copy.md` file.
+- MUST save the Playwright script to `capture/playwright-script.js` and the raw runtime data to `capture/runtime-data.json` so the capture is reproducible.
+- NEVER fabricate animation timings, easing curves, or design tokens. If a value cannot be captured, mark it `[uncertain]` in the spec.
+- NEVER refactor, improve, or "clean up" the reference site's decisions. Capture what IS, not what should be.
+
+## Execution phases
+
+### Phase 1 — Static source analysis
+1. Read all files in LOCAL_SOURCE_PATH. Identify:
+   - Frameworks and libraries in use (GSAP, ScrollTrigger, Lenis, Framer Motion, Locomotive Scroll, AOS, Webflow, Framer, Wix, Squarespace, Next.js, etc.) via script tags, class prefixes, and DOM attributes
+   - Font families loaded (Google Fonts, self-hosted, Adobe Fonts)
+   - CSS methodology (utility classes, BEM, CSS modules, Tailwind, vanilla)
+   - Any inline animation definitions (`@keyframes`, CSS transitions, GSAP timelines in readable JS)
+2. Record detected frameworks. If any of {Webflow, Framer, Wix, Squarespace} is present, flag source inference as UNAVAILABLE for animations.
+
+### Phase 2 — Runtime capture via Playwright
+Write a Playwright script at `capture/playwright-script.js` that:
+1. Launches headless Chromium, navigates to TARGET_URL, waits for network idle.
+2. If the response is 403, 429, or hits a Cloudflare/bot-protection challenge: log the failure reason, exit 1, and stop all further work. Report to user: "Playwright blocked by [reason]. Runtime capture not possible. Options: (1) manually capture via DevTools Performance tab and supply the trace, (2) supply screenshots + annotated scroll notes."
+3. Captures full-page screenshots at scroll positions 0%, 25%, 50%, 75%, 100% — saved to `capture/screenshots/`.
+4. For each key selector (hero, nav, section headings, primary visual elements, CTAs, footer): records computed styles at each scroll interval. Sample at least: `transform`, `opacity`, `filter`, `background`, `color`, `font-size`, `line-height`, dimensions.
+5. If GSAP is detected on `window`: introspects `gsap.globalTimeline.getChildren()` and dumps each tween's target, duration, ease, vars, and scrollTrigger config (if any).
+6. If Lenis is detected: logs the Lenis config (duration, easing, smoothWheel, orientation, gestureOrientation).
+7. If ScrollTrigger is detected: dumps `ScrollTrigger.getAll()` with trigger selectors, start/end values, scrub settings, pin settings, toggle actions.
+8. If Framer Motion or Webflow/Framer/Wix runtime is detected: captures visible animation state at each scroll interval via computed-style sampling only (proprietary runtimes cannot be introspected reliably).
+9. Downloads every referenced image, video, and font file to `assets/` (preserve original filenames; if collisions, suffix with section name).
+10. Dumps all collected data to `capture/runtime-data.json`.
+
+## Phase 2.5 — GSAP/ScrollTrigger exposure shim (run when Phase 2 cannot introspect GSAP)
+
+Trigger condition: Run this phase ONLY if Phase 2 detected GSAP-like behavior (transformed elements, ScrollTrigger pin/scrub effects) but `window.gsap` was undefined or `gsap.globalTimeline.getChildren()` returned an empty array. If Phase 2 successfully introspected GSAP, skip this entire phase.
+
+### Goal
+Re-run runtime capture with a script injection shim that intercepts the bundled GSAP module before timelines are created, exposes it on `window`, and re-runs the introspection from Phase 2 step 5–7.
+
+### Hard rules
+- MUST attempt the shim BEFORE writing source-inferred animations to the spec.
+- MUST NOT modify the target site's source files. The shim runs only inside Playwright's browser context.
+- MUST verify the shim worked by checking that `window.__capturedGSAP` and `window.__capturedScrollTrigger` are populated before introspection runs.
+- If the shim fails (no module match, CSP blocks injection, source maps unavailable), log the failure reason, mark the relevant gaps as `OPEN — shim failed`, and proceed with source inference as the original fallback.
+- NEVER claim animation data is runtime-captured if the shim only partially succeeded. Mark each animation entry as `[runtime]`, `[shim-runtime]`, or `[inferred]` so the rebuild session knows the confidence level of each entry.
+
+### Implementation
+
+Update `capture/playwright-script.js` to add a pre-navigation init script. The shim uses three strategies in order; the first one that succeeds wins.
+
+#### Strategy A — Module loader interception (Webpack/Vite/Rollup)
+
+Before navigation, inject:
+
+```javascript
+await page.addInitScript(() => {
+  // Intercept Webpack's module registry
+  const originalDefineProperty = Object.defineProperty;
+  window.__capturedGSAP = null;
+  window.__capturedScrollTrigger = null;
+
+  // Watch for any object that looks like the gsap module being assigned anywhere
+  const gsapSignature = (obj) =>
+    obj && typeof obj === 'object'
+      && typeof obj.to === 'function'
+      && typeof obj.from === 'function'
+      && typeof obj.timeline === 'function'
+      && obj.globalTimeline;
+
+  const stSignature = (obj) =>
+    obj && typeof obj === 'object'
+      && typeof obj.create === 'function'
+      && typeof obj.getAll === 'function'
+      && obj.version;
+
+  // Webpack module registry interception
+  const origPush = Array.prototype.push;
+  Array.prototype.push = function(...args) {
+    const result = origPush.apply(this, args);
+    try {
+      args.forEach((entry) => {
+        if (Array.isArray(entry) && entry.length >= 2 && typeof entry[1] === 'object') {
+          Object.values(entry[1]).forEach((mod) => {
+            if (typeof mod === 'function') {
+              const fakeModule = { exports: {} };
+              const fakeRequire = () => ({});
+              try { mod(fakeModule, fakeModule.exports, fakeRequire); } catch (e) {}
+              const exp = fakeModule.exports;
+              if (gsapSignature(exp)) window.__capturedGSAP = exp;
+              if (gsapSignature(exp.default)) window.__capturedGSAP = exp.default;
+              if (stSignature(exp)) window.__capturedScrollTrigger = exp;
+              if (stSignature(exp.default)) window.__capturedScrollTrigger = exp.default;
+              if (gsapSignature(exp.gsap)) window.__capturedGSAP = exp.gsap;
+              if (stSignature(exp.ScrollTrigger)) window.__capturedScrollTrigger = exp.ScrollTrigger;
+            }
+          });
+        }
+      });
+    } catch (e) {}
+    return result;
+  };
+});
+```
+
+#### Strategy B — Element-walk capture (when modules can't be intercepted)
+
+After the page reaches network idle, walk every animated element and reconstruct timeline data from GSAP's internal `_gsap` cache plus mutation observation. Even though `_gsap` doesn't back-reference the module, it does contain `id`, `tween`, and `_initted` markers that — combined with a MutationObserver watching the same elements — can reconstruct a near-runtime view.
+
+```javascript
+await page.evaluate(() => {
+  const animatedElements = document.querySelectorAll('*');
+  const reconstructed = [];
+
+  animatedElements.forEach((el) => {
+    if (el._gsap) {
+      const cache = el._gsap;
+      const computed = window.getComputedStyle(el);
+      reconstructed.push({
+        selector: el.tagName.toLowerCase()
+          + (el.id ? '#' + el.id : '')
+          + (el.className ? '.' + String(el.className).trim().split(/\s+/).join('.') : ''),
+        cache_id: cache.id || null,
+        x: cache.x, y: cache.y, scaleX: cache.scaleX, scaleY: cache.scaleY,
+        rotation: cache.rotation, opacity: computed.opacity,
+        transform: computed.transform,
+      });
+    }
+  });
+
+  window.__shimReconstructedAnimations = reconstructed;
+});
+```
+
+This gives you the *current state* of every GSAP-touched element. Combined with the Phase 2 scroll-checkpoint sampling, you can reconstruct most timeline endpoints — though not the exact easing curve.
+
+#### Strategy C — Performance API timing capture
+
+If both A and B yield incomplete data, fall back to the browser's Performance API to capture animation frame timings:
+
+```javascript
+await page.evaluate(() => {
+  window.__animationFrames = [];
+  const originalRAF = window.requestAnimationFrame;
+  window.requestAnimationFrame = function(cb) {
+    return originalRAF.call(window, (ts) => {
+      window.__animationFrames.push({
+        timestamp: ts,
+        scrollY: window.scrollY,
+      });
+      cb(ts);
+    });
+  };
+});
+
+// Then after scroll capture, dump:
+const frames = await page.evaluate(() => window.__animationFrames);
+```
+
+Frame-timing data lets you reconstruct duration and approximate easing by curve-fitting the captured transform values across frames.
+
+### Post-shim introspection
+
+After whichever strategy succeeded, re-run Phase 2 steps 5–7 using the captured globals:
+
+```javascript
+const gsapData = await page.evaluate(() => {
+  if (!window.__capturedGSAP) return null;
+  return window.__capturedGSAP.globalTimeline.getChildren().map(t => ({
+    targets: t.targets().map(el => el.tagName + (el.id ? '#' + el.id : '')),
+    duration: t.duration(),
+    delay: t.delay(),
+    vars: JSON.parse(JSON.stringify(t.vars, (k, v) =>
+      typeof v === 'function' ? '[function]' : v
+    )),
+  }));
+});
+
+const stData = await page.evaluate(() => {
+  if (!window.__capturedScrollTrigger) return null;
+  return window.__capturedScrollTrigger.getAll().map(st => ({
+    trigger: st.trigger ? st.trigger.tagName + (st.trigger.id ? '#' + st.trigger.id : '') : null,
+    start: st.start, end: st.end,
+    scrub: st.scrub, pin: !!st.pin,
+    toggleActions: st.vars && st.vars.toggleActions,
+    animation: st.animation ? {
+      duration: st.animation.duration(),
+      vars: st.animation.vars,
+    } : null,
+  }));
+});
+```
+
+Append the result to `capture/runtime-data.json` under a new key: `shim_capture: { strategy: 'A' | 'B' | 'C', gsap: [...], scrollTrigger: [...] }`.
+
+### Spec impact
+
+Update Animation Catalog entries (§4 of SITE_SPEC.md) with the new confidence labels:
+- `[runtime]` — captured directly from `window.gsap` in Phase 2 (highest confidence)
+- `[shim-runtime]` — captured via Phase 2.5 shim Strategy A or post-shim introspection (high confidence)
+- `[reconstructed]` — derived from Strategy B element-walk or Strategy C frame timing (medium confidence)
+- `[inferred]` — derived from source code reading only (low confidence)
+
+Update the Gaps section: any gap that was `OPEN — inferred only` and is now resolved by the shim should be marked `RESOLVED via shim Strategy [A/B/C]`. Any gap that the shim attempted but failed should be marked `OPEN — shim failed: [reason]` so the user knows manual capture (DevTools Performance trace) is the next escalation.
+
+### Completion checklist additions
+- [ ] Phase 2.5 ran only because Phase 2 introspection returned empty
+- [ ] Shim strategy used is recorded in `capture/runtime-data.json`
+- [ ] Each Animation Catalog entry has a confidence label
+- [ ] Gaps section accurately reflects what the shim resolved vs failed
+
+Run the script. If it exits 1, follow the stop-and-report rule above. If it succeeds, proceed to Phase 3.
+
+### Phase 3 — Assemble the spec
+
+Produce `SITE_SPEC.md` with exactly these 11 sections, in this order. Use the formatting shown.
+
+#### 1. Site Overview
+- TARGET_URL
+- Detected frameworks/libraries (from Phase 1 + Phase 2 cross-check)
+- Tech stack verdict (one sentence)
+- Overall page structure — ordered list of top-level sections as they appear on the page
+
+#### 2. Design Tokens
+Extract from computed styles. Output as a single code block:
+```
+Colors:
+  --color-bg: #XXXXXX
+  --color-fg: #XXXXXX
+  --color-accent: #XXXXXX
+  [all unique colors found, named by usage context]
+
+Typography:
+  --font-display: "Name", fallback
+  --font-body: "Name", fallback
+  Scale: 12 / 14 / 16 / 18 / 24 / 32 / 48 / 64
+  Line heights: 1.1 / 1.3 / 1.5 / 1.7
+  Weights used: 400, 500, 700
+
+Spacing:
+  Scale: 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96
+
+Radii: 0 / 4 / 8 / 16 / 9999
+Shadows: [list with exact values]
+Breakpoints: [px values detected from media queries]
+```
+
+#### 3. Section-by-Section Breakdown
+For each top-level page section, produce a subsection:
+```
+### 3.X [Section Name]
+Structure: [simplified HTML tree, max 15 lines]
+Layout: [grid / flex specifics — columns, gaps, alignment]
+Copy: see copy.md § [Section Name]
+Assets: see assets manifest § [Section Name]
+Animations: references Animation Catalog entries 4.X, 4.Y
+```
+
+#### 4. Animation Catalog
+Every animation as a numbered entry. Format: short prose header + GSAP-flavored pseudo-code timeline. Library-agnostic — developers can translate to Framer Motion, Motion One, or CSS keyframes.
+
+Example format:
+```
+### 4.1 Hero intro sequence
+Three hero elements fade and translate in on page load, staggered.
+
+timeline({ delay: 0.2 })
+  .from('.hero-title', { opacity: 0, y: 20, duration: 0.8, ease: 'power2.out' })
+  .from('.hero-sub', { opacity: 0, y: 15, duration: 0.6, ease: 'power2.out' }, '-=0.4')
+  .from('.hero-cta', { opacity: 0, scale: 0.95, duration: 0.5, ease: 'back.out(1.2)' }, '-=0.3')
+
+Trigger: page load
+Target selectors: .hero-title, .hero-sub, .hero-cta
+Notes: stagger via overlapping timeline positions
+```
+
+For scroll-linked animations:
+```
+### 4.7 Hero image parallax
+Hero image translates upward as user scrolls past hero section.
+
+scrollTrigger({
+  trigger: '.hero',
+  start: 'top top',
+  end: 'bottom top',
+  scrub: true
+})
+  .to('.hero-image', { y: -150, ease: 'none' })
+
+Scroll-linked: yes (scrub)
+Smooth scroll integration: Lenis (detected)
+```
+
+If an animation's exact easing cannot be captured, use `[uncertain]` and provide best-guess equivalent.
+
+#### 5. Scroll Behavior
+- Smooth scroll library in use (Lenis config if present)
+- List every scroll-linked animation (references to Animation Catalog entries)
+- Scroll velocity effects (if any)
+- Snap points / section-locked scrolling (if any)
+- Pin sections / horizontal scroll (if any)
+
+#### 6. Asset Manifest
+Table format:
+```
+| ID | Type | Original URL | Local Path | Dimensions | Size | Used In |
+|----|------|--------------|------------|------------|------|---------|
+```
+Every asset downloaded in Phase 2 appears here.
+
+#### 7. Copy Document
+Reference only. State: "All verbatim copy extracted to `copy.md`, organized by section with heading hierarchy preserved."
+
+#### 8. Interactive Elements
+For each interactive element (buttons, forms, menus, modals, toggles, accordions):
+- Trigger (hover, click, focus)
+- Visual response (color change, scale, slide, fade)
+- Duration and easing if animated
+- State changes (what DOM mutates)
+
+#### 9. Responsive Behavior
+For each breakpoint detected in Phase 1:
+- Layout changes (grid columns, stacking)
+- Elements hidden or shown
+- Typography scale changes
+- Animations disabled or modified on mobile
+
+#### 10. Rebuild Phases
+A phased implementation plan for Claude Code:
+```
+Phase 1 — Static layout (HTML skeleton, no styling)
+Phase 2 — Design tokens + base styles (no animations)
+Phase 3 — Copy + assets inserted
+Phase 4 — Entry animations (load-triggered from Animation Catalog)
+Phase 5 — Scroll-linked animations
+Phase 6 — Interactive elements
+Phase 7 — Responsive polish
+```
+Each phase: one sentence of what "done" looks like for that phase.
+
+#### 11. AEO/AI-Visibility Readiness Notes
+PASSIVE CAPTURE ONLY. Do not add recommendations. Record:
+- Schema.org markup present (types detected via JSON-LD or microdata)
+- Heading hierarchy (H1/H2/H3 tree from rendered DOM)
+- FAQ or Q&A blocks present (yes/no + count)
+- Semantic HTML usage (article, section, nav, header, footer, aside, main)
+- Meta tags: title, description, OG, Twitter, canonical
+- Robots.txt, llms.txt, ai.txt presence at the domain root (fetch and note)
+- Content chunking: average paragraph length, list usage frequency
+
+## Output file structure
+When complete, the repo should contain:
+```
+SITE_SPEC.md
+copy.md
+assets/
+  [downloaded images, fonts, videos]
+capture/
+  playwright-script.js
+  runtime-data.json
+  screenshots/
+    scroll-0.png
+    scroll-25.png
+    scroll-50.png
+    scroll-75.png
+    scroll-100.png
+```
+
+## Completion checklist
+Before declaring done, verify:
+- [ ] All 11 sections present in SITE_SPEC.md
+- [ ] Every animation in the Animation Catalog has a pseudo-code timeline (not just prose)
+- [ ] Every asset referenced in the spec exists in `assets/`
+- [ ] copy.md contains verbatim text, not summaries
+- [ ] capture/playwright-script.js is reproducible (user can re-run it standalone)
+- [ ] If any section is incomplete, the INCOMPLETE header and Gaps section are at the top of SITE_SPEC.md
+
+Report completion with: a one-line summary, the file tree produced, and any `[uncertain]` values that need human verification.
+```
+
+🎯 Target: Claude Code
+💡 Comprehensive reverse-engineering brief — front-loads hard rules and framework-detection logic, mandates Playwright runtime capture with explicit stop-and-report fallback, locks the 11-section output format with GSAP-flavored pseudo-code timelines so the spec is directly actionable by a future Claude Code rebuild session.

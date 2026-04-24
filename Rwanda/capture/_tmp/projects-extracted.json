@@ -1,0 +1,2572 @@
+[
+  {
+    "name": "Tennessee Performing Arts Center",
+    "location": "Nashville, United States",
+    "photoUrl": "https://media.big.dk/02-broadway_15-credit-Bloomimages_sh.jpg?width=800",
+    "monoUrl": "https://media.big.dk/TPAC_ICON-01.svg?width=52&height=52",
+    "photoFile": "02-broadway_15-credit-Bloomimages_sh_w800.jpg",
+    "monoFile": "TPAC_ICON-01_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "NOT A HOTEL Setouchi",
+    "location": "Sagishima, Japan",
+    "photoUrl": "https://media.big.dk/setouchi-3villas.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/05/NAH_ICON.svg?width=52&height=52",
+    "photoFile": "setouchi-3villas_w800.jpg",
+    "monoFile": "NAH_ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Gastronomy Open Ecosystem",
+    "location": "San Sebastian, Spain",
+    "photoUrl": "https://media.big.dk/22302_N170_webproject-2.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_22302_N34.svg?width=52&height=52",
+    "photoFile": "22302_N170_webproject-2_w800.jpg",
+    "monoFile": "19_22302_N34_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "East Side Coastal Resiliency",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/ESCR-25-07-BIG-1512_dp.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N65.svg?width=52&height=52",
+    "photoFile": "ESCR-25-07-BIG-1512_dp_w800.jpg",
+    "monoFile": "19_A_220303_N65_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "The Plus",
+    "location": "Magnor, Norway",
+    "photoUrl": "https://media.big.dk/2022/09/19_19034_N220_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N160.svg?width=52&height=52",
+    "photoFile": "19_19034_N220_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N160_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Bloomberg Student Center at Johns Hopkins University",
+    "location": "Baltimore, United States",
+    "photoUrl": "https://media.big.dk/copyright_laurianghinitoiu_big_jh-5_crop-2.jpg?width=800",
+    "monoUrl": "https://media.big.dk/JHOP_LOGO.svg?width=52&height=52",
+    "photoFile": "copyright_laurianghinitoiu_big_jh-5_crop-2_w800.jpg",
+    "monoFile": "JHOP_LOGO_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Suzhou Museum of Contemporary Art",
+    "location": "Suzhou, China",
+    "photoUrl": "https://media.big.dk/1208-Ye-Jianyuan_20241208164122_0121_dp-edit.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/04/SAM_ICON-web-1.svg?width=52&height=52",
+    "photoFile": "1208-Ye-Jianyuan_20241208164122_0121_dp-edit_w800.jpg",
+    "monoFile": "SAM_ICON-web-1_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Hamburg State Opera",
+    "location": "Hamburg, Germany",
+    "photoUrl": "https://media.big.dk/19_25037_N5_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/25037.svg?width=52&height=52",
+    "photoFile": "19_25037_N5_webproject_w800.jpg",
+    "monoFile": "25037_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Sankt Lukas Hospice and Lukashuset",
+    "location": "Hellerup, Denmark",
+    "photoUrl": "https://media.big.dk/19_24052_N4_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/ICON_SANKT-LUKAS.svg?width=52&height=52",
+    "photoFile": "19_24052_N4_webproject_w800.jpg",
+    "monoFile": "ICON_SANKT-LUKAS_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Claremont McKenna College",
+    "location": "Claremont, United States",
+    "photoUrl": "https://media.big.dk/copyright_laurianghinitoiu_big_cmc-3_punched.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/11/Artboard-31.svg?width=52&height=52",
+    "photoFile": "copyright_laurianghinitoiu_big_cmc-3_punched_w800.jpg",
+    "monoFile": "Artboard-31_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Manresa Wilds",
+    "location": "Norwalk, United States",
+    "photoUrl": "https://media.big.dk/25_Boiler-Building-Ocean-Lab_courtesy-BIG.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/09/RESA_LOGO.svg?width=52&height=52",
+    "photoFile": "25_Boiler-Building-Ocean-Lab_courtesy-BIG_w800.jpg",
+    "monoFile": "RESA_LOGO_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "BIG HQ",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2024/10/19_X16B_N178_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/230307_UPDATED-BHQ-ICON-WHITE-1.svg?width=52&height=52",
+    "photoFile": "19_X16B_N178_webproject_w800.jpg",
+    "monoFile": "230307_UPDATED-BHQ-ICON-WHITE-1_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "CityWave",
+    "location": "Milan, Italy",
+    "photoUrl": "https://media.big.dk/FINAL_BTB_BIG_MILAN_PHIV_GATES_tree-2.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N361.svg?width=52&height=52",
+    "photoFile": "FINAL_BTB_BIG_MILAN_PHIV_GATES_tree-2_w800.jpg",
+    "monoFile": "19_A_220303_N361_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Gelephu International Airport",
+    "location": "Gelephu, Bhutan",
+    "photoUrl": "https://media.big.dk/GLU_Gelephu-Airport_CONCEPT_Apron-Arrival_by-BIG.jpg?width=800",
+    "monoUrl": "https://media.big.dk/GLU_ICON_SVG.svg?width=52&height=52",
+    "photoFile": "GLU_Gelephu-Airport_CONCEPT_Apron-Arrival_by-BIG_w800.jpg",
+    "monoFile": "GLU_ICON_SVG_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "The Impact",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/19_24036_L_N14_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/orstad-01.svg?width=52&height=52",
+    "photoFile": "19_24036_L_N14_webproject_w800.jpg",
+    "monoFile": "orstad-01_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Gowanus 175 Third Street",
+    "location": "Brooklyn, United States",
+    "photoUrl": "https://media.big.dk/BIG_175-STREET_VIEW-03_credit-bucharest.studio.jpg?width=800",
+    "monoUrl": "https://media.big.dk/250221_GOW-LOGO_final.svg?width=52&height=52",
+    "photoFile": "BIG_175-STREET_VIEW-03_credit-bucharest.studio_w800.jpg",
+    "monoFile": "250221_GOW-LOGO_final_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Jinji Lake Pavilion",
+    "location": "Suzhou, China",
+    "photoUrl": "https://media.big.dk/21_22011_N27_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/Tea-House-Logo_web.svg?width=52&height=52",
+    "photoFile": "21_22011_N27_hero1_w800.jpg",
+    "monoFile": "Tea-House-Logo_web_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Athletics Las Vegas Ballpark",
+    "location": "Las Vegas, United States",
+    "photoUrl": "https://media.big.dk/ALV-5_credit-Negativ_highres.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/11/ALV_LOGO-ICON_WHITE-1.svg?width=52&height=52",
+    "photoFile": "ALV-5_credit-Negativ_highres_w800.jpg",
+    "monoFile": "ALV_LOGO-ICON_WHITE-1_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "The Drop",
+    "location": "Istanbul, Turkey",
+    "photoUrl": "https://media.big.dk/19_24326_N182_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/RIVA_ICON.svg?width=52&height=52",
+    "photoFile": "19_24326_N182_webproject_w800.jpg",
+    "monoFile": "RIVA_ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Gelephu Mindfulness City",
+    "location": "Gelephu, Bhutan",
+    "photoUrl": "https://media.big.dk/2023/12/19_23038_N20_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/12/BHUTAN_ICON-1.svg?width=52&height=52",
+    "photoFile": "19_23038_N20_webproject_w800.jpg",
+    "monoFile": "BHUTAN_ICON-1_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Solar One Environmental Education Center",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/DSC03763.jpg?width=800",
+    "monoUrl": "https://media.big.dk/230808_SOL-2.svg?width=52&height=52",
+    "photoFile": "DSC03763_w800.jpg",
+    "monoFile": "230808_SOL-2_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Hungarian Natural History Museum",
+    "location": "Debrecen, Hungary",
+    "photoUrl": "https://media.big.dk/19_24322_N15_webproject-e1743523004777.jpg?width=800",
+    "monoUrl": "https://media.big.dk/24322_ICON.svg?width=52&height=52",
+    "photoFile": "19_24322_N15_webproject-e1743523004777_w800.jpg",
+    "monoFile": "24322_ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "New Dubai Masterplan",
+    "location": "Dubai, United Arab Emirates",
+    "photoUrl": "https://media.big.dk/19_21311_N3_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/Asset-3.svg?width=52&height=52",
+    "photoFile": "19_21311_N3_webproject_w800.jpg",
+    "monoFile": "Asset-3_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Ancient Future: Bridging Bhutanese Tradition and Innovation",
+    "location": "Venice, Italy",
+    "photoUrl": "https://media.big.dk/ancient_future_press-release-15.jpg?width=800",
+    "monoUrl": "https://media.big.dk/25006-_-ICON.svg?width=52&height=52",
+    "photoFile": "ancient_future_press-release-15_w800.jpg",
+    "monoFile": "25006-_-ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Fira Barcelona Business Hub",
+    "location": "Barcelona, Spain",
+    "photoUrl": "https://media.big.dk/19_24324_N2_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/FIRA_ICON.svg?width=52&height=52",
+    "photoFile": "19_24324_N2_webproject_w800.jpg",
+    "monoFile": "FIRA_ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Opera and Ballet Theatre of Kosovo",
+    "location": "Prishtina, Kosovo",
+    "photoUrl": "https://media.big.dk/06-Winter-Concert_by-Bloom-3.jpg?width=800",
+    "monoUrl": "https://media.big.dk/KOSOP-ICON.svg?width=52&height=52",
+    "photoFile": "06-Winter-Concert_by-Bloom-3_w800.jpg",
+    "monoFile": "KOSOP-ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "CopenHill",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/19_ARC_N943_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N16.svg?width=52&height=52",
+    "photoFile": "19_ARC_N943_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N16_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "One High Line",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/07/231028_EJ_aerial_AM_0747-2288.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N59.svg?width=52&height=52",
+    "photoFile": "231028_EJ_aerial_AM_0747-2288_w800.jpg",
+    "monoFile": "19_A_220303_N59_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Joint Research Center",
+    "location": "Sevilla, Spain",
+    "photoUrl": "https://media.big.dk/2022/07/JRC_DD_Landscape_Plaza-02_by-FUSAO.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_21313_N10.svg?width=52&height=52",
+    "photoFile": "JRC_DD_Landscape_Plaza-02_by-FUSAO_w800.jpg",
+    "monoFile": "19_21313_N10_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Musée Atelier Audemars Piguet",
+    "location": "Le Brassus, Switzerland",
+    "photoUrl": "https://media.big.dk/2022/06/19_13035_15522_N1700_webproject-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N15-1.svg?width=52&height=52",
+    "photoFile": "19_13035_15522_N1700_webproject-1_w800.jpg",
+    "monoFile": "19_A_220303_N15-1_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "The Spiral",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/07/copyright_laurianghinitoiu_big_spiral_press_06_A005C0034_230827_W8TV-pp2288-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N149.svg?width=52&height=52",
+    "photoFile": "copyright_laurianghinitoiu_big_spiral_press_06_A005C0034_230827_W8TV-pp2288-1_w800.jpg",
+    "monoFile": "19_A_220303_N149_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "LEGO Brand House",
+    "location": "Billund, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/19_12033_N121_webproject-e1669041489225.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N83.svg?width=52&height=52",
+    "photoFile": "19_12033_N121_webproject-e1669041489225_w800.jpg",
+    "monoFile": "19_A_220303_N83_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Noma 2.0",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/19_15019_N76_webproject-e1739246826623.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N103.svg?width=52&height=52",
+    "photoFile": "19_15019_N76_webproject-e1739246826623_w800.jpg",
+    "monoFile": "19_A_220303_N103_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Freedom Data Center",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2024/06/3-crop.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/06/2024-06-25-Lonestar-Icon_Inverted1.svg?width=52&height=52",
+    "photoFile": "3-crop_w800.jpg",
+    "monoFile": "2024-06-25-Lonestar-Icon_Inverted1_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "NYPD 40th Precinct",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/BIG_40th_4117_A.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N105.svg?width=52&height=52",
+    "photoFile": "BIG_40th_4117_A_w800.jpg",
+    "monoFile": "19_A_220303_N105_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Marengo Multimodal Transport Hub",
+    "location": "Toulouse, France",
+    "photoUrl": "https://media.big.dk/2024/03/23025_N24_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/03/ICON-MMTH.svg?width=52&height=52",
+    "photoFile": "23025_N24_webproject_w800.jpg",
+    "monoFile": "ICON-MMTH_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "The Twist",
+    "location": "Jevnaker, Norway",
+    "photoUrl": "https://media.big.dk/2022/06/KIS_N170_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N75-4.svg?width=52&height=52",
+    "photoFile": "KIS_N170_hero1_w800.jpg",
+    "monoFile": "A_220303_N75-4_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "VIA 57 West",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_10009_N3105_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N164.svg?width=52&height=52",
+    "photoFile": "21_10009_N3105_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N164_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Google Bay View",
+    "location": "Mountain View, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_15505_CONFIDENTIAL_N19_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N50.svg?width=52&height=52",
+    "photoFile": "21_15505_CONFIDENTIAL_N19_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N50_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "A Beat of Water",
+    "location": "Milan, Italy",
+    "photoUrl": "https://media.big.dk/24323_N50_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/ROCA_ICON.svg?width=52&height=52",
+    "photoFile": "24323_N50_webproject_w800.jpg",
+    "monoFile": "ROCA_ICON_w52_h52.svg",
+    "photoOnDisk": true,
+    "monoOnDisk": true
+  },
+  {
+    "name": "Audemars Piguet Hotel",
+    "location": "Le Brassus, Switzerland",
+    "photoUrl": "https://media.big.dk/2022/08/19_15529_N288_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N14.svg?width=52&height=52",
+    "photoFile": "19_15529_N288_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N14_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "UAE International Horticultural Expo Pavilion",
+    "location": "Doha, Qatar",
+    "photoUrl": "https://media.big.dk/2024/04/19_23027_N32_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/05/UAE-Pavilion-LOGO.svg?width=52&height=52",
+    "photoFile": "19_23027_N32_webproject_w800.jpg",
+    "monoFile": "UAE-Pavilion-LOGO_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "University of Kansas School of Architecture and Design",
+    "location": "Lawrence, United States",
+    "photoUrl": "https://media.big.dk/2024/04/ARCD_CONCEPT-REFINEMENT_INTERIOR-STAIR-VIEW_by-Kilograph-2288.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/04/ARCD-icon_web.svg?width=52&height=52",
+    "photoFile": "ARCD_CONCEPT-REFINEMENT_INTERIOR-STAIR-VIEW_by-Kilograph-2288_w800.jpg",
+    "monoFile": "ARCD-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Museum for Paper Art",
+    "location": "Jammerbugt, Denmark",
+    "photoUrl": "https://media.big.dk/2024/07/21_24020_hero1-e1719949945267.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/08/PAPIR-2.svg?width=52&height=52",
+    "photoFile": "21_24020_hero1-e1719949945267_w800.jpg",
+    "monoFile": "PAPIR-2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Sail",
+    "location": "Rouen, France",
+    "photoUrl": "https://media.big.dk/1-The-Sail_Atchain.jpg?width=800",
+    "monoUrl": "https://media.big.dk/251001_ROUEN-LOGO_FINAL_ticker-03.svg?width=52&height=52",
+    "photoFile": "1-The-Sail_Atchain_w800.jpg",
+    "monoFile": "251001_ROUEN-LOGO_FINAL_ticker-03_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "National Juneteenth Museum",
+    "location": "Fort Worth, United States",
+    "photoUrl": "https://media.big.dk/SE-Corner-_-White_credit-BIG.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/10/JUNE_ICON-1.svg?width=52&height=52",
+    "photoFile": "SE-Corner-_-White_credit-BIG_w800.jpg",
+    "monoFile": "JUNE_ICON-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Google Gradient Canopy",
+    "location": "Mountain View, United States",
+    "photoUrl": "https://media.big.dk/2023/10/2023_06_21_Google6-2288.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/01/GCE_icon.svg?width=52&height=52",
+    "photoFile": "2023_06_21_Google6-2288_w800.jpg",
+    "monoFile": "GCE_icon_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Freedom Plaza",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/01-AERIAL-VIEW-FROM-S-E_creditBloomimages.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/02/FREE_LOGO-1.svg?width=52&height=52",
+    "photoFile": "01-AERIAL-VIEW-FROM-S-E_creditBloomimages_w800.jpg",
+    "monoFile": "FREE_LOGO-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "CODEX",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2024/03/ICON-CODEX-VILLAGE-RENDERING-2288.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/03/TEXNEX_ICON-test.svg?width=52&height=52",
+    "photoFile": "ICON-CODEX-VILLAGE-RENDERING-2288_w800.jpg",
+    "monoFile": "TEXNEX_ICON-test_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Central America Private Residence",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2024/03/02_BIG_Private-Residence_Image-by-Paul-Raeside.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/02/MEX_ICON_B-W.svg?width=52&height=52",
+    "photoFile": "02_BIG_Private-Residence_Image-by-Paul-Raeside_w800.jpg",
+    "monoFile": "MEX_ICON_B-W_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Heights School",
+    "location": "Arlington, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_14520_N526_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N168.svg?width=52&height=52",
+    "photoFile": "21_14520_N526_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N168_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "National Museum of the United States Navy",
+    "location": "Washington D.C., United States",
+    "photoUrl": "https://media.big.dk/2023/04/21_23501_N7_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/04/USNAVY_ICON-3.svg?width=52&height=52",
+    "photoFile": "21_23501_N7_hero1_w800.jpg",
+    "monoFile": "USNAVY_ICON-3_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "VLTAVA Philharmonic Prague",
+    "location": "Prague, Czech Republic",
+    "photoUrl": "https://media.big.dk/2024/05/21_21092_N90_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_21092_N27.svg?width=52&height=52",
+    "photoFile": "21_21092_N90_hero1_w800.jpg",
+    "monoFile": "19_21092_N27_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BIG BCN Office",
+    "location": "Barcelona, Spain",
+    "photoUrl": "https://media.big.dk/BIG_BCN_N21_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/01/ESP-sq-flag.svg?width=52&height=52",
+    "photoFile": "BIG_BCN_N21_webproject_w800.jpg",
+    "monoFile": "ESP-sq-flag_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Vollebak Island",
+    "location": "Vollebak Island, Canada",
+    "photoUrl": "https://media.big.dk/2023/05/19_201014_N64_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/05/VAI_ICON_web.svg?width=52&height=52",
+    "photoFile": "19_201014_N64_webproject_w800.jpg",
+    "monoFile": "VAI_ICON_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BIG L.A. OFFICE",
+    "location": "Los Angeles, United States",
+    "photoUrl": "https://media.big.dk/2024/04/20240322_BIG-LAX-OFFICE-PHOTO_Pooya-Aledavood_2_2288.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/04/USA-sq-flag.svg?width=52&height=52",
+    "photoFile": "20240322_BIG-LAX-OFFICE-PHOTO_Pooya-Aledavood_2_2288_w800.jpg",
+    "monoFile": "USA-sq-flag_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Aarhus Harbor Masterplan",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/copyright_laurianghinitoiu_big_aarhus_01_lower-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/BASSIN-7-icon-01.svg?width=52&height=52",
+    "photoFile": "copyright_laurianghinitoiu_big_aarhus_01_lower-1_w800.jpg",
+    "monoFile": "BASSIN-7-icon-01_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "CapitaSpring",
+    "location": "Singapore, Singapore",
+    "photoUrl": "https://media.big.dk/2022/08/19_15012_N227_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N125.svg?width=52&height=52",
+    "photoFile": "19_15012_N227_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N125_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Houseboat Bukken Bruse",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/21_BUKKEN_N16_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/BUKKEN-LOGO.svg?width=52&height=52",
+    "photoFile": "21_BUKKEN_N16_hero1_w800.jpg",
+    "monoFile": "BUKKEN-LOGO_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "3daysofdesign: Materialism",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/19_25028_N3_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/3DOD_ICON-01.svg?width=52&height=52",
+    "photoFile": "19_25028_N3_webproject_w800.jpg",
+    "monoFile": "3DOD_ICON-01_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "El Cosmico",
+    "location": "Marfa, United States",
+    "photoUrl": "https://media.big.dk/El-Cosmico_3D-printed_Sunday_Homes_ICON_BjarkeIngelsGroup_Sept2024-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/03/19_22521_2_N129-12.svg?width=52&height=52",
+    "photoFile": "El-Cosmico_3D-printed_Sunday_Homes_ICON_BjarkeIngelsGroup_Sept2024-1_w800.jpg",
+    "monoFile": "19_22521_2_N129-12_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Refugee Museum of Denmark",
+    "location": "Oksbøl, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/R_Hjortshoj-Flugt-PRESS-1-pm-edit-edit-111.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_15002_N79.svg?width=52&height=52",
+    "photoFile": "R_Hjortshoj-Flugt-PRESS-1-pm-edit-edit-111_w800.jpg",
+    "monoFile": "19_15002_N79_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Sphere",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2024/02/2DGTLFestival-Teksupport-December012023-1457-4394-credit-Michael_Poselski-@offbrandproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/02/WMW-icon1.svg?width=52&height=52",
+    "photoFile": "2DGTLFestival-Teksupport-December012023-1457-4394-credit-Michael_Poselski-@offbrandproject_w800.jpg",
+    "monoFile": "WMW-icon1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "205 Water Street",
+    "location": "Brooklyn, United States",
+    "photoUrl": "https://media.big.dk/DUMBO-Penthouse-NY-3_AriBurling.jpg?width=800",
+    "monoUrl": "https://media.big.dk/205-Water-St_icon.svg?width=52&height=52",
+    "photoFile": "DUMBO-Penthouse-NY-3_AriBurling_w800.jpg",
+    "monoFile": "205-Water-St_icon_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Qianhai Supertall Towers",
+    "location": "Shenzhen, China",
+    "photoUrl": "https://media.big.dk/2023/01/21_22527_N105_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/01/220822_QIANHAI-LOGO-ICON-BLACK.svg?width=52&height=52",
+    "photoFile": "21_22527_N105_hero1_w800.jpg",
+    "monoFile": "220822_QIANHAI-LOGO-ICON-BLACK_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Reflaction",
+    "location": "Milan, Italy",
+    "photoUrl": "https://media.big.dk/2024/05/GPA_7367_%C2%A9gaiapanozzo.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/04/P_Audi_Milan_icon_web1.svg?width=52&height=52",
+    "photoFile": "GPA_7367_%C2%A9gaiapanozzo_w800.jpg",
+    "monoFile": "P_Audi_Milan_icon_web1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Ellinikon Park Rise",
+    "location": "Ellinikon, Greece",
+    "photoUrl": "https://media.big.dk/2023/10/21_21310_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/10/ELLIHR_ICON-1.svg?width=52&height=52",
+    "photoFile": "21_21310_hero1_w800.jpg",
+    "monoFile": "ELLIHR_ICON-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "AARhus Residences",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/19_13033_N20_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/AAR-01.svg?width=52&height=52",
+    "photoFile": "19_13033_N20_webproject_w800.jpg",
+    "monoFile": "AAR-01_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Nawabari",
+    "location": "BoConcept",
+    "photoUrl": "https://media.big.dk/2023/10/21_PRODUCTS_SPONGE_INTERNAL_N27_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/10/P-Nawabari-icon_web-45.svg?width=52&height=52",
+    "photoFile": "21_PRODUCTS_SPONGE_INTERNAL_N27_hero1_w800.jpg",
+    "monoFile": "P-Nawabari-icon_web-45_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Danish Maritime Museum",
+    "location": "Helsingør, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/19_0711_N49_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N134-1.svg?width=52&height=52",
+    "photoFile": "19_0711_N49_webproject_w800.jpg",
+    "monoFile": "A_220303_N134-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Zurich Airport Building Dock A",
+    "location": "Zurich, Switzerland",
+    "photoUrl": "https://media.big.dk/2022/06/ZRH_Exterior_02_by-BUCHAREST-STUDIO-upscaled_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_20502_N52.svg?width=52&height=52",
+    "photoFile": "ZRH_Exterior_02_by-BUCHAREST-STUDIO-upscaled_heroweb_w800.jpg",
+    "monoFile": "19_20502_N52_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Greenland National Gallery",
+    "location": "Nuuk, Greenland",
+    "photoUrl": "https://media.big.dk/2022/07/21_10023_N293_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N104.svg?width=52&height=52",
+    "photoFile": "21_10023_N293_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N104_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Aqaba Port Terminal",
+    "location": "Aqaba, Jordan",
+    "photoUrl": "https://media.big.dk/2022/11/19_21068_N13_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/11/221020_APMT-LOGO1.svg?width=52&height=52",
+    "photoFile": "19_21068_N13_webproject_w800.jpg",
+    "monoFile": "221020_APMT-LOGO1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Villa Gug",
+    "location": "Aalborg, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/10-0Q1A1928-EDIT-PM.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N56.svg?width=52&height=52",
+    "photoFile": "10-0Q1A1928-EDIT-PM_w800.jpg",
+    "monoFile": "19_A_220303_N56_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "DÉCA",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2024/02/21_PRODUCTS_TONI_INTERNAL_N4_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/02/P_Toni_Deca_icon_web6.svg?width=52&height=52",
+    "photoFile": "21_PRODUCTS_TONI_INTERNAL_N4_hero1_w800.jpg",
+    "monoFile": "P_Toni_Deca_icon_web6_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "IQON Residences",
+    "location": "Quito, Ecuador",
+    "photoUrl": "https://media.big.dk/2022/07/BICUBIK_3934_2288px.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N11.svg?width=52&height=52",
+    "photoFile": "BICUBIK_3934_2288px_w800.jpg",
+    "monoFile": "19_A_220303_N11_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Biosphere",
+    "location": "Harads, Sweden",
+    "photoUrl": "https://media.big.dk/2022/06/19_19304_N118_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_19304_N107.svg?width=52&height=52",
+    "photoFile": "19_19304_N118_webproject_w800.jpg",
+    "monoFile": "19_19304_N107_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Dymak HQ",
+    "location": "Odense, Denmark",
+    "photoUrl": "https://media.big.dk/2023/11/21_21085_N49_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/10/DYMAK-ICON.svg?width=52&height=52",
+    "photoFile": "21_21085_N49_hero1_w800.jpg",
+    "monoFile": "DYMAK-ICON_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Red Lion Court",
+    "location": "London, England",
+    "photoUrl": "https://media.big.dk/2023/03/19_181000_CONFIDENTIAL_N2_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/03/18100_RLC_ICON.svg?width=52&height=52",
+    "photoFile": "19_181000_CONFIDENTIAL_N2_webproject_w800.jpg",
+    "monoFile": "18100_RLC_ICON_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "ESET Campus",
+    "location": "Bratislava, Slovakia",
+    "photoUrl": "https://media.big.dk/2022/06/ESET_SD-VISUAL_AERIAL_by-BLOOM.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_191015_N48.svg?width=52&height=52",
+    "photoFile": "ESET_SD-VISUAL_AERIAL_by-BLOOM_w800.jpg",
+    "monoFile": "19_191015_N48_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Stellar Nebula Lamps",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/10/19_PRODUCTS_STELLAR_N55_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Stellar-Nebula-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_STELLAR_N55_webproject_w800.jpg",
+    "monoFile": "P-Stellar-Nebula-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Västerås Travel Center",
+    "location": "Västeras, Sweden",
+    "photoUrl": "https://media.big.dk/2022/06/01_VIEW_C-by-PLAYTIME-upscaled_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N161.svg?width=52&height=52",
+    "photoFile": "01_VIEW_C-by-PLAYTIME-upscaled_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N161_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Kampanilen",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/19_17039_N143_webproject-2.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/01/19_A_220303_N107.svg?width=52&height=52",
+    "photoFile": "19_17039_N143_webproject-2_w800.jpg",
+    "monoFile": "19_A_220303_N107_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Telus Sky",
+    "location": "Calgary, Canada",
+    "photoUrl": "https://media.big.dk/2022/06/11-Westbank_telusSky_0235-Copy.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/WBC-icon_web.svg?width=52&height=52",
+    "photoFile": "11-Westbank_telusSky_0235-Copy_w800.jpg",
+    "monoFile": "WBC-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Oakland A's Ballpark & Masterplan",
+    "location": "Oakland, United States",
+    "photoUrl": "https://media.big.dk/2022/09/01_BIG_ABALL_Oakland-As-Ballpark_Skyline_Image-by-BIG-Bjarke-Ingels-Group.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/19_A_220303_N6.svg?width=52&height=52",
+    "photoFile": "01_BIG_ABALL_Oakland-As-Ballpark_Skyline_Image-by-BIG-Bjarke-Ingels-Group_w800.jpg",
+    "monoFile": "19_A_220303_N6_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Superkilen",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/L1042080.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/SUK-icon.svg?width=52&height=52",
+    "photoFile": "L1042080_w800.jpg",
+    "monoFile": "SUK-icon_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Mountain",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/0510_N1290_hero1-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N100-1.svg?width=52&height=52",
+    "photoFile": "0510_N1290_hero1-1_w800.jpg",
+    "monoFile": "A_220303_N100-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Education Esbjerg",
+    "location": "Esbjerg, Denmark",
+    "photoUrl": "https://media.big.dk/2022/09/19_21015_N4_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/EDUES-icon_web.svg?width=52&height=52",
+    "photoFile": "19_21015_N4_webproject_w800.jpg",
+    "monoFile": "EDUES-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "120 Fleet Street",
+    "location": "London, England",
+    "photoUrl": "https://media.big.dk/2022/06/19_191019_N38_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_191019_N601.svg?width=52&height=52",
+    "photoFile": "19_191019_N38_webproject_w800.jpg",
+    "monoFile": "19_191019_N601_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Vancouver House",
+    "location": "Vancouver, Canada",
+    "photoUrl": "https://media.big.dk/2022/07/19_A_200831_N59_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N153.svg?width=52&height=52",
+    "photoFile": "19_A_200831_N59_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N153_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Tirpitz Museum",
+    "location": "Blavand, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/21_MCB_N88_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N92.svg?width=52&height=52",
+    "photoFile": "21_MCB_N88_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N92_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Sneglehusene Residences",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/2022/10/19_14022_N85_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/10/NYE-icon_web.svg?width=52&height=52",
+    "photoFile": "19_14022_N85_webproject_w800.jpg",
+    "monoFile": "NYE-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "La Linea Lamps",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_LINEA_N21_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-La-Linea-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_LINEA_N21_webproject_w800.jpg",
+    "monoFile": "P-La-Linea-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Kaktus Towers",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2024/10/19_17010_N484_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/19_A_220303_N69.svg?width=52&height=52",
+    "photoFile": "19_17010_N484_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N69_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Mars Dune Alpha",
+    "location": "Houston, United States",
+    "photoUrl": "https://media.big.dk/2022/07/ICON_NASA_CHAPEA_Mars-Dune-Alpha-000-WM-111.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N101.svg?width=52&height=52",
+    "photoFile": "ICON_NASA_CHAPEA_Mars-Dune-Alpha-000-WM-111_w800.jpg",
+    "monoFile": "19_A_220303_N101_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "MÉCA",
+    "location": "Bordeaux, France",
+    "photoUrl": "https://media.big.dk/2022/06/21_MECA_N485_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N93.svg?width=52&height=52",
+    "photoFile": "21_MECA_N485_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N93_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "VM Houses",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/VM-PHOTO-JOHAN-FOWELIN-1_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N159.svg?width=52&height=52",
+    "photoFile": "VM-PHOTO-JOHAN-FOWELIN-1_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N159_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Glasir",
+    "location": "Tórshavn, Faroe Islands",
+    "photoUrl": "https://media.big.dk/2022/06/FAER_N77_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N46.svg?width=52&height=52",
+    "photoFile": "FAER_N77_webproject_w800.jpg",
+    "monoFile": "A_220303_N46_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "NABR",
+    "location": "San Jose, United States",
+    "photoUrl": "https://media.big.dk/2022/12/21_20515_N129_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_20515_N122.svg?width=52&height=52",
+    "photoFile": "21_20515_N129_hero1_w800.jpg",
+    "monoFile": "19_20515_N122_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "8 House",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/DSC_7000_SHOPPED_Image-by-Dragor-Luftfoto_heroweb-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N3-3.svg?width=52&height=52",
+    "photoFile": "DSC_7000_SHOPPED_Image-by-Dragor-Luftfoto_heroweb-1_w800.jpg",
+    "monoFile": "A_220303_N3-3_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Urban Rigger",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/CON_N719_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N38.svg?width=52&height=52",
+    "photoFile": "CON_N719_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N38_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Sluishuis Residences",
+    "location": "Amsterdam, Netherlands",
+    "photoUrl": "https://media.big.dk/2022/07/21_16017_N331_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N131.svg?width=52&height=52",
+    "photoFile": "21_16017_N331_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N131_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Washington Football Stadium",
+    "location": "Washington, United States",
+    "photoUrl": "https://media.big.dk/2022/07/15519_S_N80.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N63.svg?width=52&height=52",
+    "photoFile": "15519_S_N80_w800.jpg",
+    "monoFile": "19_A_220303_N63_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Panda House",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/19_PANDA_N101_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N110.svg?width=52&height=52",
+    "photoFile": "19_PANDA_N101_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N110_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Smile",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_13517_14528_N10_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N42.svg?width=52&height=52",
+    "photoFile": "21_13517_14528_N10_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N42_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "NASA Olympus",
+    "location": "Lunar South Pole, The Moon",
+    "photoUrl": "https://media.big.dk/2022/07/21_20511_N27_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_20511_N82.svg?width=52&height=52",
+    "photoFile": "21_20511_N27_hero1_w800.jpg",
+    "monoFile": "19_20511_N82_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Oceanix Busan",
+    "location": "Busan, South Korea",
+    "photoUrl": "https://media.big.dk/2022/06/19_22502_N48_webproject-e1657787859338.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_22502_N63.svg?width=52&height=52",
+    "photoFile": "19_22502_N48_webproject-e1657787859338_w800.jpg",
+    "monoFile": "19_22502_N63_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Galeries Lafayette Champs Elysees",
+    "location": "Paris, France",
+    "photoUrl": "https://media.big.dk/2022/06/19_15020_N10_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N55.svg?width=52&height=52",
+    "photoFile": "19_15020_N10_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N55_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Shenzhen Energy Mansion HQ",
+    "location": "Shenzhen, China",
+    "photoUrl": "https://media.big.dk/2022/06/21_09035_N27_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N121.svg?width=52&height=52",
+    "photoFile": "21_09035_N27_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N121_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Grove at Grand Bay",
+    "location": "Miami, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_12000_N1946_hero1-e1684140913274.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N37.svg?width=52&height=52",
+    "photoFile": "21_12000_N1946_hero1-e1684140913274_w800.jpg",
+    "monoFile": "19_A_220303_N37_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "79 & Park Residences",
+    "location": "Stockholm, Sweden",
+    "photoUrl": "https://media.big.dk/2022/06/21_11013_N2_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N137.svg?width=52&height=52",
+    "photoFile": "21_11013_N2_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N137_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Danish Pavilion Shanghai Expo",
+    "location": "Shanghai, China",
+    "photoUrl": "https://media.big.dk/2022/06/Expo2010-BIG-6328_heroweb-e1684143457982.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N169.svg?width=52&height=52",
+    "photoFile": "Expo2010-BIG-6328_heroweb-e1684143457982_w800.jpg",
+    "monoFile": "19_A_220303_N169_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "WeGrow NYC",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/08/19_17520_N795_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N166.svg?width=52&height=52",
+    "photoFile": "19_17520_N795_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N166_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Wildflower Film Studios Astoria",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/19_19516_N235_webproject-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N167.svg?width=52&height=52",
+    "photoFile": "19_19516_N235_webproject-1_w800.jpg",
+    "monoFile": "19_A_220303_N167_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Google Platform 37",
+    "location": "London, England",
+    "photoUrl": "https://media.big.dk/2022/06/21_15504_N610_hero1-e1667985138930.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N71.svg?width=52&height=52",
+    "photoFile": "21_15504_N610_hero1-e1667985138930_w800.jpg",
+    "monoFile": "19_A_220303_N71_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Skum Vase",
+    "location": "Rosenthal",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_SKUM_N12_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Skum-Vase-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_SKUM_N12_webproject_w800.jpg",
+    "monoFile": "P-Skum-Vase-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Danish Neuroscience Center",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/CAM_02_TONED-DOWN-scaled-upscaled_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_20026_N91.svg?width=52&height=52",
+    "photoFile": "CAM_02_TONED-DOWN-scaled-upscaled_heroweb_w800.jpg",
+    "monoFile": "19_20026_N91_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Hyperloop Certification Center",
+    "location": "Tucker and Grant Counties, United States",
+    "photoUrl": "https://media.big.dk/2022/07/21_18532_HCC_N3_hero1-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_18532_HCC_N22-1.svg?width=52&height=52",
+    "photoFile": "21_18532_HCC_N3_hero1-1_w800.jpg",
+    "monoFile": "19_18532_HCC_N22-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "King Toronto Residences",
+    "location": "Toronto, Canada",
+    "photoUrl": "https://media.big.dk/2022/06/7-KING-STREET-DEVELOPMENT_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N74.svg?width=52&height=52",
+    "photoFile": "7-KING-STREET-DEVELOPMENT_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N74_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Gammel Hellerup Gymnasium",
+    "location": "Hellerup, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/21_GHG_N61_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N53.svg?width=52&height=52",
+    "photoFile": "21_GHG_N61_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N53_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Ibervalles Hotel",
+    "location": "Madrid, Spain",
+    "photoUrl": "https://media.big.dk/19_24320_N118_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/ICON_IBERVALLES-HOTEL.svg?width=52&height=52",
+    "photoFile": "19_24320_N118_webproject_w800.jpg",
+    "monoFile": "ICON_IBERVALLES-HOTEL_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Serpentine Pavilion",
+    "location": "London, England",
+    "photoUrl": "https://media.big.dk/2022/07/19_SERP_N953_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N122.svg?width=52&height=52",
+    "photoFile": "19_SERP_N953_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N122_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Transitlager Dreispitz",
+    "location": "Basel, Switzerland",
+    "photoUrl": "https://media.big.dk/2022/06/21_TLD_N490_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N147.svg?width=52&height=52",
+    "photoFile": "21_TLD_N490_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N147_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Suitsupply HQ",
+    "location": "Amsterdam, Netherlands",
+    "photoUrl": "https://media.big.dk/2023/11/21_16013_N191_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/19_A_220303_N136-1.svg?width=52&height=52",
+    "photoFile": "21_16013_N191_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N136-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Dortheavej 2 Residences",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/21_DONG_N420_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N41.svg?width=52&height=52",
+    "photoFile": "21_DONG_N420_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N41_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Downtown Brooklyn Public Realm",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/BIG-81_Credit-Hassan-Mokaddam.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_19503_N99.svg?width=52&height=52",
+    "photoFile": "BIG-81_Credit-Hassan-Mokaddam_w800.jpg",
+    "monoFile": "19_19503_N99_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Omniturm",
+    "location": "Frankfurt, Germany",
+    "photoUrl": "https://media.big.dk/2022/06/19_14046_N41_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N95.svg?width=52&height=52",
+    "photoFile": "19_14046_N41_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N95_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Copenhagen Harbor Bath",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/1802-Copenhagen-Harbor-Bath_Image-by-Rasmus-Hjortshoj_01_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N20-1.svg?width=52&height=52",
+    "photoFile": "1802-Copenhagen-Harbor-Bath_Image-by-Rasmus-Hjortshoj_01_heroweb_w800.jpg",
+    "monoFile": "A_220303_N20-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Sjakket Youth Club",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/SJA_N136_hero1-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N126-3.svg?width=52&height=52",
+    "photoFile": "SJA_N136_hero1-1_w800.jpg",
+    "monoFile": "A_220303_N126-3_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Union Hub",
+    "location": "Toronto, Canada",
+    "photoUrl": "https://media.big.dk/2022/07/19_17529_17043_N73_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_17529_17043_N142.svg?width=52&height=52",
+    "photoFile": "19_17529_17043_N73_webproject_w800.jpg",
+    "monoFile": "19_17529_17043_N142_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Henning G. Kruses Plads",
+    "location": "Esbjerg, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/19035_N142_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_19035_N143.svg?width=52&height=52",
+    "photoFile": "19035_N142_hero1_w800.jpg",
+    "monoFile": "19_19035_N143_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Brick Sofa",
+    "location": "Jot.Jot",
+    "photoUrl": "https://media.big.dk/2022/10/SHP05951-LandscapeCrop.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Sofa-Brick-icon_web.svg?width=52&height=52",
+    "photoFile": "SHP05951-LandscapeCrop_w800.jpg",
+    "monoFile": "P-Sofa-Brick-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BiodiverCity Penang",
+    "location": "Penang, Malaysia",
+    "photoUrl": "https://media.big.dk/2022/07/19_20501_N46_webproject-e1657801192704.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N114.svg?width=52&height=52",
+    "photoFile": "19_20501_N46_webproject-e1657801192704_w800.jpg",
+    "monoFile": "19_A_220303_N114_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BQE to BQ-Park",
+    "location": "Brooklyn, United States",
+    "photoUrl": "https://media.big.dk/2022/07/19_BIG_HEARTS_N30_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_BIG_HEARTS_N41.svg?width=52&height=52",
+    "photoFile": "19_BIG_HEARTS_N30_webproject_w800.jpg",
+    "monoFile": "19_BIG_HEARTS_N41_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Brooklyn Bridge",
+    "location": "Brooklyn, United States",
+    "photoUrl": "https://media.big.dk/2022/07/19_20519_N8_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N30.svg?width=52&height=52",
+    "photoFile": "19_20519_N8_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N30_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Isenberg Innovation Hub",
+    "location": "Amherst, United States",
+    "photoUrl": "https://media.big.dk/2022/08/19_15532_N953_webproject-e1667985190254.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N68.svg?width=52&height=52",
+    "photoFile": "19_15532_N953_webproject-e1667985190254_w800.jpg",
+    "monoFile": "19_A_220303_N68_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "San Pellegrino Flagship Factory",
+    "location": "San Pellegrino Terme, Italy",
+    "photoUrl": "https://media.big.dk/2022/08/SPFF_002_Credit-Schirra-Giraldi-2288.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N135.svg?width=52&height=52",
+    "photoFile": "SPFF_002_Credit-Schirra-Giraldi-2288_w800.jpg",
+    "monoFile": "19_A_220303_N135_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Farfetch HQ & Fuse Valley",
+    "location": "Leça do Balio - Matosinhos, Portugal",
+    "photoUrl": "https://media.big.dk/2022/06/19_19302_N154_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N48.svg?width=52&height=52",
+    "photoFile": "19_19302_N154_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N48_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Maritime Youth House",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/21_0247_N172_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N88-2.svg?width=52&height=52",
+    "photoFile": "21_0247_N172_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N88-2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Vejlevej 11",
+    "location": "Billund, Denmark",
+    "photoUrl": "https://media.big.dk/2022/10/19_17018_N334_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N155.svg?width=52&height=52",
+    "photoFile": "19_17018_N334_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N155_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Marsk Tower",
+    "location": "Skærbæk, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/21_20024_N45_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N90.svg?width=52&height=52",
+    "photoFile": "21_20024_N45_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N90_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "1200 Intrepid",
+    "location": "Philadelphia, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_NAVY_N23_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N102.svg?width=52&height=52",
+    "photoFile": "21_NAVY_N23_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N102_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "River Ring",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/07/19_19506_N240_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_19506_N244.svg?width=52&height=52",
+    "photoFile": "19_19506_N240_webproject_w800.jpg",
+    "monoFile": "19_19506_N244_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "EPIQ Residences",
+    "location": "Quito, Ecuador",
+    "photoUrl": "https://media.big.dk/BICUBIK_1161_edited_FINAL.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N12.svg?width=52&height=52",
+    "photoFile": "BICUBIK_1161_edited_FINAL_w800.jpg",
+    "monoFile": "19_A_220303_N12_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Toyota Woven City",
+    "location": "Susono, Japan",
+    "photoUrl": "https://media.big.dk/2022/07/19_18535_N320_webproject-e1657788724153.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N150.svg?width=52&height=52",
+    "photoFile": "19_18535_N320_webproject-e1657788724153_w800.jpg",
+    "monoFile": "19_A_220303_N150_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "City of Telosa",
+    "location": ", United States",
+    "photoUrl": "https://media.big.dk/2023/08/06A_Telosa_Concept-Render_BIG_Iconic-Tower-Night22882500.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/NEW-icon_web.svg?width=52&height=52",
+    "photoFile": "06A_Telosa_Concept-Render_BIG_Iconic-Tower-Night22882500_w800.jpg",
+    "monoFile": "NEW-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Ellsinore Psychiatric Hospital",
+    "location": "Helsingør, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/PSY_Dragor-Luftfoto_01_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N115-1.svg?width=52&height=52",
+    "photoFile": "PSY_Dragor-Luftfoto_01_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N115-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Cité de l’innovation Sorbonne Université",
+    "location": "Paris, France",
+    "photoUrl": "https://media.big.dk/2022/06/11010_PARC_00_Hero-Image_Entrance-upscaled_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N111.svg?width=52&height=52",
+    "photoFile": "11010_PARC_00_Hero-Image_Entrance-upscaled_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N111_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Pont de Bondy Metro Station",
+    "location": "Bondy, France",
+    "photoUrl": "https://media.big.dk/2022/08/19_16016_N156_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N112.svg?width=52&height=52",
+    "photoFile": "19_16016_N156_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N112_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "HB Trapper",
+    "location": "Herning, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/19_18039_N333_webproject-e1690882530383.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_18039_N489.svg?width=52&height=52",
+    "photoFile": "19_18039_N333_webproject-e1690882530383_w800.jpg",
+    "monoFile": "19_18039_N489_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Orb",
+    "location": "Nevada",
+    "photoUrl": "https://media.big.dk/2022/07/21_X17_N165_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/orb-icon_WEB.svg?width=52&height=52",
+    "photoFile": "21_X17_N165_hero1_w800.jpg",
+    "monoFile": "orb-icon_WEB_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "FORMGIVING",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/21_18012_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_18012_N85.svg?width=52&height=52",
+    "photoFile": "21_18012_hero1_w800.jpg",
+    "monoFile": "19_18012_N85_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Klein Cabin",
+    "location": "Bethel Woods, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_16523_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N76.svg?width=52&height=52",
+    "photoFile": "21_16523_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N76_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Mars Science City",
+    "location": "Dubai, United Arab Emirates",
+    "photoUrl": "https://media.big.dk/2022/07/19_MARS_N4_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N89.svg?width=52&height=52",
+    "photoFile": "19_MARS_N4_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N89_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Los Angeles Arts District",
+    "location": "Los Angeles, United States",
+    "photoUrl": "https://media.big.dk/east_credit-Brick-Visual.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N80.svg?width=52&height=52",
+    "photoFile": "east_credit-Brick-Visual_w800.jpg",
+    "monoFile": "19_A_220303_N80_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "OPPO R&D HQ Hangzhou",
+    "location": "Hangzhou, China",
+    "photoUrl": "https://media.big.dk/2022/06/02_TOWER-OVER-WATER-SE_-BY-BIG_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N109.svg?width=52&height=52",
+    "photoFile": "02_TOWER-OVER-WATER-SE_-BY-BIG_heroweb_w800.jpg",
+    "monoFile": "19_A_220303_N109_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Smithsonian Masterplan",
+    "location": "Washington DC, United States",
+    "photoUrl": "https://media.big.dk/2022/07/21_SMI_N169_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N132.svg?width=52&height=52",
+    "photoFile": "21_SMI_N169_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N132_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "National Theatre of Albania",
+    "location": "Tirana, Albania",
+    "photoUrl": "https://media.big.dk/2023/01/19_17027_N261_webproject-e1673383480462.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N148.svg?width=52&height=52",
+    "photoFile": "19_17027_N261_webproject-e1673383480462_w800.jpg",
+    "monoFile": "19_A_220303_N148_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Miami Produce",
+    "location": "Miami, United States",
+    "photoUrl": "https://media.big.dk/2022/07/18500.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N97.svg?width=52&height=52",
+    "photoFile": "18500_w800.jpg",
+    "monoFile": "19_A_220303_N97_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Honeycomb Residences & Albany Masterplan",
+    "location": "Nassau, Bahamas",
+    "photoUrl": "https://media.big.dk/2022/08/19_13514_N803_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/19_A_220303_N24.svg?width=52&height=52",
+    "photoFile": "19_13514_N803_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N24_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Oslo Science City",
+    "location": "Oslo, Norway",
+    "photoUrl": "https://media.big.dk/2022/06/21_20035_CONFIDENTIAL_N53_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_20035_CONFIDENTIAL_N47.svg?width=52&height=52",
+    "photoFile": "21_20035_CONFIDENTIAL_N53_hero1_w800.jpg",
+    "monoFile": "19_20035_CONFIDENTIAL_N47_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Oceanix City",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2022/07/19_SFC_N30_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N123.svg?width=52&height=52",
+    "photoFile": "19_SFC_N30_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N123_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Lycium",
+    "location": "Fanø Bad, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/AERIAL-upscaled.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_16002_N107.svg?width=52&height=52",
+    "photoFile": "AERIAL-upscaled_w800.jpg",
+    "monoFile": "19_16002_N107_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Pegasus Hyperloop Pod",
+    "location": "Las Vegas, United States",
+    "photoUrl": "https://media.big.dk/2022/06/19_PEGASUS_N12_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_16514_PEGASUS_N18.svg?width=52&height=52",
+    "photoFile": "19_PEGASUS_N12_webproject_w800.jpg",
+    "monoFile": "19_16514_PEGASUS_N18_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Terminus AI City",
+    "location": "Chongqing, China",
+    "photoUrl": "https://media.big.dk/2022/07/19_20001_N78_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N145.svg?width=52&height=52",
+    "photoFile": "19_20001_N78_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N145_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Skypark Business Center",
+    "location": "Luxembourg, Luxembourg",
+    "photoUrl": "https://media.big.dk/18011_N229_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N87.svg?width=52&height=52",
+    "photoFile": "18011_N229_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N87_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Hot to Cold",
+    "location": "Washington, United States",
+    "photoUrl": "https://media.big.dk/2022/07/21_13504_N1167_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_13504_N1224.svg?width=52&height=52",
+    "photoFile": "21_13504_N1167_hero1_w800.jpg",
+    "monoFile": "19_13504_N1224_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The BIG Maze",
+    "location": "Washington, United States",
+    "photoUrl": "https://media.big.dk/2022/06/21_MAZE_N32_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N91.svg?width=52&height=52",
+    "photoFile": "21_MAZE_N32_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N91_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Times Square Valentine",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/06/19_11074_N219_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N162.svg?width=52&height=52",
+    "photoFile": "19_11074_N219_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N162_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Barcelona Institute of Science and Technology",
+    "location": "Barcelona, Spain",
+    "photoUrl": "https://media.big.dk/2022/06/21_BIST_N44_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N29.svg?width=52&height=52",
+    "photoFile": "21_BIST_N44_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N29_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "St. Thomas Church Extension",
+    "location": "Frederiksberg, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/14003_N75.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N139.svg?width=52&height=52",
+    "photoFile": "14003_N75_w800.jpg",
+    "monoFile": "19_A_220303_N139_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Hualien Masterplan",
+    "location": "Hualien City, Taiwan",
+    "photoUrl": "https://media.big.dk/2022/07/B08-AERIAL_-ROOFTOP-upscaled.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N64.svg?width=52&height=52",
+    "photoFile": "B08-AERIAL_-ROOFTOP-upscaled_w800.jpg",
+    "monoFile": "19_A_220303_N64_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Kimball Art Center",
+    "location": "Park City, United States",
+    "photoUrl": "https://media.big.dk/2022/08/19_19510_N64_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/19_A_220303_N72.svg?width=52&height=52",
+    "photoFile": "19_19510_N64_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N72_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "La Termica Turbine Hall",
+    "location": "Barcelona, Spain",
+    "photoUrl": "https://media.big.dk/2022/07/19_18002_N104_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_18002_N82.svg?width=52&height=52",
+    "photoFile": "19_18002_N104_webproject_w800.jpg",
+    "monoFile": "19_18002_N82_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "WWW",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/08/WWW_0001_for-vista.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/WWW-icon_web.svg?width=52&height=52",
+    "photoFile": "WWW_0001_for-vista_w800.jpg",
+    "monoFile": "WWW-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "2 World Trade Center",
+    "location": "New York, United States",
+    "photoUrl": "https://media.big.dk/2022/07/19_14521_A_N82_webproject-e1677837034336.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N2.svg?width=52&height=52",
+    "photoFile": "19_14521_A_N82_webproject-e1677837034336_w800.jpg",
+    "monoFile": "19_A_220303_N2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Loop City",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_LOOP_N92_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N86.svg?width=52&height=52",
+    "photoFile": "21_LOOP_N92_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N86_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Jack's House",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/09/19_17055_N161_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/JACK-icon_web.svg?width=52&height=52",
+    "photoFile": "19_17055_N161_webproject_w800.jpg",
+    "monoFile": "JACK-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Museum of the Human Body",
+    "location": "Montpellier, France",
+    "photoUrl": "https://media.big.dk/2022/07/13020_N90.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N66.svg?width=52&height=52",
+    "photoFile": "13020_N90_w800.jpg",
+    "monoFile": "19_A_220303_N66_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Parque de la Innovación",
+    "location": "Buenos Aires, Argentina",
+    "photoUrl": "https://media.big.dk/2022/07/19_19523_N168_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_19523_N287.svg?width=52&height=52",
+    "photoFile": "19_19523_N168_webproject_w800.jpg",
+    "monoFile": "19_19523_N287_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Tallinn Town Hall",
+    "location": "Tallinn, Estonia",
+    "photoUrl": "https://media.big.dk/2022/06/BIG-TAT-View-from-square-upscaled_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N143.svg?width=52&height=52",
+    "photoFile": "BIG-TAT-View-from-square-upscaled_heroweb_w800.jpg",
+    "monoFile": "A_220303_N143_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Scala Tower",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_0651_N34_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N120.svg?width=52&height=52",
+    "photoFile": "21_0651_N34_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N120_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "LEGO Towers",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_0640_N280_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N84.svg?width=52&height=52",
+    "photoFile": "21_0640_N280_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N84_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Skuru Bridge",
+    "location": "Nacka, Sweden",
+    "photoUrl": "https://media.big.dk/2022/07/11057_N54.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N119.svg?width=52&height=52",
+    "photoFile": "11057_N54_w800.jpg",
+    "monoFile": "19_A_220303_N119_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Europa City Expo Building",
+    "location": "Gonesse, France",
+    "photoUrl": "https://media.big.dk/2022/07/EURX_05_EXTERIOR-FROM-FRONT_Image-by-BIG.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_17041_N57.svg?width=52&height=52",
+    "photoFile": "EURX_05_EXTERIOR-FROM-FRONT_Image-by-BIG_w800.jpg",
+    "monoFile": "19_17041_N57_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Al Wasl Plaza Dubai Expo",
+    "location": "Dubai, United Arab Emirates",
+    "photoUrl": "https://media.big.dk/2022/07/19_16025_N52_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_16025_N68.svg?width=52&height=52",
+    "photoFile": "19_16025_N52_webproject_w800.jpg",
+    "monoFile": "19_16025_N68_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Escher Tower",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/08/19_0547_N40_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N43.svg?width=52&height=52",
+    "photoFile": "19_0547_N40_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N43_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Slussen Masterplan",
+    "location": "Stockholm, Sweden",
+    "photoUrl": "https://media.big.dk/2022/07/21_09014_N8_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N130.svg?width=52&height=52",
+    "photoFile": "21_09014_N8_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N130_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Tamayo Cultural Center",
+    "location": "Atizapan, Mexico",
+    "photoUrl": "https://media.big.dk/2022/07/21_0857_N3_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N142.svg?width=52&height=52",
+    "photoFile": "21_0857_N3_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N142_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Artery",
+    "location": "Abu Dhabi, United Arab Emirates",
+    "photoUrl": "https://media.big.dk/2022/07/4-ARTERY-HOUSE.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_16029_N48.svg?width=52&height=52",
+    "photoFile": "4-ARTERY-HOUSE_w800.jpg",
+    "monoFile": "19_16029_N48_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Holy Road",
+    "location": "Athens, Greece",
+    "photoUrl": "https://media.big.dk/2022/07/19_0815_N33_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N61.svg?width=52&height=52",
+    "photoFile": "19_0815_N33_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N61_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Battery",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_0523_N9_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N21.svg?width=52&height=52",
+    "photoFile": "21_0523_N9_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N21_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Koutalaki Ski Village",
+    "location": "Levi, Finland",
+    "photoUrl": "https://media.big.dk/2022/07/21_11042_N46_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N81.svg?width=52&height=52",
+    "photoFile": "21_11042_N46_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N81_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The 5 Pillars of Bawadi",
+    "location": "Dubai, United Arab Emirates",
+    "photoUrl": "https://media.big.dk/2022/07/0804_N115.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N22.svg?width=52&height=52",
+    "photoFile": "0804_N115_w800.jpg",
+    "monoFile": "19_A_220303_N22_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Stereo No.1 Quayside",
+    "location": "Newcastle, England",
+    "photoUrl": "https://media.big.dk/2022/07/21_191000_N14_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N140.svg?width=52&height=52",
+    "photoFile": "21_191000_N14_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N140_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Bridge Residences",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_0531_N48_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N35.svg?width=52&height=52",
+    "photoFile": "21_0531_N48_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N35_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The National Bank of Iceland",
+    "location": "Reykjavik, Iceland",
+    "photoUrl": "https://media.big.dk/2022/07/21_0745_N71_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N31.svg?width=52&height=52",
+    "photoFile": "21_0745_N71_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N31_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "VMCP Hotel",
+    "location": "Arlanda, Sweden",
+    "photoUrl": "https://media.big.dk/2022/07/21_726_N17_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N17.svg?width=52&height=52",
+    "photoFile": "21_726_N17_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N17_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Odense Aqua Center",
+    "location": "Odense/Aalborg, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/0112_N45.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N108.svg?width=52&height=52",
+    "photoFile": "0112_N45_w800.jpg",
+    "monoFile": "19_A_220303_N108_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Yes Is More",
+    "location": "Copenhagen, Denmark | Aarhus, Denmark | Bordeaux, France | Tokyo, Japan,",
+    "photoUrl": "https://media.big.dk/2022/06/21_YIM_N43_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N170.svg?width=52&height=52",
+    "photoFile": "21_YIM_N43_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N170_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Clover Block",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_0526_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N77.svg?width=52&height=52",
+    "photoFile": "21_0526_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N77_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Watch Flower",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_13023_N14_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N10.svg?width=52&height=52",
+    "photoFile": "21_13023_N14_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N10_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Astana National Library",
+    "location": "Astana, Kazakhstan",
+    "photoUrl": "https://media.big.dk/2022/07/19_09008_N26_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N13.svg?width=52&height=52",
+    "photoFile": "19_09008_N26_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N13_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Walter Towers",
+    "location": "Prague, Czech Republic",
+    "photoUrl": "https://media.big.dk/2022/07/21_0806_N9_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N163.svg?width=52&height=52",
+    "photoFile": "21_0806_N9_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N163_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Phoenix Observation Tower",
+    "location": "Phoenix, United States",
+    "photoUrl": "https://media.big.dk/2022/07/BIG_PHO_COLLAGE_05_SILHOUETTE_30CM-HIGH.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N113.svg?width=52&height=52",
+    "photoFile": "BIG_PHO_COLLAGE_05_SILHOUETTE_30CM-HIGH_w800.jpg",
+    "monoFile": "19_A_220303_N113_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Stavanger Concert Hall",
+    "location": "Stavanger, Norway",
+    "photoUrl": "https://media.big.dk/2022/06/0309_N67_hero1-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/A_220303_N138-9.svg?width=52&height=52",
+    "photoFile": "0309_N67_hero1-1_w800.jpg",
+    "monoFile": "A_220303_N138-9_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Yongsan Hashtag Tower",
+    "location": "Seoul, South Korea",
+    "photoUrl": "https://media.big.dk/2022/07/11046_N25.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N171.svg?width=52&height=52",
+    "photoFile": "11046_N25_w800.jpg",
+    "monoFile": "19_A_220303_N171_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Zira Island Masterplan",
+    "location": "Baku, Azerbaijan",
+    "photoUrl": "https://media.big.dk/2022/07/19_0825_N34_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N172.svg?width=52&height=52",
+    "photoFile": "19_0825_N34_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N172_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "The Vejle Houses",
+    "location": "Vejle, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/VEJ-04-VIZ-BIG-upscaled.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N154.svg?width=52&height=52",
+    "photoFile": "VEJ-04-VIZ-BIG-upscaled_w800.jpg",
+    "monoFile": "19_A_220303_N154_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Superharbour",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/21_0308_N84_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N57.svg?width=52&height=52",
+    "photoFile": "21_0308_N84_hero1_w800.jpg",
+    "monoFile": "19_A_220303_N57_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "People's Building Shanghai",
+    "location": "Shanghai, China",
+    "photoUrl": "https://media.big.dk/2022/07/19_0406_N43_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N117.svg?width=52&height=52",
+    "photoFile": "19_0406_N43_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N117_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Scoop Chair",
+    "location": "+Halle",
+    "photoUrl": "https://media.big.dk/2022/08/Scoop-E-LandscapeCrop.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Scoop-icon_web.svg?width=52&height=52",
+    "photoFile": "Scoop-E-LandscapeCrop_w800.jpg",
+    "monoFile": "P-Scoop-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Panda Figure",
+    "location": "Architectmade",
+    "photoUrl": "https://media.big.dk/2022/09/21_PRODUCTS_PAN_N5_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Panda-Figure-icon_web6.svg?width=52&height=52",
+    "photoFile": "21_PRODUCTS_PAN_N5_hero1_w800.jpg",
+    "monoFile": "P-Panda-Figure-icon_web6_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Gople Outdoor Lamps",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_GOPLE_O_N10_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Gople-Outdoor-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_GOPLE_O_N10_webproject_w800.jpg",
+    "monoFile": "P-Gople-Outdoor-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Ripple Lamps",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/09/21_PRODUCTS_RIPPLE_N15_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Ripple-icon_web.svg?width=52&height=52",
+    "photoFile": "21_PRODUCTS_RIPPLE_N15_hero1_w800.jpg",
+    "monoFile": "P-Ripple-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Vine Light",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_VINE_N19_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Vine-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_VINE_N19_webproject_w800.jpg",
+    "monoFile": "P-Vine-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Skum Pavilion",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/08/19_16037_N20_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/19_A_220303_N129.svg?width=52&height=52",
+    "photoFile": "19_16037_N20_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N129_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Bulb Fiction Lamp",
+    "location": "Fritz Hansen",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_BULB_N2_webproject-e1660815145807.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Bulb-Fiction-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_BULB_N2_webproject-e1660815145807_w800.jpg",
+    "monoFile": "P-Bulb-Fiction-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Via 57 Chair",
+    "location": "Fritz Hansen",
+    "photoUrl": "https://media.big.dk/2022/08/5828_VIA57-Yellow_White-LandscapeCrop.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/VIA.svg?width=52&height=52",
+    "photoFile": "5828_VIA57-Yellow_White-LandscapeCrop_w800.jpg",
+    "monoFile": "VIA_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Taper Bathroom Fittings",
+    "location": "Kallista",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_TAPER_webproject-e1660719226137.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Taper-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_TAPER_webproject-e1660719226137_w800.jpg",
+    "monoFile": "P-Taper-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Lilium Outdoor",
+    "location": "Skagerak",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_LILIUM_N22_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Lillium-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_LILIUM_N22_webproject_w800.jpg",
+    "monoFile": "P-Lillium-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Hav Porcelain Collection",
+    "location": "Royal Copenhagen",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_HAV_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Hav-icon_web2.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_HAV_webproject_w800.jpg",
+    "monoFile": "P-Hav-icon_web2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Pebble Bathroom Accessories",
+    "location": "d line",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_PEBBLE_N2_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Pebble-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_PEBBLE_N2_webproject_w800.jpg",
+    "monoFile": "P-Pebble-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Totem Shelf",
+    "location": "Driade",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_TOTEM_N2_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Totem-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_TOTEM_N2_webproject_w800.jpg",
+    "monoFile": "P-Totem-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BIG Mermaid",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2022/07/19_HEI_N21_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N58.svg?width=52&height=52",
+    "photoFile": "19_HEI_N21_webproject_w800.jpg",
+    "monoFile": "19_A_220303_N58_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "X Table",
+    "location": "Holmris B8",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_X_N4_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-X-Table-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_X_N4_webproject_w800.jpg",
+    "monoFile": "P-X-Table-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Gople Lamps",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/07/19_IDEAS_GOPLE_N34_webproject-e1659089578545.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Gople-icon_web.svg?width=52&height=52",
+    "photoFile": "19_IDEAS_GOPLE_N34_webproject-e1659089578545_w800.jpg",
+    "monoFile": "P-Gople-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Alphabet of Light",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/08/DSC2595_crop_JB.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Alphabet-icon_web.svg?width=52&height=52",
+    "photoFile": "DSC2595_crop_JB_w800.jpg",
+    "monoFile": "P-Alphabet-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Headphones",
+    "location": "Aiaiai",
+    "photoUrl": "https://media.big.dk/2022/08/19_PRODUCTS_AIAIAI_N7_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Hav-AIAIAI-Capital-web2.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_AIAIAI_N7_webproject_w800.jpg",
+    "monoFile": "P-Hav-AIAIAI-Capital-web2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Bicycle Series",
+    "location": "Biomega",
+    "photoUrl": "https://media.big.dk/2022/08/19_PRODUCTS_OKO_N2_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Biomega-icon_web-4.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_OKO_N2_webproject_w800.jpg",
+    "monoFile": "P-Biomega-icon_web-4_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Roulade Chair",
+    "location": "Jot.Jot",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_ROULADE_N17_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Roulade-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_ROULADE_N17_webproject_w800.jpg",
+    "monoFile": "P-Roulade-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Shanghay Chair",
+    "location": "HAY",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_SHANGHAY_webproject-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Shangai-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_SHANGHAY_webproject-1_w800.jpg",
+    "monoFile": "P-Shangai-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Strap Kitchen Fronts",
+    "location": "Reform",
+    "photoUrl": "https://media.big.dk/2022/09/21_PRODUCTS_STRAP_N38_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/P-Strap-icon_web.svg?width=52&height=52",
+    "photoFile": "21_PRODUCTS_STRAP_N38_hero1_w800.jpg",
+    "monoFile": "P-Strap-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Voxel Sofa",
+    "location": "Common Seating",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_VOXEL_N17_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Voxel-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_VOXEL_N17_webproject_w800.jpg",
+    "monoFile": "P-Voxel-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Slice Shelf",
+    "location": "&tradition",
+    "photoUrl": "https://media.big.dk/2022/09/19_UNKNOWN_N3_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/P-Slice-Shelf-icon_web.svg?width=52&height=52",
+    "photoFile": "19_UNKNOWN_N3_webproject_w800.jpg",
+    "monoFile": "P-Slice-Shelf-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Keglen Lamps",
+    "location": "Louis Poulsen",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_KEGLEN_N8_webproject-e1660814904923.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Keglen-icon_web-1.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_KEGLEN_N8_webproject-e1660814904923_w800.jpg",
+    "monoFile": "P-Keglen-icon_web-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Gople Portable Lamp",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_GOPLE_P_N8_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Gople-Portable-icon_web2.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_GOPLE_P_N8_webproject_w800.jpg",
+    "monoFile": "P-Gople-Portable-icon_web2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Silverback Lamps",
+    "location": "Louis Poulsen",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_SILVERBACK_N17_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Silverback-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_SILVERBACK_N17_webproject_w800.jpg",
+    "monoFile": "P-Silverback-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Slicing Lamps",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/09/21_PRODUCTS_SLICING_N14_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/09/P-Louvre-icon_web.svg?width=52&height=52",
+    "photoFile": "21_PRODUCTS_SLICING_N14_hero1_w800.jpg",
+    "monoFile": "P-Louvre-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Trumpet Downlight",
+    "location": "XAL",
+    "photoUrl": "https://media.big.dk/2022/08/19_PRODUCTS_TRUMPET_N6_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/P-Trumpet-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_TRUMPET_N6_webproject_w800.jpg",
+    "monoFile": "P-Trumpet-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Smart Lock Duo",
+    "location": "Friday Home",
+    "photoUrl": "https://media.big.dk/2022/07/19_PRODUCTS_DUO_N38_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Friday-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_DUO_N38_webproject_w800.jpg",
+    "monoFile": "P-Friday-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Window Garden",
+    "location": "Rosenthal",
+    "photoUrl": "https://media.big.dk/2022/08/19_PRODUCTS_WINDOW_N41_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Window-Gardens-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_WINDOW_N41_webproject_w800.jpg",
+    "monoFile": "P-Window-Gardens-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Reusable Cup System",
+    "location": "TURN",
+    "photoUrl": "https://media.big.dk/2022/10/19_PRODUCTS_TURN_N29_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Turn-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_TURN_N29_webproject_w800.jpg",
+    "monoFile": "P-Turn-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Puzzle House",
+    "location": "Copenhagen, DK",
+    "photoUrl": "https://media.big.dk/2022/10/21_UNKNOWN2_N11_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/10/P-Puzzle-House-icon_web2.svg?width=52&height=52",
+    "photoFile": "21_UNKNOWN2_N11_hero1_w800.jpg",
+    "monoFile": "P-Puzzle-House-icon_web2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Gople Spot Light",
+    "location": "Artemide",
+    "photoUrl": "https://media.big.dk/2022/09/19_PRODUCTS_GOPLE_S_N5_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Gople-System-icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_GOPLE_S_N5_webproject_w800.jpg",
+    "monoFile": "P-Gople-System-icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BIG LON OFFICE",
+    "location": "London, England",
+    "photoUrl": "https://media.big.dk/2024/02/201013_N212_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/02/Flag-Icon.svg?width=52&height=52",
+    "photoFile": "201013_N212_webproject_w800.jpg",
+    "monoFile": "Flag-Icon_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "BIG NYC Office",
+    "location": "Brooklyn, United States",
+    "photoUrl": "https://media.big.dk/2023/01/19_X02_N9_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/01/USA-sq-flag.svg?width=52&height=52",
+    "photoFile": "19_X02_N9_webproject_w800.jpg",
+    "monoFile": "USA-sq-flag_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Port Kembla Masterplan",
+    "location": ", Australia",
+    "photoUrl": "https://media.big.dk/2024/02/19_22016_N104_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/02/KEMB_Phase-3_ICON.svg?width=52&height=52",
+    "photoFile": "19_22016_N104_webproject_w800.jpg",
+    "monoFile": "KEMB_Phase-3_ICON_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Knop Lamps",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2024/07/19_PRODUCTS_KNOB_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2024/07/P_Artemide_Knop_icon_web.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_KNOB_webproject_w800.jpg",
+    "monoFile": "P_Artemide_Knop_icon_web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Smart Lock System",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/2022/08/19_PRODUCTS_FRIDAY_N21_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/08/P-Friday-icon_web-2.svg?width=52&height=52",
+    "photoFile": "19_PRODUCTS_FRIDAY_N21_webproject_w800.jpg",
+    "monoFile": "P-Friday-icon_web-2_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "I AM MSHRM Pavilion",
+    "location": "Copenhagen, Denmark",
+    "photoUrl": "https://media.big.dk/2023/08/21_23009_N26_hero1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2023/08/MSHRM-icon-web.svg?width=52&height=52",
+    "photoFile": "21_23009_N26_hero1_w800.jpg",
+    "monoFile": "MSHRM-icon-web_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Ø4 Beach Huts",
+    "location": "Aarhus, Denmark",
+    "photoUrl": "https://media.big.dk/2022/06/R_Hjortshoj-BIG-Bath-Houses-32-1.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_A_220303_N106.svg?width=52&height=52",
+    "photoFile": "R_Hjortshoj-BIG-Bath-Houses-32-1_w800.jpg",
+    "monoFile": "19_A_220303_N106_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Google Caribbean",
+    "location": "Sunnyvale, United States",
+    "photoUrl": "https://media.big.dk/2022/06/01-AERIAL_heroweb.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/06/19_17502_N72.svg?width=52&height=52",
+    "photoFile": "01-AERIAL_heroweb_w800.jpg",
+    "monoFile": "19_17502_N72_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Uppsala Power Plant",
+    "location": "Uppsala, Sweden",
+    "photoUrl": "https://media.big.dk/2022/07/010915_WEBSITE-FINAL_.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2022/07/19_A_220303_N151.svg?width=52&height=52",
+    "photoFile": "010915_WEBSITE-FINAL__w800.jpg",
+    "monoFile": "19_A_220303_N151_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "A Million Times 96",
+    "location": ",",
+    "photoUrl": "https://media.big.dk/EDIT_YongwonJ-1214_af-edit.jpg?width=800",
+    "monoUrl": "https://media.big.dk/2025-10-09-ICON_A-MILLION-TIMES____.svg?width=52&height=52",
+    "photoFile": "EDIT_YongwonJ-1214_af-edit_w800.jpg",
+    "monoFile": "2025-10-09-ICON_A-MILLION-TIMES_____w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "EDGE East Side Berlin",
+    "location": "Berlin, Germany",
+    "photoUrl": "https://media.big.dk/19_17501_N14_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/ETB_ICON.svg?width=52&height=52",
+    "photoFile": "19_17501_N14_webproject_w800.jpg",
+    "monoFile": "ETB_ICON_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  },
+  {
+    "name": "Materialism",
+    "location": "Suzhou, China",
+    "photoUrl": "https://media.big.dk/210100_N361_webproject.jpg?width=800",
+    "monoUrl": "https://media.big.dk/3DOD_ICON-01-1.svg?width=52&height=52",
+    "photoFile": "210100_N361_webproject_w800.jpg",
+    "monoFile": "3DOD_ICON-01-1_w52_h52.svg",
+    "photoOnDisk": false,
+    "monoOnDisk": false
+  }
+]

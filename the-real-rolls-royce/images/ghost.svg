@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1422"/>
+      <stop offset="50%" stop-color="#060608"/>
+      <stop offset="100%" stop-color="#0c1018"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0.5" cy="0.45" r="0.45">
+      <stop offset="0%" stop-color="#C0C0C0" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#C0C0C0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="480" fill="url(#bg)"/>
+  <rect width="640" height="480" fill="url(#spot)"/>
+
+  <!-- Floor -->
+  <line x1="0" y1="320" x2="640" y2="320" stroke="#1a1a2e" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Ghost - Minimalist elegant sedan, 3/4 front -->
+  <g transform="translate(320, 260)" opacity="0.85">
+    <path d="M-200,25 L-185,-8 L-155,-32 L-105,-45 L-30,-48 L60,-46 L130,-32 L175,-8 L195,25 L195,40 L-200,40 Z"
+          fill="#10141e" stroke="#1a2030" stroke-width="0.7"/>
+    <!-- Roofline -->
+    <path d="M-95,-44 C-60,-78 -10,-88 40,-86 C85,-78 120,-55 145,-25"
+          fill="none" stroke="#C0C0C0" stroke-width="0.5" opacity="0.3"/>
+    <!-- Silver trim -->
+    <line x1="-180" y1="2" x2="180" y2="2" stroke="#C0C0C0" stroke-width="0.5" opacity="0.15"/>
+    <!-- Grille -->
+    <rect x="-192" y="-16" width="22" height="40" rx="3" fill="none" stroke="#C4A44D" stroke-width="0.7" opacity="0.25"/>
+    <line x1="-181" y1="-16" x2="-181" y2="24" stroke="#C4A44D" stroke-width="0.4" opacity="0.2"/>
+    <!-- Headlight -->
+    <rect x="-170" y="-6" width="22" height="7" rx="3" fill="#C0C0C0" opacity="0.12"/>
+    <!-- Wheels -->
+    <circle cx="-130" cy="40" r="26" fill="#080808" stroke="#1a1a2e" stroke-width="1.2"/>
+    <circle cx="-130" cy="40" r="17" fill="none" stroke="#C0C0C0" stroke-width="0.4" opacity="0.15"/>
+    <circle cx="130" cy="40" r="26" fill="#080808" stroke="#1a1a2e" stroke-width="1.2"/>
+    <circle cx="130" cy="40" r="17" fill="none" stroke="#C0C0C0" stroke-width="0.4" opacity="0.15"/>
+    <!-- Reflection -->
+    <ellipse cx="0" cy="75" rx="200" ry="8" fill="#C0C0C0" opacity="0.015"/>
+  </g>
+
+  <text x="320" y="430" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="9" letter-spacing="5" fill="#C0C0C0" opacity="0.2">GHOST</text>
+</svg>

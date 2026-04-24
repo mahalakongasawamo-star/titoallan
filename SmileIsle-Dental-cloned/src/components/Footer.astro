@@ -1,0 +1,63 @@
+---
+import { PHONE, ADDRESS, BOOKING_URL } from '../consts';
+---
+
+<footer class="bg-navy text-white/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-4 gap-10">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <h3 class="font-heading text-2xl font-bold text-white mb-3">Smile Isle</h3>
+        <p class="font-body text-sm text-white/60 leading-relaxed">
+          Board-certified orthodontics in Odessa, FL. Braces, Invisalign & airway-focused care for the whole family.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-body text-sm font-semibold text-white uppercase tracking-wider mb-4">Navigate</h4>
+        <ul class="space-y-2 font-body text-sm">
+          <li><a href="/about" class="text-white/60 hover:text-white transition-colors">About</a></li>
+          <li><a href="/orthodontics" class="text-white/60 hover:text-white transition-colors">Orthodontics</a></li>
+          <li><a href="/invisalign" class="text-white/60 hover:text-white transition-colors">Invisalign</a></li>
+          <li><a href="/new-patients" class="text-white/60 hover:text-white transition-colors">New Patients</a></li>
+          <li><a href="/contact" class="text-white/60 hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-body text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h4>
+        <ul class="space-y-2 font-body text-sm">
+          <li class="text-white/60">{ADDRESS}</li>
+          <li><a href={`tel:${PHONE.replace(/[^\d]/g, '')}`} class="text-white/60 hover:text-white transition-colors">{PHONE}</a></li>
+          <li class="text-white/60">Mon–Fri: 8am–5pm</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div>
+        <h4 class="font-body text-sm font-semibold text-white uppercase tracking-wider mb-4">Get Started</h4>
+        <p class="font-body text-sm text-white/60 mb-4">Free consultations available. $1,000 off comprehensive treatment.*</p>
+        <a
+          href={BOOKING_URL}
+          class="inline-block px-6 py-2.5 bg-primary text-white font-body text-sm font-semibold rounded-full hover:bg-primary-400 transition-colors"
+        >
+          Book Free Consult
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="font-body text-xs text-white/40">
+        &copy; {new Date().getFullYear()} Smile Isle Orthodontics. All rights reserved.
+      </p>
+      <div class="flex gap-6 font-body text-xs text-white/40">
+        <a href="/privacy" class="hover:text-white/60 transition-colors">Privacy Policy</a>
+        <a href="/terms" class="hover:text-white/60 transition-colors">Terms & Conditions</a>
+        <a href="/accessibility" class="hover:text-white/60 transition-colors">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>

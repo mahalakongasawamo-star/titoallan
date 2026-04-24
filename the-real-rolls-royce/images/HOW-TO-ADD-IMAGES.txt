@@ -1,0 +1,35 @@
+ROLLS-ROYCE IMAGE PLACEHOLDERS
+================================
+
+Drop your images into this folder, then update index.html.
+
+TWO PLACES TO UPDATE PER IMAGE:
+  1. The CSS variable at the top of <style> (--img-hero, --img-phantom, etc.)
+  2. The <img src="..."> tag in the HTML
+
+EXAMPLE — Replacing the hero image:
+  1. Drop your file here:  images/hero.jpg
+  2. In index.html CSS (line ~30):
+       BEFORE:  --img-hero: url('https://images.unsplash.com/...');
+       AFTER:   --img-hero: url('images/hero.jpg');
+  3. In index.html HTML (search for "hero__bg-image"):
+       BEFORE:  src="https://images.unsplash.com/..."
+       AFTER:   src="images/hero.jpg"
+
+RECOMMENDED FILE NAMES & SIZES:
+  hero.jpg             1920x1080+  (fullscreen background)
+  bespoke.jpg          1920x1080+  (fullscreen parallax)
+  phantom.jpg          960x540     (featured model card)
+  spectre.jpg          960x540     (featured model card)
+  ghost.jpg            640x480     (grid model card)
+  cullinan.jpg         640x480     (grid model card)
+  blackbadge.jpg       640x480     (grid model card)
+  whisper-experiences.jpg  640x854 (portrait 3:4 card)
+  whisper-journeys.jpg     640x854 (portrait 3:4 card)
+  whisper-ecstasy.jpg      640x854 (portrait 3:4 card)
+
+TIPS:
+  - Use .jpg or .webp for photos (smaller file size)
+  - The hero needs to be at least 1920px wide for desktop
+  - All images auto-crop via object-fit: cover — center your subject
+  - If an image fails to load, a dark gradient placeholder appears

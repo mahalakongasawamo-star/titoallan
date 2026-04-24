@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* ═══════ LIGHT MODE (default) ═══════ */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f8f8;
+  --color-text: #111111;
+  --color-text-light: #ffffff;
+  --color-text-muted: #666666;
+  --color-text-subtle: #999999;
+  --color-border: #e0e0e0;
+  --color-accent: #111111;
+}
+
+/* ═══════ DARK MODE ═══════ */
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #111111;
+  --color-text: #ededed;
+  --color-text-light: #ffffff;
+  --color-text-muted: #999999;
+  --color-text-subtle: #666666;
+  --color-border: #333333;
+  --color-accent: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-rr-blue: #00498F;
+  --color-rr-cobalt: #00205B;
+  --color-rr-white: #FFFFFF;
+  --color-rr-black: #050505;
+  --color-rr-gold: #C4A44D;
+  --color-rr-silver: #C0C0C0;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ═══════ THEME-AWARE SECTIONS ═══════ */
+
+/* Hero & industry keep dark backgrounds regardless of theme */
+[data-theme="dark"] .theme-section {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Light mode: main sections get light backgrounds */
+.theme-section {
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hide default cursor when custom cursor is active (desktop only) */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}

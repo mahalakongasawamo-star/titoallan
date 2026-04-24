@@ -1,0 +1,220 @@
+# Upserv — AI-Friendly Web Design for Small & Medium Businesses
+
+> Upserv builds AI-friendly websites for small and medium businesses so they appear in AI-driven recommendations.
+
+Website: https://upserv.ai
+Email: hello@upserv.ai
+Free AI Scan: https://geo-check.org/lander
+
+Upserv is a web design agency that rebuilds and redesigns websites for small and medium businesses so they appear in AI-driven recommendations, ChatGPT Ads, Google MUM, Perplexity, Grok, and Meta Andromeda.
+
+We serve dental clinics, medical practices, restaurants, retail stores, auto repair shops, electricians, plumbers, and law firms across the United States.
+
+---
+
+## The Problem Upserv Solves
+
+On February 9, 2026, ChatGPT launched advertising to 900 million users. AI now surfaces 3 to 5 businesses per query, not pages of links. An analysis of 350,000 local businesses found 98.8% were absent from ChatGPT recommendations entirely.
+
+93% of google ai mode searches end without a single click. (Source: Semrush, 2025).
+
+AI-referred visitors convert at 4.4× the rate of traditional organic traffic because they arrive already knowing what they want. If your local business isn’t structuring its data for AI, AI platforms cannot recommend your services.
+
+AI hallucinates unverified data. It guesses your pricing, invents your service areas, and cites outdated hours. We build your verified Training Document and push it to 19 AI platforms so they get it right every time.
+
+---
+
+## Core Capabilities
+
+### AI-Optimized Structure
+
+Schema markup, semantic HTML, and structured data that AI platforms parse instantly — so ChatGPT, Perplexity, and Google Gemini recommend your business by name.
+
+### Verified Training Documents
+
+We build your verified AI Training Document and push it to 19 platforms. No more hallucinated prices, wrong hours, or invented service areas.
+
+### Conversion-Driven Design
+
+AI-referred visitors convert at 4.4× the rate of organic traffic. Our designs are built to capture that intent with clear CTAs and trust signals.
+
+---
+
+## Pricing
+
+All tiers require a $150/month data subscription.
+
+| Tier | Name | Price | What You Get |
+| ---- | ---- | ----- | ------------ |
+| TIER 01 | Starter | $1,000 | 5-section AI-ready site, semantic HTML, training document, and push to 19 platforms. |
+| TIER 02 | Growth | $5,000 | Full multi-page site, deep AI integration, training document, and AI chatbot included. |
+| TIER 03 | Scale | $10,000 | Complete custom build, advanced chatbot, employee upskilling, and quarterly strategy. |
+
+### What Every Tier Includes
+
+- AI-ready website with semantic HTML
+- Schema markup for structured data
+- Verified AI Training Document
+- Push to 19 AI platforms
+- Ghost Score before and after launch
+
+### Monthly Data Subscription — $150/month
+
+Every 30 days we refresh your training document across all 19 platforms, update any changed services or pricing, add new reviews and trust signals, and send a monthly visibility report.
+
+---
+
+## How It Works
+
+1. **Free AI Visibility Scan** — We audit what AI currently says about your business.
+2. **Business Interview** — 30–60 minute interview to capture verified facts.
+3. **Website Build** — Semantic HTML, schema markup, fact-statement copy.
+4. **Training Document** — Plain-language fact file formatted to the llms.txt standard.
+5. **Platform Push** — Verified data pushed to 19 AI platforms.
+6. **Ghost Score Report** — Before-and-after measurement of AI visibility.
+
+Most sites launch in 7 days.
+
+---
+
+## Industry Case Studies
+
+### Dental Clinic (01 / Health Starter — $1,000)
+
+**Problem:** AI was hallucinating crown pricing for dental practices, quoting $800 less than actual rates. Patients booked elsewhere. Upserv built a fact-statement site with verified pricing schema and pushed it to 19 AI platforms.
+
+**Result:** ChatGPT now correctly cites service menu, prices, and hours when patients ask for local dental options.
+
+### Law Firm (02 / Legal Growth — $5,000)
+
+**Problem:** AI was fabricating practice areas for law firms, listing personal injury for a pure corporate firm. Upserv built a verified legal entity profile with LegalService schema, attorney credentials in live text, and a training document clarifying exact practice areas.
+
+**Result:** Perplexity now accurately lists the firm’s practice areas and jurisdiction when prospects ask AI for specialized legal help.
+
+### Real Estate Agency (03 / Property Starter — $1,000)
+
+**Problem:** Real estate agencies were being confused with brokers, developers, and competitors by AI. Upserv built a RealEstateAgent schema profile with verified agent names, licensed service areas, and transaction history facts so AI cites the correct firm.
+
+**Result:** Gemini now correctly surfaces the agency’s service zip codes and specialties when buyers ask AI to recommend a local agent.
+
+### Restaurant (04 / Food Starter — $1,000)
+
+**Problem:** Restaurants were being ignored by AI when diners asked “find me a family Italian restaurant open Sunday near downtown.” AI could not read the menu, hours, or cuisine type. Upserv built a Restaurant schema site with structured menu data and verified hours.
+
+**Result:** ChatGPT and Meta AI now surface the restaurant when users ask for cuisine type, dietary options, or weekend availability in the area.
+
+### Medical Practice (05 / Health Scale — $10,000)
+
+**Problem:** AI was directing patients to competing clinics because the practice website had no structured specialties data, no physician credentials in live text, and no insurance acceptance schema. Upserv built a full MedicalOrganization profile and pushed it to 19 platforms.
+
+**Result:** Perplexity and ChatGPT now correctly list physician names, specialties, accepted insurance, and new patient availability.
+
+### Retail Store (06 / Retail Growth — $5,000)
+
+**Problem:** Retail stores were invisible when shoppers asked AI “where can I buy X near me?” Upserv built a LocalBusiness + Store schema profile with verified product categories, store hours, location data, and a training document pushed to Google, ChatGPT, and Meta AI.
+
+**Result:** Google Gemini now recommends the store when local shoppers ask AI for specific product categories available nearby.
+
+### Home Services (07 / Service Starter — $1,000)
+
+**Problem:** HVAC companies and plumbers were invisible to AI emergency queries. When homeowners asked “find me an emergency plumber available tonight,” AI had no structured service-area or availability data to cite. Upserv fixed this with HomeAndConstructionBusiness schema and verified service zone data.
+
+**Result:** ChatGPT now correctly surfaces the business for emergency and same-day service queries within the verified service area.
+
+### Accounting Firm (08 / Finance Growth — $5,000)
+
+**Problem:** Accounting firms were being confused with tax prep chains and general bookkeeping services. Upserv built a verified FinancialService schema profile specifying exact services (forensic accounting, tax strategy, CFO advisory), client sizes served, and partner credentials.
+
+**Result:** ChatGPT now distinguishes the firm from national chains and cites the correct specialties when business owners ask AI for a local CPA.
+
+### Salon & Beauty (09 / Beauty Starter — $1,000)
+
+**Problem:** Salons were losing bookings because AI cited wrong pricing and services. Upserv built a BeautySalon schema site with live service menu text, stylist names and credentials, booking link, and verified price ranges pushed to all platforms.
+
+**Result:** Meta AI and ChatGPT now correctly surface the salon’s services and pricing when users ask AI to find a specific treatment nearby.
+
+---
+
+## Frequently Asked Questions
+
+### What exactly does Upserv do?
+
+Upserv builds AI-friendly websites for small and medium businesses. We write your website copy as plain-language fact statements, implement semantic HTML and schema markup, and push a verified training document to 19 AI platforms — so ChatGPT, Gemini, Perplexity, and Meta AI can accurately cite and recommend your business.
+
+### Why is my current website invisible to AI?
+
+Most websites are built to look good visually — graphics, animations, and taglines. AI cannot read image text, cannot interpret design, and cannot extract facts from vague slogans. If your business name, services, pricing, and location are not written as readable plain-language text with schema markup, AI skips your site entirely and cites a competitor instead.
+
+### Is Upserv the same as SEO?
+
+No. SEO optimizes your website to rank higher in traditional Google search results. AI Visibility optimizes your business to be recommended by AI systems — ChatGPT, Gemini, Perplexity, and Meta AI. These are different systems with different requirements. SEO targets page rankings. We target AI citations. Both matter, but only one is growing at 900 million users weekly.
+
+### How much does an Upserv website cost?
+
+Upserv offers three tiers: Starter at $1,000 (5-section AI-ready site, semantic HTML, training document, push to 19 platforms), Growth at $5,000 (full multi-page site, deep AI integration, AI chatbot included), and Scale at $10,000 (complete custom build, advanced chatbot, employee upskilling, quarterly strategy). All tiers require a $150/month data subscription.
+
+### How long does it take to get my website live?
+
+Most Upserv websites launch in 7 days. Day 1: Free AI visibility scan. Day 2–3: 30–60 minute business interview and training document build. Day 4–5: Website build with schema markup, llms.txt, and fact-statement copy. Day 6: Your review and approval. Day 7: Launch and push to 19 AI platforms.
+
+### Do I need to replace my current website?
+
+Not necessarily. At the $1,000 Starter tier, you have two options: Option 1 — we edit your existing site by rewriting copy as fact statements and adding schema markup. Option 2 — we build a brand-new 1-page, 5-section AI-friendly website from scratch. We recommend the new build for businesses with outdated or heavily image-based sites.
+
+### What is a training document?
+
+A training document is a plain-language fact file about your business. It contains your exact services, verified pricing, correct hours, location, staff names and credentials, and any other facts AI needs to recommend you accurately. We format it to the llms.txt standard so AI platforms can ingest it directly. Without a training document, AI guesses — and guesses wrong.
+
+### What is a Ghost Score?
+
+A Ghost Score is Upserv’s AI visibility measurement — a score of 0 to 100 that measures how accurately and how often AI platforms cite your business. A score of 0 means AI never mentions your business. A score of 100 means AI consistently recommends you with correct information. We run your Ghost Score before launch and again 30 days after.
+
+### How do I know if AI visibility is working?
+
+Upserv provides a Ghost Score report before launch and 30 days after launch showing exactly what changed — which platforms now cite you, what they say, and where errors were corrected. Most clients see AI recognition within 4–8 weeks of launch.
+
+### What happens after my website launches?
+
+After launch, Upserv manages your AI visibility on a $150/month subscription. Every 30 days we refresh your training document across all 19 platforms, update any changed services or pricing, add new reviews and trust signals, and send a monthly visibility report.
+
+### What are the 19 AI platforms Upserv pushes data to?
+
+We push your verified training document to: ChatGPT, Google Gemini, Perplexity, Meta AI (Facebook & Instagram), Microsoft Copilot, Claude (Anthropic), Google Search (MUM), Bing AI, Apple Intelligence, Amazon Alexa, Grok (xAI), You.com, Brave Leo, DuckDuckAI, Aria (Opera), HuggingChat, Cohere Command, Mistral Le Chat, and OpenRouter.
+
+---
+
+## AI Insights & Articles
+
+### Featured: 93% of Google AI Mode Searches End Without a Click. Here Is What That Means for Your Business.
+
+In 2026, Google AI Mode answers the majority of search queries directly — without sending the user to any website. This article explains what zero-click AI search means for small business owners and the exact steps to stay visible.
+
+**What you will learn:**
+- Why 93% of AI Mode searches produce no website clicks
+- How AI decides which businesses to recommend
+- The 3 things your website needs for AI to cite you correctly
+- What happens to businesses that do nothing in 2026
+
+### More Articles
+
+- **FEB 2026** — What Is a Training Document and Why Does Every Small Business Need One?
+- **JAN 2026** — AI Visibility Is Not SEO. Here Is the Difference.
+- **JAN 2026** — A Dental Clinic Asked ChatGPT to Recommend Itself. Here Is What AI Said.
+- **DEC 2025** — Schema Markup for Small Businesses: The Complete Plain-Language Guide
+- **DEC 2025** — What Is llms.txt and Does Your Business Website Need One?
+
+---
+
+## The 19 AI Platforms
+
+We push your verified training document to: ChatGPT, Google Gemini, Perplexity, Meta AI (Facebook & Instagram), Microsoft Copilot, Claude (Anthropic), Google Search (MUM), Bing AI, Apple Intelligence, Amazon Alexa, Grok (xAI), You.com, Brave Leo, DuckDuckAI, Aria (Opera), HuggingChat, Cohere Command, Mistral Le Chat, and OpenRouter.
+
+---
+
+## Contact Upserv
+
+Upserv is an AI-ready website company serving businesses that cannot afford to be invisible.
+
+- Email: hello@upserv.ai
+- Free AI Scan: https://geo-check.org/lander
+- Starting at $1,000

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About KCLC — Kindergarten Camp Learning Center, founded 2010 by School Directress Ms. Lala Ticzon-Santos. 14+ years of progressive preschool education for ages 2–6 in Antipolo City, Rizal and Marikina City, Metro Manila.">
+  <meta name="keywords" content="KCLC, about, kindergarten Antipolo, preschool Marikina, Ms. Lala Ticzon-Santos, progressive education, multiple intelligences, preschool team, School Directress">
+  <meta name="author" content="Kindergarten Camp Learning Center">
+  <meta name="robots" content="index, follow">
+  <title>About KCLC — School Directress, Team &amp; Story | Kindergarten Camp Learning Center</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About KCLC — Kindergarten Camp Learning Center">
+  <meta property="og:description" content="14+ years of progressive preschool education. Meet our team and learn what makes KCLC different.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/Hi-Res-KCLC-Logo.png">
+
+  <!-- Structured Data: AboutPage + Person (directress) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://www.kindergartencamp.com/about.html",
+    "name": "About KCLC — Kindergarten Camp Learning Center",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://www.kindergartencamp.com/about.html#directress",
+      "name": "Ms. Lala Ticzon-Santos",
+      "jobTitle": "School Directress and Founder",
+      "description": "Founder and School Directress of Kindergarten Camp Learning Center with 14+ years leading progressive early childhood education in Antipolo and Marikina.",
+      "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": "Kindergarten Camp Learning Center",
+        "url": "https://www.kindergartencamp.com/"
+      },
+      "knowsAbout": [
+        "Early Childhood Education",
+        "Progressive Curriculum",
+        "Multiple Intelligences Theory",
+        "Integrated Thematic Teaching",
+        "Beginning Reading Instruction",
+        "Singapore Math Methodology"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kindergartencamp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "About", "item": "https://www.kindergartencamp.com/about.html"}
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: EducationalOrganization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Preschool", "EducationalOrganization"],
+    "name": "Kindergarten Camp Learning Center",
+    "alternateName": "KCLC",
+    "url": "https://www.kindergartencamp.com/",
+    "logo": "https://www.kindergartencamp.com/images/Hi-Res-KCLC-Logo.png",
+    "description": "Progressive preschool education in Antipolo and Marikina, Philippines. Founded by Ms. Lala Ticzon-Santos with 14+ years of developing whole-child learners.",
+    "email": "info@kindergartencamp.com",
+    "telephone": "+63277962016",
+    "foundingDate": "2010",
+    "founder": {
+      "@id": "https://www.kindergartencamp.com/about.html#directress"
+    },
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "47 Ticzon Park, P. Oliveros Street",
+        "addressLocality": "Antipolo City",
+        "addressRegion": "Rizal",
+        "postalCode": "1870",
+        "addressCountry": "PH"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "103 Starlite St. Rancho 3 Estate, Concepcion Dos",
+        "addressLocality": "Marikina City",
+        "addressCountry": "PH"
+      }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:30",
+      "closes": "17:30"
+    }
+  }
+  </script>
+
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('kclc-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ====================================================================== -->
+  <!-- CURSOR FOLLOWER -->
+  <!-- ====================================================================== -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ====================================================================== -->
+  <!-- NAVIGATION -->
+  <!-- ====================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="KCLC Home">
+        <img src="images/Hi-Res-KCLC-Logo.png" alt="KCLC Logo" width="54" height="54">
+        <span class="nav-brand-title">Kindergarten Camp <span class="nav-brand-title-accent">Learning Center</span></span>
+      </a>
+
+      <div class="nav-right">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-dropdown">
+          <a href="programs.html" class="nav-link nav-dropdown-toggle">Programs</a>
+          <div class="nav-dropdown-menu">
+            <a href="programs.html">All Programs</a>
+            <a href="program-early-learning.html">Early Learning</a>
+            <a href="program-kindergarten.html">Kindergarten</a>
+            <a href="program-daycare.html">Daycare Services</a>
+          </div>
+        </li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="choosing-a-kindergarten.html" class="nav-link">Compare</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="index.html#book-a-tour" class="nav-link nav-cta">Book a Tour</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====================================================================== -->
+  <!-- BREADCRUMBS -->
+  <!-- ====================================================================== -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+        <li aria-current="page">About Us</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ====================================================================== -->
+  <!-- PAGE HERO — Dark, inner-page style -->
+  <!-- ====================================================================== -->
+  <section class="page-hero" data-animate="fade-in">
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="section-eyebrow">About KCLC</p>
+        <h1 class="page-hero-title"><strong>Who Is Behind KCLC?</strong></h1>
+        <p class="page-hero-desc">Kindergarten Camp Learning Center was founded in 2010 by <strong>Ms. Lala Ticzon-Santos</strong> and has shaped young minds in Antipolo and Marikina for 14+ years. Our team of passionate early childhood educators builds self-directed, socially aware, and environmentally conscious learners through progressive, child-centered education.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- OUR STORY -->
+  <!-- ====================================================================== -->
+  <section class="story" style="padding: var(--space-14) 0; background: var(--surface-primary); transition: background-color 0.5s var(--ease-out);" data-animate="fade-up">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-heading">How Did Kindergarten Camp Start?</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 17px; line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-6);">
+          Kindergarten Camp Learning Center was founded by <strong style="color: var(--text-primary);">Ms. Lala Ticzon-Santos</strong>, a dedicated educator with a clear vision: to build a school where children develop not just academically, but as whole human beings. From the very beginning, KCLC adopted a progressive approach to education, grounded in Dr. Howard Gardner's theory of multiple intelligences.
+        </p>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-6);">
+          For over 14 years, KCLC has served families in Antipolo and Marikina through integrated thematic teaching, content-based instruction, and developmentally appropriate methods. The curriculum places caring for the environment and social studies at its core, ensuring children see meaningful connections between what they learn and the world around them.
+        </p>
+        <p style="font-size: 17px; line-height: 1.7; color: var(--text-secondary);">
+          Today, KCLC operates two campuses and continues its mission as "your child's learning camp of explorations" &mdash; a place where every child is empowered to become a confident, independent learner ready for whatever comes next.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- MISSION & VALUES -->
+  <!-- ====================================================================== -->
+  <section class="mission" style="padding: var(--space-14) 0; background: var(--surface-secondary); transition: background-color 0.5s var(--ease-out);" data-animate="fade-up">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">Mission &amp; Values</p>
+        <h2 class="section-heading">What Does KCLC Stand For?</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card" data-animate="fade-up" data-delay="0">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="20" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 52c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 10l2 4 4.5.7-3.3 3.1.8 4.5L32 20l-4 2.3.8-4.5-3.3-3.1L30 14z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Self-Directed Learning</h3>
+          <p class="value-text">Children are guided to become independent thinkers who are ready to learn, explore, and maximize their potential through hands-on, developmentally appropriate experiences.</p>
+        </div>
+
+        <div class="value-card" data-animate="fade-up" data-delay="150">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 36c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="currentColor" stroke-width="2"/>
+              <circle cx="22" cy="28" r="3" fill="currentColor" opacity="0.3"/>
+              <circle cx="42" cy="28" r="3" fill="currentColor" opacity="0.3"/>
+              <path d="M20 44l-6 8M44 44l6 8" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Social Transformation</h3>
+          <p class="value-text">KCLC develops learners who show genuine concern for humanity and community. Children grow into socially aware individuals geared towards positive change in their environment.</p>
+        </div>
+
+        <div class="value-card" data-animate="fade-up" data-delay="300">
+          <div class="value-icon">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 24c2-4 6-6 10-6s8 2 10 6" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 36l4 4 4-4" stroke="currentColor" stroke-width="2"/>
+              <path d="M36 36l-4 8" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              <path d="M18 40c4 6 10 10 14 10s10-4 14-10" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Environmental Care</h3>
+          <p class="value-text">Caring for the environment sits at the core of everything KCLC teaches. Children learn to respect nature and understand their responsibility as stewards of the world they live in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- MEET OUR TEAM -->
+  <!-- ====================================================================== -->
+  <section class="team" style="padding: var(--space-14) 0; background: var(--surface-primary); transition: background-color 0.5s var(--ease-out);" data-animate="fade-up">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">Our Team</p>
+        <h2 class="section-heading">Who Are the Teachers at KCLC?</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="staff-grid">
+        <!-- Ms. Lala Ticzon-Santos -->
+        <div class="staff-card staff-card--featured" data-animate="fade-up" data-delay="0" itemscope itemtype="https://schema.org/Person">
+          <div class="staff-avatar" itemprop="image">LT</div>
+          <h3 class="staff-name" itemprop="name">Ms. Lala Ticzon-Santos</h3>
+          <p class="staff-role" itemprop="jobTitle">Founder &amp; School Directress</p>
+          <p class="staff-bio" itemprop="description">Founder and School Directress of KCLC since 2010. Ms. Lala has dedicated 14+ years to building a progressive learning environment in Antipolo and Marikina where every child is valued and empowered to reach their full potential.</p>
+          <ul class="staff-credentials">
+            <!-- TODO: Replace with real academic credentials -->
+            <li><strong>Experience:</strong> 14+ years in progressive early childhood education</li>
+            <li><strong>Specialization:</strong> Multiple intelligences, integrated thematic teaching</li>
+            <li><strong>Role:</strong> Oversees curriculum at both Antipolo and Marikina campuses</li>
+          </ul>
+        </div>
+
+        <!-- Teacher Lala -->
+        <div class="staff-card" data-animate="fade-up" data-delay="100">
+          <div class="staff-avatar">TL</div>
+          <h3 class="staff-name">Teacher Lala</h3>
+          <p class="staff-role">Lead Educator, Antipolo</p>
+          <p class="staff-bio">Lead educator at the Antipolo campus. Teacher Lala brings warmth and expertise to every classroom, ensuring children thrive through guided exploration and interactive learning.</p>
+        </div>
+
+        <!-- Teacher Joanne -->
+        <div class="staff-card" data-animate="fade-up" data-delay="200">
+          <div class="staff-avatar">TJ</div>
+          <h3 class="staff-name">Teacher Joanne</h3>
+          <p class="staff-role">Lead Educator, Marikina</p>
+          <p class="staff-bio">Lead educator at the Marikina campus. Teacher Joanne nurtures young learners with patience and creativity, helping them build strong academic and socio-emotional foundations.</p>
+        </div>
+
+        <!-- Teaching Staff 1 -->
+        <div class="staff-card" data-animate="fade-up" data-delay="300">
+          <div class="staff-avatar">TS</div>
+          <h3 class="staff-name">Teaching Staff</h3>
+          <p class="staff-role">Early Childhood Educator</p>
+          <p class="staff-bio">A dedicated member of the KCLC teaching team, trained in progressive methods and multiple intelligences theory to support each child's unique learning journey.</p>
+        </div>
+
+        <!-- Teaching Staff 2 -->
+        <div class="staff-card" data-animate="fade-up" data-delay="400">
+          <div class="staff-avatar">TS</div>
+          <h3 class="staff-name">Teaching Staff</h3>
+          <p class="staff-role">Early Childhood Educator</p>
+          <p class="staff-bio">Part of the KCLC team committed to creating a caring, stimulating environment where children develop confidence, independence, and a genuine love for learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- SAFETY & FACILITIES -->
+  <!-- ====================================================================== -->
+  <section class="safety" style="padding: var(--space-14) 0; background: var(--surface-secondary); transition: background-color 0.5s var(--ease-out);" data-animate="fade-up">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">Safety &amp; Facilities</p>
+        <h2 class="section-heading">Is KCLC a Safe Environment for Children?</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="safety-grid">
+        <div class="safety-card" data-animate="fade-up" data-delay="0">
+          <div class="safety-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4L6 12v12c0 11 8 18 18 22 10-4 18-11 18-22V12L24 4z"/>
+              <path d="M18 24l4 4 8-8" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h4>Secure Campus</h4>
+          <p>Both campuses are fully secured with controlled access, ensuring only authorized individuals enter the premises during school hours.</p>
+        </div>
+
+        <div class="safety-card" data-animate="fade-up" data-delay="100">
+          <div class="safety-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="16" cy="16" r="6"/>
+              <circle cx="32" cy="16" r="6"/>
+              <circle cx="24" cy="32" r="6"/>
+            </svg>
+          </div>
+          <h4>Small Class Sizes</h4>
+          <p>We maintain small class sizes so every child receives personalized attention and care from their teachers throughout the day.</p>
+        </div>
+
+        <div class="safety-card" data-animate="fade-up" data-delay="200">
+          <div class="safety-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="14" r="8"/>
+              <path d="M10 42c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+              <path d="M30 10l2 3 3.5.5-2.5 2.5.6 3.5L30 18l-3.6 1.5.6-3.5-2.5-2.5 3.5-.5z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <h4>Trained Staff</h4>
+          <p>All KCLC educators are trained in early childhood education, child safety protocols, and progressive teaching methodologies.</p>
+        </div>
+
+        <div class="safety-card" data-animate="fade-up" data-delay="300">
+          <div class="safety-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="8" y="8" width="32" height="32" rx="2"/>
+              <path d="M8 20h32"/>
+              <path d="M20 8v32" opacity="0.3"/>
+              <path d="M16 28l4 4 8-8" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h4>Clean Facilities</h4>
+          <p>Classrooms, play areas, and common spaces are regularly cleaned and sanitized to maintain a healthy learning environment for every child.</p>
+        </div>
+
+        <div class="safety-card" data-animate="fade-up" data-delay="400">
+          <div class="safety-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="6" y="10" width="36" height="28" rx="2"/>
+              <path d="M6 18h36"/>
+              <circle cx="24" cy="30" r="4"/>
+              <path d="M20 30h8" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h4>Parent Communication</h4>
+          <p>Parents stay informed through regular updates, direct contact with teachers, and open communication channels about their child's progress and well-being.</p>
+        </div>
+
+        <div class="safety-card" data-animate="fade-up" data-delay="500">
+          <div class="safety-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4v8"/>
+              <path d="M24 36v8"/>
+              <path d="M4 24h8"/>
+              <path d="M36 24h8"/>
+              <circle cx="24" cy="24" r="10"/>
+              <path d="M24 18v8l4 4" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h4>Emergency Protocols</h4>
+          <p>KCLC has clear emergency procedures in place, with regular drills and trained personnel ready to respond to any situation swiftly and safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- CTA BANNER -->
+  <!-- ====================================================================== -->
+  <section class="cta-banner" data-animate="fade-in">
+    <div class="container">
+      <h2>Ready to See KCLC for Yourself?</h2>
+      <p>Visit either of our campuses in Antipolo or Marikina and see firsthand how KCLC nurtures confident, independent learners.</p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="index.html#book-a-tour" class="btn btn-primary">Book a School Tour</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- FOOTER -->
+  <!-- ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/Hi-Res-KCLC-Logo.png" alt="KCLC Logo" width="48" height="48" class="footer-logo">
+          <p class="footer-tagline">Kindergarten Camp Learning Center<br>Your child's learning camp of explorations</p>
+        </div>
+
+        <div class="footer-links">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h5 class="footer-heading">Programs</h5>
+          <ul>
+            <li><a href="program-early-learning.html">Early Learning</a></li>
+            <li><a href="program-kindergarten.html">Kindergarten</a></li>
+            <li><a href="program-daycare.html">Daycare</a></li>
+            <li><a href="admissions.html">Online Enrollment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h5 class="footer-heading">Contact</h5>
+          <p><strong>KCLC Antipolo</strong><br>47 Ticzon Park, P. Oliveros Street<br>Antipolo City, 1870 Rizal</p>
+          <p style="margin-top: var(--space-3);"><strong>KCLC Marikina</strong><br>103 Starlite St., Rancho 3 Estate<br>Concepcion Dos, Marikina City</p>
+          <p style="margin-top: var(--space-3);">
+            <a href="tel:+63277962016">+632 7796 2016</a><br>
+            <a href="tel:+63286504238">+632 8650 4238</a><br>
+            <a href="mailto:info@kindergartencamp.com">info@kindergartencamp.com</a>
+          </p>
+          <p style="margin-top: var(--space-2); font-size: 14px;">Mon&ndash;Sat 7:30 AM &ndash; 5:30 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Kindergarten Camp Learning Center. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

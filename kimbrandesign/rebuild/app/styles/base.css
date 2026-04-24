@@ -1,0 +1,96 @@
+/* Base styles — applies § 2 tokens to html, body, headings, links, buttons.
+ * No section-specific layout, no animations. Phase 2 only. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 16px; /* § 2 — html default */
+  background: var(--color-bg-page);
+  color: var(--color-fg-default);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  background: var(--color-bg-page);
+  color: var(--color-fg-default);
+}
+
+/* Headings (sizes per § 2 / § 3) — fluid via clamp() for Phase 7.
+   Lower bound = mobile-friendly; upper = the sampled desktop size. */
+h1 {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(36px, 4.2vw, 60px);
+  line-height: clamp(44px, 5vw, 72px);
+  font-weight: 200;
+  color: var(--color-fg-on-dark); /* § 3.2 — hero H1 is white, over dark hero */
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--color-fg-default);
+}
+
+h3 {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* Services display H3 — the 300px sampled desktop size clamps down to a
+   readable 72px at 375px wide. */
+.service h3 {
+  font-family: var(--font-secondary);
+  font-size: clamp(72px, 20vw, 300px);
+  line-height: clamp(56px, 15vw, 180px);
+  color: var(--color-fg-on-dark);
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, .btn {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Autonomous custom elements are inline by default; normalize to block so
+   the document flow reads as a stack. Not section-specific — structural. */
+kim-signature,
+kim-sticky-nav,
+kim-service,
+kim-work,
+kim-faq,
+kim-snackbar {
+  display: block;
+}
+
+/* img guardrail — kept here rather than waiting for Phase 3 because Phase 2
+   review will break without it once any image src is wired in. Noted in
+   BUILD_STATE.md. */
+img {
+  max-width: 100%;
+  height: auto;
+}

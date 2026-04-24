@@ -1,0 +1,190 @@
+---
+import SEO from '../components/SEO.astro';
+import Navigation from '../components/sections/Navigation.astro';
+import Hero from '../components/sections/Hero';
+import FAQ from '../components/sections/FAQ';
+import TechGrid from '../components/sections/TechGrid';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO
+      title={SITE_TITLE}
+      description={SITE_DESCRIPTION}
+      jsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Smile Isle Orthodontics — Odessa, FL',
+        description: SITE_DESCRIPTION,
+      }}
+    />
+  </head>
+  <body>
+    <Navigation />
+
+    <main>
+      <!-- Hero Section -->
+      <Hero client:load />
+
+      <!-- Introduction Section -->
+      <section class="py-20 md:py-28 bg-cream-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-6">
+            Welcome to Smile Isle Orthodontics
+          </h2>
+          <p class="font-body text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6">
+            Dr. Marina Kosturos is a board-certified orthodontist bringing a boutique, whole-body approach
+            to orthodontics in Odessa, FL. From airway support to 3D imaging and custom braces, every
+            detail of your care is thoughtfully planned. Our coastal-calm office features weighted blankets,
+            noise-canceling headphones, and a warm atmosphere — because at Smile Isle, it's your time
+            to smile and make waves.
+          </p>
+          <a
+            href="/book"
+            class="inline-flex items-center gap-2 px-8 py-3.5 bg-navy text-white font-body font-semibold
+              hover:bg-navy-light transition-colors duration-300 shadow-lg"
+          >
+            Book a FREE consult today!
+          </a>
+        </div>
+      </section>
+
+      <!-- Services Teaser -->
+      <section class="py-20 md:py-28 bg-[#eef4ff] relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+              Find the right fix for...
+            </h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            {[
+              { label: 'Braces for everyone', desc: 'Kids, teens & adults' },
+              { label: 'Invisalign', desc: 'Clear aligners for all ages' },
+              { label: 'Early checkups', desc: 'For the little ones' },
+              { label: 'Airway support', desc: 'Breathing & sleep health' },
+              { label: 'Retainers & appliances', desc: 'Maintain your results' },
+            ].map((item) => (
+              <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-primary-100/60 hover:shadow-md transition-shadow">
+                <h3 class="font-heading text-lg font-bold text-navy">{item.label}</h3>
+                <p class="font-body text-sm text-gray-500 mt-1">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div class="text-center mt-10">
+            <a
+              href="/orthodontics"
+              class="inline-flex items-center gap-2 px-8 py-3.5 bg-navy text-white font-body font-semibold
+                hover:bg-navy-light transition-colors duration-300 shadow-lg"
+            >
+              Find Your Fit
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clinical Tech Grid -->
+      <TechGrid client:visible />
+
+      <!-- Built With Families Section -->
+      <section class="py-20 md:py-28 bg-cream-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy text-center mb-14">
+            Built with families in mind
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'We look at the whole picture',
+                text: 'Straight teeth are great, but we also care about breathing, sleep, growth, and function. We\'re the only airway-focused orthodontic office in the area.',
+              },
+              {
+                title: 'A feel-good experience',
+                text: 'Warm greetings, weighted blankets, noise-canceling headphones, and a calm coastal atmosphere. Whether you\'re 7 or 70, we make sure you feel at ease.',
+              },
+              {
+                title: 'Your one-stop spot',
+                text: 'Located in a family-centered building next to a pediatric medical group and pediatric dental office. Fewer car trips, easier communication between your care team.',
+              },
+            ].map((item) => (
+              <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-primary-100/40 hover:shadow-lg transition-shadow">
+                <h3 class="font-heading text-xl font-bold text-navy mb-3">{item.title}</h3>
+                <p class="font-body text-gray-600 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <div class="text-center mt-12">
+            <a
+              href="/about"
+              class="inline-flex items-center gap-2 px-8 py-3.5 bg-navy text-white font-body font-semibold
+                hover:bg-navy-light transition-colors duration-300 shadow-lg"
+            >
+              Get To Know Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment Section -->
+      <section class="py-20 md:py-28 bg-[#eef4ff]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-6">
+            Payment Made Simple
+          </h2>
+          <p class="font-body text-lg text-gray-600 leading-relaxed mb-4">
+            We accept all major insurance plans and offer flexible payment options — including
+            monthly plans and low down payments.
+          </p>
+          <p class="font-body text-lg text-secondary font-semibold mb-2">
+            Enjoy FREE consultations and $1,000 OFF comprehensive treatment for a limited time.
+          </p>
+          <p class="font-body text-sm text-gray-400 mb-8">*Eligibility confirmed at your visit.</p>
+          <a
+            href="/financing"
+            class="inline-flex items-center gap-2 px-8 py-3.5 bg-navy text-white font-body font-semibold
+              hover:bg-navy-light transition-colors duration-300 shadow-lg"
+          >
+            Learn About Financing
+          </a>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <FAQ client:visible />
+
+      <!-- Final CTA -->
+      <section class="py-20 md:py-28 bg-navy text-white text-center">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+            Let's get your smile started
+          </h2>
+          <p class="font-body text-lg text-white/70 mb-3">Book your free consult today</p>
+          <p class="font-body text-white/60 mb-8 leading-relaxed">
+            Whether you're planning care for your child or finally doing something for yourself, we're here for you.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="/book"
+              class="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white font-body font-semibold
+                rounded-full hover:bg-primary-400 transition-colors duration-300 shadow-lg"
+            >
+              Book Free Consultation
+            </a>
+            <a
+              href="tel:8137554655"
+              class="inline-flex items-center gap-2 px-8 py-3.5 bg-transparent text-white/80 font-body font-semibold
+                border-b-2 border-white/40 hover:text-white hover:border-white transition-colors duration-300"
+            >
+              Call Us!
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

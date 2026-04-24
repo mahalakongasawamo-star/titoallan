@@ -1,0 +1,740 @@
+[
+  {
+    "t": 0,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 300,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 800,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 1500,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 2500,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 2700,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -197,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -196.566)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 2900,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -533,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -533.143)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3000,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -643,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -642.504)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3050,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -761,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -761.495)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3100,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -830,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -830.41)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3150,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -875,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -875.21)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3200,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -892,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -892.375)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3300,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -900,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -899.591)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3400,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -900,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": false,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -900)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3500,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -900,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": false,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -900)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 3700,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -900,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": false,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -900)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 4000,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -900,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": false,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -900)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  },
+  {
+    "t": 4500,
+    "url": "https://big.dk/",
+    "loader": {
+      "rect": {
+        "x": 0,
+        "y": -900,
+        "w": 1440,
+        "h": 900
+      },
+      "inViewport": false,
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, -900)",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgb(0, 0, 0)",
+      "z-index": "50"
+    },
+    "loaderSelector": "div.pointer-events-none.fixed.inset-0",
+    "innerLogo": {
+      "rect": {
+        "x": 30,
+        "y": 20,
+        "w": 42,
+        "h": 19
+      },
+      "inViewport": true,
+      "opacity": "1",
+      "transform": "none",
+      "clip-path": "none",
+      "visibility": "visible",
+      "display": "block",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "z-index": "auto"
+    },
+    "innerLogoSelector": "svg",
+    "scrollY": 0,
+    "docHeight": 116110,
+    "bodyBg": "rgb(255, 255, 255)"
+  }
+]

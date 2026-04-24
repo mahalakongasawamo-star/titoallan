@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="40%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#0c1220"/>
+    </linearGradient>
+    <linearGradient id="heroGlow" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" stop-color="#C4A44D" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#C4A44D" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <radialGradient id="headlightL" cx="0.35" cy="0.58" r="0.25">
+      <stop offset="0%" stop-color="#C4A44D" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C4A44D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="headlightR" cx="0.65" cy="0.58" r="0.25">
+      <stop offset="0%" stop-color="#C4A44D" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C4A44D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#heroBg)"/>
+
+  <!-- Ambient glow from below -->
+  <rect width="1920" height="1080" fill="url(#heroGlow)"/>
+
+  <!-- Headlight ambient glow -->
+  <rect width="1920" height="1080" fill="url(#headlightL)"/>
+  <rect width="1920" height="1080" fill="url(#headlightR)"/>
+
+  <!-- Horizon line -->
+  <line x1="0" y1="620" x2="1920" y2="620" stroke="#1a1a2e" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Road surface -->
+  <rect x="0" y="620" width="1920" height="460" fill="url(#roadGrad)"/>
+
+  <!-- Luxury car silhouette (front 3/4 view) -->
+  <g transform="translate(960, 540)" opacity="0.85">
+    <!-- Car body - elegant sedan profile -->
+    <path d="M-320,80 L-300,20 L-260,-30 L-200,-65 L-140,-85 L-60,-95 L60,-95 L140,-85 L200,-65 L260,-30 L300,20 L320,80 L320,100 L-320,100 Z"
+          fill="#111827" stroke="#1a2035" stroke-width="1"/>
+    <!-- Roof line -->
+    <path d="M-180,-65 C-140,-120 -80,-140 0,-142 C80,-140 140,-120 180,-65"
+          fill="none" stroke="#C4A44D" stroke-width="0.8" opacity="0.4"/>
+    <!-- Windshield -->
+    <path d="M-160,-60 L-100,-110 L100,-110 L160,-60"
+          fill="#0a1020" stroke="#C4A44D" stroke-width="0.5" opacity="0.3"/>
+    <!-- Hood line -->
+    <line x1="-260" y1="-30" x2="260" y2="-30" stroke="#C4A44D" stroke-width="0.5" opacity="0.25"/>
+    <!-- Grille -->
+    <rect x="-50" y="-20" width="100" height="80" rx="4" fill="none" stroke="#C4A44D" stroke-width="1" opacity="0.35"/>
+    <line x1="0" y1="-20" x2="0" y2="60" stroke="#C4A44D" stroke-width="0.8" opacity="0.3"/>
+    <!-- Headlights -->
+    <ellipse cx="-180" cy="10" rx="45" ry="12" fill="#C4A44D" opacity="0.12"/>
+    <ellipse cx="180" cy="10" rx="45" ry="12" fill="#C4A44D" opacity="0.12"/>
+    <ellipse cx="-180" cy="10" rx="25" ry="6" fill="#C4A44D" opacity="0.25"/>
+    <ellipse cx="180" cy="10" rx="25" ry="6" fill="#C4A44D" opacity="0.25"/>
+    <!-- Spirit of Ecstasy hint -->
+    <line x1="0" y1="-30" x2="0" y2="-50" stroke="#C4A44D" stroke-width="1" opacity="0.4"/>
+    <path d="M-4,-50 L0,-62 L4,-50" fill="#C4A44D" opacity="0.3"/>
+    <!-- Wheels -->
+    <circle cx="-200" cy="95" r="40" fill="#0a0a0a" stroke="#1a1a2e" stroke-width="2"/>
+    <circle cx="-200" cy="95" r="28" fill="none" stroke="#C4A44D" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="200" cy="95" r="40" fill="#0a0a0a" stroke="#1a1a2e" stroke-width="2"/>
+    <circle cx="200" cy="95" r="28" fill="none" stroke="#C4A44D" stroke-width="0.5" opacity="0.2"/>
+    <!-- Reflection on ground -->
+    <ellipse cx="0" cy="160" rx="350" ry="20" fill="#C4A44D" opacity="0.03"/>
+  </g>
+
+  <!-- Subtle gold accent lines -->
+  <line x1="0" y1="1060" x2="1920" y2="1060" stroke="#C4A44D" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Stars/particles -->
+  <circle cx="200" cy="120" r="1" fill="#fff" opacity="0.3"/>
+  <circle cx="450" cy="200" r="0.8" fill="#fff" opacity="0.2"/>
+  <circle cx="800" cy="80" r="1.2" fill="#fff" opacity="0.25"/>
+  <circle cx="1100" cy="150" r="0.8" fill="#fff" opacity="0.2"/>
+  <circle cx="1400" cy="100" r="1" fill="#fff" opacity="0.3"/>
+  <circle cx="1700" cy="180" r="0.8" fill="#fff" opacity="0.2"/>
+  <circle cx="350" cy="300" r="0.6" fill="#fff" opacity="0.15"/>
+  <circle cx="1550" cy="280" r="0.6" fill="#fff" opacity="0.15"/>
+</svg>

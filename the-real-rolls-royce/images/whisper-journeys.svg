@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 854" width="640" height="854">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1025"/>
+      <stop offset="30%" stop-color="#0c1830"/>
+      <stop offset="60%" stop-color="#0a0e18"/>
+      <stop offset="100%" stop-color="#00205B"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.7" cy="0.15" r="0.25">
+      <stop offset="0%" stop-color="#C0C0C0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#C0C0C0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1830" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00205B" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="854" fill="url(#skyGrad)"/>
+  <rect width="640" height="854" fill="url(#moonGlow)"/>
+
+  <!-- Stars -->
+  <g opacity="0.5">
+    <circle cx="100" cy="60" r="1" fill="#fff" opacity="0.35"/>
+    <circle cx="200" cy="120" r="0.7" fill="#fff" opacity="0.25"/>
+    <circle cx="350" cy="40" r="1.1" fill="#fff" opacity="0.3"/>
+    <circle cx="480" cy="90" r="0.8" fill="#fff" opacity="0.28"/>
+    <circle cx="550" cy="150" r="0.6" fill="#fff" opacity="0.2"/>
+    <circle cx="80" cy="180" r="0.9" fill="#fff" opacity="0.22"/>
+    <circle cx="420" cy="170" r="0.7" fill="#fff" opacity="0.25"/>
+    <circle cx="280" cy="80" r="1" fill="#fff" opacity="0.3"/>
+    <circle cx="160" cy="30" r="0.8" fill="#fff" opacity="0.2"/>
+    <circle cx="520" cy="50" r="0.9" fill="#fff" opacity="0.28"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="470" cy="120" r="25" fill="#C0C0C0" opacity="0.06"/>
+  <circle cx="470" cy="120" r="22" fill="#C0C0C0" opacity="0.04"/>
+
+  <!-- Mountain silhouettes -->
+  <g opacity="0.6">
+    <!-- Far mountain -->
+    <path d="M-40,450 L120,280 L200,320 L300,260 L420,340 L520,290 L680,450 Z"
+          fill="#0a1020" opacity="0.8"/>
+    <!-- Near mountain -->
+    <path d="M-40,500 L80,340 L180,400 L260,310 L360,380 L480,320 L580,370 L680,500 Z"
+          fill="#080c18" opacity="0.9"/>
+    <!-- Snow caps suggestion -->
+    <path d="M258,312 L260,310 L262,312" fill="#C0C0C0" opacity="0.08"/>
+    <path d="M118,282 L120,280 L122,282" fill="#C0C0C0" opacity="0.06"/>
+  </g>
+
+  <!-- Lake/water -->
+  <rect x="0" y="500" width="640" height="354" fill="url(#waterGrad)" opacity="0.5"/>
+
+  <!-- Water reflections -->
+  <g opacity="0.08">
+    <line x1="100" y1="540" x2="140" y2="540" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="250" y1="560" x2="300" y2="560" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="400" y1="530" x2="450" y2="530" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="180" y1="580" x2="220" y2="580" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="350" y1="600" x2="400" y2="600" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="500" y1="570" x2="540" y2="570" stroke="#C0C0C0" stroke-width="0.5"/>
+  </g>
+
+  <!-- Moon reflection on water -->
+  <ellipse cx="470" cy="520" rx="3" ry="30" fill="#C0C0C0" opacity="0.04"/>
+
+  <!-- Road winding through -->
+  <path d="M320,854 C310,750 280,650 300,550 C320,500 340,480 360,460"
+        fill="none" stroke="#C4A44D" stroke-width="0.8" opacity="0.08"/>
+
+  <text x="320" y="780" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="9" letter-spacing="5" fill="#C0C0C0" opacity="0.2">JOURNEYS</text>
+</svg>

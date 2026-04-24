@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="50%" stop-color="#030303"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <radialGradient id="darkGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a1a2e" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="480" fill="url(#bg)"/>
+  <rect width="640" height="480" fill="url(#darkGlow)"/>
+
+  <!-- Floor -->
+  <line x1="0" y1="320" x2="640" y2="320" stroke="#111" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Black Badge - Darkened, aggressive car, front 3/4 -->
+  <g transform="translate(320, 258)" opacity="0.9">
+    <!-- Dark body -->
+    <path d="M-190,25 L-175,-10 L-145,-35 L-95,-48 L-20,-52 L70,-50 L140,-35 L180,-10 L195,25 L195,40 L-190,40 Z"
+          fill="#0a0a0a" stroke="#1a1a1a" stroke-width="0.8"/>
+    <!-- Aggressive roofline -->
+    <path d="M-85,-48 C-50,-82 0,-90 50,-88 C95,-80 130,-58 155,-25"
+          fill="none" stroke="#222" stroke-width="0.6" opacity="0.5"/>
+    <!-- Dark chrome trim - all blacked out -->
+    <line x1="-170" y1="2" x2="180" y2="2" stroke="#222" stroke-width="0.6" opacity="0.2"/>
+    <!-- Dark grille -->
+    <rect x="-185" y="-18" width="24" height="42" rx="3" fill="#050505" stroke="#222" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-173" y1="-18" x2="-173" y2="24" stroke="#222" stroke-width="0.5" opacity="0.3"/>
+    <!-- Dark headlights -->
+    <rect x="-162" y="-6" width="24" height="7" rx="3" fill="#1a1a1a" opacity="0.3"/>
+    <!-- Red accent brake calipers -->
+    <circle cx="-120" cy="38" r="4" fill="#8B0000" opacity="0.3"/>
+    <circle cx="120" cy="38" r="4" fill="#8B0000" opacity="0.3"/>
+    <!-- Dark wheels -->
+    <circle cx="-120" cy="40" r="26" fill="#050505" stroke="#111" stroke-width="1.5"/>
+    <circle cx="-120" cy="40" r="17" fill="none" stroke="#222" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="120" cy="40" r="26" fill="#050505" stroke="#111" stroke-width="1.5"/>
+    <circle cx="120" cy="40" r="17" fill="none" stroke="#222" stroke-width="0.5" opacity="0.2"/>
+    <!-- Dark Spirit of Ecstasy -->
+    <line x1="-175" y1="-35" x2="-175" y2="-46" stroke="#222" stroke-width="0.8" opacity="0.4"/>
+    <path d="M-178,-46 L-175,-53 L-172,-46" fill="#222" opacity="0.3"/>
+  </g>
+
+  <!-- Black Badge emblem hint -->
+  <g transform="translate(320, 160)" opacity="0.12">
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#C4A44D" stroke-width="0.8"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="7" letter-spacing="1.5" fill="#C4A44D">BB</text>
+  </g>
+
+  <text x="320" y="430" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="9" letter-spacing="5" fill="#333" opacity="0.35">BLACK BADGE</text>
+</svg>

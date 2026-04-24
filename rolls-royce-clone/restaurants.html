@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osteria Romano — Authentic Italian Restaurant | Montrose, Houston TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#F0EDE6;--bg-mid:#EAE4D8;--bg-card:#E8E1D4;
+  --ink:#1a1206;--ink-70:rgba(26,18,6,.70);--ink-45:rgba(26,18,6,.45);
+  --ink-25:rgba(26,18,6,.25);--ink-12:rgba(26,18,6,.12);--ink-07:rgba(26,18,6,.07);
+  --gold:#C9963A;--gold-d:rgba(201,150,58,.12);--gold-b:rgba(201,150,58,.22);
+  --br:rgba(26,18,6,.10);--br-strong:rgba(26,18,6,.18);
+  --fd:'Libre Baskerville',serif;--fb:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+/* Italian flag ribbon */
+body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,#009246 0%,#009246 33.33%,#F5EFE0 33.33%,#F5EFE0 66.66%,#CE2B37 66.66%,#CE2B37 100%);
+  z-index:9999;opacity:.6;}
+
+/* Paper grain */
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+  background-size:160px;opacity:.55;}
+
+
+
+/* ══ DEMO BANNER ════════════════════════════════════════ */
+.demo-banner{background:rgba(201,150,58,.07);border-bottom:1px solid rgba(201,150,58,.18);padding:9px 24px;
+  text-align:center;font-size:10px;font-weight:600;color:var(--gold);letter-spacing:.08em;
+  font-family:var(--fb);position:relative;z-index:200;margin-top:3px;}
+
+/* ══ NAV ════════════════════════════════════════════════ */
+nav{position:fixed;top:37px;left:0;right:0;z-index:100;height:70px;display:flex;
+  align-items:center;justify-content:space-between;padding:0 56px;
+  background:rgba(240,237,230,.97);backdrop-filter:blur(22px);border-bottom:1px solid var(--br);}
+.nav-logo{display:flex;flex-direction:column;gap:2px;text-decoration:none;}
+.nav-name{font-family:var(--fd);font-size:20px;font-weight:700;font-style:italic;color:var(--ink);letter-spacing:.02em;}
+.nav-sub{font-size:9px;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-family:var(--fb);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:11px;color:var(--ink-45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;font-family:var(--fb);font-weight:500;}
+.nav-links a:hover{color:var(--ink);}
+
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* Mobile nav drawer */
+.nav-drawer{display:none;position:fixed;top:107px;left:0;right:0;z-index:99;
+  background:rgba(240,237,230,.98);backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--br);
+  padding:0;max-height:0;overflow:hidden;transition:max-height .35s ease, padding .35s ease;}
+.nav-drawer.open{max-height:300px;padding:16px 0;}
+.nav-drawer a{display:block;padding:12px 28px;font-size:12px;color:var(--ink-45);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-family:var(--fb);font-weight:500;border-bottom:1px solid var(--br);transition:color .2s,background .2s;}
+.nav-drawer a:last-child{border-bottom:none;}
+.nav-drawer a:hover{color:var(--ink);background:rgba(201,150,58,.05);}
+@keyframes heartbeat-glow{0%,100%{box-shadow:0 0 0 0 rgba(201,150,58,0);}40%{box-shadow:0 0 0 5px rgba(201,150,58,.22),0 0 18px rgba(201,150,58,.10);}60%{box-shadow:0 0 0 3px rgba(201,150,58,.14);}}
+.btn-reserve{padding:10px 22px;background:var(--ink);color:var(--bg);font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s,box-shadow .3s;animation:heartbeat-glow 2.8s ease-in-out infinite;}
+.btn-reserve:hover{background:#3d2710;animation:none;box-shadow:0 4px 20px rgba(26,18,6,.25);}
+
+/* ══ HERO ═══════════════════════════════════════════════ */
+.hero{position:relative;z-index:1;min-height:100vh;display:grid;grid-template-columns:1fr 390px;padding-top:107px;overflow:hidden;}
+
+/* ① ROMAN BRICK TEXTURE — faint masonry pattern behind everything */
+.hero::before{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40'%3E%3Crect x='.5' y='.5' width='39' height='18' fill='none' stroke='%23966020' stroke-width='.55'/%3E%3Crect x='40.5' y='.5' width='39' height='18' fill='none' stroke='%23966020' stroke-width='.55'/%3E%3Crect x='-19.5' y='21.5' width='39' height='17' fill='none' stroke='%23966020' stroke-width='.55'/%3E%3Crect x='20.5' y='21.5' width='39' height='17' fill='none' stroke='%23966020' stroke-width='.55'/%3E%3Crect x='60.5' y='21.5' width='39' height='17' fill='none' stroke='%23966020' stroke-width='.55'/%3E%3C/svg%3E");
+  background-size:80px 40px;
+  opacity:.11;
+}
+
+/* Canvas layers */
+#heroBg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+#pastaCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;}
+#steamCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;}
+
+/* ② FLOATING OLIVE BRANCH */
+.olive-branch{
+  position:absolute;top:6%;left:3%;
+  z-index:2;pointer-events:none;
+  opacity:.28;
+  animation:olive-drift 14s ease-in-out infinite;
+  transform-origin:50% 80%;
+}
+@keyframes olive-drift{
+  0%,100%{transform:translateY(0) rotate(-2deg);}
+  35%    {transform:translateY(-10px) rotate(1.5deg);}
+  70%    {transform:translateY(-5px) rotate(-3deg);}
+}
+.olive-branch-r{
+  position:absolute;bottom:8%;right:395px;
+  z-index:2;pointer-events:none;
+  opacity:.18;
+  animation:olive-drift 18s ease-in-out 4s infinite;
+  transform:scaleX(-1);
+  transform-origin:50% 20%;
+}
+
+/* ③ CANDLE FLAMES — elegant, barely moving */
+.candle-wrap{position:absolute;z-index:4;pointer-events:none;}
+.candle-left{top:8px;left:10px;}
+.candle-right{top:8px;right:10px;}
+.candle-wrap svg{display:block;}
+
+/* Single slow sway — both candles share this, offset by delay */
+.flame-a{animation:gentle-sway 4s ease-in-out infinite;transform-origin:50% 95%;}
+.flame-b{animation:gentle-sway 4s ease-in-out 1.6s infinite;transform-origin:50% 95%;}
+
+@keyframes gentle-sway{
+  0%,100%{transform:rotate(-1deg) scaleX(1);}
+  50%    {transform:rotate(1.2deg) scaleX(.95);}
+}
+
+/* ══ HERO LEFT ══════════════════════════════════════════ */
+.hero-left{position:relative;z-index:4;padding:64px 52px 64px 68px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--br-strong);}
+#parallaxLayer{will-change:transform;transition:transform .08s linear;}
+
+/* Content panels */
+.cp{display:flex;gap:22px;align-items:flex-start;padding:24px 0;position:relative;opacity:0;transform:translateY(14px);animation:up .65s ease forwards;}
+
+/* ④ FORK & KNIFE DIVIDERS — replace diamond ornament */
+.cp:not(:last-of-type)::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:16px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 16' preserveAspectRatio='xMidYMid meet'%3E%3Cline x1='0' y1='8' x2='208' y2='8' stroke='%23C9963A' stroke-opacity='.15' stroke-width='.75'/%3E%3Ccircle cx='5' cy='8' r='1.6' fill='%23C9963A' fill-opacity='.14'/%3E%3Ccircle cx='216' cy='8' r='1.8' fill='%23C9963A' fill-opacity='.24'/%3E%3Cg transform='translate(230,2)'%3E%3Cline x1='1' y1='0' x2='1' y2='5' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1'/%3E%3Cline x1='3.2' y1='0' x2='3.2' y2='5' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1'/%3E%3Cline x1='5.4' y1='0' x2='5.4' y2='5' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1'/%3E%3Cpath d='M1 5 Q3.2 7 3.2 9 L3.2 13' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1' fill='none'/%3E%3Cpath d='M5.4 5 Q3.2 7 3.2 9' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1' fill='none'/%3E%3C/g%3E%3Cg transform='translate(258,2)'%3E%3Cline x1='3' y1='0' x2='3' y2='13' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1'/%3E%3Cpath d='M3 0 Q7 2.5 6 7.5 L3 8.5' stroke='%23C9963A' stroke-opacity='.5' stroke-width='1' fill='none'/%3E%3C/g%3E%3Ccircle cx='280' cy='8' r='1.8' fill='%23C9963A' fill-opacity='.24'/%3E%3Cline x1='288' y1='8' x2='500' y2='8' stroke='%23C9963A' stroke-opacity='.15' stroke-width='.75'/%3E%3Ccircle cx='495' cy='8' r='1.6' fill='%23C9963A' fill-opacity='.14'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;background-size:100% 16px;
+}
+
+.cp:nth-child(1){animation-delay:.2s;}.cp:nth-child(2){animation-delay:.4s;padding:30px 0 36px;}.cp:nth-child(3){animation-delay:.6s;}.cp:nth-child(4){animation-delay:.8s;}
+@keyframes up{to{opacity:1;transform:translateY(0);}}
+.cp-body{flex:1;}
+
+.id-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;background:var(--gold-d);border:1px solid var(--gold-b);border-left:2px solid rgba(201,150,58,.5);}
+.id-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.id-txt{font-family:var(--fd);font-size:13px;font-style:italic;color:var(--ink-70);letter-spacing:.03em;}
+
+.h1{font-family:var(--fd);font-size:clamp(40px,4.8vw,72px);font-weight:700;line-height:1.04;color:var(--ink);}
+.h1 em{color:var(--gold);font-style:italic;}
+
+.body-p{font-family:var(--fd);font-style:italic;font-size:14px;color:var(--ink-70);line-height:1.82;max-width:450px;}
+.body-p strong{color:var(--ink);font-style:normal;font-weight:700;}
+
+.ai-box{padding:14px 16px;background:var(--gold-d);border:1px solid var(--gold-b);border-left:2px solid rgba(201,150,58,.45);max-width:480px;}
+.ai-row{display:flex;gap:10px;align-items:flex-start;}
+.ai-icon{width:20px;height:20px;border-radius:50%;background:rgba(201,150,58,.12);border:1px solid var(--gold-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.ai-txt{font-size:12px;font-weight:400;color:var(--ink-70);line-height:1.65;font-family:var(--fb);}
+.ai-txt strong{color:var(--gold);font-weight:600;}
+.pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.pill{padding:2px 9px;background:rgba(201,150,58,.06);border:1px solid rgba(201,150,58,.22);font-size:9px;font-weight:600;color:var(--gold);letter-spacing:.08em;font-family:var(--fb);}
+
+.cta-row{display:flex;align-items:center;gap:12px;padding-top:26px;flex-wrap:wrap;opacity:0;animation:up .55s ease forwards;animation-delay:.9s;}
+.btn-main{padding:13px 28px;background:var(--ink);color:var(--bg);font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s,box-shadow .3s;animation:heartbeat-glow 2.8s ease-in-out 1.2s infinite;}
+.btn-main:hover{background:#3d2710;animation:none;box-shadow:0 4px 20px rgba(26,18,6,.25);}
+.btn-sec{padding:12px 20px;background:transparent;border:1.5px solid var(--ink-25);color:var(--ink-45);font-family:var(--fb);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;}
+.btn-sec:hover{border-color:var(--ink-45);color:var(--ink);}
+
+.trust-row{display:flex;align-items:center;gap:18px;padding-top:14px;flex-wrap:wrap;opacity:0;animation:up .55s ease forwards;animation-delay:1.05s;}
+.trust-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-45);font-family:var(--fb);}
+.trust-tick{width:14px;height:14px;background:var(--gold-d);border:1px solid var(--gold-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* ══ HERO RIGHT ═════════════════════════════════════════ */
+.hero-right{position:relative;z-index:4;background:var(--bg-mid);border-left:1px solid var(--br-strong);padding:32px 24px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .4s;}
+.hero-right:hover{box-shadow:-6px 0 32px rgba(201,150,58,.09);}
+
+.ai-badge{padding:12px 14px;background:var(--gold-d);border:1px solid var(--gold-b);text-align:center;opacity:0;animation:up .5s ease forwards;animation-delay:.4s;}
+.ai-badge-title{font-family:var(--fb);font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px;}
+.bp{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;}
+.bp span{padding:2px 9px;background:rgba(201,150,58,.05);border:1px solid rgba(201,150,58,.16);font-size:9px;color:var(--ink-45);font-weight:500;font-family:var(--fb);letter-spacing:.06em;}
+
+.chef-card{background:var(--bg-card);border:1px solid var(--br);padding:16px;display:flex;align-items:center;gap:12px;opacity:0;animation:up .5s ease forwards;animation-delay:.55s;transition:background .25s;}
+.chef-card:hover{background:#ddd5c2;}
+.chef-av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,rgba(201,150,58,.15),rgba(201,150,58,.06));border:1.5px solid rgba(201,150,58,.55);box-shadow:0 0 0 3px var(--bg-card),0 0 0 5px rgba(201,150,58,.22),0 0 0 7px rgba(201,150,58,.08);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:16px;font-style:italic;font-weight:700;color:var(--gold);flex-shrink:0;position:relative;}
+.chef-av::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px dashed rgba(201,150,58,.18);pointer-events:none;}
+.chef-name{font-family:var(--fd);font-size:15px;font-weight:700;font-style:italic;color:var(--ink);margin-bottom:2px;}
+.chef-title{font-size:10px;color:var(--ink-45);font-family:var(--fb);line-height:1.45;}
+.chef-award{margin-top:5px;font-size:9px;color:var(--gold);letter-spacing:.04em;font-family:var(--fb);}
+
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--br);overflow:hidden;opacity:0;animation:up .5s ease forwards;animation-delay:.7s;}
+.sc{background:var(--bg-card);border-right:1px solid var(--br);border-bottom:1px solid var(--br);padding:12px 14px;text-align:center;transition:background .2s;cursor:default;}
+.sc:hover{background:#ddd5c2;}
+.sc:nth-child(2){border-right:none;}.sc:nth-child(3){border-bottom:none;}.sc:nth-child(4){border-right:none;border-bottom:none;}
+.sn{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:3px;}
+.sn.w{color:var(--ink);}
+.sl{font-size:9px;color:var(--ink-45);letter-spacing:.06em;text-transform:uppercase;font-family:var(--fb);}
+.stats .sc:nth-child(3) .sl::before{content:'';display:inline-block;width:9px;height:12px;margin-right:4px;vertical-align:middle;margin-bottom:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 13' fill='none'%3E%3Cpath d='M1.5 1h6L6.2 4.8a2.2 2.2 0 0 1-4.4 0Z' stroke='%23C9963A' stroke-opacity='.6' stroke-width='.75' stroke-linejoin='round'/%3E%3Cline x1='4.5' y1='7' x2='4.5' y2='11' stroke='%23C9963A' stroke-opacity='.6' stroke-width='.75'/%3E%3Cline x1='2.5' y1='12' x2='6.5' y2='12' stroke='%23C9963A' stroke-opacity='.6' stroke-width='.75'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:contain;}
+
+/* ⑥ DRAMATIC SMOKE — menu-box gets a visible aroma plume */
+.menu-box{background:var(--bg-card);border:1px solid var(--br);overflow:visible;opacity:0;animation:up .5s ease forwards;animation-delay:.85s;position:relative;}
+.menu-hdr{padding:10px 14px;border-bottom:1px solid var(--br);display:flex;justify-content:space-between;align-items:center;background:rgba(26,18,6,.03);position:relative;overflow:hidden;}
+.menu-hdr::after{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:60px;height:1px;background:linear-gradient(to right,transparent,rgba(201,150,58,.3),transparent);}
+.menu-hdr-title{font-family:var(--fd);font-size:13px;font-style:italic;color:var(--gold);}
+.menu-hdr-note{font-size:9px;color:var(--ink-45);font-family:var(--fb);letter-spacing:.04em;}
+
+.menu-row{display:flex;align-items:baseline;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--br);position:relative;overflow:hidden;cursor:default;transition:color .2s;}
+.menu-row:last-child{border-bottom:none;}
+.menu-row::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(201,150,58,.07) 30%,rgba(201,150,58,.14) 55%,rgba(201,150,58,.07) 80%,transparent 100%);transform:translateX(-110%);transition:transform .48s cubic-bezier(.22,1,.36,1);pointer-events:none;}
+.menu-row:hover::before{transform:translateX(0);}
+.menu-row:hover .menu-name{color:var(--ink);}
+.menu-row:hover .menu-price{color:#a86c18;}
+.menu-name{font-family:var(--fd);font-size:13px;font-style:italic;color:var(--ink-70);transition:color .3s;position:relative;z-index:1;}
+.menu-dots{flex:1;border-bottom:1px dotted var(--ink-25);margin:0 8px;height:1px;margin-bottom:3px;position:relative;z-index:1;}
+.menu-price{font-family:var(--fb);font-size:11px;font-weight:700;color:var(--gold);transition:color .3s;position:relative;z-index:1;}
+
+/* ══ STATS STRIP ════════════════════════════════════════ */
+.strip{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--br-strong);background:var(--bg-mid);}
+.si{padding:22px 26px;border-right:1px solid var(--br);opacity:0;animation:up .5s ease forwards;transition:background .2s;}
+.si:hover{background:#e2d8c8;}
+.si:last-child{border-right:none;}
+.si:nth-child(1){animation-delay:.9s;}.si:nth-child(2){animation-delay:1s;}.si:nth-child(3){animation-delay:1.1s;}.si:nth-child(4){animation-delay:1.2s;}
+.sinum{font-family:var(--fd);font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-.01em;margin-bottom:3px;}
+.sinum span{color:var(--gold);}
+.silbl{font-size:10px;color:var(--ink-45);letter-spacing:.06em;text-transform:uppercase;font-family:var(--fb);}
+
+/* ══ RESPONSIVE ═════════════════════════════════════════ */
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .nav-drawer{display:block;}
+  .hero{grid-template-columns:1fr;}
+  .hero-left{padding:40px 20px 40px 32px;border-right:none;border-bottom:1px solid var(--br);}
+  .hero-right{border-left:none;border-top:1px solid var(--br);}
+  .olive-branch-r{display:none;}
+  .strip{grid-template-columns:repeat(2,1fr);}
+  .si:nth-child(2){border-right:none;}.si:nth-child(3){border-top:1px solid var(--br);}.si:nth-child(4){border-right:none;border-top:1px solid var(--br);}
+}
+@media(max-width:600px){.nav-hours{display:none;}.btn-reserve{padding:8px 14px;font-size:10px;}}
+@media(max-width:480px){.h1{font-size:36px;}}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">&#9888; DEMO &#8212; All business names, chef names, awards, menu items, stats, and prices below are invented for illustration. Replace every detail with verified client data before publishing.</div>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-name">Osteria Romano</div>
+    <div class="nav-sub">Authentic Italian &middot; Est. 1998</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Menu</a></li><li><a href="#">Wine List</a></li><li><a href="#">Private Dining</a></li><li><a href="#">Our Story</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <span class="nav-hours" style="font-size:11px;color:var(--ink-45);font-family:var(--fb);">Tue&ndash;Sun &middot; 5pm&ndash;11pm</span>
+    <a href="#" class="btn-reserve">Reserve a Table</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="#">Menu</a>
+  <a href="#">Wine List</a>
+  <a href="#">Private Dining</a>
+  <a href="#">Our Story</a>
+  <a href="#" style="color:var(--gold);font-weight:600;">Reserve a Table</a>
+</div>
+
+<section class="hero">
+
+  <!-- Cursor-reactive candlelight -->
+  <canvas id="heroBg"></canvas>
+  <!-- ③ Pasta shapes canvas -->
+  <canvas id="pastaCanvas"></canvas>
+  <!-- ⑥ Dramatic steam/aroma canvas -->
+  <canvas id="steamCanvas"></canvas>
+
+  <!-- ② Floating olive branch — left -->
+  <div class="olive-branch">
+    <svg width="130" height="170" viewBox="0 0 130 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M65 162 C63 140 55 116 60 92 C65 70 80 52 75 26 C73 16 69 8 67 2" stroke="#4a6e1e" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="47" cy="140" rx="15" ry="5.5" transform="rotate(-38 47 140)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="82" cy="135" rx="15" ry="5.5" transform="rotate(28 82 135)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="45" cy="112" rx="16" ry="5.5" transform="rotate(-28 45 112)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="80" cy="108" rx="16" ry="5.5" transform="rotate(22 80 108)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="50" cy="85" rx="15" ry="5" transform="rotate(-18 50 85)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="78" cy="82" rx="15" ry="5" transform="rotate(16 78 82)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="55" cy="58" rx="13" ry="4.5" transform="rotate(-10 55 58)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="76" cy="55" rx="13" ry="4.5" transform="rotate(9 76 55)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="62" cy="32" rx="9" ry="3.5" transform="rotate(-4 62 32)" stroke="#4a6e1e" stroke-width="0.9"/>
+      <ellipse cx="73" cy="30" rx="9" ry="3.5" transform="rotate(7 73 30)" stroke="#4a6e1e" stroke-width="0.9"/>
+      <circle cx="46" cy="132" r="3" stroke="#4a6e1e" stroke-width="0.9"/>
+      <circle cx="84" cy="126" r="3" stroke="#4a6e1e" stroke-width="0.9"/>
+      <circle cx="47" cy="102" r="2.5" stroke="#4a6e1e" stroke-width="0.8"/>
+      <circle cx="82" cy="98" r="2.5" stroke="#4a6e1e" stroke-width="0.8"/>
+    </svg>
+  </div>
+
+  <!-- ② Second olive branch — right side, mirrored -->
+  <div class="olive-branch-r">
+    <svg width="110" height="145" viewBox="0 0 130 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M65 162 C63 140 55 116 60 92 C65 70 80 52 75 26 C73 16 69 8 67 2" stroke="#4a6e1e" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="47" cy="140" rx="15" ry="5.5" transform="rotate(-38 47 140)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="82" cy="135" rx="15" ry="5.5" transform="rotate(28 82 135)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="45" cy="112" rx="16" ry="5.5" transform="rotate(-28 45 112)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="80" cy="108" rx="16" ry="5.5" transform="rotate(22 80 108)" stroke="#4a6e1e" stroke-width="1"/>
+      <ellipse cx="50" cy="85" rx="15" ry="5" transform="rotate(-18 50 85)" stroke="#4a6e1e" stroke-width="1"/>
+      <circle cx="46" cy="132" r="3" stroke="#4a6e1e" stroke-width="0.9"/>
+      <circle cx="84" cy="126" r="3" stroke="#4a6e1e" stroke-width="0.9"/>
+    </svg>
+  </div>
+
+  <div class="hero-left">
+    <div id="parallaxLayer">
+      <div class="cp">
+        <div class="cp-body">
+          <div class="id-badge"><div class="id-dot"></div><span class="id-txt">Family-owned Italian trattoria &middot; Montrose, Houston TX &middot; Since 1998</span></div>
+        </div>
+      </div>
+      <div class="cp">
+        <div class="cp-body">
+          <h1 class="h1">Real Italian Cooking.<br><em>Made with Memory,<br>Served with Love.</em></h1>
+        </div>
+      </div>
+      <div class="cp">
+        <div class="cp-body">
+          <p class="body-p">For <strong>couples, families, and food lovers</strong> in Houston who want authentic Southern Italian cuisine &mdash; handmade pasta, wood-fired proteins, and a Tuscan wine list curated in Bologna &mdash; in a candlelit room that feels like home.</p>
+        </div>
+      </div>
+      <div class="cp">
+        <div class="cp-body">
+          <div class="ai-box">
+            <div class="ai-row">
+              <div class="ai-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.5 7.5L8.5 2.5" stroke="#C9963A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div>
+                <div class="ai-txt"><strong>Osteria Romano appears by name when Houstonians ask AI for the best Italian restaurant in Montrose.</strong> Our LocalRestaurant schema with live menu items, hours, reservation link, and cuisine details ensures AI cites us accurately &mdash; never a competitor, never outdated info.</div>
+                <div class="pills"><span class="pill">ChatGPT</span><span class="pill">Google AI</span><span class="pill">Yelp AI</span><span class="pill">Perplexity</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="#" class="btn-main">Reserve a Table Tonight</a>
+      <a href="#" class="btn-sec">View Full Menu</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><div class="trust-tick"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#C9963A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Open Tue&ndash;Sun 5pm&ndash;11pm</div>
+      <div class="trust-item"><div class="trust-tick"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#C9963A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>James Beard Semifinalist 2023 &amp; 2024</div>
+      <div class="trust-item"><div class="trust-tick"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#C9963A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>180+ wines on the list</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+
+    <!-- Classic taper candle in brass holder — clean fine dining -->
+    <div class="candle-wrap candle-left">
+      <svg width="32" height="82" viewBox="0 0 32 82" fill="none" xmlns="http://www.w3.org/2000/svg" class="flame-a">
+        <!-- Flame: soft outer halo -->
+        <ellipse cx="16" cy="8" rx="5" ry="7" fill="rgba(255,155,30,0.13)"/>
+        <!-- Flame: amber body, teardrop -->
+        <path d="M16 18 C12.5 16.5 11 12.5 12 8.5 C13 5.5 14.5 3 16 1 C17.5 3 19 5.5 20 8.5 C21 12.5 19.5 16.5 16 18Z" fill="rgba(255,142,22,0.86)"/>
+        <!-- Flame: bright cream-yellow inner -->
+        <path d="M16 15.5 C13.8 14 13.2 10.5 14.2 7.5 C14.9 5.5 15.5 3.8 16 2.5 C16.5 3.8 17.1 5.5 17.8 7.5 C18.8 10.5 18.2 14 16 15.5Z" fill="rgba(255,228,105,0.97)"/>
+        <!-- Wick -->
+        <line x1="16" y1="18" x2="16" y2="21" stroke="rgba(40,18,4,0.68)" stroke-width="1" stroke-linecap="round"/>
+        <!-- Taper body — slim, slightly wider at base -->
+        <path d="M14 21 L13 58 L19 58 L18 21 Z" fill="rgba(246,236,214,0.96)"/>
+        <!-- Taper left shadow (gives it roundness) -->
+        <path d="M14 21 L13 58 L14.8 58 L15.4 21 Z" fill="rgba(26,18,6,0.06)"/>
+        <!-- Taper right shadow -->
+        <path d="M18 21 L19 58 L17.2 58 L16.6 21 Z" fill="rgba(26,18,6,0.04)"/>
+        <!-- Wax drip — natural, one side only -->
+        <path d="M13.8 32 Q12.8 38 13.6 46" stroke="rgba(246,236,214,0.50)" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <!-- Candle cup / bobeche — small flared collar -->
+        <path d="M11 58 Q11 56 13 56 L19 56 Q21 56 21 58 L22 61 L10 61 Z" fill="rgba(188,145,50,0.88)"/>
+        <!-- Bobeche rim highlight -->
+        <ellipse cx="16" cy="61" rx="6" ry="1.2" fill="rgba(215,170,70,0.55)"/>
+        <ellipse cx="16" cy="61" rx="6" ry="1.2" stroke="rgba(230,190,90,0.40)" stroke-width="0.6" fill="none"/>
+        <!-- Candlestick stem -->
+        <rect x="14.5" y="61" width="3" height="10" fill="rgba(192,148,48,0.85)"/>
+        <!-- Stem highlight -->
+        <rect x="14.5" y="61" width="0.9" height="10" fill="rgba(230,195,95,0.25)"/>
+        <!-- Base knop (the decorative ball on the stem) -->
+        <ellipse cx="16" cy="71" rx="4.5" ry="2.2" fill="rgba(196,152,52,0.90)"/>
+        <ellipse cx="16" cy="71" rx="4.5" ry="2.2" stroke="rgba(225,185,80,0.30)" stroke-width="0.6" fill="none"/>
+        <!-- Base foot — flat disc -->
+        <ellipse cx="16" cy="74" rx="7.5" ry="2" fill="rgba(188,145,50,0.88)"/>
+        <!-- Foot front edge -->
+        <path d="M8.5 74 Q8.5 77 16 77 Q23.5 77 23.5 74" fill="rgba(175,132,42,0.80)"/>
+        <!-- Foot rim highlight -->
+        <ellipse cx="16" cy="74" rx="7.5" ry="2" stroke="rgba(228,188,82,0.28)" stroke-width="0.6" fill="none"/>
+      </svg>
+    </div>
+    <div class="candle-wrap candle-right">
+      <svg width="32" height="82" viewBox="0 0 32 82" fill="none" xmlns="http://www.w3.org/2000/svg" class="flame-b">
+        <ellipse cx="16" cy="8" rx="5" ry="7" fill="rgba(255,155,30,0.13)"/>
+        <path d="M16 18 C12.5 16.5 11 12.5 12 8.5 C13 5.5 14.5 3 16 1 C17.5 3 19 5.5 20 8.5 C21 12.5 19.5 16.5 16 18Z" fill="rgba(255,136,18,0.84)"/>
+        <path d="M16 15.5 C13.8 14 13.2 10.5 14.2 7.5 C14.9 5.5 15.5 3.8 16 2.5 C16.5 3.8 17.1 5.5 17.8 7.5 C18.8 10.5 18.2 14 16 15.5Z" fill="rgba(255,222,98,0.97)"/>
+        <line x1="16" y1="18" x2="16" y2="21" stroke="rgba(40,18,4,0.68)" stroke-width="1" stroke-linecap="round"/>
+        <path d="M14 21 L13 58 L19 58 L18 21 Z" fill="rgba(246,236,214,0.96)"/>
+        <path d="M14 21 L13 58 L14.8 58 L15.4 21 Z" fill="rgba(26,18,6,0.06)"/>
+        <path d="M18 21 L19 58 L17.2 58 L16.6 21 Z" fill="rgba(26,18,6,0.04)"/>
+        <!-- Drip on the other side for variety -->
+        <path d="M18.2 28 Q19.2 35 18.4 44" stroke="rgba(246,236,214,0.50)" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M11 58 Q11 56 13 56 L19 56 Q21 56 21 58 L22 61 L10 61 Z" fill="rgba(188,145,50,0.88)"/>
+        <ellipse cx="16" cy="61" rx="6" ry="1.2" fill="rgba(215,170,70,0.55)"/>
+        <ellipse cx="16" cy="61" rx="6" ry="1.2" stroke="rgba(230,190,90,0.40)" stroke-width="0.6" fill="none"/>
+        <rect x="14.5" y="61" width="3" height="10" fill="rgba(192,148,48,0.85)"/>
+        <rect x="14.5" y="61" width="0.9" height="10" fill="rgba(230,195,95,0.25)"/>
+        <ellipse cx="16" cy="71" rx="4.5" ry="2.2" fill="rgba(196,152,52,0.90)"/>
+        <ellipse cx="16" cy="71" rx="4.5" ry="2.2" stroke="rgba(225,185,80,0.30)" stroke-width="0.6" fill="none"/>
+        <ellipse cx="16" cy="74" rx="7.5" ry="2" fill="rgba(188,145,50,0.88)"/>
+        <path d="M8.5 74 Q8.5 77 16 77 Q23.5 77 23.5 74" fill="rgba(175,132,42,0.80)"/>
+        <ellipse cx="16" cy="74" rx="7.5" ry="2" stroke="rgba(228,188,82,0.28)" stroke-width="0.6" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="ai-badge">
+      <div class="ai-badge-title">AI Visibility Active</div>
+      <div class="bp"><span>ChatGPT</span><span>Google AI</span><span>Yelp AI</span><span>Perplexity</span></div>
+    </div>
+    <div class="chef-card">
+      <div class="chef-av">MR</div>
+      <div>
+        <div class="chef-name">Chef Marco Romano</div>
+        <div class="chef-title">Executive Chef &amp; Co-Owner &middot; Bologna, Italy</div>
+        <div class="chef-award">&#9733; James Beard Semifinalist 2023 &amp; 2024 &middot; 4.8&#9733; Yelp</div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="sc"><div class="sn">4.8&#9733;</div><div class="sl">Yelp Rating</div></div>
+      <div class="sc"><div class="sn w">26yr</div><div class="sl">Serving Houston</div></div>
+      <div class="sc"><div class="sn w">180+</div><div class="sl">Wine Labels</div></div>
+      <div class="sc"><div class="sn">$65</div><div class="sl">Avg. Per Person</div></div>
+    </div>
+    <div class="menu-box">
+      <div class="menu-hdr"><span class="menu-hdr-title">Tonight&rsquo;s Specials</span><span class="menu-hdr-note">Market menu &middot; changes daily</span></div>
+      <div class="menu-row"><span class="menu-name">Bistecca alla Fiorentina</span><div class="menu-dots"></div><span class="menu-price">$68</span></div>
+      <div class="menu-row"><span class="menu-name">Tagliatelle al Tartufo Nero</span><div class="menu-dots"></div><span class="menu-price">$38</span></div>
+      <div class="menu-row"><span class="menu-name">Branzino al Sale</span><div class="menu-dots"></div><span class="menu-price">$52</span></div>
+      <div class="menu-row"><span class="menu-name">Risotto ai Funghi Porcini</span><div class="menu-dots"></div><span class="menu-price">$34</span></div>
+      <div class="menu-row"><span class="menu-name">Panna Cotta al Limoncello</span><div class="menu-dots"></div><span class="menu-price">$14</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="si"><div class="sinum">26<span>yr</span></div><div class="silbl">Family-Owned Since 1998</div></div>
+  <div class="si"><div class="sinum">4.<span>8&#9733;</span></div><div class="silbl">Average Yelp Rating</div></div>
+  <div class="si"><div class="sinum">180<span>+</span></div><div class="silbl">Wines on the List</div></div>
+  <div class="si"><div class="sinum">4<span>x</span></div><div class="silbl">AI Platforms Indexed</div></div>
+</div>
+
+<script>
+/* ═══ 2. CURSOR-REACTIVE CANDLELIGHT ════════════════════ */
+(function(){
+  const canvas=document.getElementById('heroBg');
+  if(!canvas)return;
+  const hero=canvas.closest('.hero')||document.body;
+  let mx=-1,my=-1,tx,ty;
+  function resize(){
+    canvas.width=hero.offsetWidth;canvas.height=hero.offsetHeight;
+    if(tx===undefined){tx=canvas.width*.35;ty=canvas.height*.5;}
+  }
+  resize();window.addEventListener('resize',resize);
+  hero.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;});
+  hero.addEventListener('mouseleave',()=>{tx=canvas.width*.35;ty=canvas.height*.5;});
+  hero.addEventListener('touchmove',e=>{const r=canvas.getBoundingClientRect(),t=e.touches[0];tx=t.clientX-r.left;ty=t.clientY-r.top;},{passive:true});
+  const ctx=canvas.getContext('2d');
+  const amb=[
+    {xr:.07,yr:.52,base:155,spd:1.3,ph:0.0,amp:22},
+    {xr:.28,yr:.16,base:175,spd:0.9,ph:1.8,amp:28},
+    {xr:.16,yr:.84,base:125,spd:1.9,ph:3.3,amp:16},
+    {xr:.55,yr:.70,base:140,spd:1.1,ph:2.5,amp:20},
+    {xr:.42,yr:.06,base:105,spd:2.2,ph:0.7,amp:14},
+  ];
+  let t=0;
+  if(tx===undefined){tx=canvas.width*.35;ty=canvas.height*.5;}
+  if(mx<0){mx=tx;my=ty;}
+  (function anim(){
+    requestAnimationFrame(anim);t+=.013;
+    mx+=(tx-mx)*.06;my+=(ty-my)*.06;
+    const W=canvas.width,H=canvas.height;
+    ctx.clearRect(0,0,W,H);
+    amb.forEach(c=>{
+      const fl=Math.sin(t*c.spd+c.ph)*.6+Math.sin(t*c.spd*1.7+c.ph*.5)*.3+Math.sin(t*c.spd*3.1+c.ph*1.2)*.1;
+      const r=c.base+fl*c.amp,a=.09+fl*.025;
+      const cx=c.xr*W,cy=c.yr*H;
+      const g=ctx.createRadialGradient(cx,cy,0,cx,cy,r);
+      g.addColorStop(0,`rgba(255,180,50,${(a*1.6).toFixed(3)})`);
+      g.addColorStop(.3,`rgba(240,140,20,${(a*.9).toFixed(3)})`);
+      g.addColorStop(.65,`rgba(210,100,10,${(a*.4).toFixed(3)})`);
+      g.addColorStop(1,'rgba(180,70,5,0)');
+      ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
+    });
+    const dx=tx-mx,dy=ty-my,spd=Math.sqrt(dx*dx+dy*dy);
+    const fl2=Math.sin(t*2.1)*.5+Math.sin(t*4.7)*.3+.2;
+    const cr=265+fl2*42+Math.min(spd*.8,60),ca=.18+fl2*.05;
+    const cg=ctx.createRadialGradient(mx,my,0,mx,my,cr);
+    cg.addColorStop(0,`rgba(255,205,85,${(ca*2.2).toFixed(3)})`);
+    cg.addColorStop(.12,`rgba(255,170,40,${(ca*1.6).toFixed(3)})`);
+    cg.addColorStop(.35,`rgba(240,130,15,${(ca*.9).toFixed(3)})`);
+    cg.addColorStop(.65,`rgba(210,90,5,${(ca*.35).toFixed(3)})`);
+    cg.addColorStop(1,'rgba(180,60,0,0)');
+    ctx.beginPath();ctx.arc(mx,my,cr,0,Math.PI*2);ctx.fillStyle=cg;ctx.fill();
+  })();
+})();
+
+/* ═══ 3. FLOATING PASTA SHAPES ════════════════════════════ */
+(function(){
+  const canvas=document.getElementById('pastaCanvas');
+  if(!canvas)return;
+  const hero=canvas.closest('.hero')||document.body;
+  function resize(){canvas.width=hero.offsetWidth;canvas.height=hero.offsetHeight;}
+  resize();window.addEventListener('resize',resize);
+  const ctx=canvas.getContext('2d');
+
+  /* Draw functions for each pasta type */
+  function drawRigatoni(ctx,x,y,rot,a){
+    ctx.save();ctx.translate(x,y);ctx.rotate(rot);
+    ctx.globalAlpha=a;
+    const w=13,h=22,r=2.5;
+    /* tube outline */
+    ctx.beginPath();ctx.roundRect(-w/2,-h/2,w,h,r);
+    ctx.strokeStyle='rgba(180,110,40,1)';ctx.lineWidth=.9;ctx.stroke();
+    /* ridges */
+    for(let i=-4;i<=4;i+=2.5){
+      ctx.beginPath();ctx.moveTo(-w/2+1,i);ctx.lineTo(w/2-1,i);
+      ctx.strokeStyle='rgba(180,110,40,0.5)';ctx.lineWidth=.5;ctx.stroke();
+    }
+    /* elliptical ends */
+    ctx.beginPath();ctx.ellipse(0,-h/2,w/2-1,1.5,0,0,Math.PI*2);
+    ctx.strokeStyle='rgba(180,110,40,0.7)';ctx.lineWidth=.7;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(0,h/2,w/2-1,1.5,0,0,Math.PI*2);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawFusilli(ctx,x,y,rot,a){
+    ctx.save();ctx.translate(x,y);ctx.rotate(rot);
+    ctx.globalAlpha=a;
+    ctx.strokeStyle='rgba(195,130,45,1)';ctx.lineWidth=1.6;ctx.lineCap='round';
+    /* Two interleaving helical curves */
+    ctx.beginPath();
+    for(let i=0;i<=1;i+=.02){
+      const py=i*30-15;
+      const px=Math.sin(i*Math.PI*4)*6;
+      if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);
+    }
+    ctx.stroke();
+    ctx.strokeStyle='rgba(195,130,45,0.55)';
+    ctx.beginPath();
+    for(let i=0;i<=1;i+=.02){
+      const py=i*30-15;
+      const px=Math.sin(i*Math.PI*4+Math.PI)*6;
+      if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);
+    }
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawBasil(ctx,x,y,rot,a){
+    ctx.save();ctx.translate(x,y);ctx.rotate(rot);
+    ctx.globalAlpha=a;
+    /* leaf body */
+    ctx.beginPath();
+    ctx.moveTo(0,-14);
+    ctx.bezierCurveTo(8,-11,11,0,0,14);
+    ctx.bezierCurveTo(-11,0,-8,-11,0,-14);
+    ctx.strokeStyle='rgba(60,100,30,1)';ctx.lineWidth=1.1;ctx.stroke();
+    /* center vein */
+    ctx.beginPath();ctx.moveTo(0,-13);ctx.lineTo(0,13);
+    ctx.strokeStyle='rgba(60,100,30,0.5)';ctx.lineWidth=.6;ctx.stroke();
+    /* side veins */
+    [-7,-2,4].forEach(py=>{
+      ctx.beginPath();ctx.moveTo(0,py);ctx.lineTo(4,py+1.5);
+      ctx.strokeStyle='rgba(60,100,30,0.3)';ctx.lineWidth=.4;ctx.stroke();
+      ctx.beginPath();ctx.moveTo(0,py);ctx.lineTo(-4,py+1.5);ctx.stroke();
+    });
+    ctx.restore();
+  }
+
+  const TYPES=[0,1,2]; /* rigatoni, fusilli, basil */
+  class Particle{
+    constructor(){this.reset(true);}
+    reset(init=false){
+      this.type=TYPES[Math.floor(Math.random()*3)];
+      const W=canvas.width,H=canvas.height;
+      this.x=Math.random()*W;
+      this.y=init?(Math.random()*H):(H+20);
+      this.vy=-(0.15+Math.random()*.22);
+      this.vx=(Math.random()-.5)*.14;
+      this.rot=Math.random()*Math.PI*2;
+      this.rotV=(Math.random()-.5)*.009;
+      this.maxA=0.13+Math.random()*.06;
+      this.a=init?Math.random()*this.maxA:0;
+      this.life=0;this.maxLife=280+Math.random()*180;
+    }
+    tick(){
+      this.life++;this.x+=this.vx;this.y+=this.vy;this.rot+=this.rotV;
+      /* gentle horizontal sway */
+      this.x+=Math.sin(this.life*.04)*0.15;
+      const p=this.life/this.maxLife;
+      if(p<.12)this.a=this.maxA*(p/.12);
+      else if(p>.8)this.a=this.maxA*((1-p)/.2);
+      else this.a=this.maxA;
+      if(this.y<-30||this.life>this.maxLife)this.reset();
+    }
+    draw(){
+      if(this.type===0)drawRigatoni(ctx,this.x,this.y,this.rot,this.a);
+      else if(this.type===1)drawFusilli(ctx,this.x,this.y,this.rot,this.a);
+      else drawBasil(ctx,this.x,this.y,this.rot,this.a);
+    }
+  }
+
+  const particles=[];
+  for(let i=0;i<22;i++)particles.push(new Particle());
+
+  (function anim(){
+    requestAnimationFrame(anim);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{p.tick();p.draw();});
+  })();
+})();
+
+/* ═══ 4. DRAMATIC SMOKE / AROMA WISPS ════════════════════ */
+(function(){
+  const canvas=document.getElementById('steamCanvas');
+  if(!canvas)return;
+  const hero=canvas.closest('.hero')||document.body;
+  function resize(){canvas.width=hero.offsetWidth;canvas.height=hero.offsetHeight;}
+  resize();window.addEventListener('resize',resize);
+  const ctx=canvas.getContext('2d');
+
+  /* Origins spread across the whole menu box */
+  function getMenuOrigins(){
+    const mb=document.querySelector('.menu-box');
+    if(!mb)return [{x:canvas.width*.82,y:canvas.height*.72}];
+    const hr=hero.getBoundingClientRect(),mr=mb.getBoundingClientRect();
+    const left=mr.left-hr.left,top=mr.top-hr.top,w=mr.width;
+    /* 5 origin points spread across menu box top */
+    return [.1,.28,.5,.72,.9].map(t=>({x:left+w*t,y:top+4}));
+  }
+
+  class Wisp{
+    constructor(i){this.idx=i%5;this.reset();}
+    reset(){
+      const origins=getMenuOrigins();
+      const o=origins[this.idx]||origins[0];
+      this.x=o.x+(Math.random()-.5)*28;
+      this.y=o.y;
+      this.vx=(Math.random()-.5)*.55;
+      this.vy=-(0.7+Math.random()*.95);
+      this.life=0;this.max=110+Math.random()*110;
+      this.r=5+Math.random()*5;
+      this.maxA=0.18+Math.random()*.08;
+    }
+    tick(){
+      this.life++;
+      this.x+=this.vx+Math.sin(this.life*.055+this.idx)*0.28;
+      this.y+=this.vy;this.vy*=.996;this.r+=.075;
+      if(this.life>=this.max)this.reset();
+    }
+    draw(){
+      const p=this.life/this.max;
+      const a=p<.15?(p/.15)*this.maxA:p<.65?this.maxA:((1-p)/.35)*this.maxA;
+      ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(245,225,185,${a.toFixed(3)})`;ctx.fill();
+    }
+  }
+
+  let wisps=[];
+  setTimeout(()=>{
+    for(let i=0;i<24;i++){const w=new Wisp(i);w.life=Math.floor(Math.random()*w.max);wisps.push(w);}
+  },900);
+
+  (function anim(){
+    requestAnimationFrame(anim);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    wisps.forEach(w=>{w.tick();w.draw();});
+  })();
+})();
+
+/* ═══ 5. PARALLAX HEADLINE ════════════════════════════════ */
+(function(){
+  const layer=document.getElementById('parallaxLayer');
+  if(!layer)return;
+  let tx=0,ty=0,cx=0,cy=0;
+  document.addEventListener('mousemove',e=>{
+    tx=(e.clientX-window.innerWidth/2)/window.innerWidth*6;
+    ty=(e.clientY-window.innerHeight/2)/window.innerHeight*3.5;
+  });
+  (function tick(){
+    requestAnimationFrame(tick);
+    cx+=(tx-cx)*.07;cy+=(ty-cy)*.07;
+    layer.style.transform=`translate(${cx.toFixed(2)}px,${cy.toFixed(2)}px)`;
+  })();
+})();
+/* ═══ 6. HAMBURGER TOGGLE ════════════════════════════════ */
+(function(){
+  const btn=document.getElementById('navHamburger');
+  const drawer=document.getElementById('navDrawer');
+  if(!btn||!drawer)return;
+  btn.addEventListener('click',()=>{
+    btn.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  // Close on link click
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    btn.classList.remove('open');
+    drawer.classList.remove('open');
+  }));
+})();
+</script>
+</body>
+</html>

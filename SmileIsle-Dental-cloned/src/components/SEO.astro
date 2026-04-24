@@ -1,0 +1,110 @@
+---
+import '../styles/global.css';
+import { SITE_TITLE, SITE_URL, PHONE, ADDRESS } from '../consts';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  canonical = new URL(Astro.url.pathname, Astro.site).toString(),
+  ogImage = '/og-default.jpg',
+  ogType = 'website',
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const fullTitle = title.includes('Smile Isle') ? title : `${title} | Smile Isle Orthodontics`;
+
+// Default Organization schema
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Orthodontist',
+  name: 'Smile Isle Orthodontics',
+  url: SITE_URL,
+  telephone: PHONE,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '14735 Sully Run',
+    addressLocality: 'Odessa',
+    addressRegion: 'FL',
+    postalCode: '33556',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 28.1897,
+    longitude: -82.5934,
+  },
+  areaServed: [
+    'Odessa, FL',
+    'Land O\' Lakes, FL',
+    'Trinity, FL',
+    'Lutz, FL',
+    'New Port Richey, FL',
+    'Tampa, FL',
+  ],
+  priceRange: '$$',
+  openingHours: 'Mo-Fr 08:00-17:00',
+  sameAs: [],
+};
+
+const allSchemas = jsonLd
+  ? Array.isArray(jsonLd)
+    ? [organizationSchema, ...jsonLd]
+    : [organizationSchema, jsonLd]
+  : [organizationSchema];
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Font preloads -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonical} />
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(ogImage, Astro.site)} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Smile Isle Orthodontics" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonical} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+<!-- Local SEO -->
+<meta name="geo.region" content="US-FL" />
+<meta name="geo.placename" content="Odessa" />
+
+<!-- Structured Data -->
+{allSchemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

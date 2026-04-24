@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumière Beauty Studio — AI-Friendly Salon | [Your City]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#FBF8F4;
+  --bg2:#F3EDE5;
+  --card:#FFFFFF;
+  --dark:#1A0A04;
+  --mid:#1A0A04;
+  --soft:#221008;
+  --muted:#2B1810;
+  --light:#3E2518;
+  --wash:#EDE4DA;
+  --copper:#B5835A;
+  --copper-d:rgba(181,131,90,0.10);
+  --copper-b:rgba(181,131,90,0.22);
+  --copper-glow:rgba(181,131,90,0.30);
+  --border:rgba(46,33,24,0.07);
+  --heading:'DM Serif Display',serif;
+  --body:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--dark);font-family:var(--body);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em;}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:72px;background:rgba(251,248,244,0.90);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-icon{width:34px;height:34px;background:var(--copper);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-name{font-family:var(--heading);font-size:19px;color:var(--dark);letter-spacing:0.01em;}
+.nav-sub{font-family:var(--body);font-size:9px;color:var(--muted);letter-spacing:0.12em;margin-top:2px;text-transform:uppercase;font-weight:500;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:11px;color:var(--soft);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--dark);}
+.nav-links a:focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:3px;}
+.nav-phone{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0.02em;}
+.btn-primary{padding:10px 24px;background:var(--copper);color:#FFF;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:99px;transition:transform .2s,opacity .2s;box-shadow:0 4px 16px var(--copper-glow);}
+.btn-primary:hover{opacity:.88;transform:translateY(-1px);}
+.btn-primary:active{transform:scale(0.97);}
+.btn-primary:focus-visible{outline:2px solid var(--dark);outline-offset:3px;}
+
+/* ── Hero ── */
+.hero{position:relative;z-index:1;min-height:100vh;display:grid;grid-template-columns:1fr 400px;padding-top:72px;overflow:hidden;}
+
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.hero-bg::before{content:'';position:absolute;inset:0;background:var(--bg);z-index:0;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 50% 50%,transparent 0%,var(--bg) 70%);z-index:3;pointer-events:none;}
+.puzzle-wrap{position:relative;width:55%;height:70%;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(46,33,24,0.10),0 0 0 1px var(--border);}
+.puzzle-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(251,248,244,0.30) 0%,rgba(212,196,181,0.15) 100%);z-index:2;pointer-events:none;border-radius:24px;}
+.puzzle-grid{position:absolute;inset:-20px;display:grid;grid-template-columns:repeat(var(--cols),1fr);grid-template-rows:repeat(var(--rows),1fr);gap:3px;z-index:1;}
+.puzzle-tile{background-size:calc(100% * var(--cols)) calc(100% * var(--rows));background-image:var(--face-img);background-position:calc(var(--cx) * -100%) calc(var(--cy) * -100%);transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);will-change:transform;border-radius:3px;position:relative;overflow:hidden;}
+.puzzle-tile::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(181,131,90,0.06),rgba(212,196,181,0.04));opacity:0;transition:opacity 0.4s ease;}
+.puzzle-tile:hover::after{opacity:1;}
+.puzzle-tile.near::after{opacity:0.5;background:radial-gradient(circle,rgba(181,131,90,0.20),transparent 70%);}
+
+.hero-left{padding:64px 52px 64px 68px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border);position:relative;z-index:2;}
+
+/* ── Checkpoints ── */
+.checkpoint{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(14px);animation:up .55s ease forwards;}
+.checkpoint:last-of-type{border-bottom:none;}
+.checkpoint:nth-child(1){animation-delay:.1s;}
+.checkpoint:nth-child(2){animation-delay:.25s;}
+.checkpoint:nth-child(3){animation-delay:.4s;}
+.checkpoint:nth-child(4){animation-delay:.55s;}
+@keyframes up{to{opacity:1;transform:translateY(0);}}
+
+.cp-dot{width:30px;height:30px;border-radius:50%;background:var(--copper-d);border:1px solid var(--copper-b);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--copper);flex-shrink:0;letter-spacing:0;}
+.cp-body{flex:1;}
+
+.id-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--copper-d);border:1px solid var(--copper-b);border-radius:99px;}
+.id-dot{width:5px;height:5px;border-radius:50%;background:var(--copper);animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.id-text{font-size:11px;color:var(--soft);letter-spacing:.03em;font-weight:500;}
+
+.headline{font-family:var(--heading);font-size:clamp(30px,3.4vw,52px);font-weight:400;line-height:1.12;color:var(--dark);letter-spacing:-0.02em;}
+.headline em{color:var(--copper);font-style:italic;}
+
+.service-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.svc-tag{padding:5px 14px;background:var(--copper-d);border:1px solid var(--copper-b);border-radius:99px;font-size:10px;font-weight:600;color:var(--copper);letter-spacing:0.03em;}
+
+.body-text{font-size:13.5px;font-weight:400;color:var(--soft);line-height:1.75;max-width:440px;}
+.body-text strong{color:var(--dark);font-weight:600;}
+
+.ai-box{padding:16px 18px;background:var(--copper-d);border:1px solid var(--copper-b);border-radius:8px;max-width:480px;}
+.ai-inner{display:flex;gap:12px;align-items:flex-start;}
+.ai-check{width:22px;height:22px;border-radius:50%;background:rgba(181,131,90,0.14);border:1px solid var(--copper-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.ai-text{font-size:12px;font-weight:400;color:var(--soft);line-height:1.65;}
+.ai-text strong{color:var(--copper);font-weight:600;}
+.pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.pill{padding:3px 10px;background:rgba(181,131,90,0.06);border:1px solid var(--copper-b);border-radius:99px;font-size:9px;font-weight:600;color:var(--copper);letter-spacing:.06em;}
+
+/* ── CTAs ── */
+.cta-row{display:flex;align-items:center;gap:12px;padding-top:28px;flex-wrap:wrap;opacity:0;animation:up .55s ease forwards;animation-delay:.7s;}
+.btn-cta{padding:12px 28px;background:var(--copper);color:#FFF;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:99px;transition:transform .2s,opacity .2s;box-shadow:0 4px 16px var(--copper-glow);}
+.btn-cta:hover{opacity:.88;transform:translateY(-1px);}
+.btn-cta:active{transform:scale(0.97);}
+.btn-cta:focus-visible{outline:2px solid var(--dark);outline-offset:3px;}
+.btn-ghost{padding:12px 20px;background:transparent;border:1px solid var(--light);color:var(--soft);font-size:10px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:99px;transition:border-color .2s,color .2s,background .2s;}
+.btn-ghost:hover{border-color:var(--copper-b);color:var(--dark);background:var(--copper-d);}
+.btn-ghost:active{transform:scale(0.97);}
+.btn-ghost:focus-visible{outline:2px solid var(--copper);outline-offset:3px;}
+
+.trust-row{display:flex;align-items:center;gap:20px;padding-top:16px;flex-wrap:wrap;opacity:0;animation:up .55s ease forwards;animation-delay:.85s;}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);font-weight:500;}
+.trust-tick{width:16px;height:16px;border-radius:50%;background:var(--copper-d);border:1px solid var(--copper-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* ── Right panel ── */
+.hero-right{background:rgba(255,255,255,0.72);backdrop-filter:blur(20px);padding:36px 28px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:2;}
+.ai-badge{padding:14px;background:var(--copper-d);border:1px solid var(--copper-b);border-radius:8px;text-align:center;opacity:0;animation:up .5s ease forwards;animation-delay:.3s;}
+.ai-badge-title{font-size:9px;font-weight:700;color:var(--copper);letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px;}
+.badge-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;}
+.badge-pill{padding:3px 10px;background:rgba(181,131,90,0.05);border:1px solid rgba(181,131,90,0.12);border-radius:99px;font-size:9px;color:var(--muted);font-weight:500;}
+
+.stylist-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px;opacity:0;animation:up .5s ease forwards;animation-delay:.45s;box-shadow:0 1px 6px rgba(46,33,24,0.04);}
+.stylist-av{width:48px;height:48px;border-radius:50%;background:var(--copper-d);border:2px solid var(--copper-b);display:flex;align-items:center;justify-content:center;font-family:var(--heading);font-size:16px;font-style:italic;color:var(--copper);flex-shrink:0;}
+.stylist-name{font-family:var(--heading);font-size:14px;color:var(--dark);margin-bottom:2px;}
+.stylist-title{font-size:10px;color:var(--muted);font-weight:500;}
+.stylist-spec{margin-top:4px;font-size:9px;color:var(--copper);opacity:.75;letter-spacing:.04em;font-weight:500;}
+
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;opacity:0;animation:up .5s ease forwards;animation-delay:.6s;}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center;transition:border-color .2s;box-shadow:0 1px 6px rgba(46,33,24,0.04);}
+.stat-card:hover{border-color:var(--copper-b);}
+.stat-num{font-family:var(--heading);font-size:22px;color:var(--copper);line-height:1;margin-bottom:4px;}
+.stat-num.w{color:var(--dark);}
+.stat-label{font-size:9px;color:var(--muted);letter-spacing:.05em;font-weight:500;}
+
+.menu-box{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;opacity:0;animation:up .5s ease forwards;animation-delay:.75s;box-shadow:0 1px 6px rgba(46,33,24,0.04);}
+.menu-hdr{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.menu-hdr-title{font-family:var(--heading);font-size:13px;font-style:italic;color:var(--copper);}
+.menu-hdr-note{font-size:9px;color:var(--muted);font-weight:500;}
+.menu-row{display:flex;align-items:baseline;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);transition:background .15s;}
+.menu-row:last-child{border-bottom:none;}
+.menu-row:hover{background:rgba(181,131,90,0.04);}
+.menu-name{font-size:11px;color:var(--mid);font-weight:500;}
+.menu-dots{flex:1;border-bottom:1px dotted var(--light);margin:0 10px;height:1px;margin-bottom:3px;}
+.menu-price{font-size:11px;font-weight:700;color:var(--copper);}
+
+/* ── Stat strip ── */
+.stat-strip{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);background:var(--bg2);}
+.strip-item{padding:24px 28px;border-right:1px solid var(--border);opacity:0;animation:up .5s ease forwards;}
+.strip-item:last-child{border-right:none;}
+.strip-item:nth-child(1){animation-delay:.9s;}
+.strip-item:nth-child(2){animation-delay:1s;}
+.strip-item:nth-child(3){animation-delay:1.1s;}
+.strip-item:nth-child(4){animation-delay:1.2s;}
+.strip-num{font-family:var(--heading);font-size:28px;color:var(--dark);letter-spacing:-.01em;margin-bottom:4px;}
+.strip-num span{color:var(--copper);}
+.strip-label{font-size:10px;color:var(--muted);letter-spacing:.06em;font-weight:500;}
+
+/* ── Banner ── */
+.demo-banner{background:rgba(181,131,90,0.08);border-bottom:1px solid rgba(181,131,90,0.15);padding:9px 20px;text-align:center;font-size:10px;color:var(--copper);letter-spacing:.05em;font-weight:600;}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero{grid-template-columns:1fr;}
+  .hero-left{padding:40px 20px 40px 28px;}
+  .hero-right{border-top:1px solid var(--border);}
+  .stat-strip{grid-template-columns:repeat(2,1fr);}
+  .strip-item:nth-child(2){border-right:none;}
+  .strip-item:nth-child(3){border-top:1px solid var(--border);}
+  .strip-item:nth-child(4){border-right:none;border-top:1px solid var(--border);}
+}
+</style>
+</head>
+<body>
+<div class="demo-banner">&#x26A0; DEMO TEMPLATE — All names, stats, and data are placeholder. Replace with verified client information before publishing.</div>
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-icon">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M4 2C4 2 3 5 5 7C7 9 7 12 7 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
+        <path d="M10 2C10 2 11 5 9 7C7 9 7 12 7 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="nav-name">Lumière Beauty Studio</div>
+      <div class="nav-sub">Hair · Skin · Nails · [Your City]</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Our Stylists</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Pricing</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <span class="nav-phone">[Your Phone]</span>
+    <a href="#" class="btn-primary">Book Now</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="puzzle-wrap">
+      <div class="puzzle-grid" id="puzzleGrid"></div>
+    </div>
+  </div>
+
+  <div class="hero-left">
+    <div class="checkpoint">
+      <div class="cp-dot">01</div>
+      <div class="cp-body">
+        <div class="id-badge">
+          <div class="id-dot"></div>
+          <span class="id-text">Hair · Skin · Nails · [Your Neighborhood], [City] · Est. [Year]</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkpoint">
+      <div class="cp-dot">02</div>
+      <div class="cp-body">
+        <h1 class="headline">Where You Come to<br><em>Look &amp; Feel</em><br>Your Best.</h1>
+        <div class="service-tags">
+          <span class="svc-tag">Hair Color</span>
+          <span class="svc-tag">Balayage</span>
+          <span class="svc-tag">Facials</span>
+          <span class="svc-tag">Nail Art</span>
+          <span class="svc-tag">Lashes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkpoint">
+      <div class="cp-dot">03</div>
+      <div class="cp-body">
+        <p class="body-text">For <strong>women, men, and teens</strong> in [Your Neighborhood] looking for a trusted local salon — expert color, cuts, skin treatments, nail art, and lash extensions, all with real verified pricing and available bookings.</p>
+      </div>
+    </div>
+
+    <div class="checkpoint">
+      <div class="cp-dot">04</div>
+      <div class="cp-body">
+        <div class="ai-box">
+          <div class="ai-inner">
+            <div class="ai-check">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.5 7.5L8.5 2.5" stroke="#B5835A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+            <div>
+              <div class="ai-text"><strong>Meta AI and ChatGPT now correctly surface Lumière's services and pricing when users ask AI to find a specific treatment nearby.</strong> Our BeautySalon schema with live service menu text, stylist credentials, booking link, and verified price ranges means AI sends the right clients — with no incorrect information.</div>
+              <div class="pills">
+                <span class="pill">Meta AI</span>
+                <span class="pill">ChatGPT</span>
+                <span class="pill">Google AI</span>
+                <span class="pill">Yelp AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a href="#" class="btn-cta">Book Your Appointment &#x2192;</a>
+      <a href="#" class="btn-ghost">View Full Menu</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item">
+        <div class="trust-tick"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#B5835A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        Online booking 24/7
+      </div>
+      <div class="trust-item">
+        <div class="trust-tick"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#B5835A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        Verified pricing on AI
+      </div>
+      <div class="trust-item">
+        <div class="trust-tick"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#B5835A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        Licensed stylists
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="ai-badge">
+      <div class="ai-badge-title">AI Visibility Active</div>
+      <div class="badge-pills">
+        <span class="badge-pill">Meta AI</span>
+        <span class="badge-pill">ChatGPT</span>
+        <span class="badge-pill">Google AI</span>
+        <span class="badge-pill">Yelp AI</span>
+      </div>
+    </div>
+    <div class="stylist-card">
+      <div class="stylist-av">[IN]</div>
+      <div>
+        <div class="stylist-name">[Lead Stylist Name]</div>
+        <div class="stylist-title">Lead Stylist · [X] Years Experience</div>
+        <div class="stylist-spec">[Cosmetology License #] · [State] · [Specialties]</div>
+      </div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num">[4.X]&#x2605;</div><div class="stat-label">Google Rating</div></div>
+      <div class="stat-card"><div class="stat-num w">[X]+</div><div class="stat-label">5-Star Reviews</div></div>
+      <div class="stat-card"><div class="stat-num w">[X]yr</div><div class="stat-label">Est. [Year]</div></div>
+      <div class="stat-card"><div class="stat-num">[X]+</div><div class="stat-label">Services Offered</div></div>
+    </div>
+    <div class="menu-box">
+      <div class="menu-hdr">
+        <span class="menu-hdr-title">Service Menu</span>
+        <span class="menu-hdr-note">Verified pricing · AI-indexed</span>
+      </div>
+      <div class="menu-row"><span class="menu-name">[Service 1 — e.g. Full Balayage]</span><div class="menu-dots"></div><span class="menu-price">$[Price]+</span></div>
+      <div class="menu-row"><span class="menu-name">[Service 2 — e.g. Cut &amp; Style]</span><div class="menu-dots"></div><span class="menu-price">$[Price]+</span></div>
+      <div class="menu-row"><span class="menu-name">[Service 3 — e.g. HydraFacial]</span><div class="menu-dots"></div><span class="menu-price">$[Price]+</span></div>
+      <div class="menu-row"><span class="menu-name">[Service 4 — e.g. Gel Manicure]</span><div class="menu-dots"></div><span class="menu-price">$[Price]+</span></div>
+      <div class="menu-row"><span class="menu-name">[Service 5 — e.g. Lash Extensions]</span><div class="menu-dots"></div><span class="menu-price">$[Price]+</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="strip-item"><div class="strip-num">[4.<span>X]&#x2605;</span></div><div class="strip-label">Google Rating</div></div>
+  <div class="strip-item"><div class="strip-num">[X]<span>+</span></div><div class="strip-label">Five-Star Reviews</div></div>
+  <div class="strip-item"><div class="strip-num">[X]<span>yr</span></div><div class="strip-label">Serving [Your City]</div></div>
+  <div class="strip-item"><div class="strip-num">4<span>x</span></div><div class="strip-label">AI Platforms Indexed</div></div>
+</div>
+
+<script>
+(function(){
+  const grid = document.getElementById('puzzleGrid');
+  if(!grid) return;
+
+  const IMG = 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80';
+  const COLS = 8;
+  const ROWS = 6;
+  const MAX_SHIFT = 18;
+  const PROXIMITY = 250;
+
+  grid.style.setProperty('--cols', COLS);
+  grid.style.setProperty('--rows', ROWS);
+  grid.style.setProperty('--face-img', `url(${IMG})`);
+
+  const tiles = [];
+  for(let r = 0; r < ROWS; r++){
+    for(let c = 0; c < COLS; c++){
+      const tile = document.createElement('div');
+      tile.className = 'puzzle-tile';
+      tile.style.setProperty('--cx', c);
+      tile.style.setProperty('--cy', r);
+      tile.dataset.col = c;
+      tile.dataset.row = r;
+      grid.appendChild(tile);
+      tiles.push(tile);
+    }
+  }
+
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.src = IMG;
+
+  let mouseX = -9999, mouseY = -9999;
+  let targetX = -9999, targetY = -9999;
+
+  document.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  document.addEventListener('mouseleave', () => {
+    targetX = -9999;
+    targetY = -9999;
+  });
+
+  function animate(){
+    mouseX += (targetX - mouseX) * 0.1;
+    mouseY += (targetY - mouseY) * 0.1;
+
+    for(let i = 0; i < tiles.length; i++){
+      const tile = tiles[i];
+      const rect = tile.getBoundingClientRect();
+      const tileCX = rect.left + rect.width / 2;
+      const tileCY = rect.top + rect.height / 2;
+
+      const dx = mouseX - tileCX;
+      const dy = mouseY - tileCY;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+
+      if(dist < PROXIMITY && mouseX > 0){
+        const force = 1 - (dist / PROXIMITY);
+        const angle = Math.atan2(dy, dx);
+        const pushX = -Math.cos(angle) * force * MAX_SHIFT;
+        const pushY = -Math.sin(angle) * force * MAX_SHIFT;
+        const scale = 1 + force * 0.08;
+        const rot = pushX * 0.15;
+
+        tile.style.transform = `translate(${pushX}px, ${pushY}px) scale(${scale}) rotate(${rot}deg)`;
+        tile.style.zIndex = Math.round(force * 10);
+        tile.style.filter = `brightness(${1 + force * 0.15}) saturate(${1 + force * 0.1})`;
+        tile.classList.toggle('near', force > 0.4);
+      } else {
+        const time = Date.now() * 0.001;
+        const col = parseInt(tile.dataset.col);
+        const row = parseInt(tile.dataset.row);
+        const floatX = Math.sin(time * 0.5 + col * 0.7) * 2;
+        const floatY = Math.cos(time * 0.4 + row * 0.8) * 2;
+
+        tile.style.transform = `translate(${floatX}px, ${floatY}px) scale(1) rotate(0deg)`;
+        tile.style.zIndex = '0';
+        tile.style.filter = 'brightness(0.88) saturate(0.85)';
+        tile.classList.remove('near');
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();
+</script>
+</body></html>

@@ -1,0 +1,758 @@
+/* Phase 5 — section-specific layout. Grounded in capture/runtime-data.json
+   sampled rects/computed-styles at viewport 1440×900, plus § 3/§ 4. */
+
+/* --- Generic pin-spacer passthrough ---------------------------------- */
+/* Phase 1 left literal .pin-spacer divs in the DOM because the spec § 3
+   listed them. They're actually GSAP-generated at runtime in the reference
+   site. Make them transparent containers so ScrollTrigger's own pin wrappers
+   can behave normally when we call .pin() on .hero/.service below. */
+.pin-spacer {
+  display: contents;
+}
+
+/* --- 1. Header (§ 3.1 + sample: absolute top, color white) ----------- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 30px 10px 0;
+  color: var(--color-fg-on-dark);
+  display: grid;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.header__logo {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.header nav {
+  display: flex;
+  gap: 30px;
+  padding: 10px 30px 20px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+.header nav a {
+  color: inherit;
+  transition: opacity 200ms ease;
+}
+.header nav a:hover {
+  opacity: 0.7;
+}
+
+/* --- 2. Hero (§ 3.2 + sample: 1440×900, flex, bg via img) ----------- */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+}
+.hero__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 30px 40px;
+}
+.hero h1 {
+  /* h1 already 60px/72px DM Sans 200 white via base.css */
+  /* line-breaks come from <br> in HTML */
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+.hero__deco {
+  display: none; /* decorative glyphs not yet wired; empty spans occupy zero space */
+}
+
+/* --- 3. About (§ 3.3 + sample: 1440×1194, grid, padding 140px 10px)  */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 140px 40px;
+  position: relative;
+}
+.about__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  position: relative;
+}
+.about__image {
+  overflow: hidden;
+}
+.about__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.about__images h2 {
+  grid-column: 1 / -1;
+  /* § 3.3 H2 is rotated -8° — set the rotation statically here; the JS
+     scroll-linked translateY is layered on top via a separate transform
+     target. GSAP animates 'y' which GSAP composes with 'rotation'. */
+  transform-origin: left center;
+  color: var(--color-fg-default);
+  padding: 40px 0 0;
+  max-width: 520px;
+}
+.about__description {
+  position: relative;
+}
+.about__description p {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 0 1em 0;
+}
+.about__deco {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.signature {
+  display: block;
+  margin-top: 30px;
+  height: 42px;
+}
+
+/* --- 4. Sticky nav (§ 3.4 + sample: position sticky, flex 1420×47) --- */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--color-bg-page);
+  padding: 10px 30px 20px;
+  margin: 0 10px;
+  border-bottom: 1px solid rgba(15, 15, 15, 0.1);
+}
+.sticky-nav .navigation {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+.sticky-nav .navigation a {
+  color: var(--color-fg-default);
+  transition: opacity 200ms ease;
+}
+.sticky-nav .navigation a:hover {
+  opacity: 0.6;
+}
+
+/* --- 5. Services (§ 3.5 + sample: bg #FFF14E, service 1440×900, relative) */
+.services {
+  background: var(--color-accent-yellow);
+  position: relative;
+}
+.services__list {
+  /* one tile per viewport — each .service gets pinned in scroll.js. */
+}
+.service {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-yellow);
+  padding: 60px 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.service h3 {
+  /* 300px/180px already set in base.css via .service h3 rule; tighten here */
+  text-align: center;
+  line-height: 0.6;
+  margin: 0 0 40px 0;
+  color: var(--color-fg-on-dark);
+  text-transform: lowercase;
+}
+.service p {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-fg-default);
+  max-width: 640px;
+  margin: 0 0 30px 0;
+}
+.service img {
+  max-height: 40vh;
+  width: auto;
+  object-fit: contain;
+}
+
+/* --- 6. Works (§ 3.6 + sample: relative, huge total height) --------- */
+.works {
+  position: relative;
+  padding: 100px 40px;
+  background: var(--color-bg-page);
+}
+.works > h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.works__decos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.works__deco {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.15;
+}
+.works__deco:nth-child(1) { top: 5%;  left: 8%;  }
+.works__deco:nth-child(2) { top: 15%; right: 10%; }
+.works__deco:nth-child(3) { top: 30%; left: 15%; }
+.works__deco:nth-child(4) { top: 40%; right: 6%;  }
+.works__deco:nth-child(5) { top: 55%; left: 12%; }
+.works__deco:nth-child(6) { top: 65%; right: 18%; }
+.works__deco:nth-child(7) { top: 80%; left: 20%; }
+.works__deco:nth-child(8) { top: 90%; right: 8%;  }
+.works__list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 140px;
+}
+.work {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 16px;
+  align-items: start;
+}
+.work h3 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  font-family: var(--font-secondary);
+  font-size: 56px;
+  line-height: 1;
+  margin: 0 0 16px 0;
+  color: var(--color-fg-default);
+}
+.work > p {
+  grid-column: 3 / -1;
+  grid-row: 1;
+  max-width: 460px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-fg-default);
+}
+.work > ul {
+  grid-column: 3 / -1;
+  grid-row: 1;
+  align-self: end;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  font-size: 12px;
+  color: var(--color-fg-default);
+  opacity: 0.7;
+}
+.work > ul > li {
+  white-space: nowrap;
+}
+.work img {
+  grid-row: 2;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+/* Spread 7 imgs across 4 columns — first 4 in row 2, next 3 in row 3 */
+.work img:nth-of-type(n+5) {
+  grid-row: 3;
+}
+
+/* --- 7. Testimonies (§ 3.7 + sample: grid, padding 100/10/70) ------- */
+#testimonies {
+  padding: 100px 10px 70px;
+  display: grid;
+  gap: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--color-fg-default);
+}
+#testimonies > h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.testimony {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  align-items: start;
+  padding-bottom: 40px;
+}
+.testimony img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  grid-row: 1 / span 2;
+}
+.testimony blockquote {
+  font-size: 28px;
+  line-height: 36px;
+  margin: 0;
+  font-family: var(--font-tertiary);
+  color: var(--color-fg-default);
+}
+.testimony > p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 16px 0 0 0;
+}
+#testimonies > a.btn {
+  justify-self: center;
+  padding: 16px 32px;
+  border: 1px solid var(--color-fg-default);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+#testimonies > a.btn:hover {
+  background: var(--color-fg-default);
+  color: var(--color-fg-on-dark);
+}
+
+/* --- 8. Book (§ 3.8 + sample: 1440×900, padding 140/10) ------------- */
+#book {
+  padding: 140px 10px;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg-page);
+}
+#book img {
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+}
+
+/* --- 9. Team (§ 3.9 + sample: grid, padding 70/10/100) -------------- */
+#team {
+  padding: 70px 40px 100px;
+  text-align: center;
+}
+#team > h2 {
+  margin-bottom: 60px;
+}
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.team__member {
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-fg-default);
+}
+.team__member p {
+  margin: 0;
+}
+.team__tagline {
+  margin-top: 60px;
+  font-size: 14px;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* --- 10. Club (§ 3.10 + sample: dark bg, 1440×1609, padding 70/0/170) */
+#club {
+  position: relative;
+  background: var(--color-club-dark);
+  color: var(--color-fg-on-dark);
+  padding: 100px 40px 170px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.club__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  opacity: 0.35;
+  z-index: 0;
+  top: -10%;
+}
+#club > h2,
+#club > .club__subtitle,
+#club > p,
+#club > a.btn {
+  position: relative;
+  z-index: 1;
+  color: var(--color-fg-on-dark);
+}
+#club > h2 {
+  font-size: 60px;
+  max-width: 720px;
+  margin: 0 0 10px 0;
+}
+#club > .club__subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+  margin: 0 0 60px 0;
+}
+#club > p {
+  max-width: 680px;
+  margin: 0 0 24px 0;
+  line-height: 28px;
+  font-size: 16px;
+}
+.club__link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 32px;
+  border: 1px solid var(--color-fg-on-dark);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+.club__link:hover {
+  background: var(--color-fg-on-dark);
+  color: var(--color-fg-default);
+}
+
+/* --- 11. FAQs (§ 3.11 + sample: dark bg, white text, padding) ------- */
+#faqs {
+  background: var(--color-club-dark);
+  color: var(--color-fg-on-dark);
+  padding: 80px 40px 80px;
+}
+#faqs > h2,
+#faqs > p {
+  color: var(--color-fg-on-dark);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#faqs > h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+#faqs > p {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 60px;
+}
+kim-faq {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+kim-faq details {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px 20px;
+}
+kim-faq summary {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+  list-style: none;
+  padding-right: 40px;
+  position: relative;
+  color: var(--color-fg-on-dark);
+}
+kim-faq summary::-webkit-details-marker {
+  display: none;
+}
+kim-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+  font-weight: 200;
+  transition: transform 300ms ease;
+}
+kim-faq details[open] summary::after {
+  content: "−";
+}
+kim-faq .faq__answer {
+  /* No padding here — padding moves to the inner <p> so that when JS clamps
+     this element to height:0 + overflow:hidden, the padding collapses too. */
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 24px;
+}
+kim-faq .faq__answer p {
+  margin: 0;
+  padding: 16px 0 0;
+}
+
+/* --- 12. Contact (§ 3.12 + sample: dark, grid 1440×194, centered) --- */
+#contact {
+  background: var(--color-club-dark);
+  color: var(--color-fg-on-dark);
+  padding: 60px 20px 20px;
+  display: grid;
+  place-items: center;
+  gap: 24px;
+  text-align: center;
+}
+#contact > h2 {
+  color: var(--color-fg-on-dark);
+  font-size: 40px;
+}
+#contact .btn {
+  color: var(--color-fg-on-dark);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: opacity 200ms ease;
+}
+#contact .btn:hover {
+  opacity: 0.7;
+}
+#contact .contact__link {
+  border: 1px solid var(--color-fg-on-dark);
+  border-radius: 999px;
+  padding: 16px 32px;
+}
+#contact .contact__link:hover {
+  background: var(--color-fg-on-dark);
+  color: var(--color-fg-default);
+  opacity: 1;
+}
+
+/* --- 13. Snackbar (§ 3.12 tail + sample: fixed, off-screen) ---------- */
+.snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 100;
+  background: var(--color-bg-page);
+  color: var(--color-fg-default);
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 100px);
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.snackbar.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+/* --- Global backdrop texture on body (§ 2 --background token) -------- */
+body {
+  background-image: var(--background);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* =====================================================================
+ * Phase 7 — Responsive polish.
+ *
+ * The reference site's CSS dump contains zero @media queries, so the
+ * desktop design relies on fluid grid + intrinsic units. Phase 7 layers
+ * on top of that: clamp() lives in base.css for typography; this section
+ * adds one breakpoint at 768px (pragmatic per executor) to collapse
+ * multi-column grids that would otherwise crush at 375px.
+ *
+ * Nothing here changes the desktop layout — the media blocks only apply
+ * below 768px. Verified at 375×812 / 768×1024 / 1440×900 / 1920×1080.
+ * ===================================================================== */
+
+@media (max-width: 768px) {
+  /* Header — stack logo over the 7-item nav; let nav wrap onto 2 rows. */
+  .header {
+    padding: 20px 10px 0;
+  }
+  .header__content {
+    gap: 8px;
+  }
+  .header nav {
+    gap: 12px 20px;
+    padding: 8px 10px 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  /* Hero content shifts to smaller horizontal padding. */
+  .hero__content {
+    padding: 0 16px 24px;
+  }
+
+  /* About — collapse to single column; let the rotated H2 breathe. */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 100px 20px;
+  }
+  .about__images {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about__images h2 {
+    font-size: 28px;
+    padding-top: 20px;
+    max-width: 100%;
+  }
+
+  /* Sticky nav — same wrap strategy as the header. */
+  .sticky-nav {
+    padding: 8px 10px 12px;
+    margin: 0;
+  }
+  .sticky-nav .navigation {
+    gap: 10px 18px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  /* Services — tile padding shrinks; clamp() already tamed the H3. */
+  .service {
+    padding: 40px 20px;
+  }
+
+  /* Works — 4-col grid crushes at 375px; go single column. */
+  .works {
+    padding: 60px 20px;
+  }
+  .works__list {
+    gap: 80px;
+  }
+  .work {
+    grid-template-columns: 1fr;
+  }
+  .work h3,
+  .work > p,
+  .work > ul {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .work h3 {
+    font-size: 40px;
+  }
+  .work img {
+    grid-row: auto !important; /* override the nth-of-type row-spread */
+  }
+
+  /* Testimonies — stack avatar above quote. */
+  #testimonies {
+    padding: 60px 16px;
+    gap: 60px;
+  }
+  .testimony {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .testimony img {
+    grid-row: auto;
+  }
+  .testimony blockquote {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  /* Book — tighter padding. */
+  #book {
+    padding: 80px 20px;
+  }
+
+  /* Team — 3 columns → 2 columns on mobile. */
+  #team {
+    padding: 60px 20px 80px;
+  }
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Club — tighter padding, smaller H2. */
+  #club {
+    padding: 60px 20px 100px;
+  }
+  #club > h2 {
+    font-size: 36px;
+  }
+
+  /* FAQs — tighter padding. */
+  #faqs {
+    padding: 60px 16px;
+  }
+  kim-faq details {
+    padding: 16px 8px;
+  }
+  kim-faq summary {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 32px;
+  }
+
+  /* Contact — tighter. */
+  #contact {
+    padding: 40px 16px 20px;
+  }
+  #contact > h2 {
+    font-size: 28px;
+  }
+}
+
+/* At very wide viewports (1920+), cap content widths so the Works list
+ * doesn't span the full screen uncomfortably. */
+@media (min-width: 1600px) {
+  .works__list,
+  #testimonies,
+  kim-faq,
+  #faqs > h2,
+  #faqs > p {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}

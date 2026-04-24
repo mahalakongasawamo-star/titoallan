@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Name — Architecture & Interior Design</title>
+  <meta name="description" content="Melbourne based architecture and interior design studio working across diverse project types in Australia and internationally.">
+  <link rel="stylesheet" href="styles.css">
+  <!-- GSAP + ScrollTrigger for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LOADER
+       ═══════════════════════════════════════════════════════ -->
+  <div class="loader-panel"></div>
+  <div class="loader">
+    <div class="loader-logo">
+      <div class="loader-logo-inner">
+        <div class="loader-logo-top">STUDIO NAME</div>
+        <div class="loader-logo-bottom">STUDIO NAME</div>
+      </div>
+    </div>
+    <div class="loader-overlay"></div>
+    <div class="loader-info-top">
+      <div class="loader-title">Design studio<br>Architecture & interior</div>
+    </div>
+    <div class="loader-info-bottom">
+      <div class="loader-location">South Yarra<br>Australia</div>
+      <div class="loader-counter-wrap">
+        <div class="overflow-hidden"><div class="loader-loading">Loading</div></div>
+        <div class="overflow-hidden"><div class="loader-counter">0%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page fade transition -->
+  <div class="fade-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo-wrap">
+        <a href="#" aria-label="Home" class="header-logo">STUDIO NAME</a>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <div class="header-toggler-wrap">
+        <div class="header-toggler">
+          <span class="header-toggler-menu">Menu</span>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <div class="header-links-wrap">
+        <div class="header-links"></div>
+      </div>
+
+      <div class="header-meta">
+        <span class="header-time">
+          <span id="hour"></span><span id="semicolon">:</span><span id="minute"></span>
+          <span id="ampm"></span>
+        </span>
+        <span class="header-location">South Yarra, AUS</span>
+      </div>
+
+      <div class="header-contact-wrap">
+        <a href="#footer" class="header-contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="header-overlay"></div>
+
+    <!-- Mobile menu -->
+    <div class="header-menu">
+      <div class="header-menu-inner">
+        <div class="header-menu-top">
+          <a href="#" class="header-menu-logo">STUDIO NAME</a>
+          <div class="header-toggler-close">Close</div>
+        </div>
+        <div class="header-menu-links"></div>
+        <div class="header-social-links"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main" class="main">
+
+    <!-- ─── HERO / COVER ─────────────────────────────────── -->
+    <section class="cover-home">
+      <div class="cover-home-screen">
+        <!-- Dark text layer (behind image) -->
+        <div class="cover-home-title-dark" aria-hidden="true">&nbsp;</div>
+        <div class="cover-home-bottom-dark">
+          <div class="cover-home-scroll-dark">
+            <span class="cover-home-scroll-bracket">[</span>
+            <span class="cover-home-scroll-text-wrap">
+              <span class="cover-home-scroll-text">Scroll</span>
+              <span class="cover-home-scroll-text">down</span>
+            </span>
+            <span class="cover-home-scroll-bracket">]</span>
+          </div>
+          <div class="cover-home-content-dark">Driven by History, Centered on Context, Embracing Culture</div>
+        </div>
+
+        <!-- Image layer -->
+        <div class="cover-home-image" data-dark="true">
+          <div class="cover-home-image-inner">
+            <div class="cover-home-image-prlx">
+              <figure class="cover-home-figure">
+                <img class="cover-home-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="" width="1920" height="1080">
+              </figure>
+              <div class="cover-home-image-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Light text (over image) -->
+          <div class="cover-home-title-light-wrap">
+            <div class="cover-home-title-light">&nbsp;</div>
+          </div>
+
+          <div class="cover-home-bottom-light">
+            <div class="cover-home-scroll">[Scroll down]</div>
+            <h1 class="cover-home-content">Driven by History, Centered on Context, Embracing Culture</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT / STUDIO  (01) ─────────────────────────── -->
+    <section id="about" class="about">
+      <!-- Corner brackets -->
+      <div class="corner corner-tl"><div class="corner-h"></div><div class="corner-v"></div></div>
+      <div class="corner corner-tr"><div class="corner-h"></div><div class="corner-v"></div></div>
+
+      <div class="about-grid">
+        <!-- Side image (sticky) -->
+        <div class="about-image-col">
+          <div class="about-image-sticky">
+            <div class="about-image-wrap">
+              <figure>
+                <img class="about-side-img lazy" data-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="" width="150" height="150">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- About text -->
+        <div class="about-text-col">
+          <div class="subtitle">
+            <div class="subtitle-number">01</div>
+            <div class="subtitle-text">Studio</div>
+          </div>
+          <div class="about-acknowledgment wysiwyg">
+            <p>We connect, create and work on the lands of Aboriginal and Torres Strait Islander peoples throughout Australia. We acknowledge First Nations' ancient histories, cultures, and ongoing connections to Country, and we pay our respect to Elders past and present.</p>
+          </div>
+        </div>
+
+        <!-- Large title (full width) -->
+        <div class="about-title-row">
+          <h2 class="about-title offset-title">Studio Name is a Melbourne based Architecture & Interior Design studio, designing various project typologies across Australia and Internationally.</h2>
+        </div>
+
+        <!-- Label + description -->
+        <div class="about-label-col">
+          <div class="about-label">Architecture<br>& Interior Design</div>
+        </div>
+        <div class="about-desc-col">
+          <h3><div class="about-description wysiwyg">
+            <p>With experience covering a range of typologies; from single & multi-residential, seniors living, student accommodation, social housing, hotels, hospitality and workplace. We believe human touch must drive creativity.</p>
+          </div></h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SELECTED WORKS  (02) ─────────────────────────── -->
+    <section id="works" class="works">
+      <div class="works-header">
+        <div class="works-header-left">
+          <div class="works-number">02</div>
+          <h2 class="works-subtitle">Selected Works</h2>
+        </div>
+        <div class="works-date-range">17 - 25'</div>
+      </div>
+      <div class="works-list">
+        <!-- Populated by content.js -->
+      </div>
+    </section>
+
+    <!-- ─── WORKS GRID (scattered mosaic) ────────────────── -->
+    <section class="works-grid-section">
+      <div class="works-grid-button-wrap">
+        <a href="#" class="works-grid-button">
+          <span class="works-grid-label">All Work</span>
+          <sup class="works-grid-count">(28)</sup>
+        </a>
+      </div>
+      <div class="works-grid-rows">
+        <!-- Row 1 -->
+        <div class="works-grid-row">
+          <div class="works-grid-cell cell-large">
+            <div class="works-grid-item" data-size="large"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-small">
+            <div class="works-grid-item" data-size="small"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-medium">
+            <div class="works-grid-item opacity-40" data-size="medium"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-medium">
+            <div class="works-grid-item" data-size="medium"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-small">
+            <div class="works-grid-item opacity-20" data-size="small"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="works-grid-row">
+          <div class="works-grid-cell cell-medium">
+            <div class="works-grid-item" data-size="medium"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=600&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-small">
+            <div class="works-grid-item opacity-20" data-size="small"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-medium">
+            <div class="works-grid-item" data-size="medium"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-small">
+            <div class="works-grid-item opacity-20" data-size="small"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-large">
+            <div class="works-grid-item" data-size="large"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="works-grid-row">
+          <div class="works-grid-cell cell-large">
+            <div class="works-grid-item" data-size="large"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-small">
+            <div class="works-grid-item opacity-20" data-size="small"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-medium">
+            <div class="works-grid-item" data-size="medium"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+          <div class="works-grid-cell cell-large">
+            <div class="works-grid-item" data-size="large"><div class="works-grid-image"><figure><img class="lazy" data-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="" width="150" height="150"></figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── VISION  (03) ─────────────────────────────────── -->
+    <section id="vision" class="vision">
+      <!-- Sticky image -->
+      <div class="vision-sticky">
+        <div class="vision-image-wrapper">
+          <div class="vision-image">
+            <div class="vision-image-scroll">
+              <div class="vision-image-parallax">
+                <figure>
+                  <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80" alt="" class="vision-img" width="150" height="150">
+                </figure>
+                <div class="vision-image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrolling content -->
+      <div class="vision-scroll-area">
+        <div class="vision-wrapper">
+          <div class="vision-titles">
+            <!-- Populated by content.js -->
+          </div>
+          <div class="vision-divider">
+            <div class="vision-number"><span class="vision-number-text">03</span></div>
+            <div class="vision-line"></div>
+            <h2 class="vision-suptitle"><span class="vision-suptitle-text">Vision</span></h2>
+          </div>
+          <div class="vision-contents">
+            <!-- Populated by content.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROCESS / METHOD  (04) ───────────────────────── -->
+    <section id="process" class="process">
+      <!-- Corner brackets -->
+      <div class="corner corner-tl"><div class="corner-h"></div><div class="corner-v"></div></div>
+      <div class="corner corner-tr"><div class="corner-h"></div><div class="corner-v"></div></div>
+      <div class="corner corner-bl"><div class="corner-h"></div><div class="corner-v"></div></div>
+      <div class="corner corner-br"><div class="corner-h"></div><div class="corner-v"></div></div>
+
+      <div class="process-grid">
+        <div class="process-steps-col">
+          <div class="process-steps">
+            <!-- Populated by content.js -->
+          </div>
+        </div>
+
+        <div class="process-images-col">
+          <div class="process-images">
+            <!-- Populated by content.js -->
+          </div>
+        </div>
+
+        <div class="process-subtitle-col">
+          <div class="subtitle">
+            <div class="subtitle-number">04</div>
+            <div class="subtitle-text">Method</div>
+          </div>
+        </div>
+
+        <div class="process-desc-col">
+          <h3><div class="process-description wysiwyg">
+            <p>The scope of our Studio covers all stages within Architecture and Interior Design. We offer an end to end level of service from early concepts through to practical completion.</p>
+          </div></h3>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <!-- CTA + Newsletter -->
+      <div class="footer-col footer-col-cta">
+        <div class="footer-cta">
+          <div class="footer-cta-label">Talk to us about your project</div>
+          <a href="#" class="footer-cta-link link-underline">Contact us</a>
+        </div>
+        <div class="footer-newsletter">
+          <div class="newsletter-label">Subscribe to our newsletter</div>
+          <form id="newsletter-form" novalidate class="newsletter-form">
+            <input class="newsletter-email-field" type="email" name="EMAIL" placeholder="Enter your email" required>
+            <div class="newsletter-form-success">Thanks for joining!</div>
+            <button type="submit" aria-label="Submit" class="newsletter-form-submit">
+              <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.19922 0C1.42013 0 1.59961 0.179477 1.59961 0.400391V3.9502C1.59967 4.08821 1.71158 4.2002 1.84961 4.2002H9.60352C9.5349 4.0811 9.45139 3.96801 9.34961 3.86621L6.73047 1.24805C6.555 1.07238 6.55504 0.787026 6.73047 0.611328L7.13867 0.204102C7.31436 0.028412 7.59964 0.0285033 7.77539 0.204102L12.1094 4.53809C12.3632 4.79193 12.3632 5.20417 12.1094 5.45801L7.77539 9.79199C7.59964 9.96759 7.31436 9.96768 7.13867 9.79199L6.73047 9.38477C6.55506 9.20908 6.55504 8.92372 6.73047 8.74805L9.34961 6.12988C9.45019 6.02929 9.53239 5.91733 9.60059 5.7998H0.5C0.223897 5.7998 6.33352e-05 5.57589 0 5.2998V0.400391C0 0.179477 0.179477 0 0.400391 0H1.19922Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Nav + Back to top -->
+      <div class="footer-col footer-col-nav">
+        <div class="footer-nav"></div>
+        <div class="footer-scroll">Back to top</div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="footer-col footer-col-contact">
+        <div class="footer-contact-rows">
+          <div class="footer-contact-row">
+            <div class="footer-contact-label">L</div>
+            <div class="footer-address">59 Garden Street<br>South Yarra<br>Victoria, Australia 3141</div>
+          </div>
+          <div class="footer-contact-row">
+            <div class="footer-contact-label">P</div>
+            <a href="tel:+61 3 8672 5999" class="footer-phone">+61 3 8672 5999</a>
+          </div>
+          <div class="footer-contact-row">
+            <div class="footer-contact-label">C</div>
+            <a href="mailto:contact@studioname.com.au" class="footer-email">contact@studioname.com.au</a>
+          </div>
+        </div>
+        <div class="footer-social-row">
+          <div class="footer-socials"></div>
+        </div>
+      </div>
+
+      <!-- Bottom row (mobile) -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">All rights reserved<br>&copy; Studio Name 2025</div>
+        <div class="footer-legal"></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

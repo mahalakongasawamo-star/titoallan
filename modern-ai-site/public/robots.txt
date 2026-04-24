@@ -1,0 +1,60 @@
+# ─── Default: allow all crawlers ───
+User-agent: *
+Allow: /
+Disallow:
+
+# ─── AI Search Bots: explicitly allowed ───
+
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /llms.txt
+Allow: /ai-ingest/
+
+# ─── Sitemap & AI content index ───
+Sitemap: https://upserv.ai/sitemap.xml

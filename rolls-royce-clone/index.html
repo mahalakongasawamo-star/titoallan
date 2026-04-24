@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>upserv.ai | AI Data Solutions</title>
+  <!-- DNS prefetch for CDNs -->
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload above-fold critical assets -->
+  <link rel="preload" href="upservai.png" as="image" fetchpriority="high">
+  <link rel="preload" href="hero-bg.jpg" as="image" fetchpriority="high">
+
+  <!-- Cross-browser compatibility -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Non-blocking Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="styles.css?v=43">
+  <meta name="theme-color" content="#0a0a0a">
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <img src="upservai.png" alt="upserv.ai" class="preloader__img" width="150">
+      </div>
+      <div class="preloader__bar">
+        <div class="preloader__progress"></div>
+      </div>
+      <span class="preloader__text">UPSERV.AI</span>
+    </div>
+  </div>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="header" id="header">
+    <div class="header__left">
+      <button class="header__menu-btn" id="menuBtn" aria-label="Open menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <span class="header__menu-text">MENU</span>
+    </div>
+
+    <div class="header__logo">
+      <a href="#" class="logo-link">
+        <div class="logo-placeholder">
+          <img src="upservai.png" alt="upserv.ai" class="header__logo-img" width="140" decoding="async">
+        </div>
+      </a>
+    </div>
+
+    <div class="header__right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <a href="#contact" class="header__cta" data-hover>
+        <!-- PLACEHOLDER: Change CTA text -->
+        <span>GET IN TOUCH</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 17L17 7M17 7H7M17 7v10"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE NAV OVERLAY ===================== -->
+  <nav class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay__close" id="navClose" aria-label="Close menu">&times;</button>
+    <ul class="nav-overlay__list">
+      <!-- PLACEHOLDER: Replace with your navigation links -->
+      <li><a href="#hero" data-hover>PLATFORM</a></li>
+      <li><a href="#explore" data-hover>SOLUTIONS</a></li>
+      <li><a href="#models" data-hover>PRODUCTS</a></li>
+      <li><a href="#about" data-hover>ABOUT</a></li>
+      <li><a href="#contact" data-hover>CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__frame">
+    <!-- React interactive overlay (particles, orbs, cursor) mounts here -->
+    <div id="hero-root"></div>
+    <div class="hero__bg" style="background-image: url('hero-bg.jpg')"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__inner">
+
+        <span class="hero__label anim-item">AI-FRIENDLY WEB DESIGN FOR SMALL AND MEDIUM BUSINESSES</span>
+        <h1 class="hero__title anim-item" id="hero-title">Upserv Builds Websites<br>That Get Your Business<br>Recommended by AI<br>Not Just Found by Google.</h1>
+        <p class="hero__desc anim-item">Upserv is a web design agency that rebuilds and redesigns websites for small and medium businesses so they appear in AI-driven recommendations — ChatGPT Ads, Google MUM, Perplexity, Grok, and Meta Andromeda.</p>
+        <p class="hero__desc anim-item">We serve dental clinics, medical practices, restaurants, retail stores, auto repair shops, electricians, plumbers, and law firms across the United States.</p>
+        <p class="hero__desc anim-item">On <strong>February 9, 2026</strong>, ChatGPT launched advertising to 900 million users. AI now surfaces 3 to 5 businesses per query — not pages of links. An analysis of 350,000 local businesses found <strong>98.8% were absent from ChatGPT recommendations entirely.</strong></p>
+        <div class="hero__stat anim-item">
+          <div class="hero__stat-num"><span data-count="93">0</span>%</div>
+          <p class="hero__stat-text">Of Google AI Mode Searches End Without A Single Click.</p>
+          <span class="hero__stat-source">Source: Semrush, 2025</span>
+        </div>
+        <p class="hero__price anim-item">STARTING AT <strong>$1,000</strong></p>
+        <div class="hero__actions anim-item">
+          <a href="https://geo-check.org/lander" target="_blank" rel="noopener noreferrer" class="hero__cta-btn hero__cta-btn--primary" data-hover>GET YOUR FREE AI SCAN</a>
+        </div>
+
+      </div>
+    </div>
+    </div><!-- /.hero__frame -->
+  </section>
+
+  <!-- ===================== VALUE PROPOSITION SECTION ===================== -->
+  <section class="value-prop anim-section" id="explore">
+    <div class="value-prop__inner anim-item">
+      <h2 class="value-prop__title"><span class="value-prop__number" data-count="900">0</span> Million Weekly<br>ChatGPT Users.<br>Is Your Data Verified?</h2>
+      <div class="value-prop__body">
+        <p>AI-referred visitors convert at 4.4&times; the rate of traditional organic traffic because they arrive already knowing what they want. If your local business isn't structuring its data for AI, AI platforms cannot recommend your services.</p>
+        <p>AI hallucinates unverified data. It guesses your pricing, invents your service areas, and cites outdated hours. We build your verified Training Document and push it to 19 AI platforms so they get it right every time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING SECTION ===================== -->
+  <section class="pricing anim-section" id="models">
+    <div class="pricing__header anim-item">
+      <h2 class="pricing__title">PRICING<br>STRUCTURES.</h2>
+      <p class="pricing__subtitle">VERIFIED DATASETS PUSHED TO<br>19 PLATFORMS.</p>
+      <p class="pricing__note-header">+ $150/MONTH DATA<br>SUBSCRIPTION REQUIRED FOR<br>ALL TIERS.</p>
+    </div>
+
+    <div class="pricing__grid">
+      <!-- Tier 1 -->
+      <div class="pricing__card anim-item">
+        <span class="pricing__tier">TIER 01</span>
+        <h3 class="pricing__name">Starter</h3>
+        <p class="pricing__desc">5-section AI-ready site, semantic HTML, training document, and push to 19 platforms.</p>
+        <span class="pricing__price">$1,000</span>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="pricing__card anim-item">
+        <span class="pricing__tier">TIER 02</span>
+        <h3 class="pricing__name">Growth</h3>
+        <p class="pricing__desc">Full multi-page site, deep AI integration, training document, and AI chatbot included.</p>
+        <span class="pricing__price">$5,000</span>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="pricing__card anim-item">
+        <span class="pricing__tier">TIER 03</span>
+        <h3 class="pricing__name">Scale</h3>
+        <p class="pricing__desc">Complete custom build, advanced chatbot, employee upskilling, and quarterly strategy.</p>
+        <span class="pricing__price">$10,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUILT FOR YOUR INDUSTRY ===================== -->
+  <section class="industry" id="industry">
+    <div class="industry__sticky">
+      <div class="industry__header">
+        <span class="industry__label">INDUSTRIES</span>
+        <h2 class="industry__title">Built For<br>Your Industry</h2>
+      </div>
+      <div class="industry__track-wrapper">
+        <div class="industry__track" id="industryTrack">
+
+          <!-- Card 01: Dental Clinic -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="under-construction.html?industry=Dental+Clinic" aria-label="Dental Clinic — Coming Soon"></a>
+            <div class="industry__card-bg" data-bg="dental-clinic.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">01 / Health Starter — $1,000</span>
+                <h3 class="industry__card-name">Dental Clinic</h3>
+                <a class="industry__card-btn" href="under-construction.html?industry=Dental+Clinic" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">AI was hallucinating crown pricing for dental practices, quoting $800 less than actual rates. Patients booked elsewhere. Upserv built a fact-statement site with verified pricing schema and pushed it to 19 AI platforms.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">ChatGPT now correctly cites service menu, prices, and hours when patients ask for local dental options.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 02: Law Firm -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="under-construction.html?industry=Law+Firm" aria-label="Law Firm — Coming Soon"></a>
+            <div class="industry__card-bg" data-bg="law-firm.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">02 / Legal Growth — $5,000</span>
+                <h3 class="industry__card-name">Law Firm</h3>
+                <a class="industry__card-btn" href="under-construction.html?industry=Law+Firm" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">AI was fabricating practice areas for law firms, listing personal injury for a pure corporate firm. Upserv built a verified legal entity profile with LegalService schema, attorney credentials in live text, and a training document clarifying exact practice areas.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">Perplexity now accurately lists the firm's practice areas and jurisdiction when prospects ask AI for specialized legal help.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 03: Real Estate Agency -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="under-construction.html?industry=Real+Estate+Agency" aria-label="Real Estate Agency — Coming Soon"></a>
+            <div class="industry__card-bg" data-bg="real-estate.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">03 / Property Starter — $1,000</span>
+                <h3 class="industry__card-name">Real Estate Agency</h3>
+                <a class="industry__card-btn" href="under-construction.html?industry=Real+Estate+Agency" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">Real estate agencies were being confused with brokers, developers, and competitors by AI. Upserv built a RealEstateAgent schema profile with verified agent names, licensed service areas, and transaction history facts so AI cites the correct firm.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">Gemini now correctly surfaces the agency's service zip codes and specialties when buyers ask AI to recommend a local agent.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 04: Restaurant -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="restaurants.html" aria-label="Restaurant — View Template"></a>
+            <div class="industry__card-bg" data-bg="restaurant.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">04 / Food Starter — $1,000</span>
+                <h3 class="industry__card-name">Restaurant</h3>
+                <a class="industry__card-btn" href="restaurants.html" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">Restaurants were being ignored by AI when diners asked "find me a family Italian restaurant open Sunday near downtown." AI could not read the menu, hours, or cuisine type. Upserv built a Restaurant schema site with structured menu data and verified hours.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">ChatGPT and Meta AI now surface the restaurant when users ask for cuisine type, dietary options, or weekend availability in the area.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 05: Medical Practice -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="medicalpractice.html" aria-label="Medical Practice — View Template"></a>
+            <div class="industry__card-bg" data-bg="medical-practice.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">05 / Health Scale — $10,000</span>
+                <h3 class="industry__card-name">Medical Practice</h3>
+                <a class="industry__card-btn" href="medicalpractice.html" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">AI was directing patients to competing clinics because the practice website had no structured specialties data, no physician credentials in live text, and no insurance acceptance schema. Upserv built a full MedicalOrganization profile and pushed it to 19 platforms.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">Perplexity and ChatGPT now correctly list physician names, specialties, accepted insurance, and new patient availability.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 06: Retail Store -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="under-construction.html?industry=Retail+Store" aria-label="Retail Store — Coming Soon"></a>
+            <div class="industry__card-bg" data-bg="retail-store.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">06 / Retail Growth — $5,000</span>
+                <h3 class="industry__card-name">Retail Store</h3>
+                <a class="industry__card-btn" href="under-construction.html?industry=Retail+Store" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">Retail stores were invisible when shoppers asked AI "where can I buy X near me?" Upserv built a LocalBusiness + Store schema profile with verified product categories, store hours, location data, and a training document pushed to Google, ChatGPT, and Meta AI.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">Google Gemini now recommends the store when local shoppers ask AI for specific product categories available nearby.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 07: Home Services -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="under-construction.html?industry=Home+Services" aria-label="Home Services — Coming Soon"></a>
+            <div class="industry__card-bg" data-bg="home-services.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">07 / Service Starter — $1,000</span>
+                <h3 class="industry__card-name">Home Services</h3>
+                <a class="industry__card-btn" href="under-construction.html?industry=Home+Services" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">HVAC companies and plumbers were invisible to AI emergency queries. When homeowners asked "find me an emergency plumber available tonight," AI had no structured service-area or availability data to cite. Upserv fixed this with HomeAndConstructionBusiness schema and verified service zone data.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">ChatGPT now correctly surfaces the business for emergency and same-day service queries within the verified service area.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 08: Accounting Firm -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="under-construction.html?industry=Accounting+Firm" aria-label="Accounting Firm — Coming Soon"></a>
+            <div class="industry__card-bg" data-bg="accounting-firm.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">08 / Finance Growth — $5,000</span>
+                <h3 class="industry__card-name">Accounting Firm</h3>
+                <a class="industry__card-btn" href="under-construction.html?industry=Accounting+Firm" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">Accounting firms were being confused with tax prep chains and general bookkeeping services. Upserv built a verified FinancialService schema profile specifying exact services (forensic accounting, tax strategy, CFO advisory), client sizes served, and partner credentials.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">ChatGPT now distinguishes the firm from national chains and cites the correct specialties when business owners ask AI for a local CPA.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 09: Salon & Beauty -->
+          <div class="industry__card">
+            <a class="industry__card-href" target="_blank" rel="noopener noreferrer" href="beautysalon.html" aria-label="Salon & Beauty — View Template"></a>
+            <div class="industry__card-bg" data-bg="beauty-salon.png"></div>
+            <div class="industry__card-overlay"></div>
+            <div class="industry__card-content">
+              <div class="industry__card-top">
+                <span class="industry__card-num">09 / Beauty Starter — $1,000</span>
+                <h3 class="industry__card-name">Salon &amp; Beauty</h3>
+                <a class="industry__card-btn" href="beautysalon.html" target="_blank" rel="noopener noreferrer">View Example →</a>
+              </div>
+              <div class="industry__card-story">
+                <p class="industry__card-problem">Salons were losing bookings because AI cited wrong pricing and services. Upserv built a BeautySalon schema site with live service menu text, stylist names and credentials, booking link, and verified price ranges pushed to all platforms.</p>
+                <span class="industry__card-badge">AI Visibility Problem Solved</span>
+                <p class="industry__card-result">Meta AI and ChatGPT now correctly surface the salon's services and pricing when users ask AI to find a specific treatment nearby.</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.industry__track -->
+      </div><!-- /.industry__track-wrapper -->
+
+      <div class="industry__footer">
+        <div class="industry__progress">
+          <div class="industry__progress-bar" id="industryProgressBar"></div>
+        </div>
+        <span class="industry__counter"><span id="industryCurrentCard">1</span> / 9</span>
+      </div>
+    </div><!-- /.industry__sticky -->
+  </section>
+
+  <!-- ===================== FAQ / EVERYTHING YOU NEED TO KNOW ===================== -->
+  <section class="faq" id="faq">
+    <div class="faq__inner">
+
+      <div class="faq__header">
+        <span class="faq__label">COMMON QUESTIONS</span>
+        <h2 class="faq__title">Everything You<br>Need To Know</h2>
+      </div>
+
+      <div class="faq__filters">
+        <span class="faq__filter-label">Jump to stage</span>
+        <div class="faq__filter-btns">
+          <button class="faq__filter-btn faq__filter-btn--active" data-stage="all">All</button>
+          <button class="faq__filter-btn" data-stage="before">Before You Buy</button>
+          <button class="faq__filter-btn" data-stage="started">Getting Started</button>
+          <button class="faq__filter-btn" data-stage="after">After Launch</button>
+        </div>
+      </div>
+
+      <div class="faq__list" id="faqList">
+
+        <!-- STAGE 01 — BEFORE YOU BUY -->
+        <div class="faq__item" data-stage="before">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 01 — BEFORE YOU BUY</span>
+              <span class="faq__question">What exactly does Upserv do?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Upserv builds AI-friendly websites for small and medium businesses. We write your website copy as plain-language fact statements, implement semantic HTML and schema markup, and push a verified training document to 19 AI platforms — so ChatGPT, Gemini, Perplexity, and Meta AI can accurately cite and recommend your business.</p>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="before">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 01 — BEFORE YOU BUY</span>
+              <span class="faq__question">Why is my current website invisible to AI?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Most websites are built to look good visually — graphics, animations, and taglines. AI cannot read image text, cannot interpret design, and cannot extract facts from vague slogans. If your business name, services, pricing, and location are not written as readable plain-language text with schema markup, AI skips your site entirely and cites a competitor instead.</p>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="before">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 01 — BEFORE YOU BUY</span>
+              <span class="faq__question">Is Upserv the same as SEO?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>No. SEO optimizes your website to rank higher in traditional Google search results. AI Visibility optimizes your business to be recommended by AI systems — ChatGPT, Gemini, Perplexity, and Meta AI. These are different systems with different requirements. SEO targets page rankings. We target AI citations. Both matter, but only one is growing at 900 million users weekly.</p>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="before">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 01 — BEFORE YOU BUY</span>
+              <span class="faq__question">How much does an Upserv website cost?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Upserv offers three tiers: <strong>Starter at $1,000</strong> (5-section AI-ready site, semantic HTML, training document, push to 19 platforms), <strong>Growth at $5,000</strong> (full multi-page site, deep AI integration, AI chatbot included), and <strong>Scale at $10,000</strong> (complete custom build, advanced chatbot, employee upskilling, quarterly strategy). All tiers require a $150/month data subscription to keep your training document refreshed across all platforms.</p>
+          </div>
+        </div>
+
+        <!-- STAGE 02 — GETTING STARTED -->
+        <div class="faq__item" data-stage="started">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 02 — GETTING STARTED</span>
+              <span class="faq__question">How long does it take to get my website live?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Most Upserv websites launch in 7 days. Here's the timeline:</p>
+            <ul>
+              <li><strong>Day 1</strong> — Free AI visibility scan</li>
+              <li><strong>Day 2–3</strong> — 30–60 minute business interview and training document build</li>
+              <li><strong>Day 4–5</strong> — Website build with schema markup, llms.txt, and fact-statement copy</li>
+              <li><strong>Day 6</strong> — Your review and approval</li>
+              <li><strong>Day 7</strong> — Launch and push to 19 AI platforms</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="started">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 02 — GETTING STARTED</span>
+              <span class="faq__question">Do I need to replace my current website?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Not necessarily. At the $1,000 Starter tier, you have two options: <strong>Option 1</strong> — we edit your existing site by rewriting copy as fact statements and adding schema markup. <strong>Option 2</strong> — we build a brand-new 1-page, 5-section AI-friendly website from scratch. We recommend the new build for businesses with outdated or heavily image-based sites, but both paths result in the same AI visibility outcome.</p>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="started">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 02 — GETTING STARTED</span>
+              <span class="faq__question">What is a training document?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>A training document is a plain-language fact file about your business. It contains your exact services, verified pricing, correct hours, location, staff names and credentials, and any other facts AI needs to recommend you accurately. We format it to the llms.txt standard so AI platforms can ingest it directly. Without a training document, AI guesses — and guesses wrong.</p>
+          </div>
+        </div>
+
+        <!-- STAGE 03 — AFTER LAUNCH -->
+        <div class="faq__item" data-stage="after">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 03 — AFTER LAUNCH</span>
+              <span class="faq__question">What is a Ghost Score?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>A Ghost Score is Upserv's AI visibility measurement — a score of 0 to 100 that measures how accurately and how often AI platforms cite your business. A score of 0 means AI never mentions your business. A score of 100 means AI consistently recommends you with correct information. We run your Ghost Score before launch and again 30 days after so you can see the exact improvement.</p>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="after">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 03 — AFTER LAUNCH</span>
+              <span class="faq__question">How do I know if AI visibility is working?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Upserv provides a Ghost Score report before launch and 30 days after launch showing exactly what changed — which platforms now cite you, what they say, and where errors were corrected. Most clients see AI recognition within 4–8 weeks of launch. The monthly subscription includes ongoing reporting so you always know your current visibility status.</p>
+          </div>
+        </div>
+
+        <div class="faq__item" data-stage="after">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">STAGE 03 — AFTER LAUNCH</span>
+              <span class="faq__question">What happens after my website launches?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>After launch, Upserv manages your AI visibility on a $150/month subscription. Every 30 days we refresh your training document across all 19 platforms, update any changed services or pricing, add new reviews and trust signals, and send a monthly visibility report. AI training data becomes stale quickly — the subscription ensures your business stays accurately cited as your information changes.</p>
+          </div>
+        </div>
+
+        <!-- GENERAL -->
+        <div class="faq__item" data-stage="all">
+          <button class="faq__trigger" aria-expanded="false">
+            <div class="faq__trigger-inner">
+              <span class="faq__stage-tag">GENERAL</span>
+              <span class="faq__question">What are the 19 AI platforms Upserv pushes data to?</span>
+            </div>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__answer">
+            <p>We push your verified training document to: ChatGPT, Google Gemini, Perplexity, Meta AI (Facebook &amp; Instagram), Microsoft Copilot, Claude (Anthropic), Google Search (MUM), Bing AI, Apple Intelligence, Amazon Alexa, Grok (xAI), You.com, Brave Leo, DuckDuckAI, Aria (Opera), HuggingChat, Cohere Command, Mistral Le Chat, and OpenRouter. All 19 platforms receive the same verified fact set so your business information is consistent everywhere AI is asked about it.</p>
+          </div>
+        </div>
+
+        <div class="faq__item faq__item--cta" data-stage="all">
+          <div class="faq__cta-row">
+            <span class="faq__cta-text">Still have a question not listed here?</span>
+            <a href="mailto:hello@upserv.ai" class="faq__cta-link">Ask Us Directly <span>→</span></a>
+          </div>
+        </div>
+
+      </div><!-- /.faq__list -->
+    </div><!-- /.faq__inner -->
+  </section>
+
+  <!-- ===================== INSIGHTS / KNOW WHAT AI KNOWS ===================== -->
+  <section class="insights" id="insights">
+    <div class="insights__inner">
+
+      <div class="insights__header">
+        <div class="insights__header-left">
+          <span class="insights__label">AI INSIGHTS</span>
+          <h2 class="insights__title">Know What AI<br>Knows About You.</h2>
+          <p class="insights__subtitle">Plain-language articles on AI visibility, schema markup, training documents, and how small businesses get recommended by ChatGPT, Gemini, and Perplexity.</p>
+        </div>
+        <div class="insights__header-right">
+          <a href="mailto:hello@upserv.ai" class="insights__notify">Get notified when we publish <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- Featured Article -->
+      <div class="insights__featured">
+        <div class="insights__featured-meta">
+          <span class="insights__featured-badge">FEATURED — MARCH 2026</span>
+          <span class="insights__read-time">6 MIN READ</span>
+        </div>
+        <h3 class="insights__featured-title">93% of Google AI Mode Searches End Without a Click. Here Is What That Means for Your Business.</h3>
+        <p class="insights__featured-desc">In 2026, Google AI Mode answers the majority of search queries directly — without sending the user to any website. This article explains what zero-click AI search means for small business owners and the exact steps to stay visible.</p>
+        <p class="insights__byline">By Upserv</p>
+        <div class="insights__topics">
+          <span class="insights__topics-label">WHAT YOU WILL LEARN</span>
+          <ul class="insights__topics-list">
+            <li>Why 93% of AI Mode searches produce no website clicks</li>
+            <li>How AI decides which businesses to recommend</li>
+            <li>The 3 things your website needs for AI to cite you correctly</li>
+            <li>What happens to businesses that do nothing in 2026</li>
+          </ul>
+        </div>
+        <div class="insights__tags">
+          <span class="insights__tag">AI SEARCH</span>
+          <span class="insights__tag">ZERO-CLICK</span>
+          <span class="insights__tag">SMALL BUSINESS</span>
+          <span class="insights__tag">GOOGLE MUM</span>
+        </div>
+      </div>
+
+      <!-- Article Grid -->
+      <div class="insights__grid">
+
+        <article class="insights__card">
+          <div class="insights__card-top">
+            <span class="insights__card-date">FEB 2026</span>
+            <span class="insights__card-time">5 MIN READ</span>
+          </div>
+          <h4 class="insights__card-title">What Is a Training Document and Why Does Every Small Business Need One?</h4>
+          <div class="insights__card-tags">
+            <span class="insights__tag">TRAINING DOC</span>
+            <span class="insights__tag">AI DATA</span>
+          </div>
+        </article>
+
+        <article class="insights__card">
+          <div class="insights__card-top">
+            <span class="insights__card-date">JAN 2026</span>
+            <span class="insights__card-time">4 MIN READ</span>
+          </div>
+          <h4 class="insights__card-title">AI Visibility Is Not SEO. Here Is the Difference.</h4>
+          <div class="insights__card-tags">
+            <span class="insights__tag">AI VISIBILITY</span>
+            <span class="insights__tag">VS SEO</span>
+          </div>
+        </article>
+
+        <article class="insights__card">
+          <div class="insights__card-top">
+            <span class="insights__card-date">JAN 2026</span>
+            <span class="insights__card-time">7 MIN READ</span>
+          </div>
+          <h4 class="insights__card-title">A Dental Clinic Asked ChatGPT to Recommend Itself. Here Is What AI Said.</h4>
+          <div class="insights__card-tags">
+            <span class="insights__tag">CASE STUDY</span>
+          </div>
+        </article>
+
+        <article class="insights__card">
+          <div class="insights__card-top">
+            <span class="insights__card-date">DEC 2025</span>
+            <span class="insights__card-time">3 MIN READ</span>
+          </div>
+          <h4 class="insights__card-title">Schema Markup for Small Businesses: The Complete Plain-Language Guide</h4>
+          <div class="insights__card-tags">
+            <span class="insights__tag">SCHEMA</span>
+            <span class="insights__tag">GUIDE</span>
+          </div>
+        </article>
+
+        <article class="insights__card">
+          <div class="insights__card-top">
+            <span class="insights__card-date">DEC 2025</span>
+            <span class="insights__card-time">4 MIN READ</span>
+          </div>
+          <h4 class="insights__card-title">What Is llms.txt and Does Your Business Website Need One?</h4>
+          <div class="insights__card-tags">
+            <span class="insights__tag">LLMS.TXT</span>
+            <span class="insights__tag">TECHNICAL</span>
+          </div>
+        </article>
+
+      </div><!-- /.insights__grid -->
+
+      <!-- Newsletter CTA -->
+      <div class="insights__newsletter">
+        <p class="insights__newsletter-text">One email per month. No fluff. Only fact-based updates on AI search changes that affect your business.</p>
+        <a href="mailto:hello@upserv.ai" class="insights__newsletter-link">Subscribe <span>→</span></a>
+      </div>
+
+    </div><!-- /.insights__inner -->
+  </section>
+
+  <!-- ===================== CONTACT / CTA SECTION ===================== -->
+  <section class="contact anim-section" id="contact">
+    <div class="contact__inner">
+
+      <!-- Left: headline + buttons -->
+      <div class="contact__left anim-item">
+        <h2 class="contact__headline">
+          <span class="contact__headline--black">OPTIMIZE YOUR<br>BUSINESS<br>FOR AI SEARCH.</span><br>
+          <span class="contact__headline--blue">NOT JUST<br>GOOGLE.</span>
+        </h2>
+        <div class="contact__btn-row">
+          <a href="https://geo-check.org/lander" target="_blank" rel="noopener noreferrer" class="contact__btn contact__btn--scan">
+            RUN FREE SCAN &nbsp;→
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: tagline + email -->
+      <div class="contact__right anim-item">
+        <p class="contact__tagline">Upserv is an AI-ready website company serving businesses that cannot afford to be invisible.</p>
+        <a href="mailto:hello@upserv.ai" class="contact__email">HELLO@UPSERV.AI</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__logo">
+      <div class="footer__logo-mark">
+        <img src="upservai.png" alt="upserv.ai" class="footer__logo-img" width="180" height="40" loading="lazy">
+        <span class="footer__brand-tagline">AI-FRIENDLY WEB DESIGN FOR SMALL AND MEDIUM BUSINESSES</span>
+      </div>
+    </div>
+
+    <div class="footer__links">
+      <div class="footer__col">
+        <a href="#hero" data-hover>HOME</a>
+        <a href="#explore" data-hover>WHY UPSERV</a>
+      </div>
+      <div class="footer__col">
+        <a href="#models" data-hover>PRICING</a>
+        <a href="#industry" data-hover>INDUSTRIES</a>
+      </div>
+      <div class="footer__col">
+        <a href="#contact" data-hover>CONTACT</a>
+        <a href="https://geo-check.org/lander" target="_blank" rel="noopener noreferrer" data-hover>FREE AI SCAN</a>
+      </div>
+    </div>
+
+    <div class="footer__social">
+      <!-- PLACEHOLDER: Replace with your social links -->
+      <a href="#" aria-label="YouTube" class="footer__social-link" data-hover>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="#" aria-label="LinkedIn" class="footer__social-link" data-hover>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="#" aria-label="X / Twitter" class="footer__social-link" data-hover>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="#" aria-label="GitHub" class="footer__social-link" data-hover>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__language">
+        LANGUAGE <span class="footer__flag">&#127482;&#127480;</span>
+      </div>
+      <p class="footer__copyright">
+        <!-- PLACEHOLDER: Replace with your copyright -->
+        &copy; 2026 upserv.ai. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger + ScrollTo (defer = non-blocking) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <!-- Lenis smooth scroll (themenectar stack) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script defer src="content.js?v=1"></script>
+  <script defer src="script.js?v=19"></script>
+
+  <!-- React Hero (Vite) -->
+  <script type="module" src="/main.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westside Medical Group — Primary Care & Family Medicine | Houston TX</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Westside Medical Group",
+  "description": "Primary Care & Family Medicine practice in West Houston, TX. Accepting new patients. Same-day appointments available.",
+  "url": "https://westsidemedicalgroup.com",
+  "telephone": "(713) 555-0177",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Houston",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "medicalSpecialty": ["Primary Care","Family Medicine","Cardiology","Pediatrics","Women's Health","Urgent Care","Telehealth"],
+  "acceptingPatients": true,
+  "availableService": ["Annual Physicals","Chronic Disease Management","Preventive Screenings","Same-Day Urgent Visits","Telehealth Consultations"],
+  "paymentAccepted": ["BlueCross","Aetna","Cigna","UnitedHealth","Medicare","Medicaid","Humana"],
+  "employee": {
+    "@type": "Physician",
+    "name": "Dr. Angela Wu, MD",
+    "medicalSpecialty": "Primary Care",
+    "yearsOfExperience": 22
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1240"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Core palette */
+  --navy:        #0b1f40;
+  --navy-mid:    #0f2d5e;
+  --blue:        #1a56db;
+  --blue-mid:    #2563eb;
+  --blue-soft:   #3b82f6;
+  --blue-light:  #93c5fd;
+  --sky:         #dbeafe;
+  --sky-soft:    #eff6ff;
+  --white:       #ffffff;
+  --off-white:   #f8faff;
+  --mist:        #e8f0fd;
+  --fog:         #f0f5ff;
+
+  /* Text */
+  --text-primary:   #0b1f40;
+  --text-secondary: #334e7a;
+  --text-muted:     #637da8;
+  --text-light:     #96b3d4;
+
+  /* Borders */
+  --border-ghost:  rgba(37,99,235,0.06);
+  --border-soft:   rgba(37,99,235,0.11);
+  --border-mid:    rgba(37,99,235,0.20);
+  --border-strong: rgba(37,99,235,0.34);
+
+  /* Typography */
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Shadows */
+  --sh-xs: 0 1px 5px rgba(11,31,64,0.05);
+  --sh-sm: 0 3px 14px rgba(11,31,64,0.07);
+  --sh-md: 0 8px 32px rgba(11,31,64,0.09);
+  --sh-lg: 0 16px 52px rgba(11,31,64,0.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--off-white);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── CANVAS BACKGROUND ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 90% 60% at 85% -5%,  rgba(147,197,253,0.13) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 55% at -5% 90%,  rgba(26,86,219,0.06)  0%, transparent 52%),
+    radial-gradient(ellipse 60% 40% at 50% 110%, rgba(219,234,254,0.5)  0%, transparent 60%),
+    linear-gradient(170deg, #eef4ff 0%, #f8faff 50%, #edf4ff 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle dot-grid texture */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: radial-gradient(circle, rgba(37,99,235,0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* ── DEMO BANNER ── */
+.demo-banner {
+  position: relative; z-index: 200;
+  background: rgba(26,86,219,0.05);
+  border-bottom: 1px solid var(--border-ghost);
+  padding: 9px 24px;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 600;
+  color: var(--blue); letter-spacing: .07em;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 33px; left: 0; right: 0;
+  z-index: 100;
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px;
+  background: rgba(248,250,255,0.91);
+  backdrop-filter: blur(28px) saturate(1.5);
+  -webkit-backdrop-filter: blur(28px) saturate(1.5);
+  border-bottom: 1px solid var(--border-ghost);
+  box-shadow: 0 1px 0 var(--border-ghost), var(--sh-xs);
+  transition: box-shadow .3s;
+}
+
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+.nav-mark {
+  width: 36px; height: 36px;
+  background: linear-gradient(145deg, var(--blue) 0%, var(--blue-soft) 100%);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(26,86,219,0.30);
+  position: relative;
+  overflow: hidden;
+}
+.nav-mark::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.18) 0%, transparent 50%);
+}
+
+.nav-name {
+  font-size: 13.5px; font-weight: 700;
+  color: var(--text-primary); letter-spacing: -.015em;
+}
+.nav-sub  { font-size: 9.5px; color: var(--text-muted); letter-spacing: .04em; margin-top: 2px; }
+
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: 11px; font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: .06em; text-transform: uppercase;
+  transition: color .18s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: -3px; left: 0; right: 0; height: 1.5px;
+  background: var(--blue);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .22s;
+}
+.nav-links a:hover { color: var(--blue); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.nav-phone {
+  font-size: 12px; font-weight: 500; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-phone-icon {
+  width: 18px; height: 18px; border-radius: 5px;
+  background: var(--sky-soft);
+  border: 1px solid var(--border-soft);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+  color: #fff;
+  font-size: 11px; font-weight: 600; letter-spacing: .04em;
+  text-decoration: none; border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(26,86,219,0.30);
+  transition: all .22s;
+  position: relative; overflow: hidden;
+}
+.btn-nav::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.12) 0%, transparent 50%);
+}
+.btn-nav:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(26,86,219,0.36); }
+
+/* ── HERO GRID ── */
+.hero {
+  position: relative; z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 388px;
+  padding-top: 101px;
+}
+
+/* ── LEFT COLUMN ── */
+.hero-left {
+  padding: 64px 68px 72px 72px;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  border-right: 1px solid var(--border-ghost);
+  position: relative;
+}
+
+/* Decorative large cross mark */
+.hero-left::before {
+  content: '';
+  position: absolute;
+  top: 80px; right: 60px;
+  width: 120px; height: 120px;
+  background:
+    linear-gradient(var(--border-ghost), var(--border-ghost)) center/2px 100% no-repeat,
+    linear-gradient(var(--border-ghost), var(--border-ghost)) center/100% 2px no-repeat;
+  opacity: .7;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Eyebrow badge */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 16px;
+  background: rgba(219,234,254,0.55);
+  border: 1px solid var(--border-mid);
+  border-radius: 99px;
+  width: fit-content;
+  opacity: 0; transform: translateY(14px);
+  animation: rise .55s cubic-bezier(.22,.68,0,1.1) .08s forwards;
+}
+.eyebrow-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34,197,94,.5);
+  animation: pulse-g 2.6s ease-in-out infinite;
+}
+@keyframes pulse-g {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+  50%      { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+}
+.eyebrow-divider { width: 1px; height: 10px; background: var(--border-mid); }
+.eyebrow-txt { font-size: 11px; font-weight: 500; color: var(--text-secondary); letter-spacing: .02em; }
+.eyebrow-accepting {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; color: #16a34a;
+}
+
+/* Headline block */
+.headline-block {
+  opacity: 0; transform: translateY(16px);
+  animation: rise .65s cubic-bezier(.22,.68,0,1.1) .20s forwards;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 3.8vw, 56px);
+  font-weight: 500;
+  line-height: 1.09;
+  color: var(--text-primary);
+  letter-spacing: -.01em;
+  margin-bottom: 22px;
+}
+h1 em { color: var(--blue); font-style: italic; font-weight: 400; }
+h1 .line-muted { color: var(--text-secondary); }
+
+.spec-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.spec-tag {
+  padding: 5px 13px;
+  background: rgba(37,99,235,0.055);
+  border: 1px solid var(--border-soft);
+  border-radius: 99px;
+  font-size: 11.5px; font-weight: 500; color: var(--blue);
+  transition: background .18s, border-color .18s; cursor: default;
+}
+.spec-tag:hover { background: rgba(37,99,235,0.10); border-color: var(--border-mid); }
+
+/* Body copy */
+.body-block {
+  opacity: 0; transform: translateY(13px);
+  animation: rise .6s cubic-bezier(.22,.68,0,1.1) .34s forwards;
+}
+.body-p {
+  font-size: 14.5px; font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.78; max-width: 490px;
+}
+.body-p strong { color: var(--text-primary); font-weight: 600; }
+
+/* Services quick list */
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  max-width: 500px;
+  opacity: 0; transform: translateY(12px);
+  animation: rise .6s cubic-bezier(.22,.68,0,1.1) .44s forwards;
+}
+.svc-item {
+  display: flex; align-items: center; gap: 9px;
+  padding: 10px 13px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid var(--border-ghost);
+  border-radius: 9px;
+  box-shadow: var(--sh-xs);
+  transition: border-color .18s, box-shadow .18s;
+  cursor: default;
+}
+.svc-item:hover { border-color: var(--border-soft); box-shadow: var(--sh-sm); }
+.svc-icon {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: var(--sky-soft);
+  border: 1px solid var(--border-soft);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.svc-name { font-size: 11.5px; font-weight: 500; color: var(--text-secondary); }
+
+/* CTA block */
+.cta-block {
+  display: flex; flex-direction: column; gap: 15px;
+  opacity: 0; transform: translateY(10px);
+  animation: rise .6s cubic-bezier(.22,.68,0,1.1) .58s forwards;
+}
+.cta-row { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+
+.btn-main {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 14px 28px;
+  background: linear-gradient(140deg, var(--blue) 0%, var(--blue-mid) 100%);
+  color: #fff;
+  font-size: 12.5px; font-weight: 600; letter-spacing: .03em;
+  text-decoration: none; border-radius: 9px;
+  box-shadow: 0 5px 20px rgba(26,86,219,0.30), 0 1px 4px rgba(26,86,219,0.18);
+  transition: all .22s;
+  position: relative; overflow: hidden;
+}
+.btn-main::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.14) 0%, transparent 55%);
+}
+.btn-main:hover { transform: translateY(-2px); box-shadow: 0 9px 30px rgba(26,86,219,0.36); }
+
+.btn-sec {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 13px 22px;
+  background: transparent;
+  border: 1.5px solid var(--border-mid);
+  color: var(--blue);
+  font-size: 12px; font-weight: 500;
+  text-decoration: none; border-radius: 9px;
+  transition: all .2s;
+}
+.btn-sec:hover { background: var(--sky-soft); border-color: var(--border-strong); }
+
+.trust-row { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.trust-item {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 11.5px; font-weight: 400; color: var(--text-muted);
+}
+.trust-tick {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: rgba(37,99,235,0.07);
+  border: 1.5px solid var(--border-soft);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── RIGHT COLUMN ── */
+.hero-right {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+  border-left: 1px solid var(--border-ghost);
+  padding: 36px 26px;
+  display: flex; flex-direction: column;
+  gap: 13px;
+  position: relative;
+}
+
+/* Subtle inner glow */
+.hero-right::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 180px;
+  background: linear-gradient(180deg, rgba(219,234,254,0.35) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.card-anim { opacity: 0; transform: translateY(16px); animation: rise .56s ease forwards; }
+.c1 { animation-delay: .28s; }
+.c2 { animation-delay: .42s; }
+.c3 { animation-delay: .57s; }
+.c4 { animation-delay: .72s; }
+
+/* ── AVAILABILITY CARD (replaces AI visibility) ── */
+.avail-card {
+  padding: 18px 18px 16px;
+  background: linear-gradient(140deg, rgba(219,234,254,0.70) 0%, rgba(240,247,255,0.95) 100%);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  box-shadow: var(--sh-sm);
+  position: relative; overflow: hidden;
+}
+.avail-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2.5px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  opacity: .6;
+}
+.avail-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 13px;
+}
+.avail-title {
+  font-size: 9.5px; font-weight: 700; color: var(--blue);
+  letter-spacing: .16em; text-transform: uppercase;
+}
+.avail-badge {
+  display: flex; align-items: center; gap: 5px;
+  padding: 3px 10px;
+  background: rgba(34,197,94,0.10);
+  border: 1px solid rgba(34,197,94,0.22);
+  border-radius: 99px;
+  font-size: 9px; font-weight: 700; color: #16a34a; letter-spacing: .04em;
+}
+.avail-dot {
+  width: 5px; height: 5px; border-radius: 50%; background: #22c55e;
+  animation: pulse-g 2.4s ease-in-out infinite;
+}
+.avail-slots {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+.avail-slot {
+  padding: 9px 11px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  text-align: center;
+}
+.avail-slot-time {
+  font-size: 11.5px; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.avail-slot-type {
+  font-size: 9px; font-weight: 500; color: var(--text-muted); letter-spacing: .04em;
+}
+.avail-footer {
+  margin-top: 11px; padding-top: 10px;
+  border-top: 1px solid var(--border-ghost);
+  font-size: 10.5px; color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.avail-footer strong { color: var(--text-secondary); font-weight: 600; }
+
+/* Doctor card */
+.doc-card {
+  background: var(--white);
+  border: 1px solid var(--border-ghost);
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  display: flex; align-items: center; gap: 14px;
+  box-shadow: var(--sh-sm);
+  transition: box-shadow .22s, border-color .22s, transform .22s;
+  position: relative; overflow: hidden;
+}
+.doc-card::after {
+  content: '';
+  position: absolute; left: 0; top: 12px; bottom: 12px; width: 2.5px;
+  background: linear-gradient(180deg, var(--blue), var(--blue-light));
+  border-radius: 0 2px 2px 0;
+  opacity: .5;
+}
+.doc-card:hover { box-shadow: var(--sh-md); border-color: var(--border-soft); transform: translateY(-1px); }
+
+.doc-av {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky-soft) 0%, var(--mist) 100%);
+  border: 2px solid var(--border-mid);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 17px; font-weight: 600; color: var(--blue); flex-shrink: 0;
+  letter-spacing: .02em;
+}
+.doc-name  { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+.doc-cred  { font-size: 10px; color: var(--blue); font-weight: 600; letter-spacing: .03em; margin-bottom: 2px; }
+.doc-title { font-size: 10px; color: var(--text-muted); line-height: 1.5; }
+.stars { display: flex; align-items: center; gap: 2px; margin-top: 6px; }
+.star {
+  width: 10px; height: 10px; background: #f59e0b;
+  clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+.star-txt { font-size: 10px; color: var(--text-muted); font-weight: 500; margin-left: 5px; }
+
+/* Stats grid */
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sc {
+  background: var(--white);
+  border: 1px solid var(--border-ghost);
+  border-radius: 10px; padding: 14px 13px; text-align: center;
+  box-shadow: var(--sh-xs);
+  transition: all .2s; cursor: default;
+  position: relative; overflow: hidden;
+}
+.sc::after {
+  content: '';
+  position: absolute; bottom: 0; left: 16px; right: 16px; height: 1.5px;
+  background: var(--sky);
+  border-radius: 1px;
+  opacity: .8;
+}
+.sc:hover { border-color: var(--border-soft); box-shadow: var(--sh-sm); transform: translateY(-1px); }
+.sn {
+  font-family: var(--serif);
+  font-size: 26px; font-weight: 500; color: var(--blue);
+  line-height: 1; margin-bottom: 5px; letter-spacing: -.01em;
+}
+.sn.dk { color: var(--text-primary); }
+.sl { font-size: 9px; font-weight: 600; color: var(--text-light); letter-spacing: .08em; text-transform: uppercase; }
+
+/* Insurance card */
+.ins-box {
+  background: var(--white);
+  border: 1px solid var(--border-ghost);
+  border-radius: 12px; overflow: hidden;
+  box-shadow: var(--sh-xs);
+}
+.ins-hdr {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-ghost);
+  background: linear-gradient(90deg, var(--sky-soft), var(--fog));
+  font-size: 9px; font-weight: 700; color: var(--blue);
+  letter-spacing: .16em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 7px;
+}
+.ins-hdr-icon {
+  width: 14px; height: 14px;
+}
+.ins-tags { display: flex; flex-wrap: wrap; gap: 5px; padding: 13px 16px 14px; }
+.ins-tag {
+  padding: 3px 10px;
+  background: var(--sky-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 99px;
+  font-size: 9.5px; font-weight: 500; color: var(--text-secondary);
+  transition: background .18s; cursor: default;
+}
+.ins-tag:hover { background: var(--mist); }
+
+/* ── STATS STRIP ── */
+.strip {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4,1fr);
+  background: linear-gradient(90deg, var(--navy) 0%, #122960 45%, #122960 55%, var(--navy) 100%);
+  overflow: hidden;
+}
+.strip::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 130% at 50% -10%, rgba(147,197,253,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.strip::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(147,197,253,0.28), transparent);
+}
+.si {
+  padding: 28px 30px;
+  border-right: 1px solid rgba(255,255,255,.05);
+  opacity: 0; animation: rise .56s ease forwards;
+  position: relative;
+}
+.si:last-child { border-right: none; }
+.si:nth-child(1) { animation-delay: .88s; }
+.si:nth-child(2) { animation-delay: .99s; }
+.si:nth-child(3) { animation-delay:1.10s; }
+.si:nth-child(4) { animation-delay:1.21s; }
+.sinum {
+  font-family: var(--serif);
+  font-size: 30px; font-weight: 500; color: #fff;
+  letter-spacing: -.01em; margin-bottom: 5px; line-height: 1;
+}
+.sinum span { color: var(--blue-light); }
+.silbl { font-size: 9.5px; color: rgba(255,255,255,.38); letter-spacing: .08em; text-transform: uppercase; font-weight: 500; }
+
+/* ── ANIMATION ── */
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 44px 28px 48px; border-right: none; border-bottom: 1px solid var(--border-ghost); }
+  .hero-right { padding: 28px 20px; }
+  .strip { grid-template-columns: 1fr 1fr; }
+  .si { border-bottom: 1px solid rgba(255,255,255,.05); }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner" role="banner">
+  ⚠ DEMO — All practice names, physician names, license numbers, stats, and insurance details are invented for illustration. Replace every detail with verified client data before publishing.
+</div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Westside Medical Group — Home">
+    <div class="nav-mark" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <rect x="7" y="1.5" width="2" height="13" rx="1" fill="white"/>
+        <rect x="1.5" y="7" width="13" height="2" rx="1" fill="white"/>
+      </svg>
+    </div>
+    <div>
+      <div class="nav-name">Westside Medical Group</div>
+      <div class="nav-sub">Primary Care · Family Medicine</div>
+    </div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Our Doctors</a></li>
+    <li><a href="#">Patient Portal</a></li>
+    <li><a href="#">Insurance</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-phone">
+      <div class="nav-phone-icon" aria-hidden="true">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M2 1.5C2 1.5 1.5 3 2.5 4.5C3.5 6 5 7.5 6.5 8.5C7.5 9.2 9 8.5 9 8.5L7.8 6.8L6.5 7.3C6.5 7.3 4.7 5.5 4.5 5.3C4.3 5.1 3.2 3.5 3.2 3.5L3.7 2.2L2 1.5Z" stroke="#1a56db" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      (713) 555-0177
+    </div>
+    <a href="#" class="btn-nav">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+        <rect x="1" y="3" width="10" height="8" rx="1.2" stroke="white" stroke-width="1.3"/>
+        <path d="M4 1v3M8 1v3" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      Book Appointment
+    </a>
+  </div>
+</nav>
+
+<section class="hero" aria-label="Practice overview">
+
+  <div class="hero-left">
+
+    <!-- Who / Where / Status -->
+    <div class="eyebrow">
+      <div class="eyebrow-dot" aria-hidden="true"></div>
+      <span class="eyebrow-txt">Primary Care · Family Medicine · West Houston</span>
+      <div class="eyebrow-divider" aria-hidden="true"></div>
+      <span class="eyebrow-accepting">
+        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true">
+          <path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#16a34a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Accepting New Patients
+      </span>
+    </div>
+
+    <!-- What we do — headline -->
+    <div class="headline-block">
+      <h1>
+        Whole-Person Care<br>
+        for <em>Every Stage</em><br>
+        <span class="line-muted">of Life.</span>
+      </h1>
+      <div class="spec-tags" aria-label="Medical specialties offered">
+        <span class="spec-tag">Cardiology</span>
+        <span class="spec-tag">Pediatrics</span>
+        <span class="spec-tag">Women's Health</span>
+        <span class="spec-tag">Urgent Care</span>
+        <span class="spec-tag">Telehealth</span>
+      </div>
+    </div>
+
+    <!-- Who it's for -->
+    <div class="body-block">
+      <p class="body-p">
+        For <strong>individuals, families, and seniors</strong> in West Houston seeking a trusted primary care home — annual physicals, chronic disease management, preventive screenings, and same-day urgent visits, all under one roof.
+      </p>
+    </div>
+
+    <!-- Services quick-view -->
+    <div class="services-list" role="list" aria-label="Core services">
+      <div class="svc-item" role="listitem">
+        <div class="svc-icon" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <rect x="1" y="3" width="11" height="9" rx="1.5" stroke="#1a56db" stroke-width="1.2"/>
+            <path d="M4 1v3M9 1v3" stroke="#1a56db" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M3.5 7.5h6M6.5 5.5v4" stroke="#1a56db" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="svc-name">Annual Physicals</span>
+      </div>
+      <div class="svc-item" role="listitem">
+        <div class="svc-icon" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M6.5 1.5C4 1.5 2 3.5 2 6s2 4.5 4.5 4.5S11 8.5 11 6s-2-4.5-4.5-4.5Z" stroke="#1a56db" stroke-width="1.2"/>
+            <path d="M4.5 6.5c.5.8 1.1 1.2 2 1.2s1.5-.4 2-1.2" stroke="#1a56db" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="4.5" cy="5" r=".6" fill="#1a56db"/>
+            <circle cx="8.5" cy="5" r=".6" fill="#1a56db"/>
+          </svg>
+        </div>
+        <span class="svc-name">Preventive Care</span>
+      </div>
+      <div class="svc-item" role="listitem">
+        <div class="svc-icon" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M6.5 1.5v2M6.5 9.5v2M1.5 6.5h2M9.5 6.5h2" stroke="#1a56db" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="6.5" cy="6.5" r="2.5" stroke="#1a56db" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <span class="svc-name">Chronic Disease Mgmt</span>
+      </div>
+      <div class="svc-item" role="listitem">
+        <div class="svc-icon" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <rect x="1.5" y="3" width="7" height="8.5" rx="1.2" stroke="#1a56db" stroke-width="1.2"/>
+            <path d="M4.5 1.5h6a1 1 0 0 1 1 1v7" stroke="#1a56db" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M3.5 6h4M3.5 8h2.5" stroke="#1a56db" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="svc-name">Telehealth Visits</span>
+      </div>
+    </div>
+
+    <!-- CTAs + trust signals -->
+    <div class="cta-block">
+      <div class="cta-row">
+        <a href="#" class="btn-main">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <rect x="1" y="3" width="11" height="9" rx="1.5" stroke="white" stroke-width="1.3"/>
+            <path d="M4 1v3M9 1v3" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Book an Appointment
+        </a>
+        <a href="#" class="btn-sec">
+          Meet Our Doctors
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="#1a56db" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="trust-row" aria-label="Key service features">
+        <div class="trust-item">
+          <div class="trust-tick" aria-hidden="true">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#1a56db" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Same-day appointments
+        </div>
+        <div class="trust-item">
+          <div class="trust-tick" aria-hidden="true">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#1a56db" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Telehealth available
+        </div>
+        <div class="trust-item">
+          <div class="trust-tick" aria-hidden="true">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#1a56db" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          40+ insurance plans accepted
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-left -->
+
+  <!-- RIGHT: Social proof sidebar -->
+  <div class="hero-right" aria-label="Practice highlights">
+
+    <!-- Availability card (replaces AI visibility) -->
+    <div class="avail-card card-anim c1" role="region" aria-label="Appointment availability">
+      <div class="avail-header">
+        <span class="avail-title">Today's Availability</span>
+        <div class="avail-badge">
+          <div class="avail-dot" aria-hidden="true"></div>
+          Open Now
+        </div>
+      </div>
+      <div class="avail-slots" aria-label="Available appointment times">
+        <div class="avail-slot">
+          <div class="avail-slot-time">9:00 AM</div>
+          <div class="avail-slot-type">In-Person</div>
+        </div>
+        <div class="avail-slot">
+          <div class="avail-slot-time">10:30 AM</div>
+          <div class="avail-slot-type">Telehealth</div>
+        </div>
+        <div class="avail-slot">
+          <div class="avail-slot-time">1:00 PM</div>
+          <div class="avail-slot-type">Urgent Care</div>
+        </div>
+        <div class="avail-slot">
+          <div class="avail-slot-time">3:15 PM</div>
+          <div class="avail-slot-type">In-Person</div>
+        </div>
+      </div>
+      <div class="avail-footer">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+          <circle cx="5.5" cy="5.5" r="4" stroke="#637da8" stroke-width="1.1"/>
+          <path d="M5.5 3.5V5.8l1.5 1" stroke="#637da8" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        <span>More slots available — <strong>call or book online</strong></span>
+      </div>
+    </div>
+
+    <!-- Lead physician card -->
+    <div class="doc-card card-anim c2" itemscope itemtype="https://schema.org/Physician">
+      <div class="doc-av" aria-hidden="true">AW</div>
+      <div>
+        <div class="doc-name" itemprop="name">Dr. Angela Wu, MD</div>
+        <div class="doc-cred">Board-Certified · Primary Care</div>
+        <div class="doc-title">TX License <span itemprop="identifier">#47229</span> · 22 Yrs Experience</div>
+        <div class="stars" aria-label="Rated 4.9 out of 5 from 1,240 reviews">
+          <div class="star" aria-hidden="true"></div>
+          <div class="star" aria-hidden="true"></div>
+          <div class="star" aria-hidden="true"></div>
+          <div class="star" aria-hidden="true"></div>
+          <div class="star" aria-hidden="true"></div>
+          <span class="star-txt">4.9 · 1,240 reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats grid -->
+    <div class="stats card-anim c3" aria-label="Practice statistics">
+      <div class="sc"><div class="sn">4.9★</div><div class="sl">Patient Rating</div></div>
+      <div class="sc"><div class="sn dk">2,400+</div><div class="sl">Active Patients</div></div>
+      <div class="sc"><div class="sn dk">8</div><div class="sl">Physicians</div></div>
+      <div class="sc"><div class="sn">22yr</div><div class="sl">In Practice</div></div>
+    </div>
+
+    <!-- Insurance -->
+    <div class="ins-box card-anim c4" itemscope itemtype="https://schema.org/MedicalOrganization">
+      <div class="ins-hdr">
+        <svg class="ins-hdr-icon" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M7 1.5L2 3.5v3.5c0 2.8 2.1 5.1 5 5.5 2.9-.4 5-2.7 5-5.5V3.5L7 1.5Z" stroke="#1a56db" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M4.5 7l1.5 1.5 3-3" stroke="#1a56db" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Accepted Insurance
+      </div>
+      <div class="ins-tags" aria-label="Insurance plans we accept">
+        <span class="ins-tag" itemprop="paymentAccepted">BlueCross</span>
+        <span class="ins-tag" itemprop="paymentAccepted">Aetna</span>
+        <span class="ins-tag" itemprop="paymentAccepted">Cigna</span>
+        <span class="ins-tag" itemprop="paymentAccepted">UnitedHealth</span>
+        <span class="ins-tag" itemprop="paymentAccepted">Medicare</span>
+        <span class="ins-tag" itemprop="paymentAccepted">Medicaid</span>
+        <span class="ins-tag" itemprop="paymentAccepted">Humana</span>
+        <span class="ins-tag">+33 more</span>
+      </div>
+    </div>
+
+  </div><!-- /hero-right -->
+
+</section>
+
+<!-- Stats strip — AI platforms stat removed, replaced with same-day metric -->
+<div class="strip" aria-label="Practice metrics">
+  <div class="si"><div class="sinum">2,400<span>+</span></div><div class="silbl">Active Patients</div></div>
+  <div class="si"><div class="sinum">4.<span>9★</span></div><div class="silbl">Avg Patient Rating</div></div>
+  <div class="si"><div class="sinum">40<span>+</span></div><div class="silbl">Insurance Plans</div></div>
+  <div class="si"><div class="sinum"><span>&lt;</span>24h</div><div class="silbl">Same-Day Access</div></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telha Clarke — Melbourne based Architecture & Interior Design studio</title>
+  <meta name="description" content="Melbourne based architecture and interior design studio working across diverse project types in Australia and internationally.">
+
+  <!-- Font: closest match to Europa-Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ====== LOADER ====== -->
+  <div class="loader-panel"></div>
+  <div class="loader">
+    <div class="loader-logo-wrap">
+      <div class="loader-logo-inner">
+        <div class="loader-logo-top tc-logo-svg"></div>
+        <div class="loader-logo-bottom tc-logo-svg"></div>
+      </div>
+    </div>
+    <div class="loader-overlay"></div>
+    <div class="loader-info-grid">
+      <div class="loader-info-left">
+        <div class="loader-title">Design studio<br>Architecture & interior</div>
+      </div>
+      <div class="loader-info-right">
+        <div class="loader-location">South Yarra<br>Australia</div>
+        <div class="loader-counter-col">
+          <div class="overflow-hidden"><div class="loader-loading">Loading</div></div>
+          <div class="overflow-hidden"><div class="loader-counter">0%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== FRAME BORDERS ====== -->
+  <div class="frame">
+    <div class="frame-left"></div>
+    <div class="frame-right"></div>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="header">
+    <div class="header-grid">
+      <div class="header-col-logo">
+        <a href="#" aria-label="Home" class="header-logo tc-logo-svg"></a>
+      </div>
+      <div class="header-col-toggler">
+        <div class="header-toggler" id="menuOpen"><span>Menu</span></div>
+      </div>
+      <div class="header-col-nav">
+        <div class="header-links">
+          <a href="#works" class="header-link">Work,</a>
+          <a href="#vision" class="header-link">Process,</a>
+          <a href="#about" class="header-link">Studio</a>
+        </div>
+      </div>
+      <div class="header-col-meta">
+        <span class="header-time">
+          <span id="hour"></span><span id="colon">:</span><span id="minute"></span>
+          <span id="ampm"></span>
+        </span>
+        <span class="header-location">South Yarra, AUS</span>
+      </div>
+      <div class="header-col-contact">
+        <a href="#footer" class="header-contact-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== MOBILE MENU ====== -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <nav class="menu" id="menu">
+    <div class="menu-top">
+      <div class="menu-logo tc-logo-svg"></div>
+      <div class="menu-close" id="menuClose">Close</div>
+    </div>
+    <div class="menu-links">
+      <a href="#" class="menu-link"><span>Home</span></a>
+      <a href="#works" class="menu-link"><span>Work</span></a>
+      <a href="#vision" class="menu-link"><span>Process</span></a>
+      <a href="#about" class="menu-link"><span>Studio</span></a>
+      <a href="#footer" class="menu-link"><span>Contact</span></a>
+    </div>
+    <div class="menu-bottom">
+      <a href="#">Instagram,</a>
+      <a href="#">Linkedin</a>
+    </div>
+  </nav>
+
+  <!-- ====== MAIN ====== -->
+  <main>
+
+    <!-- == COVER / HERO == -->
+    <section class="cover">
+      <div class="cover-screen">
+        <!-- Dark text layer (behind image, for xl only) -->
+        <div class="cover-dark-elements">
+          <div class="cover-scroll-dark">[Scroll down]</div>
+          <div class="cover-tagline-dark">Driven by History, Centered on Context, Embracing Culture</div>
+        </div>
+        <!-- Full-bleed image -->
+        <div class="cover-image" data-dark="true">
+          <div class="cover-image-inner">
+            <div class="parallax-wrap" data-parallax-force="5">
+              <img src="https://telhaclarke.com.au/wp-content/uploads/2025/10/PNG-1-1920x1920.jpg" alt="">
+              <div class="cover-dim"></div>
+            </div>
+          </div>
+          <!-- Light text over image -->
+          <div class="cover-light-elements">
+            <div class="cover-bottom-bar">
+              <div class="cover-scroll-light">[Scroll down]</div>
+              <h1 class="cover-tagline">Driven by History, Centered on Context, Embracing Culture</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- == ABOUT / STUDIO (01) == -->
+    <section class="about" id="about">
+      <div class="corner corner-tl"></div>
+      <div class="corner corner-tr"></div>
+      <div class="about-grid">
+        <!-- Portrait image (sticky on desktop) -->
+        <div class="about-img-col">
+          <div class="about-img-outer">
+            <div class="about-img-sticky">
+              <img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Loller-22-768x1151.jpg" alt="" class="lazy">
+            </div>
+          </div>
+        </div>
+        <!-- Subtitle + acknowledgment -->
+        <div class="about-text-col">
+          <div class="sub-line">
+            <span class="sub-num">01</span>
+            <span class="sub-label">Studio</span>
+          </div>
+          <p class="about-ack">We connect, create and work on the lands of Aboriginal and Torres Strait Islander peoples throughout Australia. We acknowledge First Nations' ancient histories, cultures, and ongoing connections to Country, and we pay our respect to Elders past and present.</p>
+        </div>
+        <!-- Big heading -->
+        <div class="about-heading-row">
+          <span class="about-heading-spacer"></span>
+          <h2 class="about-heading">Telha Clarke is a Melbourne based Architecture &amp; Interior Design studio, designing various project typologies across Australia and Internationally.</h2>
+        </div>
+        <!-- Detail row -->
+        <div class="about-detail-l">Architecture<br>& Interior Design</div>
+        <div class="about-detail-r">
+          <p>With experience covering a range of typologies; from single &amp; multi-residential, seniors living, student accommodation, social housing, hotels, hospitality and workplace. We believe human touch must drive creativity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- == SELECTED WORKS (02) == -->
+    <section class="works" id="works">
+      <div class="works-top">
+        <div class="works-top-left"><span class="works-num">02</span><h2>Selected Works</h2></div>
+        <div class="works-top-right">17 - 25'</div>
+      </div>
+      <div class="works-list">
+        <!-- Item 1 -->
+        <a href="#" class="wi">
+          <div class="wi-title-row">
+            <div class="wi-line wi-line-l"></div>
+            <div class="wi-line wi-line-r"></div>
+            <div class="wi-bracket wi-bracket-l">[</div>
+            <h3 class="wi-name">Loller</h3>
+            <div class="wi-bracket wi-bracket-r">]</div>
+          </div>
+          <div class="wi-img-row">
+            <div class="wi-img-col">
+              <div class="wi-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Loller-28-1200x800.jpg" alt="" class="lazy"></div>
+              <div class="wi-meta"><span>Multi-residential</span><span>2025</span></div>
+            </div>
+          </div>
+        </a>
+        <!-- Item 2 -->
+        <a href="#" class="wi">
+          <div class="wi-title-row">
+            <div class="wi-line wi-line-l"></div>
+            <div class="wi-line wi-line-r"></div>
+            <div class="wi-bracket wi-bracket-l">[</div>
+            <h3 class="wi-name">Penthouse Vivace</h3>
+            <div class="wi-bracket wi-bracket-r">]</div>
+          </div>
+          <div class="wi-img-row">
+            <div class="wi-img-col">
+              <div class="wi-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/10/PV-3-1200x636.jpg" alt="" class="lazy"></div>
+              <div class="wi-meta"><span>Residential</span><span>2024</span></div>
+            </div>
+          </div>
+        </a>
+        <!-- Item 3 -->
+        <a href="#" class="wi">
+          <div class="wi-title-row">
+            <div class="wi-line wi-line-l"></div>
+            <div class="wi-line wi-line-r"></div>
+            <div class="wi-bracket wi-bracket-l">[</div>
+            <h3 class="wi-name">Stanhope</h3>
+            <div class="wi-bracket wi-bracket-r">]</div>
+          </div>
+          <div class="wi-img-row">
+            <div class="wi-img-col">
+              <div class="wi-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Stanhope-3-2-1200x1800.jpg" alt="" class="lazy"></div>
+              <div class="wi-meta"><span>Hotel</span><span>2023</span></div>
+            </div>
+          </div>
+        </a>
+        <!-- Item 4 -->
+        <a href="#" class="wi">
+          <div class="wi-title-row">
+            <div class="wi-line wi-line-l"></div>
+            <div class="wi-line wi-line-r"></div>
+            <div class="wi-bracket wi-bracket-l">[</div>
+            <h3 class="wi-name">Ormond</h3>
+            <div class="wi-bracket wi-bracket-r">]</div>
+          </div>
+          <div class="wi-img-row">
+            <div class="wi-img-col">
+              <div class="wi-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Ormond-21-2-1200x1799.jpg" alt="" class="lazy"></div>
+              <div class="wi-meta"><span>Residential</span><span>2022</span></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- == WORKS IMAGE GRID == -->
+    <section class="wgrid">
+      <div class="wgrid-row wgrid-row-1">
+        <div class="wgrid-cell wgrid-c1"><div class="wgrid-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/08/Parlington-2-768x768.jpg" alt="" class="lazy"></div></div>
+        <div class="wgrid-cell wgrid-c2"><div class="wgrid-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Loller-19-480x720.jpg" alt="" class="lazy"></div></div>
+        <div class="wgrid-cell wgrid-c3"><div class="wgrid-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/10/Argo-5-480x720.jpg" alt="" class="lazy"></div></div>
+        <div class="wgrid-cell wgrid-c4"><div class="wgrid-img dim"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/High-St-2-480x614.jpg" alt="" class="lazy"></div></div>
+      </div>
+      <div class="wgrid-row wgrid-row-2">
+        <div class="wgrid-cell wgrid-c5"><div class="wgrid-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Ormond-21-2-480x720.jpg" alt="" class="lazy"></div></div>
+        <div class="wgrid-cell wgrid-c6"><div class="wgrid-img dim"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Soho-13-480x720.jpg" alt="" class="lazy"></div></div>
+        <div class="wgrid-cell wgrid-c7"><div class="wgrid-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/10/ES-5-480x720.jpg" alt="" class="lazy"></div></div>
+        <div class="wgrid-cell wgrid-c8"><div class="wgrid-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Hurstmon-9-768x1151.jpg" alt="" class="lazy"></div></div>
+      </div>
+    </section>
+
+    <!-- == VISION (03) == -->
+    <section class="vision" id="vision">
+      <!-- Sticky background: centered image -->
+      <div class="vision-bg">
+        <div class="vision-bg-grid">
+          <div class="vision-img-col">
+            <div class="vision-img">
+              <div class="vision-img-scroll">
+                <div class="vision-img-prlx parallax-wrap" data-parallax-force="5">
+                  <img src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Stanhope-3-2-1200x1800.jpg" alt="">
+                  <div class="cover-dim"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll-driven content layer -->
+      <div class="vision-scroll" style="--height-multiplier: 4.25;">
+        <div class="vision-pinned">
+          <!-- Horizontal scrolling titles -->
+          <div class="vision-titles" id="visionTitles">
+            <div class="vision-ti vision-ti-active"><h3 class="vision-ti-text">Design integrity</h3></div>
+            <div class="vision-ti vision-ti-dim"><h3 class="vision-ti-text">Innovation</h3></div>
+            <div class="vision-ti vision-ti-dim"><h3 class="vision-ti-text">Enhanced living</h3></div>
+          </div>
+          <!-- Separator line -->
+          <div class="vision-sep">
+            <div class="vision-sep-num"><span>03</span></div>
+            <div class="vision-sep-line"></div>
+            <h2 class="vision-sep-label"><span>Vision</span></h2>
+          </div>
+          <!-- Content panels that crossfade -->
+          <div class="vision-contents" id="visionContents">
+            <div class="vision-ct active">Our design aesthetic is established through a consistent process and a detailed concept brief, which considers client needs, site context, and the future occupiers. We combine and test these elements to create a singular design vision concealing many influencing layers. This singular vision, like a piece of artwork, is unique and individual. We believe the principles of design quality should always be present no matter the project brief or building scale.</div>
+            <div class="vision-ct">Telha Clarke welcomes innovation through research and technology to contribute new ideas and challenging theories. We see technology as a tool, we engage with it and it is integral to our work, however we believe human touch must drive creativity. We heavily invest time in research through leading industry seminars, University tutoring and participation in international study tours.</div>
+            <div class="vision-ct">We believe enhanced user experience and well-being should be at the forefront of design. We constantly consider the impact of design on the end user to ensure our designs promote positive human interaction and encourage healthier, enriched experiences.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- == PROCESS / METHOD (04) == -->
+    <section class="process" id="process">
+      <div class="corner corner-tl"></div>
+      <div class="corner corner-tr"></div>
+      <div class="corner corner-bl"></div>
+      <div class="corner corner-br"></div>
+      <div class="process-grid">
+        <div class="process-img-col">
+          <div class="process-imgs">
+            <div class="process-img active"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Loller-22-768x1151.jpg" alt="" class="lazy"></div>
+            <div class="process-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/12/Marketing-Plan-2-768x543.jpg" alt="" class="lazy"></div>
+            <div class="process-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/11/CN-Residence-22-e1764201118833-768x768.jpg" alt="" class="lazy"></div>
+            <div class="process-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/12/Bala-In-Construction-768x1024.jpg" alt="" class="lazy"></div>
+            <div class="process-img"><img data-src="https://telhaclarke.com.au/wp-content/uploads/2025/09/Soho-2-768x1152.jpg" alt="" class="lazy"></div>
+          </div>
+        </div>
+        <div class="process-sub-col">
+          <div class="sub-line"><span class="sub-num">04</span><h2 class="sub-label">Method</h2></div>
+        </div>
+        <div class="process-steps-col">
+          <div class="process-steps">
+            <div class="process-step active" data-idx="0"><span class="ps-num">01</span><span class="ps-name">Concept</span></div>
+            <div class="process-step" data-idx="1"><span class="ps-num">02</span><span class="ps-name">Design Development</span></div>
+            <div class="process-step" data-idx="2"><span class="ps-num">03</span><span class="ps-name">Documentation</span></div>
+            <div class="process-step" data-idx="3"><span class="ps-num">04</span><span class="ps-name">Construction</span></div>
+            <div class="process-step" data-idx="4"><span class="ps-num">05</span><span class="ps-name">Completion</span></div>
+          </div>
+        </div>
+        <div class="process-desc-col">
+          <p>The scope of our Studio covers all stages within Architecture and Interior Design. We offer an end to end level of service from early concepts through to practical completion.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" id="footer">
+    <div class="footer-upper">
+      <div class="footer-grid">
+        <!-- CTA + newsletter -->
+        <div class="footer-col-left">
+          <div class="footer-cta">
+            <div class="footer-cta-mist">Talk to us about your project</div>
+            <a href="#" class="footer-cta-link">Contact us</a>
+          </div>
+          <div class="footer-nl">
+            <div>Subscribe to our newsletter</div>
+            <form class="footer-nl-form" id="nlForm" novalidate>
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit" aria-label="Submit">
+                <svg width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M1.2 0c.22 0 .4.18.4.4v3.55c0 .14.11.25.25.25h7.75a1.6 1.6 0 0 0-.25-.33L6.73 1.25a.43.43 0 0 1 0-.64l.41-.41a.43.43 0 0 1 .64 0l4.33 4.33c.25.25.25.67 0 .92l-4.33 4.33a.43.43 0 0 1-.64 0l-.41-.41a.43.43 0 0 1 0-.64l2.62-2.62a1.6 1.6 0 0 0 .25-.33H.5a.5.5 0 0 1-.5-.5V.4C0 .18.18 0 .4 0h.8Z" fill="currentColor"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Nav -->
+        <div class="footer-col-nav">
+          <div class="footer-nav-links">
+            <a href="#">Home</a><a href="#works">Work</a><a href="#about">Studio</a><a href="#vision">Process</a><a href="#footer">Contact</a>
+          </div>
+          <div class="footer-btt" id="btt">Back to top</div>
+        </div>
+        <!-- Contact -->
+        <div class="footer-col-contact">
+          <div class="footer-addr">
+            <div class="footer-row"><span class="footer-label">L</span><span>59 Garden Street<br>South Yarra<br>Victoria, Australia 3141</span></div>
+            <div class="footer-row"><span class="footer-label">P</span><a href="tel:+61386725999">+61 3 8672 5999</a></div>
+            <div class="footer-row"><span class="footer-label">C</span><a href="mailto:contact@telhaclarke.com.au">contact@telhaclarke.com.au</a></div>
+          </div>
+          <div class="footer-social"><a href="#">Instagram,</a> <a href="#">Linkedin</a></div>
+        </div>
+        <!-- Mobile only bottom -->
+        <div class="footer-mob-bottom">
+          <div class="footer-mob-left">All rights reserved<br>&copy; Telha Clarke 2025</div>
+          <div class="footer-mob-right"><a href="#">Privacy policy</a><a href="#">Terms of services</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Black bottom with large logo -->
+    <div class="footer-black">
+      <div class="footer-black-inner">
+        <div class="footer-black-logo tc-logo-svg"></div>
+        <div class="footer-black-meta">
+          <span>All rights reserved &copy; Telha Clarke 2025</span>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of services</a>
+          <span>Website by <a href="#">TM</a> &amp; <a href="#">GL</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SVG template (injected by JS) -->
+  <template id="tcLogoSVG">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512.19 150.48">
+      <path fill="currentColor" d="M47.28,142.84V23.86H7.11V7.64h126.69V23.86h-40.17v118.97H47.28Z"/>
+      <path fill="currentColor" d="M259.92,126.61v16.22h-83.24c-13.33,0-24.14-10.81-24.14-24.14V7.64h107.38V23.86h-61.03v41.14h52.53v16.22h-52.53v35.73c0,5.33,4.32,9.66,9.66,9.66h51.37Z"/>
+      <path fill="currentColor" d="M278.66,118.69V7.64h46.35V116.96c0,5.33,4.32,9.66,9.66,9.66h26.08v16.22h-57.94c-13.33,0-24.14-10.81-24.14-24.14Z"/>
+      <path fill="currentColor" d="M379.48,142.84V7.64h46.35v57.36h40.17V7.64h46.35V142.84h-46.35v-61.61h-40.17v61.61h-46.35Z"/>
+      <path fill="currentColor" d="M619.16,142.84l-12.56-35.54h-48.67l-12.17,35.54h-19.51L573.39,7.64h45.97l49.25,135.19h-49.44Zm-55.82-51.76h37.47l-19.12-53.69-18.35,53.69Z"/>
+      <path fill="currentColor" d="M875.06,142.84h-39.01c-11.59,0-22.57-1.45-32.93-4.35-10.36-2.9-19.41-7.21-27.14-12.94-7.72-5.73-13.87-12.84-18.45-21.34-4.57-8.5-6.86-18.35-6.86-29.55,0-11.71,2.29-21.82,6.86-30.32,4.57-8.5,10.72-15.45,18.45-20.86,7.72-5.41,16.77-9.4,27.14-11.97,10.36-2.57,21.34-3.86,32.93-3.86h39.01V23.86h-37.47c-11.59,0-20.76,3.41-27.52,11.78-6.76,8.37-10.14,21.38-10.14,39.01,0,17.77,3.38,31,10.14,39.69,6.76,8.69,15.94,12.26,27.52,12.26h5.99s31.48,0,31.48,0v16.22Z"/>
+      <path fill="currentColor" d="M893.8,118.69V7.64h46.35V116.96c0,5.33,4.32,9.66,9.66,9.66h26.08v16.22h-57.94c-13.33,0-24.14-10.81-24.14-24.14Z"/>
+      <path fill="currentColor" d="M1082.69,142.84l-12.56-35.54h-48.67l-12.17,35.54h-19.51L1036.91,7.64h45.97l49.25,135.19h-49.44Zm-55.82-51.76h37.47l-19.12-53.69-18.35,53.69Z"/>
+      <path fill="currentColor" d="M1170.18,7.64h57.94V23.86h-26.08c-5.33,0-9.66,4.32-9.66,9.66v109.31h-46.35V31.78c0-13.33,10.81-24.14,24.14-24.14Z"/>
+      <path fill="currentColor" d="M1332.8,142.84l-25.88-60.26-14.1,14.49v45.77h-45.96V7.64h45.96V72.15l62.19-64.51h24.72l-39.01,40.17,43.07,95.02h-50.99Z"/>
+      <path fill="currentColor" d="M1505.08,126.61v16.22h-83.24c-13.33,0-24.14-10.81-24.14-24.14V7.64h107.38V23.86h-61.03v41.14h52.53v16.22h-52.53v35.73c0,5.33,4.32,9.66,9.66,9.66h51.37Z"/>
+    </svg>
+  </template>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
