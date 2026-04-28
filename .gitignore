@@ -22,6 +22,9 @@ out/
 # Project migrated to its own repo (aurum-spa-aesthetics)
 kimbrandesign/
 
+# Project migrated to its own repo (kindergartencamp)
+kindergartencamp/
+
 # OS files
 .DS_Store
 Thumbs.db
